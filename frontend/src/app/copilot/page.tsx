@@ -34,7 +34,9 @@ export default function CopilotPage() {
   useEffect(() => {
     api.agentStatus().then(setStatus).catch(() => {});
   }, []);
-  useEffect(() => endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }), [turns]);
+  useEffect(() => {
+    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [turns]);
 
   async function ask(question: string) {
     const text = question.trim();
