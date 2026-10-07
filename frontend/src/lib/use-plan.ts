@@ -21,8 +21,8 @@ export function clearPlanCache() {
   cache.clear();
 }
 
-export function usePlan(body: PlanBody, opts: { alternatives?: boolean; delayMs?: number } = {}): PlanState {
-  const { alternatives = true, delayMs = 400 } = opts;
+export function usePlan(body: PlanBody, opts: { alternatives?: boolean; delayMs?: number; retry?: number } = {}): PlanState {
+  const { alternatives = true, delayMs = 400, retry = 0 } = opts; // bump `retry` to try again after an error
   const key = JSON.stringify(body);
   const hit = cache.get(key);
   const [state, setState] = useState<PlanState>({
@@ -58,7 +58,7 @@ export function usePlan(body: PlanBody, opts: { alternatives?: boolean; delayMs?
       clearTimeout(timer);
       ctrl.abort();
     };
-  }, [key, alternatives, delayMs]);
+  }, [key, alternatives, delayMs, retry]);
 
   return state;
 }

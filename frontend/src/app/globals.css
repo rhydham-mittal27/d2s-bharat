@@ -11,23 +11,47 @@
   --warn: #9a5b00;
   --warn-soft: #fbf0dd;
   --bad: #a3322a;
+  --bad-soft: #f7e7e5;
+  --grey: #b3b7ba; /* comparison bars */
+  --on-accent: #ffffff;
   --track: #ecedea;
 }
 
+/* dark: follows the system unless the user picked a theme with the toggle (data-theme on <html>) */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #111314;
-    --surface: #1a1d1f;
-    --ink: #e8e9e7;
-    --muted: #9aa0a5;
-    --line: #2c3033;
-    --accent: #4fc2a6;
-    --accent-soft: #173a33;
-    --warn: #e0a548;
-    --warn-soft: #3a2c14;
-    --bad: #e2766d;
-    --track: #262a2d;
+  :root:not([data-theme="light"]) {
+  --bg: #111314;
+  --surface: #1a1d1f;
+  --ink: #e8e9e7;
+  --muted: #9aa0a5;
+  --line: #2c3033;
+  --accent: #4fc2a6;
+  --accent-soft: #173a33;
+  --warn: #e0a548;
+  --warn-soft: #3a2c14;
+  --bad: #e2766d;
+  --bad-soft: #3a1f1c;
+  --grey: #5a6066;
+  --on-accent: #0c1f1a;
+  --track: #262a2d;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #111314;
+  --surface: #1a1d1f;
+  --ink: #e8e9e7;
+  --muted: #9aa0a5;
+  --line: #2c3033;
+  --accent: #4fc2a6;
+  --accent-soft: #173a33;
+  --warn: #e0a548;
+  --warn-soft: #3a2c14;
+  --bad: #e2766d;
+  --bad-soft: #3a1f1c;
+  --grey: #5a6066;
+  --on-accent: #0c1f1a;
+  --track: #262a2d;
 }
 
 @theme inline {
@@ -41,6 +65,9 @@
   --color-warn: var(--warn);
   --color-warn-soft: var(--warn-soft);
   --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-grey: var(--grey);
+  --color-on-accent: var(--on-accent);
   --color-track: var(--track);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
