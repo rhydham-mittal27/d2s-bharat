@@ -1,0 +1,10 @@
+\documentclass[12pt,varwidth=16cm,border=4pt]{standalone}
+\usepackage[T1]{fontenc}\usepackage{mathptmx}\usepackage{amsmath}
+\begin{document}\begin{align*}
+\max \; & \textstyle\sum_k w_k z_k \\
+\text{s.t. } & z_k \le \min\!\big(G_k,\ \textstyle\sum_c a_{ck}\, s_c\big) && \text{no value beyond the gap}\\
+& m_c r_c \le s_c \le M_c r_c && \text{batch size and seat limits}\\
+& \textstyle\sum_c (F_c r_c + p_c s_c) \le B && \text{budget}\\
+& \textstyle\sum_c h_c r_c \le H && \text{trainer-hours}\\
+& r_c \le r_{c'} \ \text{for prerequisites } c' \text{ of } c; \quad \textstyle\sum_{c\in g} r_c \le 1 && \text{either/or groups}
+\end{align*}\end{document}
