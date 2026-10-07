@@ -1,4 +1,18 @@
 import os
+import tempfile
+
+# Tests never touch the real database from backend/.env: env vars beat the .env file, and an empty URL
+# means "no database". DB tests create their own in-memory SQLite.
+os.environ["D2S_DATABASE_URL"] = ""
+# Auth is exercised in test_auth.py; elsewhere it is off. A fixed test secret, never the real one.
+os.environ["D2S_AUTH_REQUIRED"] = "false"
+os.environ["D2S_JWT_SECRET"] = "test-secret-" + "x" * 40
+# ChromaDB in a throwaway folder, never the real dataset/chroma
+os.environ["D2S_CHROMA_PATH"] = tempfile.mkdtemp(prefix="d2s-chroma-")
+# The local agent model is never called in tests; agents get a scripted chooser instead.
+os.environ["D2S_AGENT_LLM_ENABLED"] = "false"
+
+import os
 
 import pytest
 

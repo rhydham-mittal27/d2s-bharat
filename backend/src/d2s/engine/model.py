@@ -38,9 +38,11 @@ class BuiltModel:
     impact_expr: cp_model.LinearExpr
     budget_ct: cp_model.Constraint
     warnings: list[str] = field(default_factory=list)
+    # label -> assumption literal guarding a relaxable constraint group (with_assumptions=True only)
+    assumptions: dict[str, cp_model.IntVar] = field(default_factory=dict)
 
 
-def validate(problem: PlanningProblem) -> list[str]:
+def validate(problem: PlanningProblem, check_budget_floor: bool = True) -> list[str]:
     """Raise on fatal input errors, return non-fatal warnings."""
     warnings: list[str] = []
     if not problem.courses:
@@ -70,6 +72,8 @@ def validate(problem: PlanningProblem) -> list[str]:
 
     _check_prerequisite_cycles(problem)
 
+    if not check_budget_floor:
+        return warnings
     mandatory_floor = sum(
         c.fixed_cost + c.cost_per_seat * c.min_batch
         for c in problem.courses
@@ -102,11 +106,22 @@ def _check_prerequisite_cycles(problem: PlanningProblem) -> None:
         visit(cid, [])
 
 
-def build_model(problem: PlanningProblem) -> BuiltModel:
-    warnings = validate(problem)
+def build_model(problem: PlanningProblem, with_assumptions: bool = False) -> BuiltModel:
+    """with_assumptions=True guards every relaxable constraint group with an assumption literal,
+    so that an infeasible model can report a small conflicting subset (see d2s.xai.plan)."""
+    warnings = validate(problem, check_budget_floor=not with_assumptions)
     m = cp_model.CpModel()
     cons = problem.constraints
     skills = {s.skill_id: s for s in problem.skills}
+    assumptions: dict[str, cp_model.IntVar] = {}
+
+    def guard(ct, label: str):
+        if with_assumptions:
+            lit = assumptions.get(label)
+            if lit is None:
+                lit = assumptions[label] = m.new_bool_var(f"assume[{label}]")
+            ct.only_enforce_if(lit)
+        return ct
 
     run: dict[str, cp_model.IntVar] = {}
     seats: dict[str, cp_model.IntVar] = {}
@@ -116,9 +131,10 @@ def build_model(problem: PlanningProblem) -> BuiltModel:
         m.add(seats[c.id] <= c.max_seats * run[c.id])
         m.add(seats[c.id] >= c.min_batch * run[c.id])
         if c.mandatory or c.id in problem.forced_in:
-            m.add(run[c.id] == 1)
+            guard(m.add(run[c.id] == 1), f"{'mandatory' if c.mandatory else 'forced in'}: {c.id}")
         if c.id in problem.forced_out:
-            m.add(run[c.id] == 0)
+            guard(m.add(run[c.id] == 0), f"forced out: {c.id}")
+    for c in problem.courses:  # after all run vars exist: prerequisites may appear in any order
         for p in c.prerequisites:
             m.add_implication(run[c.id], run[p])
 
@@ -130,11 +146,12 @@ def build_model(problem: PlanningProblem) -> BuiltModel:
         m.add_at_most_one(run[cid] for cid in members)
 
     cost_expr = sum(c.fixed_cost * run[c.id] + c.cost_per_seat * seats[c.id] for c in problem.courses)
-    budget_ct = m.add(cost_expr <= cons.budget)
+    budget_ct = guard(m.add(cost_expr <= cons.budget), "budget")
     if cons.trainer_hours is not None:
-        m.add(sum(c.trainer_hours * run[c.id] for c in problem.courses) <= cons.trainer_hours)
+        guard(m.add(sum(c.trainer_hours * run[c.id] for c in problem.courses) <= cons.trainer_hours),
+              "trainer-hours")
     if cons.max_total_seats is not None:
-        m.add(sum(seats.values()) <= cons.max_total_seats)
+        guard(m.add(sum(seats.values()) <= cons.max_total_seats), "total seats")
 
     closed: dict[str, cp_model.IntVar] = {}
     for sid, s in skills.items():
@@ -149,7 +166,8 @@ def build_model(problem: PlanningProblem) -> BuiltModel:
             m.add(supply == sum(terms))
             m.add_min_equality(closed[sid], [supply, cap])
         if s.min_closure_pct:
-            m.add(closed[sid] >= s.min_closure_pct * s.learners_short)
+            guard(m.add(closed[sid] >= s.min_closure_pct * s.learners_short),
+                  f"equity floor: {sid} >= {s.min_closure_pct}%")
 
     max_w = max((s.demand_weight for s in problem.skills), default=0.0)
     if max_w <= 0:
@@ -164,6 +182,8 @@ def build_model(problem: PlanningProblem) -> BuiltModel:
         unscale = max_w / WEIGHT_RESOLUTION / 100
     impact_expr = sum(int_weights[sid] * closed[sid] for sid in skills)
     m.maximize(impact_expr)
+    if with_assumptions:
+        m.add_assumptions(list(assumptions.values()))
 
     return BuiltModel(
         model=m,
@@ -176,4 +196,5 @@ def build_model(problem: PlanningProblem) -> BuiltModel:
         impact_expr=impact_expr,
         budget_ct=budget_ct,
         warnings=warnings,
+        assumptions=assumptions,
     )

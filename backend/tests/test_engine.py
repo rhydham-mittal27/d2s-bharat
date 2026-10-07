@@ -187,3 +187,40 @@ def test_why_not_explains_excluded_course(problem):
     if ans.feasible:
         assert ans.objective_delta is not None and ans.objective_delta <= 1e-6
     assert ans.reason
+
+
+def test_alternatives_are_distinct_ranked_and_true(problem):
+    from d2s.engine import alternatives
+    from d2s.engine.solver import solve as solve_
+
+    alts = alternatives(problem, k=3)
+    assert [a.label for a in alts][:2] == ["Plan A", "Plan B"]
+    assert abs(alts[0].plan.objective - solve_(problem).objective) < 1e-6
+    sets = [frozenset(a.plan.seats()) for a in alts]
+    assert len(set(sets)) == len(sets)  # every plan has a different course set
+    objs = [a.plan.objective for a in alts]
+    assert objs == sorted(objs, reverse=True)
+    for a in alts:  # each one is feasible under the real constraints
+        assert a.plan.total_cost <= problem.constraints.budget
+        assert a.plan.total_trainer_hours <= problem.constraints.trainer_hours
+    # Plan B is truly the best plan that differs from A: forcing out any A course can't beat it
+    best_without = max(solve_(problem.model_copy(update={"forced_out": [c]})).objective for c in sets[0])
+    assert alts[1].plan.objective >= best_without - 1e-6
+    assert alts[1].tradeoff and alts[1].impact_pct_of_best <= 100
+
+
+def test_alternatives_min_diff_and_exhaustion(problem):
+    from d2s.engine import alternatives
+
+    alts = alternatives(problem, k=3, min_diff=2)
+    a = set(alts[0].plan.seats())
+    for alt in alts[1:]:
+        assert len(a ^ set(alt.plan.seats())) >= 2
+    tiny = problem.model_copy(update={"courses": problem.courses[:1]})
+    assert len(alternatives(tiny, k=3)) == 1  # the empty plan is not offered as an alternative
+
+
+def test_prerequisite_listed_after_dependant(problem):
+    """Course order must not matter (the database returns courses sorted by id)."""
+    reordered = problem.model_copy(update={"courses": list(reversed(problem.courses))})
+    assert abs(solve(reordered).objective - solve(problem).objective) < 1e-6

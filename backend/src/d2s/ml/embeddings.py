@@ -1,7 +1,7 @@
 """Text embedders behind one protocol, so tests and offline dev never download a model.
 
 All embedders return L2-normalised float32 matrices: cosine similarity == dot product,
-matching pgvector's inner-product / cosine operators later.
+matching the cosine space of the ChromaDB collection.
 """
 
 import hashlib
