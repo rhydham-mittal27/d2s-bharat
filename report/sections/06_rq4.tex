@@ -1,6 +1,6 @@
-\section{Data Analysis III: What to Teach First (RQ4)}\label{sec:rq4}
+\subsection{What to Teach First (RQ4)}\label{sec:rq4}
 
-\subsection{Model}
+\subsubsection{Model}
 
 RQ4 turns the evidence into a decision. For each candidate course $c$ the model chooses whether to
 run it ($r_c \in \{0,1\}$) and how many seats to offer ($s_c$). For each skill area $k$ it counts
@@ -38,7 +38,7 @@ costs are materials only; GPU time for deep learning at about Rs~100 per hour \c
 Personality (RQ3) is not modelled as a course, because traits are relatively stable; it informs
 mentoring and assessment instead (Section~\ref{sec:implications}).
 
-\subsection{The optimal plan}
+\subsubsection{The optimal plan}
 
 \begin{table}[H]\centering\small
 \caption{Proven-optimal plan for Rs~4 lakh and 200 trainer-hours.}\label{tab:plan}
@@ -68,7 +68,7 @@ coverage), Deep Learning \& NLP $-12.8\%$ (needs ML first and 40 more hours), Bi
 (lowest-valued area, does not fit the remaining hours), Power BI $-1.1\%$ (either/or with Tableau,
 which closes the full gap at the same per-seat cost).
 
-\subsection{Sensitivity: what would change the decision?}
+\subsubsection{Sensitivity: what would change the decision?}
 
 \textbf{Money is not the constraint}: Rs~0.47 lakh remains unspent, and an extra Rs~1 lakh adds no
 impact. \textbf{Trainer capacity is}, but in whole-course steps. The linear relaxation suggests each
@@ -94,7 +94,7 @@ Trainer-hours & Added to the plan & Impact (change) & Gap closed\\
 \fig[0.8\linewidth]{fig_rq4_pareto.png}{Cost--impact Pareto frontier with 200 and 400
 trainer-hours.}
 
-\subsection{Robustness}
+\subsubsection{Robustness}
 
 The plan was re-optimised under nine evidence scenarios: balanced, market-led and outcome-led
 weightings, each at the lower bound, point estimate and upper bound of every confidence interval

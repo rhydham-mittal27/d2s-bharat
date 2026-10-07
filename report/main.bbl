@@ -34,10 +34,10 @@ Bradley Efron and Robert~J. Tibshirani.
 \newblock \emph{An Introduction to the Bootstrap}.
 \newblock Chapman and Hall, New York, 1993.
 
-\bibitem[{European Commission}(2024)]{esco2024}
+\bibitem[{European Commission}(2025)]{esco2024}
 {European Commission}.
 \newblock {ESCO}: European skills, competences, qualifications and occupations,
-  version 1.2.1, 2024.
+  version 1.2.1, 2025.
 \newblock URL \url{https://esco.ec.europa.eu}.
 
 \bibitem[Holm(1979)]{holm1979}
@@ -71,9 +71,9 @@ Peter McCullagh.
 \newblock \emph{Journal of the Royal Statistical Society: Series B},
   42\penalty0 (2):\penalty0 109--142, 1980.
 
-\bibitem[{National Center for O*NET Development}(2025)]{onet2025}
+\bibitem[{National Center for O*NET Development}(2026)]{onet2025}
 {National Center for O*NET Development}.
-\newblock {O*NET} 30.3 database, 2025.
+\newblock {O*NET} 30.3 database, 2026.
 \newblock URL \url{https://www.onetcenter.org/database.html}.
 
 \bibitem[Pedregosa et~al.(2011)]{pedregosa2011}

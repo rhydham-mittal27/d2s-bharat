@@ -10,6 +10,43 @@ The analysis moves from \emph{descriptive} (what the market and employees look l
 three diagnostic questions $\rightarrow$ one prescriptive decision.}\label{fig:flow}
 \end{figure}
 
+\textbf{Overall flow.} The work proceeds in five stages, each feeding the next:
+\begin{enumerate}
+  \item \textbf{Audit and prepare} all four files (Section~\ref{sec:data}): repair, derive, de-duplicate
+        and reduce until every variable needed by an RQ is clean and analysable.
+  \item \textbf{Describe the market} (RQ1): what is demanded, and what is paid more once
+        experience and role are held constant.
+  \item \textbf{Diagnose the employees} (RQ2, RQ3): which measured skills and traits separate
+        high from low outcomes, with tests, effect sizes and validated models.
+  \item \textbf{Triangulate}: place the five JDS skill areas in the job market so that market and
+        employer evidence can be compared on the same scale.
+  \item \textbf{Prescribe} (RQ4): turn gaps and evidence weights into an optimal, budget-feasible
+        training plan and test how robust it is.
+\end{enumerate}
+
+\textbf{Motivation and reasons for this approach.}
+\begin{itemize}
+  \item \emph{Decision first.} The stakeholders (training institutions) need an action, not only
+        a description, so the analysis is designed backwards from the RQ4 decision: every
+        quantity the optimiser needs (gaps, value of a skill) is produced by an earlier stage.
+  \item \emph{Triangulation over a single source.} Job postings show what employers \emph{ask
+        for}; JDS shows what employers \emph{reward} after hiring. Neither alone is reliable, so a
+        skill is prioritised only when the sources agree, and disagreements (storytelling) are
+        reported as findings.
+  \item \emph{Methods matched to the data, not the other way round.} Salary comes in ordered bands,
+        JDS scores sit at a ceiling and JDS/SDS are small; the methods below were chosen for these
+        properties. Complex models (gradient boosting, neural networks) were not used because with
+        139--161 people they would add variance without adding explanation.
+  \item \emph{Transparency.} Every step is scripted and every assumption (notably RQ4 course
+        costs) is listed, so a jury or an institution can re-run the analysis with its own numbers.
+\end{itemize}
+
+\textbf{Alternatives considered and rejected.} Linear regression on salary midpoints (treats
+coarse bands as exact amounts); extracting skills from descriptions by meaning (tested, F1 6.8\%,
+Section~\ref{sec:skills}); deleting re-used JDS/SDS IDs (would lose 3--11\% of people without
+evidence that they are duplicates); and a linear-programming plan (proposes fractional courses,
+Section~\ref{sec:rq4}).
+
 \textbf{Why these methods.}
 \begin{itemize}
   \item \textbf{Rank-based tests and effect sizes} (Mann--Whitney U \citep{mannwhitney1947},

@@ -1,6 +1,15 @@
-\section{Data Analysis I: Market Demand and Pay (RQ1)}\label{sec:rq1}
+\section{Data Analysis}\label{sec:analysis}
 
-\subsection{Demand}
+The analysis answers the four research questions in order of the analytics value chain
+(Figure~\ref{fig:flow}): \emph{descriptive} analysis of the job market (RQ1,
+Section~\ref{sec:rq1}), \emph{diagnostic} statistical and machine-learning analysis of the two
+employee datasets (RQ2 and RQ3, Section~\ref{sec:rq23}) and a \emph{prescriptive} optimisation
+that converts the evidence into a training decision (RQ4, Section~\ref{sec:rq4}). Each part ends
+with an explicit answer to its research question.
+
+\subsection{Market Demand and Pay (RQ1)}\label{sec:rq1}
+
+\subsubsection{Demand}
 
 Within the 5,138 data-role postings, the most requested skills (with Wilson 95\% intervals
 \citep{wilson1927}) are data analytics (18.3\% [17.3, 19.4]), SQL (16.5\% [15.5, 17.5]), SAS (13.4\%),
@@ -10,7 +19,7 @@ Python (12.6\%), business analysis (12.5\%), machine learning (12.0\%) and R (10
 
 \fig[0.78\linewidth]{fig_demand.png}{Most demanded skills in data-role postings (Wilson 95\% CIs).}
 
-\subsection{Pay, after accounting for experience}
+\subsubsection{Pay, after accounting for experience}
 
 Raw salary comparisons are misleading because skills and seniority go together. We therefore fit an
 ordinal logistic regression of the six salary bands on indicators for the 30 most common skills,
@@ -36,7 +45,8 @@ Marketing analytics & 1.64 [1.20, 2.26] & & & \\
 Java & 1.51 [1.20, 1.90] & & & \\
 Statistics & 1.43 [1.09, 1.88] & & & \\
 SAS & 1.42 [1.20, 1.68] & & & \\
-Business intelligence / Tableau & 1.41 / 1.41 & & & \\
+Business intelligence & 1.41 [1.11, 1.80] & & & \\
+Tableau & 1.41 [1.09, 1.82] & & & \\
 Data mining & 1.40 [1.07, 1.83] & & & \\
 Data analytics & 1.25 [1.09, 1.42] & & & \\
 \bottomrule
@@ -47,11 +57,12 @@ Data analytics & 1.25 [1.09, 1.42] & & & \\
 (only skills with FDR $q<0.05$).}
 
 \textbf{Interpretation.} Advanced analytics (predictive modelling, NLP, statistics, data mining)
-and core tools (SAS, SQL, Java) are linked to higher bands \emph{beyond what experience explains}.
+and core tools (SAS, Java, BI/Tableau) are linked to higher bands \emph{beyond what experience
+explains}; across all postings SQL (OR 1.23) and machine learning (1.34) are also significant.
 Postings emphasising MIS reporting or generic ``communication'' are lower-paid support roles; this
-does not mean communication is unvaluable, as RQ2 shows.
+does not mean communication is undervalued by employers, as RQ2 shows.
 
-\subsection{Skill bundles}
+\subsubsection{Skill bundles}
 
 Association rules show that the big-data stack is requested as a bundle: hive $\rightarrow$ Hadoop
 (confidence 75\%, lift 13.1), Scala $\rightarrow$ Spark (72\%, lift 15.2), hive $\rightarrow$ Spark
@@ -61,7 +72,7 @@ course.
 
 \fig[0.85\linewidth]{fig_bundles.png}{Strongest skill co-occurrence rules in data roles.}
 
-\subsection{Company-level view (DataScience Jobs)}
+\subsubsection{Company-level view (DataScience Jobs)}
 
 Average salary rises with minimum experience (Spearman $\rho = 0.63$, $p<10^{-100}$). Openings are
 spread across many employers (Herfindahl index 0.021), but the ten largest (TCS, Accenture,
@@ -72,17 +83,17 @@ are at large IT-services firms that pay below the typical company} (Figure~\ref{
 \fig{fig_ds_jobs.png}{DataScience Jobs: salary vs experience (bubble size = openings) and the ten
 largest employers.}
 
-\subsection{Triangulation: the five JDS skill areas in the market}
+\subsubsection{Triangulation: the five JDS skill areas in the market}
 
 To connect RQ1 with RQ2, each of the five JDS skill areas was measured in the job market
 (Table~\ref{tab:tri}, Figure~\ref{fig:fig_triangulation.png}).
 
 \begin{table}[H]\centering\small
 \caption{The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike
-link (RQ2).}\label{tab:tri}
+link (RQ2).}\label{tab:tri}\setlength{\tabcolsep}{4pt}
 \begin{tabular}{@{}l c c c@{}}
 \toprule
-Skill area & Demand (\% postings) & Market pay OR [95\% CI] & RQ2 hike OR per SD [95\% CI]\\
+Skill area & Demand (\%) & Market pay OR [95\% CI] & RQ2 hike OR per SD [95\% CI]\\
 \midrule
 Coding & \textbf{40.7} & 1.50 [1.34, 1.68] & 1.67 [1.10, 2.79]\\
 Maths \& stats & 15.9 & \textbf{1.56} [1.35, 1.80] & \textbf{3.01} [1.99, 4.60]\\

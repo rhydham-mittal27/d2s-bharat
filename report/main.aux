@@ -10,8 +10,10 @@
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Research questions, data and methods.}}{2}{table.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{tab:rq}{{1}{2}{Research questions, data and methods}{table.caption.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Approach}{2}{section.2}\protected@file@percent }
-\newlabel{sec:approach}{{2}{2}{Approach}{section.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Approach}{3}{section.2}\protected@file@percent }
+\newlabel{sec:approach}{{2}{3}{Approach}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Analytical flow: four SAS datasets $\rightarrow $ cleaning and derivation $\rightarrow $ three diagnostic questions $\rightarrow $ one prescriptive decision.}}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:flow}{{1}{3}{Analytical flow: four SAS datasets $\rightarrow $ cleaning and derivation $\rightarrow $ three diagnostic questions $\rightarrow $ one prescriptive decision}{figure.caption.2}{}}
 \citation{mannwhitney1947}
 \citation{kerby2014}
 \citation{holm1979}
@@ -27,105 +29,108 @@
 \citation{reimers2019}
 \citation{xiao2023bge}
 \citation{sasvfl}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Analytical flow: four SAS datasets $\rightarrow $ cleaning and derivation $\rightarrow $ three diagnostic questions $\rightarrow $ one prescriptive decision.}}{3}{figure.caption.2}\protected@file@percent }
-\newlabel{fig:flow}{{1}{3}{Analytical flow: four SAS datasets $\rightarrow $ cleaning and derivation $\rightarrow $ three diagnostic questions $\rightarrow $ one prescriptive decision}{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Data Exploration and Preparation}{4}{section.3}\protected@file@percent }
-\newlabel{sec:data}{{3}{4}{Data Exploration and Preparation}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The four datasets and their quality}{4}{subsection.3.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Data-quality audit and actions for the four SAS files.}}{4}{table.caption.3}\protected@file@percent }
-\newlabel{tab:quality}{{2}{4}{Data-quality audit and actions for the four SAS files}{table.caption.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Analytics Jobs: cleaning and derived variables}{4}{subsection.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Cleaning actions on Analytics Jobs (left) and missing values after de-duplication (right).}}{4}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:fig_cleaning.png}{{2}{4}{Cleaning actions on Analytics Jobs (left) and missing values after de-duplication (right)}{figure.caption.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Variables derived during preparation.}}{5}{table.caption.5}\protected@file@percent }
-\newlabel{tab:derived}{{3}{5}{Variables derived during preparation}{table.caption.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Distribution of the salary band (Analytics Jobs, 14,840 postings).}}{5}{table.caption.6}\protected@file@percent }
-\newlabel{tab:bands}{{4}{5}{Distribution of the salary band (Analytics Jobs, 14,840 postings)}{table.caption.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Skill normalisation: from 10,000+ free-text tags to comparable skills}{5}{subsection.3.3}\protected@file@percent }
-\newlabel{sec:skills}{{3.3}{5}{Skill normalisation: from 10,000+ free-text tags to comparable skills}{subsection.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Mapping of recruiter tags to ESCO/O*NET (left) and similarity of non-exact tags to their nearest skill (right).}}{6}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:fig_tag_mapping.png}{{3}{6}{Mapping of recruiter tags to ESCO/O*NET (left) and similarity of non-exact tags to their nearest skill (right)}{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Every recruiter tag resolves to a canonical skill.}}{6}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:fig_canonical.png}{{4}{6}{Every recruiter tag resolves to a canonical skill}{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Calibrating meaning-based text matching against recruiter tags: agreement never exceeds F1 $\approx $ 7\%, so it was excluded.}}{6}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:fig_text_calibration.png}{{5}{6}{Calibrating meaning-based text matching against recruiter tags: agreement never exceeds F1 $\approx $ 7\%, so it was excluded}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Role families}{7}{subsection.3.4}\protected@file@percent }
-\newlabel{sec:families}{{3.4}{7}{Role families}{subsection.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Postings and median salary band by role family; data roles in blue.}}{7}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:fig_role_families.png}{{6}{7}{Postings and median salary band by role family; data roles in blue}{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}DataScience Jobs}{7}{subsection.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}JDS and SDS: employee skill and trait data}{7}{subsection.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data Exploration: Manipulation, Derivation, Consolidation and Preparation}{4}{section.3}\protected@file@percent }
+\newlabel{sec:data}{{3}{4}{Data Exploration: Manipulation, Derivation, Consolidation and Preparation}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Consolidated data-quality audit}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Data-quality audit and actions for the four SAS files.}}{5}{table.caption.3}\protected@file@percent }
+\newlabel{tab:quality}{{2}{5}{Data-quality audit and actions for the four SAS files}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Data modification: repairing and standardising values}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Modification and deduction actions on Analytics Jobs (left) and missing values after de-duplication (right).}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:fig_cleaning.png}{{2}{5}{Modification and deduction actions on Analytics Jobs (left) and missing values after de-duplication (right)}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Data derivation: new variables}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Variables derived during preparation.}}{6}{table.caption.5}\protected@file@percent }
+\newlabel{tab:derived}{{3}{6}{Variables derived during preparation}{table.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Distribution of the salary band (Analytics Jobs, 14,840 postings).}}{6}{table.caption.6}\protected@file@percent }
+\newlabel{tab:bands}{{4}{6}{Distribution of the salary band (Analytics Jobs, 14,840 postings)}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Data deduction: redundant records and ambiguous cases}{6}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Data reduction: from high-cardinality text to analysable categories}{6}{subsection.3.5}\protected@file@percent }
+\newlabel{sec:reduction}{{3.5}{6}{Data reduction: from high-cardinality text to analysable categories}{subsection.3.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Data reduction steps.}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:reduction}{{5}{7}{Data reduction steps}{table.caption.7}{}}
+\newlabel{sec:skills}{{3.5}{7}{}{table.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Mapping of recruiter tags to ESCO/O*NET (left) and similarity of non-exact tags to their nearest skill (right).}}{7}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:fig_tag_mapping.png}{{3}{7}{Mapping of recruiter tags to ESCO/O*NET (left) and similarity of non-exact tags to their nearest skill (right)}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Every recruiter tag resolves to a canonical skill.}}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:fig_canonical.png}{{4}{8}{Every recruiter tag resolves to a canonical skill}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Calibrating meaning-based text matching against recruiter tags: agreement never exceeds F1 $\approx $ 7\%, so it was excluded.}}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:fig_text_calibration.png}{{5}{8}{Calibrating meaning-based text matching against recruiter tags: agreement never exceeds F1 $\approx $ 7\%, so it was excluded}{figure.caption.10}{}}
+\newlabel{sec:families}{{3.5}{8}{}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Postings and median salary band by role family; data roles in blue.}}{9}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:fig_role_families.png}{{6}{9}{Postings and median salary band by role family; data roles in blue}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Consolidation: dataset profiles and exploratory findings}{9}{subsection.3.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Descriptive statistics with group means by outcome.}}{9}{table.caption.12}\protected@file@percent }
+\newlabel{tab:desc}{{6}{9}{Descriptive statistics with group means by outcome}{table.caption.12}{}}
 \citation{wilson1927}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Descriptive statistics with group means by outcome.}}{8}{table.caption.11}\protected@file@percent }
-\newlabel{tab:desc}{{5}{8}{Descriptive statistics with group means by outcome}{table.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces JDS: skill scores by salary-hike outcome. High-hike juniors cluster at the 5.0 ceiling.}}{8}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:fig_jds_dist.png}{{7}{8}{JDS: skill scores by salary-hike outcome. High-hike juniors cluster at the 5.0 ceiling}{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Data Analysis I: Market Demand and Pay (RQ1)}{9}{section.4}\protected@file@percent }
-\newlabel{sec:rq1}{{4}{9}{Data Analysis I: Market Demand and Pay (RQ1)}{section.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Demand}{9}{subsection.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Most demanded skills in data-role postings (Wilson 95\% CIs).}}{9}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:fig_demand.png}{{8}{9}{Most demanded skills in data-role postings (Wilson 95\% CIs)}{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Pay, after accounting for experience}{9}{subsection.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Skills associated with salary band in data-role postings (ordinal logit, adjusted for experience, role family and multi-city; FDR $q<0.05$).}}{10}{table.caption.14}\protected@file@percent }
-\newlabel{tab:pay}{{6}{10}{Skills associated with salary band in data-role postings (ordinal logit, adjusted for experience, role family and multi-city; FDR $q<0.05$)}{table.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Adjusted pay association of skills in data roles (only skills with FDR $q<0.05$).}}{10}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:fig_pay_data_roles.png}{{9}{10}{Adjusted pay association of skills in data roles (only skills with FDR $q<0.05$)}{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Skill bundles}{10}{subsection.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Strongest skill co-occurrence rules in data roles.}}{11}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:fig_bundles.png}{{10}{11}{Strongest skill co-occurrence rules in data roles}{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Company-level view (DataScience Jobs)}{11}{subsection.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces DataScience Jobs: salary vs experience (bubble size = openings) and the ten largest employers.}}{11}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:fig_ds_jobs.png}{{11}{11}{DataScience Jobs: salary vs experience (bubble size = openings) and the ten largest employers}{figure.caption.17}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Triangulation: the five JDS skill areas in the market}{11}{subsection.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike link (RQ2).}}{12}{table.caption.18}\protected@file@percent }
-\newlabel{tab:tri}{{7}{12}{The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike link (RQ2)}{table.caption.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Triangulation of the five JDS skill areas across market demand, market pay and junior salary hikes.}}{12}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:fig_triangulation.png}{{12}{12}{Triangulation of the five JDS skill areas across market demand, market pay and junior salary hikes}{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Data Analysis II: Junior Skills and Senior Traits (RQ2, RQ3)}{12}{section.5}\protected@file@percent }
-\newlabel{sec:rq23}{{5}{12}{Data Analysis II: Junior Skills and Senior Traits (RQ2, RQ3)}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}RQ2: which skills are associated with a high salary hike for juniors?}{13}{subsection.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces RQ2 (JDS, $n=139$): group comparison and multivariable association.}}{13}{table.caption.20}\protected@file@percent }
-\newlabel{tab:rq2}{{8}{13}{RQ2 (JDS, $n=139$): group comparison and multivariable association}{table.caption.20}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces RQ2: effect sizes with bootstrap CIs (left) and cross-validated model performance (right).}}{13}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:rq2}{{13}{13}{RQ2: effect sizes with bootstrap CIs (left) and cross-validated model performance (right)}{figure.caption.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}RQ3: which traits are associated with senior success?}{13}{subsection.5.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces RQ3 (SDS, $n=161$): group comparison and multivariable association.}}{13}{table.caption.22}\protected@file@percent }
-\newlabel{tab:rq3}{{9}{13}{RQ3 (SDS, $n=161$): group comparison and multivariable association}{table.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces JDS: skill scores by salary-hike outcome. High-hike juniors cluster at the 5.0 ceiling.}}{10}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:fig_jds_dist.png}{{7}{10}{JDS: skill scores by salary-hike outcome. High-hike juniors cluster at the 5.0 ceiling}{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Data Analysis}{10}{section.4}\protected@file@percent }
+\newlabel{sec:analysis}{{4}{10}{Data Analysis}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Market Demand and Pay (RQ1)}{10}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:rq1}{{4.1}{10}{Market Demand and Pay (RQ1)}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Demand}{10}{subsubsection.4.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Most demanded skills in data-role postings (Wilson 95\% CIs).}}{11}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:fig_demand.png}{{8}{11}{Most demanded skills in data-role postings (Wilson 95\% CIs)}{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Pay, after accounting for experience}{11}{subsubsection.4.1.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Skills associated with salary band in data-role postings (ordinal logit, adjusted for experience, role family and multi-city; FDR $q<0.05$).}}{12}{table.caption.15}\protected@file@percent }
+\newlabel{tab:pay}{{7}{12}{Skills associated with salary band in data-role postings (ordinal logit, adjusted for experience, role family and multi-city; FDR $q<0.05$)}{table.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Adjusted pay association of skills in data roles (only skills with FDR $q<0.05$).}}{12}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:fig_pay_data_roles.png}{{9}{12}{Adjusted pay association of skills in data roles (only skills with FDR $q<0.05$)}{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Skill bundles}{12}{subsubsection.4.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Strongest skill co-occurrence rules in data roles.}}{13}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:fig_bundles.png}{{10}{13}{Strongest skill co-occurrence rules in data roles}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Company-level view (DataScience Jobs)}{13}{subsubsection.4.1.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces DataScience Jobs: salary vs experience (bubble size = openings) and the ten largest employers.}}{13}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:fig_ds_jobs.png}{{11}{13}{DataScience Jobs: salary vs experience (bubble size = openings) and the ten largest employers}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Triangulation: the five JDS skill areas in the market}{13}{subsubsection.4.1.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike link (RQ2).}}{14}{table.caption.19}\protected@file@percent }
+\newlabel{tab:tri}{{8}{14}{The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike link (RQ2)}{table.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Triangulation of the five JDS skill areas across market demand, market pay and junior salary hikes.}}{14}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:fig_triangulation.png}{{12}{14}{Triangulation of the five JDS skill areas across market demand, market pay and junior salary hikes}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Junior Skills and Senior Traits (RQ2, RQ3)}{14}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:rq23}{{4.2}{14}{Junior Skills and Senior Traits (RQ2, RQ3)}{subsection.4.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}RQ2: which skills are associated with a high salary hike for juniors?}{15}{subsubsection.4.2.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces RQ2 (JDS, $n=139$): group comparison and multivariable association.}}{15}{table.caption.21}\protected@file@percent }
+\newlabel{tab:rq2}{{9}{15}{RQ2 (JDS, $n=139$): group comparison and multivariable association}{table.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces RQ2: effect sizes with bootstrap CIs (left) and cross-validated model performance (right).}}{15}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:rq2}{{13}{15}{RQ2: effect sizes with bootstrap CIs (left) and cross-validated model performance (right)}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}RQ3: which traits are associated with senior success?}{15}{subsubsection.4.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces RQ3 (SDS, $n=161$): group comparison and multivariable association.}}{15}{table.caption.23}\protected@file@percent }
+\newlabel{tab:rq3}{{10}{15}{RQ3 (SDS, $n=161$): group comparison and multivariable association}{table.caption.23}{}}
 \citation{barrick1991}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces RQ3: effect sizes (left) and cross-validated model performance (right).}}{14}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:rq3}{{14}{14}{RQ3: effect sizes (left) and cross-validated model performance (right)}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces RQ3 depth-3 decision tree.}}{14}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:fig_sds_tree.png}{{15}{14}{RQ3 depth-3 decision tree}{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Suppressor effects and caution}{14}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces RQ3: effect sizes (left) and cross-validated model performance (right).}}{16}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:rq3}{{14}{16}{RQ3: effect sizes (left) and cross-validated model performance (right)}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces RQ3 depth-3 decision tree.}}{16}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:fig_sds_tree.png}{{15}{16}{RQ3 depth-3 decision tree}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Suppressor effects and caution}{16}{subsubsection.4.2.3}\protected@file@percent }
 \citation{cpsat}
 \citation{knowledgehut}
 \citation{sasvfl}
 \citation{gpuindia2026}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Data Analysis III: What to Teach First (RQ4)}{15}{section.6}\protected@file@percent }
-\newlabel{sec:rq4}{{6}{15}{Data Analysis III: What to Teach First (RQ4)}{section.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Model}{15}{subsection.6.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces RQ4 inputs: what is data and what is assumed.}}{15}{table.caption.25}\protected@file@percent }
-\newlabel{tab:rq4in}{{10}{15}{RQ4 inputs: what is data and what is assumed}{table.caption.25}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}The optimal plan}{16}{subsection.6.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Proven-optimal plan for Rs~4 lakh and 200 trainer-hours.}}{16}{table.caption.26}\protected@file@percent }
-\newlabel{tab:plan}{{11}{16}{Proven-optimal plan for Rs~4 lakh and 200 trainer-hours}{table.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Optimal plan (left) and the share of each skill gap it closes (right).}}{16}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:fig_rq4_plan.png}{{16}{16}{Optimal plan (left) and the share of each skill gap it closes (right)}{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Sensitivity: what would change the decision?}{16}{subsection.6.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces What additional trainer-hours buy (budget not limiting).}}{17}{table.caption.28}\protected@file@percent }
-\newlabel{tab:hours}{{12}{17}{What additional trainer-hours buy (budget not limiting)}{table.caption.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Cost--impact Pareto frontier with 200 and 400 trainer-hours.}}{17}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:fig_rq4_pareto.png}{{17}{17}{Cost--impact Pareto frontier with 200 and 400 trainer-hours}{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Robustness}{17}{subsection.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Seats per course across nine evidence scenarios.}}{18}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:fig_rq4_robust.png}{{18}{18}{Seats per course across nine evidence scenarios}{figure.caption.30}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Results and Conclusions}{18}{section.7}\protected@file@percent }
-\newlabel{sec:results}{{7}{18}{Results and Conclusions}{section.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Answers to the research questions.}}{18}{table.caption.31}\protected@file@percent }
-\newlabel{tab:answers}{{13}{18}{Answers to the research questions}{table.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}What to Teach First (RQ4)}{17}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:rq4}{{4.3}{17}{What to Teach First (RQ4)}{subsection.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Model}{17}{subsubsection.4.3.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces RQ4 inputs: what is data and what is assumed.}}{17}{table.caption.26}\protected@file@percent }
+\newlabel{tab:rq4in}{{11}{17}{RQ4 inputs: what is data and what is assumed}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}The optimal plan}{18}{subsubsection.4.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Proven-optimal plan for Rs~4 lakh and 200 trainer-hours.}}{18}{table.caption.27}\protected@file@percent }
+\newlabel{tab:plan}{{12}{18}{Proven-optimal plan for Rs~4 lakh and 200 trainer-hours}{table.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Optimal plan (left) and the share of each skill gap it closes (right).}}{18}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:fig_rq4_plan.png}{{16}{18}{Optimal plan (left) and the share of each skill gap it closes (right)}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Sensitivity: what would change the decision?}{18}{subsubsection.4.3.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces What additional trainer-hours buy (budget not limiting).}}{19}{table.caption.29}\protected@file@percent }
+\newlabel{tab:hours}{{13}{19}{What additional trainer-hours buy (budget not limiting)}{table.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Cost--impact Pareto frontier with 200 and 400 trainer-hours.}}{19}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:fig_rq4_pareto.png}{{17}{19}{Cost--impact Pareto frontier with 200 and 400 trainer-hours}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}Robustness}{19}{subsubsection.4.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Seats per course across nine evidence scenarios.}}{20}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:fig_rq4_robust.png}{{18}{20}{Seats per course across nine evidence scenarios}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Results and Conclusions}{20}{section.5}\protected@file@percent }
+\newlabel{sec:results}{{5}{20}{Results and Conclusions}{section.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Answers to the research questions.}}{20}{table.caption.32}\protected@file@percent }
+\newlabel{tab:answers}{{14}{20}{Answers to the research questions}{table.caption.32}{}}
 \citation{barrick1991}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Implications}{19}{section.8}\protected@file@percent }
-\newlabel{sec:implications}{{8}{19}{Implications}{section.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Implications}{21}{section.6}\protected@file@percent }
+\newlabel{sec:implications}{{6}{21}{Implications}{section.6}{}}
 \bibstyle{plainnat}
 \bibdata{references}
 \bibcite{agrawal1994}{{1}{1994}{{Agrawal and Srikant}}{{}}}
@@ -133,13 +138,13 @@
 \bibcite{benjamini1995}{{3}{1995}{{Benjamini and Hochberg}}{{}}}
 \bibcite{breiman1984}{{4}{1984}{{Breiman et~al.}}{{Breiman, Friedman, Olshen, and Stone}}}
 \bibcite{efron1993}{{5}{1993}{{Efron and Tibshirani}}{{}}}
-\bibcite{esco2024}{{6}{2024}{{European Commission}}{{}}}
+\bibcite{esco2024}{{6}{2025}{{European Commission}}{{}}}
 \bibcite{holm1979}{{7}{1979}{{Holm}}{{}}}
 \bibcite{kerby2014}{{8}{2014}{{Kerby}}{{}}}
 \bibcite{knowledgehut}{{9}{2025}{{KnowledgeHut}}{{}}}
 \bibcite{mannwhitney1947}{{10}{1947}{{Mann and Whitney}}{{}}}
 \bibcite{mccullagh1980}{{11}{1980}{{McCullagh}}{{}}}
-\bibcite{onet2025}{{12}{2025}{{National Center for O*NET Development}}{{}}}
+\bibcite{onet2025}{{12}{2026}{{National Center for O*NET Development}}{{}}}
 \bibcite{pedregosa2011}{{13}{2011}{{Pedregosa et~al.}}{{}}}
 \bibcite{peduzzi1996}{{14}{1996}{{Peduzzi et~al.}}{{Peduzzi, Concato, Kemper, Holford, and Feinstein}}}
 \bibcite{cpsat}{{15}{2025}{{Perron and Didier}}{{}}}
@@ -150,28 +155,28 @@
 \bibcite{vittinghoff2007}{{20}{2007}{{Vittinghoff and McCulloch}}{{}}}
 \bibcite{wilson1927}{{21}{1927}{{Wilson}}{{}}}
 \bibcite{xiao2023bge}{{22}{2023}{{Xiao et~al.}}{{Xiao, Liu, Zhang, and Muennighoff}}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}Reproducibility}{22}{appendix.A}\protected@file@percent }
-\newlabel{app:repro}{{A}{22}{Reproducibility}{appendix.A}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Role-family rules}{22}{appendix.B}\protected@file@percent }
-\newlabel{app:families}{{B}{22}{Role-family rules}{appendix.B}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {C}RQ4 course catalogue (assumptions)}{22}{appendix.C}\protected@file@percent }
-\newlabel{app:catalogue}{{C}{22}{RQ4 course catalogue (assumptions)}{appendix.C}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {D}Additional figures}{23}{appendix.D}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Spearman correlations, including the outcome.}}{23}{figure.caption.34}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Odds ratios per +1 SD (L2 logistic regression, bootstrap 95\% CI).}}{23}{figure.caption.35}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces SDS: trait scores by success outcome.}}{23}{figure.caption.36}\protected@file@percent }
-\newlabel{fig:fig_sds_dist.png}{{21}{23}{SDS: trait scores by success outcome}{figure.caption.36}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces RQ2 depth-3 decision tree.}}{24}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:fig_jds_tree.png}{{22}{24}{RQ2 depth-3 decision tree}{figure.caption.37}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Adjusted pay association of skills, all postings.}}{24}{figure.caption.38}\protected@file@percent }
-\newlabel{fig:fig_pay_all.png}{{23}{24}{Adjusted pay association of skills, all postings}{figure.caption.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Analytics Jobs: salary bands and experience requirements.}}{25}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:fig_salary_experience.png}{{24}{25}{Analytics Jobs: salary bands and experience requirements}{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Skill mix by city (top 15 skills, top 10 cities).}}{25}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:fig_city.png}{{25}{25}{Skill mix by city (top 15 skills, top 10 cities)}{figure.caption.40}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces RQ4 inputs: gaps (left) and the value of closing them (right).}}{25}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:fig_rq4_inputs.png}{{26}{25}{RQ4 inputs: gaps (left) and the value of closing them (right)}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {E}SAS code for the core analyses}{25}{appendix.E}\protected@file@percent }
-\newlabel{app:sas}{{E}{25}{SAS code for the core analyses}{appendix.E}{}}
-\@writefile{lol}{\contentsline {lstlisting}{appendix/d2s\textunderscore core\textunderscore analysis.sas}{26}{lstlisting.-1}\protected@file@percent }
-\gdef \@abspage@last{30}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Reproducibility}{24}{appendix.A}\protected@file@percent }
+\newlabel{app:repro}{{A}{24}{Reproducibility}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Role-family rules}{24}{appendix.B}\protected@file@percent }
+\newlabel{app:families}{{B}{24}{Role-family rules}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}RQ4 course catalogue (assumptions)}{24}{appendix.C}\protected@file@percent }
+\newlabel{app:catalogue}{{C}{24}{RQ4 course catalogue (assumptions)}{appendix.C}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Additional figures}{25}{appendix.D}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Spearman correlations, including the outcome.}}{25}{figure.caption.35}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Odds ratios per +1 SD (L2 logistic regression, bootstrap 95\% CI).}}{25}{figure.caption.36}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces SDS: trait scores by success outcome.}}{25}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:fig_sds_dist.png}{{21}{25}{SDS: trait scores by success outcome}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces RQ2 depth-3 decision tree.}}{26}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:fig_jds_tree.png}{{22}{26}{RQ2 depth-3 decision tree}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Adjusted pay association of skills, all postings.}}{26}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:fig_pay_all.png}{{23}{26}{Adjusted pay association of skills, all postings}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Analytics Jobs: salary bands and experience requirements.}}{27}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:fig_salary_experience.png}{{24}{27}{Analytics Jobs: salary bands and experience requirements}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Skill mix by city (top 15 skills, top 10 cities).}}{27}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:fig_city.png}{{25}{27}{Skill mix by city (top 15 skills, top 10 cities)}{figure.caption.41}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces RQ4 inputs: gaps (left) and the value of closing them (right).}}{27}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:fig_rq4_inputs.png}{{26}{27}{RQ4 inputs: gaps (left) and the value of closing them (right)}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {E}SAS code for the core analyses}{27}{appendix.E}\protected@file@percent }
+\newlabel{app:sas}{{E}{27}{SAS code for the core analyses}{appendix.E}{}}
+\@writefile{lol}{\contentsline {lstlisting}{appendix/d2s\textunderscore core\textunderscore analysis.sas}{28}{lstlisting.-1}\protected@file@percent }
+\gdef \@abspage@last{31}

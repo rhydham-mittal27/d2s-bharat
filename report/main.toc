@@ -1,32 +1,33 @@
 \contentsline {section}{Executive Summary}{1}{Doc-Start}%
 \contentsline {section}{\numberline {1}Problem Definition and Analytics Objective}{2}{section.1}%
-\contentsline {section}{\numberline {2}Approach}{2}{section.2}%
-\contentsline {section}{\numberline {3}Data Exploration and Preparation}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The four datasets and their quality}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Analytics Jobs: cleaning and derived variables}{4}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Skill normalisation: from 10,000+ free-text tags to comparable skills}{5}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Role families}{7}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}DataScience Jobs}{7}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}JDS and SDS: employee skill and trait data}{7}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Data Analysis I: Market Demand and Pay (RQ1)}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Demand}{9}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Pay, after accounting for experience}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Skill bundles}{10}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Company-level view (DataScience Jobs)}{11}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Triangulation: the five JDS skill areas in the market}{11}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Data Analysis II: Junior Skills and Senior Traits (RQ2, RQ3)}{12}{section.5}%
-\contentsline {subsection}{\numberline {5.1}RQ2: which skills are associated with a high salary hike for juniors?}{13}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}RQ3: which traits are associated with senior success?}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Suppressor effects and caution}{14}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Data Analysis III: What to Teach First (RQ4)}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Model}{15}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}The optimal plan}{16}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Sensitivity: what would change the decision?}{16}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Robustness}{17}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Results and Conclusions}{18}{section.7}%
-\contentsline {section}{\numberline {8}Implications}{19}{section.8}%
-\contentsline {section}{\numberline {A}Reproducibility}{22}{appendix.A}%
-\contentsline {section}{\numberline {B}Role-family rules}{22}{appendix.B}%
-\contentsline {section}{\numberline {C}RQ4 course catalogue (assumptions)}{22}{appendix.C}%
-\contentsline {section}{\numberline {D}Additional figures}{23}{appendix.D}%
-\contentsline {section}{\numberline {E}SAS code for the core analyses}{25}{appendix.E}%
+\contentsline {section}{\numberline {2}Approach}{3}{section.2}%
+\contentsline {section}{\numberline {3}Data Exploration: Manipulation, Derivation, Consolidation and Preparation}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Consolidated data-quality audit}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Data modification: repairing and standardising values}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Data derivation: new variables}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Data deduction: redundant records and ambiguous cases}{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Data reduction: from high-cardinality text to analysable categories}{6}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Consolidation: dataset profiles and exploratory findings}{9}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Data Analysis}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Market Demand and Pay (RQ1)}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Demand}{10}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Pay, after accounting for experience}{11}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Skill bundles}{12}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Company-level view (DataScience Jobs)}{13}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Triangulation: the five JDS skill areas in the market}{13}{subsubsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.2}Junior Skills and Senior Traits (RQ2, RQ3)}{14}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}RQ2: which skills are associated with a high salary hike for juniors?}{15}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}RQ3: which traits are associated with senior success?}{15}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Suppressor effects and caution}{16}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}What to Teach First (RQ4)}{17}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Model}{17}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}The optimal plan}{18}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Sensitivity: what would change the decision?}{18}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Robustness}{19}{subsubsection.4.3.4}%
+\contentsline {section}{\numberline {5}Results and Conclusions}{20}{section.5}%
+\contentsline {section}{\numberline {6}Implications}{21}{section.6}%
+\contentsline {section}{\numberline {A}Reproducibility}{24}{appendix.A}%
+\contentsline {section}{\numberline {B}Role-family rules}{24}{appendix.B}%
+\contentsline {section}{\numberline {C}RQ4 course catalogue (assumptions)}{24}{appendix.C}%
+\contentsline {section}{\numberline {D}Additional figures}{25}{appendix.D}%
+\contentsline {section}{\numberline {E}SAS code for the core analyses}{27}{appendix.E}%

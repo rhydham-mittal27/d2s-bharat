@@ -19,19 +19,19 @@
 \node[prep] (p3) at (2,1) {audit IDs, ranges,\\ceiling effect};
 \node[prep] (p4) at (3,1) {fix headers,\\audit IDs};
 % row 2: reduction
-\node[wide,minimum width=7.2cm] (red) at (0.5,2) {Data reduction: titles $\rightarrow$ 10 role families;
+\node[wide,minimum width=7.2cm] (red) at (0.5,2) {Data reduction: titles $\rightarrow$ 10 role families;\\
 tags $\rightarrow$ 6,604 canonical skills (ESCO/O*NET)};
 % row 3: research questions
-\node[rq,minimum width=7.2cm] (rq1) at (0.5,3) {\textbf{RQ1} demand \& pay: Wilson CIs, ordinal logit, association rules};
+\node[rq,minimum width=7.2cm] (rq1) at (0.5,3) {\textbf{RQ1} demand \& pay\\Wilson CIs, ordinal logit, association rules};
 \node[rq] (rq2) at (2,3) {\textbf{RQ2} junior skills\\tests, L2-logit, tree};
 \node[rq] (rq3) at (3,3) {\textbf{RQ3} senior traits\\tests, L2-logit, tree};
 % row 4: triangulation
-\node[wide,minimum width=11.0cm] (tri) at (1,4) {Triangulation: the 5 JDS skill areas in the market (RQ1) vs junior salary hikes (RQ2)};
+\node[wide,minimum width=10.4cm] (tri) at (0.9,4) {Triangulation: the 5 JDS skill areas in the market (RQ1) vs junior salary hikes (RQ2)};
 % row 5: decision
-\node[dec,minimum width=11.0cm] (rq4) at (1,5) {\textbf{RQ4} CP-SAT training plan: gaps (JDS) $\times$ value (RQ1 + RQ2) under budget, trainers, seats};
+\node[dec,minimum width=10.4cm] (rq4) at (0.9,5) {\textbf{RQ4} CP-SAT training plan: gaps (JDS) $\times$ value (RQ1 + RQ2)\\under budget, trainer-hour and seat limits};
 \node[rq] (people) at (3,5) {RQ3 $\rightarrow$ mentoring\\\& assessment};
 % row 6: outputs
-\node[dec,minimum width=11.0cm] (out) at (1,6) {Sensitivity \textbullet{} Pareto frontier \textbullet{} robustness (9 scenarios) \textbullet{} why-not};
+\node[dec,minimum width=10.4cm] (out) at (0.9,6) {Sensitivity \textbullet{} Pareto frontier \textbullet{} robustness (9 scenarios) \textbullet{} why-not};
 % arrows (all vertical, no crossings)
 \foreach \a/\b in {aj/p1, dj/p2, jds/p3, sds/p4, p3/rq2, p4/rq3, rq3/people, rq4/out}
   \draw[arr] (\a) -- (\b);
