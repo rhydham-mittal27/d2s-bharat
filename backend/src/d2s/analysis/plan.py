@@ -63,8 +63,11 @@ def evidence_weights(tri: pd.DataFrame, scheme: str = "balanced", bound: str = "
                          "hike_c": scaled(hike), "weight": score})
 
 
-def load_catalogue(path) -> list[Course]:
-    df = pd.read_csv(path).fillna("")
+def load_catalogue(source) -> list[Course]:
+    """source: path to the catalogue CSV, or an already-loaded list of courses (e.g. from the database)."""
+    if isinstance(source, list):
+        return list(source)
+    df = pd.read_csv(source).fillna("")
     courses = []
     for r in df.to_dict("records"):
         cov = {a: int(r[f"cov_{a}"]) for a in AREAS if r.get(f"cov_{a}", "") not in ("", 0)}
@@ -75,6 +78,19 @@ def load_catalogue(path) -> list[Course]:
             exclusive_group=r["exclusive_group"] or None, mandatory=str(r["mandatory"]).lower() == "true",
         ))
     return courses
+
+
+def catalogue_frame(courses: list[Course]) -> pd.DataFrame:
+    """Courses in the catalogue CSV's column layout (cov_<area> columns, ';'-joined prerequisites)."""
+    rows = []
+    for c in courses:
+        r = {"id": c.id, "name": c.name, "fixed_cost": c.fixed_cost, "cost_per_seat": c.cost_per_seat,
+             "min_batch": c.min_batch, "max_seats": c.max_seats, "trainer_hours": c.trainer_hours,
+             "prerequisites": ";".join(c.prerequisites), "exclusive_group": c.exclusive_group or "",
+             "mandatory": c.mandatory}
+        r.update({f"cov_{a}": c.coverage.get(a) for a in AREAS})
+        rows.append(r)
+    return pd.DataFrame(rows)
 
 
 def build_problem(gaps: pd.DataFrame, weights: pd.DataFrame, courses: list[Course], budget: int,

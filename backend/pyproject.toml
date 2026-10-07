@@ -21,6 +21,23 @@ workers = [
     "arq>=0.27",
     "redis>=5.0",
 ]
+api = [
+    "fastapi>=0.115",
+    "pwdlib[argon2]>=0.2",
+    "pyjwt>=2.9",
+    "python-multipart>=0.0.9",
+    "uvicorn[standard]>=0.30",
+]
+db = [
+    "chromadb>=1.0",
+    "psycopg[binary]>=3.2",
+    "sqlalchemy>=2.0",
+]
+agents = [
+    "langchain-core>=0.3",
+    "langchain-ollama>=0.3",
+    "langgraph>=0.6",
+]
 
 [dependency-groups]
 dev = [

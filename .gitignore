@@ -1,2 +1,9 @@
 /dataset 
 *.pyc
+# secrets (Supabase connection string etc.)
+.env
+.env.*
+!.env.example
+
+# server and run logs
+*.log
