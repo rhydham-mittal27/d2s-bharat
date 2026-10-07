@@ -1,0 +1,9 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import time; t=time.time()
+from d2s.ml.taxonomy import load_onet, load_esco
+o=load_onet(); e=load_esco(); m=o.merge(e)
+print('onet', o.version, len(o.skills), 'skills', len(o.occupations), 'occ', len(o.links), 'links')
+print('esco', e.version, len(e.skills), 'skills', len(e.occupations), 'occ', len(e.links), 'links')
+print('merged', m.version, len(m.skills), 'skills', f'{time.time()-t:.1f}s')
+from collections import Counter; print(Counter(s.kind for s in m.skills.values()).most_common())
+"

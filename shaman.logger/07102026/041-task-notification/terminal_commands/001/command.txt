@@ -1,0 +1,13 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import importlib
+for m in ['sentence_transformers','torch','sklearn','matplotlib','statsforecast']:
+    try: mod=importlib.import_module(m); print(m, getattr(mod,'__version__','?'))
+    except Exception as e: print(m, 'MISSING', type(e).__name__)
+import pandas as pd
+d=pd.read_json('../dataset/jobs/naukri/naukri_data_scientist.jsonl', lines=True)
+d['createdDate']=pd.to_datetime(d['createdDate'])
+print(d['createdDate'].min(), d['createdDate'].max())
+print(d['createdDate'].dt.to_period('M').value_counts().sort_index().to_string())
+print('unique jobId', d['jobId'].nunique(), 'desc null', d['jobDescription'].isna().sum())
+print(d['location'].str.split(',').str[0].value_counts().head(8).to_string())
+"

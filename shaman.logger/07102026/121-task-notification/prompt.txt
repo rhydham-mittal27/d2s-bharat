@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b0c9o7wj0</task-id>
+<summary>Monitor event: "SAS ingestion run (milestones)"</summary>
+<event>[   98.9s] text extraction: 2,816/14,840 posts</event>
+</task-notification>

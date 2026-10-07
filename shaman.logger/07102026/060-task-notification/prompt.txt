@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[  438.4s] lexical extraction: 10,000/88,561 posts (2,511 posts/s)
+[  439.0s] lexical extraction: 12,000/88,561 posts (2,642 posts/s)</event>
+</task-notification>

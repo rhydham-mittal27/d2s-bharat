@@ -1,0 +1,27 @@
+    course_id  seats  cost  trainer_hours
+       py_sql     35 70500             40
+     sas_prog     60 45000             30
+        stats     60 78000             40
+           ml     50 97000             48
+story_tableau     58 62400             30
+                         skill_id  learners_short  learners_closed  closure_pct
+                    coding_skills              77             77.0        100.0
+               maths_stats_skills              82             82.0        100.0
+                 ai_and_ml_skills              71             50.0         70.4
+                  big_data_skills              65              0.0          0.0
+dashboard_and_storytelling_skills              58             58.0        100.0
+                             area  demand_c  market_c  hike_c  weight
+                    coding_skills       1.0       0.9     0.5    99.7
+               maths_stats_skills       0.4       1.0     1.0   100.0
+                 ai_and_ml_skills       0.4       0.8     0.6    77.3
+                  big_data_skills       0.3       0.6     0.5    59.4
+dashboard_and_storytelling_skills       0.3       0.3     0.9    62.9
+Python & SQL for Analytics                                  9
+SAS Programming on SAS Viya for Learners                    9
+Applied Statistics & Probability                            9
+Machine Learning Foundations                                9
+Deep Learning & NLP                                         0
+Big-Data Stack: Hadoop, Spark, Hive (taught as a bundle)    2
+Data Storytelling with Tableau                              7
+Dashboards & Storytelling with Power BI                     0
+Integrated Analytics Bootcamp (capstone)                    0

@@ -1,0 +1,13 @@
+-rw-r--r-- 1 Rhydham 197121 2658042 Oct  7 12:46 SAS Data Problem Statement and Instructions Hackathon (1).zip
+Archive:  SAS Data Problem Statement and Instructions Hackathon (1).zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+        0  2026-09-02 12:41   SAS Data Problem Statement and Instructions Hackathon/
+  3610518  2026-02-09 16:34   SAS Data Problem Statement and Instructions Hackathon/Analytics Jobs.csv
+   159874  2026-02-09 18:48   SAS Data Problem Statement and Instructions Hackathon/Data Description Doc.pdf
+    96390  2026-02-09 16:34   SAS Data Problem Statement and Instructions Hackathon/DataScience Jobs.csv
+    16190  2026-02-09 17:02   SAS Data Problem Statement and Instructions Hackathon/JDS Skill Traits.xlsx
+  1385698  2026-04-27 19:13   SAS Data Problem Statement and Instructions Hackathon/Problem Context Brief,  SAS VFL Demos, Guidelines Dos and Donts.pdf
+    14839  2026-02-09 17:11   SAS Data Problem Statement and Instructions Hackathon/SDS Personality Traits.xlsx
+---------                     -------
+  5283509                     7 files

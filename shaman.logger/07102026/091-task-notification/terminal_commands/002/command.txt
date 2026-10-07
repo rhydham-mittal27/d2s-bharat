@@ -1,0 +1,2 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/ingest" && cat eval_threshold_sweep.csv | column -t -s, ; python -c "
+import pandas as pd; e=pd.read_csv('eval_examples.csv'); print(e.sample(10,random_state=3)[['sentence','gold','top1','top1_similarity','gold_rank']].to_string(max_colwidth=45))"

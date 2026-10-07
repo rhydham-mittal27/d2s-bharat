@@ -1,0 +1,9 @@
+{'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577} False
+queue 5474 {'review': 3363, 'unmapped': 2111}
+post_skills 45869
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/make_ingestion_report.py:187:    return save(fig, "07_tag_mapping.png")
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/make_ingestion_report.py:312:    tags = pd.read_csv(IN / "tag_mapping.csv")
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/make_sas_report.py:101:    return save(fig, "03_tag_mapping.png")
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/make_sas_report.py:258:    tags = pd.read_csv(IN / "tag_mapping.csv")
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/run_ingestion.py:136:    tags.to_csv(out / "tag_mapping.csv", index=False)
+C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/run_sas_ingestion.py:67:    tag_table.to_csv(out / "tag_mapping.csv", index=False)

@@ -1,0 +1,58 @@
+hybrid per post 18.9 | lexical per post 5.6
+== HYBRID sample
+label                                     taxonomy  match_type
+Design                                    onet      lexical       741
+Science                                   onet      lexical       678
+follow verbal instructions                esco      semantic      605
+data engineering                          esco      semantic      593
+SQL                                       esco      lexical       469
+communication                             esco      lexical       462
+perform data mining                       esco      semantic      450
+computer science                          esco      lexical       420
+Python                                    onet      lexical       401
+teach computer science                    esco      semantic      396
+work in teams                             esco      semantic      365
+statistics                                esco      lexical       343
+lead others                               esco      lexical       297
+Programming languages                     onet      semantic      297
+High-performance software libraries       onet      semantic      281
+business requirements techniques          esco      semantic      275
+work with broad variety of personalities  esco      semantic      273
+have computer literacy                    esco      semantic      257
+ICT project management methodologies      esco      lexical       244
+database                                  esco      lexical       241
+== LEXICAL all
+label                                 taxonomy  match_type
+Design                                onet      lexical       25717
+Science                               onet      lexical       16909
+computer science                      esco      lexical       15701
+communication                         esco      lexical       14527
+Java (computer programming)           esco      lexical       12231
+Programming                           onet      lexical       11811
+SQL                                   esco      lexical       11258
+JavaScript                            onet      lexical       10176
+Python                                onet      lexical        9340
+ICT project management methodologies  esco      lexical        8400
+lead others                           esco      lexical        8006
+database                              esco      lexical        7374
+style sheet languages                 esco      lexical        6254
+PHP                                   onet      lexical        5929
+Git                                   onet      lexical        5797
+DevOps                                esco      lexical        5674
+SAP Data Services                     esco      lexical        5183
+React                                 onet      lexical        5072
+MySQL                                 onet      lexical        4800
+Visual Basic                          esco      lexical        4771
+== semantic-only examples (random)
+0.69 | interact verbally in English             | 6) Candidates should be fluent in English.
+0.76 | Operations Analysis                      | 8 years of relevant experience of managing a large scale enterprise application developmen
+0.76 | ICTraining                               | solid programming skills in Python, SQL querying, and Scala
+0.71 | older adults' needs                      | Seeking an individual with senior level experience
+0.83 | Web-administered databases               | Manage and optimize database operations for e-commerce websites.
+0.75 | Talent Technology HireDesk               | IT Hiring Manager
+0.79 | SmartDraw                                | Ability to improve automation through the CI/CD pipeline through analysis of the current p
+0.69 | Candidate screening software             | Preferred candidate profile
+0.69 | Amazon Elastic Container Service ECS     | Possesses hands-on technical experience working in AWS
+0.79 | OpenAI ChatGPT                           | Chatbot Developer
+0.73 | Hugging Face                             | Lead Application Developer
+0.81 | engineering processes                    | Mentor junior engineers and colleagues on model-based development techniques and tools

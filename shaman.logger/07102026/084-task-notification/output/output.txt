@@ -1,0 +1,1 @@
+The semantic sample is running at about **9 posts per second**, and 960 of 3,000 posts are done. That's about 4 more minutes, then roughly 2 minutes for tag mapping and the ESCO↔O\*NET crosswalk.

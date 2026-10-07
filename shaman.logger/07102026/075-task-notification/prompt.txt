@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[1 events suppressed — output rate too high. Consider using TaskStop to restart this monitor with a more selective filter.]</event>
+</task-notification>

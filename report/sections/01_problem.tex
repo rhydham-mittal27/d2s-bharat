@@ -1,0 +1,52 @@
+\section{Problem Definition and Analytics Objective}\label{sec:problem}
+
+\textbf{Context.} India's analytics job market changes faster than curricula. Universities, skilling
+providers and CSR programmes must decide what to teach with limited budget, trainers and seats,
+but lack evidence on three questions: which skills the market \emph{demands and pays for}, which
+skills are associated with \emph{early-career growth}, and which personal traits are associated
+with \emph{success among senior} data scientists. The SAS-provided data covers all three: job
+postings (Analytics Jobs), company-level openings and salaries (DataScience Jobs), and two
+outcome-labelled employee datasets (JDS Skill Traits for juniors, SDS Personality Traits for
+seniors).
+
+\begin{center}
+\fcolorbox{sasblue}{sasblue!6}{\parbox{0.94\linewidth}{\textbf{Analytics objective.}
+To identify the technical skills and personality traits most strongly associated with
+labour-market demand, pay and on-the-job success for data-science professionals, and to
+translate this evidence into a budget-constrained, explainable training plan that tells an
+institution \emph{what to teach first}.}}
+\end{center}
+
+\begin{table}[H]\centering\small
+\caption{Research questions, data and methods.}\label{tab:rq}
+\begin{tabularx}{\linewidth}{@{}L{2.0cm}Y L{3.4cm} L{3.9cm}@{}}
+\toprule
+\textbf{RQ} & \textbf{Question} & \textbf{Data} & \textbf{Methods}\\
+\midrule
+RQ1 Demand \& pay & Which skills and roles are most demanded, and which are associated with
+higher salary bands, beyond experience? & Analytics Jobs (14,840 cleaned postings); DataScience Jobs
+(1,602 rows, 93,005 openings) & Cleaning, skill normalisation (ESCO/O*NET), Wilson CIs, ordinal
+logistic regression, FDR control, association rules \\
+\addlinespace
+RQ2 Junior growth & Which of five measured skill areas are associated with a high vs.\ low salary
+hike? & JDS Skill Traits (139) & Mann--Whitney U, effect sizes, regularised logistic regression,
+shallow tree, repeated CV, permutation test \\
+\addlinespace
+RQ3 Senior success & Which Big Five traits are associated with high vs.\ low success? & SDS
+Personality Traits (161) & As RQ2 \\
+\addlinespace
+RQ4 Decision & Given RQ1--RQ3, which training interventions should an institution prioritise under
+budget and capacity limits? & Evidence from RQ1--RQ3; documented cost assumptions & Integer
+optimisation (CP-SAT), sensitivity, Pareto frontier, robustness \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Scope.} Only the SAS-provided datasets are analysed; ESCO and O*NET
+\citep{esco2024,onet2025} serve solely as a skill vocabulary. Findings are associations, not
+causal effects. Analytics Jobs contains non-data roles too; we keep them for comparison and analyse
+the 5,138 data-role postings separately (Section~\ref{sec:families}).
+
+\textbf{Success criteria.} Each RQ is answered with a quantified finding; predictive models are
+judged against a majority-class baseline with cross-validated accuracy and AUC; the RQ4 plan states
+which constraints bind and what extra resources would change.

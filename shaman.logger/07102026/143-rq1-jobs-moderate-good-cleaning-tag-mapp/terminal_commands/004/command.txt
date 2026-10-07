@@ -1,0 +1,11 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd
+from pathlib import Path
+from d2s.ingest import parsing
+from d2s.analysis import jobs
+p,_=parsing.load_sas_analytics(Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon/Analytics Jobs.csv'))
+p['family']=p.title.map(jobs.role_family)
+o=p[p.family=='Other']
+print(o.title.value_counts().head(40).to_string())
+print(o.title.str.lower().str.findall(r'[a-z]+').explode().value_counts().head(40).to_dict())
+"

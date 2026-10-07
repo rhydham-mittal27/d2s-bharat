@@ -1,0 +1,10 @@
+ + matplotlib==3.11.2
+ + pillow==12.3.0
+ + pyparsing==3.3.3
+89965 ../dataset/jobs/naukri/naukri_software_engineer.jsonl
+(89966, 37) 87374
+createdDate
+2021     2810
+2022     4164
+2023    11020
+2024    58412

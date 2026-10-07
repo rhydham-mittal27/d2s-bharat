@@ -1,0 +1,1 @@
+tail -4 "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas_run.log"; tasklist | grep -i python | head

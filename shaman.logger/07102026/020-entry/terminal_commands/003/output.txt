@@ -1,0 +1,28 @@
+== Occupation Data.txt (1017 lines)
+O*NET-SOC Code	Title	Description
+11-1011.00	Chief Executives	Determine and formulate policies and provide overall direction of companies or private and public sector organizations within guidelines set up by a board of directors or similar governing body. Plan, direct, or coordinate operational activities at the highest level of management with the help of subordinate executives and staff managers.
+11-1011.03	Chief Sustainability Officers	Communicate and coordinate with management, shareholders, customers, and employees to address sustainability issues. Enact or oversee a corporate sustainability strategy.
+== Essential Skills.txt (17881 lines)
+O*NET-SOC Code	Element ID	Element Name	Scale ID	Data Value	N	Standard Error	Lower CI Bound	Upper CI Bound	Recommend Suppress	Not Relevant	Date	Domain Source
+11-1011.00	2.A.1.a	Reading Comprehension	IM	4.12	8	0.1250	3.8800	4.3700	N	n/a	08/2023	Analyst
+11-1011.00	2.A.1.a	Reading Comprehension	LV	4.62	8	0.1830	4.2664	4.9836	N	N	08/2023	Analyst
+== Transferable Skills.txt (44701 lines)
+O*NET-SOC Code	Element ID	Element Name	Scale ID	Data Value	N	Standard Error	Lower CI Bound	Upper CI Bound	Recommend Suppress	Not Relevant	Date	Domain Source
+11-1011.00	2.B.1.a	Social Perceptiveness	IM	4.12	8	0.1250	3.8800	4.3700	N	n/a	08/2023	Analyst
+11-1011.00	2.B.1.a	Social Perceptiveness	LV	4.25	8	0.1637	3.9292	4.5708	N	N	08/2023	Analyst
+== Software Skills.txt (31822 lines)
+O*NET-SOC Code	Workplace Example	Element ID	Element Name	Hot Technology	In Demand
+11-1011.00	Adobe Acrobat	2.E.5.b	Document management software	Y	N
+11-1011.00	AdSense Tracker	2.E.6.f	Data base user interface and query software	N	N
+== Knowledge.txt (59005 lines)
+O*NET-SOC Code	Element ID	Element Name	Scale ID	Data Value	N	Standard Error	Lower CI Bound	Upper CI Bound	Recommend Suppress	Not Relevant	Date	Domain Source
+11-1011.00	2.C.1.a	Administration and Management	IM	4.78	28	0.1102	4.5564	5.0000	N	n/a	08/2023	Incumbent
+11-1011.00	2.C.1.a	Administration and Management	LV	6.50	28	0.2130	6.0666	6.9409	N	N	08/2023	Incumbent
+== Emerging Tasks.txt (329 lines)
+O*NET-SOC Code	Task	Category	Original Task ID	Original Task	Date	Domain Source
+11-2022.00	Coach staff on sales tactics.	New	n/a	n/a	08/2025	Occupational Expert
+11-2022.00	Establish and monitor staff's sales goals.	New	n/a	n/a	08/2025	Occupational Expert
+== Content Model Reference.txt (3007 lines)
+Element ID	Element Name	Description
+1	Worker Characteristics	Personal traits and abilities that affect how people learn and perform at work.
+1.A	Abilities	Natural talents and capabilities that affect how well someone can perform work.

@@ -1,0 +1,1 @@
+The exact-name pass is running at about 2,800 posts per second and will finish all 88,561 posts in about 30 seconds. After that comes the 3,000-post semantic sample, which is the slow part. I won't comment on each progress line.

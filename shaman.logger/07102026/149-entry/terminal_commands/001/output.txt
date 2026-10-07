@@ -1,0 +1,6 @@
+3:\subsection{The four datasets and their quality}
+15:\subsection{Analytics Jobs: cleaning and derived variables}
+62:\subsection{Skill normalisation: from 10,000+ free-text tags to comparable skills}\label{sec:skills}
+92:\subsection{Role families}\label{sec:families}
+102:\subsection{DataScience Jobs}
+110:\subsection{JDS and SDS: employee skill and trait data}

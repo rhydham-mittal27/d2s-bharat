@@ -1,0 +1,10 @@
+id,name,fixed_cost,cost_per_seat,min_batch,max_seats,trainer_hours,cov_coding_skills,cov_maths_stats_skills,cov_ai_and_ml_skills,cov_big_data_skills,cov_dashboard_and_storytelling_skills,prerequisites,exclusive_group,mandatory,assumption_basis
+py_sql,Python & SQL for Analytics,60000,800,15,60,40,100,,,,,,,false,"trainer Rs1500/h x 40h; per seat: cloud notebooks + materials"
+sas_prog,SAS Programming on SAS Viya for Learners,45000,0,15,60,30,70,20,,,,,,false,"trainer Rs1500/h x 30h; SAS VFL is free for academic use"
+stats,Applied Statistics & Probability,60000,500,15,60,40,,100,,,,,,false,"trainer Rs1500/h x 40h; per seat: materials"
+ml,Machine Learning Foundations,72000,1500,15,50,48,,20,100,,,py_sql;stats,,false,"trainer Rs1500/h x 48h; per seat: compute"
+dl_nlp,Deep Learning & NLP,80000,3000,10,30,40,,,60,,,ml,,false,"trainer Rs2000/h x 40h; per seat: GPU compute"
+bigdata,"Big-Data Stack: Hadoop, Spark, Hive (taught as a bundle)",70000,2000,15,40,40,,,,100,,py_sql,,false,"trainer Rs1750/h x 40h; per seat: cluster time; bundle from RQ1 association rules"
+story_tableau,Data Storytelling with Tableau,45000,600,15,60,30,,,,,100,,viz_tool,false,"trainer Rs1500/h x 30h; per seat: academic licence/materials"
+story_powerbi,Dashboards & Storytelling with Power BI,40000,400,15,60,28,,,,,90,,viz_tool,false,"trainer Rs1430/h x 28h; per seat: materials"
+bootcamp,Integrated Analytics Bootcamp (capstone),150000,2500,20,40,90,40,40,30,,40,,,false,"trainer Rs1670/h x 90h; per seat: projects/compute; partial coverage of four areas"

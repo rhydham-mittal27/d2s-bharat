@@ -1,0 +1,33 @@
+sklearn 1.9.1
+scipy 1.18.1
+statsmodels 0.15.0
+openpyxl MISSING
+seaborn MISSING
+== JDS columns ['id', 'big_data_skills', 'maths-stats_skills', 'coding_skills', 'ai_and_ml_skills', 'dashboard_and_storytelling_skills', 'salary_hike_high_or_low']
+  id  big_data_skills  maths-stats_skills  coding_skills  ai_and_ml_skills  dashboard_and_storytelling_skills  salary_hike_high_or_low
+2223              3.3                 3.8            5.0               3.4                                2.5                        0
+2223              2.4                 3.4            3.1               4.3                                2.5                        0
+3291              4.8                 4.5            5.0               4.8                                5.0                        1
+3291              4.4                 3.0            3.3               4.6                                2.3                        0
+fully identical duplicate rows: 0
+== SDS columns ['id', 'neuroticism', ' extraversion', 'openness_to_experience', 'agreeableness', 'conscientiousness', 'success_ classification_ high_low']
+  id  neuroticism   extraversion  openness_to_experience  agreeableness  conscientiousness  success_ classification_ high_low
+8065           17             26                      34             30                 44                                  0
+8065           36             47                      54             52                 51                                  1
+8198           41             39                      48             46                 59                                  1
+8198           31             43                      42             59                 31                                  0
+8228           44             28                      44             61                 27                                  0
+8228           26             32                      37             44                 35                                  0
+8301           35             42                      34             29                 50                                  0
+8301           30             56                      41             48                 52                                  1
+8303           47             22                      32             42                 57                                  0
+8303           39             46                      47             50                 50                                  1
+8308           22             46                      44             60                 42                                  0
+8308           37             50                      53             41                 51                                  1
+8489           56             20                      23             21                 24                                  0
+8489           28             51                      53             56                 60                                  1
+8656           38             35                      42             39                 49                                  1
+8656           36             46                      45             44                 54                                  1
+8887           34             47                      49             52                 53                                  1
+8887           23             24                      39             37                 64                                  0
+fully identical duplicate rows: 0

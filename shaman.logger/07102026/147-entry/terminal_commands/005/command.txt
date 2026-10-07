@@ -1,0 +1,5 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed" && python -c "
+import json; s=json.load(open('sas/summary.json')); t=s['tags']; u=t['tag_uses_by_method']; tot=sum(u.values())
+print(t['distinct'], t['distinct_by_method'], {k: round(100*v/tot,1) for k,v in u.items()}, tot)
+print(s['calibration_at_threshold'], s['threshold'])
+"; cat ../../report/tables/describe_jds.tex ../../report/tables/describe_sds.tex

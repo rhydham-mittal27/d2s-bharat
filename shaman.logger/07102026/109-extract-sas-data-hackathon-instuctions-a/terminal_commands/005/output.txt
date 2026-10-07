@@ -1,0 +1,35 @@
+== JDS Skill Traits.xlsx / JDS (139, 7)
+     id  big_data_skills  maths-stats_skills  coding_skills  ai_and_ml_skills  dashboard_and_storytelling_skills  salary_hike_high_or_low
+0  2809              3.6                 4.0            4.5               4.8                                5.0                        1
+1  2231              5.0                 3.8            3.3               5.0                                4.4                        0
+2  3522              4.1                 3.8            4.4               4.2                                5.0                        1
+3  3291              4.4                 3.0            3.3               4.6                                2.3                        0
+4  3424              2.3                 2.3            2.6               3.3                                3.0                        0
+            id  big_data_skills  maths-stats_skills  coding_skills  ai_and_ml_skills  dashboard_and_storytelling_skills  salary_hike_high_or_low
+count   139.00           139.00              139.00         139.00            139.00                             139.00                   139.00
+mean   2958.46             3.85                4.29           4.27              4.57                               4.36                     0.53
+std     604.54             0.85                0.84           0.89              0.67                               0.93                     0.50
+min    2007.00             2.30                2.20           2.20              2.20                               2.30                     0.00
+25%    2383.50             3.10                3.80           3.35              4.40                               3.75                     0.00
+50%    2963.00             3.80                4.60           4.60              4.90                               5.00                     1.00
+75%    3452.00             4.60                5.00           5.00              5.00                               5.00                     1.00
+max    4000.00             5.00                5.00           5.00              5.00                               5.00                     1.00
+== SDS Personality Traits.xlsx / SDS (161, 7)
+     id  neuroticism   extraversion  openness_to_experience  agreeableness  conscientiousness  success_ classification_ high_low
+0  8120           33             34                      39             45                 51                                  1
+1  8951           50             36                      31             59                 39                                  0
+2  8656           38             35                      42             39                 49                                  1
+3  8796           41             26                      30             40                 19                                  0
+4  8470           20             17                      21             31                 26                                  0
+            id  neuroticism   extraversion  openness_to_experience  agreeableness  conscientiousness  success_ classification_ high_low
+count   161.00       161.00         161.00                  161.00         161.00             161.00                             161.00
+mean   8484.60        36.19          43.20                   41.33          44.60              45.21                               0.53
+std     280.36        11.27          12.13                   11.32          11.29              13.21                               0.50
+min    8001.00        17.00          17.00                   18.00          17.00              18.00                               0.00
+25%    8228.00        27.00          34.00                   32.00          39.00              35.00                               0.00
+50%    8504.00        34.00          45.00                   44.00          46.00              49.00                               1.00
+75%    8729.00        44.00          53.00                   49.00          51.00              56.00                               1.00
+max    8979.00        68.00          67.00                   65.00          68.00              66.00                               1.00
+analytics nulls {'s_no': 0, 'experience': 0, 'job_description': 3508, 'job_desig': 0, 'job_type': 12011, 'key_skills': 1, 'location': 0, 'salary': 0}
+{'Analytics': 2971, 'analytics': 746, 'ANALYTICS': 64, 'analytic': 30, 'Analytic': 19}
+{'10to15': 3608, '15to25': 3281, '6to10': 2876, '0to3': 2592, '3to6': 2239, '25to50': 1245}

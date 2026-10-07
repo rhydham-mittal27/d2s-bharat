@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python scripts/make_sas_report.py 2>&1 | tail -2 && uv run --no-sync pytest -q 2>&1 | tail -1

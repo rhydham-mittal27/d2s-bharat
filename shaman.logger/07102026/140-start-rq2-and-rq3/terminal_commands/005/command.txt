@@ -1,0 +1,14 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/rq23" && python -c "
+import pandas as pd
+c=pd.read_csv('rq3_sds_correlations.csv', index_col=0); print(c.round(2).to_string())
+c=pd.read_csv('rq2_jds_correlations.csv', index_col=0); print(c.round(2).to_string())
+"; cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd, numpy as np, statsmodels.api as sm
+from d2s.analysis.traits import load_sds
+from pathlib import Path
+ds=load_sds(Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon/SDS Personality Traits.xlsx'))
+X=(ds.X-ds.X.mean())/ds.X.std()
+for cols in [['neuroticism'], ['neuroticism','conscientiousness','openness_to_experience'], ds.features]:
+    m=sm.Logit(ds.y, sm.add_constant(X[cols])).fit(disp=0)
+    print(cols, 'neuroticism coef', round(m.params['neuroticism'],2), 'p', round(m.pvalues['neuroticism'],4))
+"

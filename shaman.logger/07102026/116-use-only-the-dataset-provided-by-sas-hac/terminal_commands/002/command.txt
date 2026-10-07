@@ -1,0 +1,8 @@
+echo "- [SAS dataset only](d2s-sas-dataset-only.md) — SAS CU Hackathon = Build for Bharat; use only SAS-provided files; ESCO/O*NET kept as vocabulary" >> "C:/Users/Rhydham/.claude/projects/C--Users-Rhydham-Desktop-projects-shaman/memory/MEMORY.md"; cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd, re
+s=pd.read_csv('../hackathon/SAS Data Problem Statement and Instructions Hackathon/DataScience Jobs.csv')
+for c in ['avg_salary','min_salary','max_salary']: print(c, s[c].astype(str).str.replace(r'[\d.]','',regex=True).value_counts().to_dict())
+a=pd.read_csv('../hackathon/SAS Data Problem Statement and Instructions Hackathon/Analytics Jobs.csv')
+print(a.experience[~a.experience.str.match(r'^\d+-\d+ yrs$', na=False)].value_counts().head(10).to_dict())
+t=a.key_skills.dropna().str.split(',').explode().str.strip(); print('tags ending ...', t.str.endswith('...').sum(), t[t.str.endswith('...')].head(5).tolist())
+"

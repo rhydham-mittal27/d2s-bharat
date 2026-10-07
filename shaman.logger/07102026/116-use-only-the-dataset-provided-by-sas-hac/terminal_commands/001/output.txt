@@ -1,0 +1,20 @@
+rows 15841 dup s_no 0 dup rows(excl s_no) 1001
+experience top: {'5-10 yrs': 1010, '2-5 yrs': 964, '3-8 yrs': 750, '2-7 yrs': 665, '3-5 yrs': 545, '4-9 yrs': 527, '3-6 yrs': 523, '7-12 yrs': 485}
+salary: {'10to15': 3608, '15to25': 3281, '6to10': 2876, '0to3': 2592, '3to6': 2239, '25to50': 1245}
+location top: {'Bengaluru': 3333, 'Mumbai': 1992, 'Gurgaon': 1313, 'Pune': 945, 'Hyderabad': 878, 'Chennai': 786, 'Delhi NCR': 593, 'Noida': 403}
+multi-city share 0.161
+job_type: {'Analytics': 2971, 'analytics': 746, 'ANALYTICS': 64, 'analytic': 30, 'Analytic': 19}
+key_skills: tags/post 5.0 distinct 10659
+{'...': 946, 'SQL': 742, 'Analytics': 691, 'Python': 644, 'Java': 566, 'Finance': 531, 'SAS': 517, 'R': 516, 'Machine Learning': 423, 'Javascript': 418, 'Business Analysis': 375, 'Digital Marketing': 371, 'Data Analysis': 359, 'Outsourcing': 358, 'SEO': 336, 'Sales': 282, 'Accounting': 270, 'Excel': 267, 'Project Management': 256, 'Business process': 255, 'HTML': 252, 'Data Analytics': 245, 'Hadoop': 243, 'finance': 225, 'Marketing': 221}
+desig top: {'Business Analyst': 108, 'Data Scientist': 64, 'Data Analyst': 50, 'Digital Marketing Manager': 45, 'Home Base Job/ Data Entry/online Work/part Time Work/freelancer work': 45, 'Product Manager': 44, 'Digital Marketing Executive': 36, 'Analyst': 35, 'SEO Executive': 29, 'SEO Analyst': 26}
+desc len median 104.0 p10 93.0 p90 108.0
+'5-7 years of experience;Should understand technology well;Should ideally have a good pedigree;Some ...'
+{'Data Scientist': 188, 'Business Analyst': 188, 'Data Engineer': 188, 'Data Analyst': 187, 'Senior Business Analyst': 187, 'Senior Data Analyst': 187, 'Senior Data Scientist': 185, 'Senior Data Engineer': 183, 'Machine Learning Engineer': 59, 'Data Architect': 50}
+{1: 358, 2: 356, 3: 233, 4: 191, 0: 170, 5: 125, 6: 55, 7: 48, 8: 27, 9: 10, 10: 10, 13: 5, 14: 4, 12: 4, 11: 3, 15: 1, 21: 1, 16: 1}
+      reference_no   company_name                  job_title  min_experience avg_salary min_salary max_salary  num_of_jobs
+1224          3783        Wissend        Senior Data Analyst               0       1.9L       1.4L       2.2L           11
+664           5617       Lumiq.ai              Data Engineer               0       8.1L       6.0L       9.5L           16
+1493          8730            TCS  Machine Learning Engineer               1       5.8L       4.0L       9.3L          193
+490           5864  Cisco Systems               Data Analyst               3       9.0L       4.0L      21.7L           38
+1419          3802      DataWeave       Senior Data Engineer               3      13.5L      11.3L      16.0L            6
+ds jobs total 93005 companies 642 dup 0

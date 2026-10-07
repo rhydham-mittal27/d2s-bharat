@@ -1,0 +1,57 @@
+I've extracted the SAS hackathon zip to `hackathon/` and gone through all 6 files. The ingestion run is meanwhile at 2,880 of 3,000 posts, nearly done.
+
+## What this hackathon is
+It's the **SAS CU Hackathon** (SAS with Chandigarh University), and it's **a different competition from Build for Bharat**. It's a data-analysis contest: SAS supplies the datasets and you set your own analytics objective. The theme is *data science jobs, skills and the personality traits of data scientists*.
+
+**Their tip:** "Everything depends on your problem identification. Do not haste." They expect real time spent on framing the objective.
+
+## The 4 datasets (sample data, 2024–25)
+| File | Rows | What's in it | Data issues I found |
+|---|---|---|---|
+| **Analytics Jobs.csv** | 15,841 | experience, job description, designation, job type, **key skills**, location, salary band | 22% of descriptions empty (3,508); job type 76% empty and inconsistent ("Analytics" / "analytics" / "ANALYTICS"); salary bands stored as text ("10to15") |
+| **DataScience Jobs.csv** | 1,602 | company, job title, minimum experience, average/min/max salary, number of jobs | salaries stored as text ("7.8L") |
+| **JDS Skill Traits.xlsx** (junior data scientists) | 139 | 1–5 scores: big data, maths-stats, coding, AI/ML, dashboard & storytelling → **salary hike (1 = high / 0 = low)** | 53% high, so the two classes are balanced; small sample |
+| **SDS Personality Traits.xlsx** (senior data scientists) | 161 | Big Five scores (neuroticism, extraversion, openness, agreeableness, conscientiousness) → **success (1 = high / 0 = low)** | 53% high; small sample; one column name contains spaces |
+
+The organisers themselves warn that the data contains misspellings, outliers and masked entries.
+
+## How it's judged
+**Round 2: written report, 70% of the final score.** Word format, 20–25 pages plus appendix, Times New Roman 12 pt. Marking (out of 100):
+
+| Section | Marks |
+|---|---|
+| Problem definition | 10 |
+| Approach | 15 |
+| **Data exploration and preparation** | **25** |
+| **Data analysis** (statistics / data mining / machine learning) | **30** |
+| Results and conclusions | 10 |
+| Implications for stakeholders | 10 |
+
+**Round 3: presentation, 30%, top 8 teams.** 15–25 PowerPoint slides, 10 minutes, plus 3–5 minutes of jury Q&A. Marking (out of 100):
+
+| Section | Marks |
+|---|---|
+| Communication | 25 |
+| Jury Q&A | 25 |
+| Storyline | 20 |
+| Conclusions | 15 |
+| Graphics | 10 |
+| Slide management | 5 |
+
+**Tools:** any tool is allowed (Python, R, Julia, Scala, SAS). Using SAS software means uploading the data to SAS Viya for Learners, which needs a SAS profile and a university email address. They suggest building a SAS Visual Analytics report and a SAS Model Studio model. Excel is "discouraged", allowed only for preliminary work.
+
+**Rules to watch:**
+- "No e-mail access or data transfers to outside world."
+- No cross-team discussion.
+- The jury's decision is final.
+
+## How it connects to our work
+- Our D2S skill-extraction pipeline fits **Analytics Jobs.csv** directly. Its `key_skills` column works as recruiter tags, like Naukri's, so we could map 15,841 posts to ESCO/O\*NET skills and compare demand by role, salary band and city.
+- One possible objective linking all four files: *which skills does the market pay for (job data), which skills predict a salary hike for juniors (JDS), and which traits predict success for seniors (SDS)?* That gives a single story, from market demand to individual success. It's a suggestion; the framing is your call.
+
+## Check before using any of this
+1. **Is outside data allowed?** The rules ban data transfers during the event. Ask the organisers whether ESCO/O\*NET or our pretrained model can be used, or whether only the provided files count.
+2. **Confidentiality.** The deck is marked *"Company Confidential, For Internal Use Only"*, so I won't publish anything from it.
+3. **Rule 2's scope.** The ban on emailing or transferring data to the outside world may mean the analysis has to be done on-site.
+
+Want me to start an exploratory analysis of these four files once the ingestion report is finished?

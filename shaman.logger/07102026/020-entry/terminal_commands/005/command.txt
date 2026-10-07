@@ -1,0 +1,1 @@
+cat "C:/Users/Rhydham/AppData/Local/Temp/claude/C--Users-Rhydham-Desktop-projects-shaman/179abff8-7912-4c4b-9bae-f98badd5c47b/tasks/b7o1z1oa6.output"; ls "C:/Users/Rhydham/Desktop/projects/shaman/backend/.venv/Lib/site-packages" 2>/dev/null | wc -l

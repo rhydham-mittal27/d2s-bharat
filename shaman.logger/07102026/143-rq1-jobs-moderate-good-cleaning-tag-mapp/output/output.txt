@@ -1,0 +1,41 @@
+RQ1 is now **strong**. Every number in the report comes from the final run, and all 46 tests pass.
+
+## What changed
+| Before | After |
+|---|---|
+| 58% of tag uses mapped, 31% waiting for review | **100% of tag uses resolved to a skill:** 56% ESCO/O\*NET, 42% skills derived from the data itself, 1.3% merged near-duplicate spellings. 4 wrong mappings corrected. |
+| All 14,840 jobs mixed together | **10 role families**; **5,138 data-role postings** analysed separately |
+| Salary medians only | **Ordinal regression** on the salary bands, **controlling for experience, role family and multi-city postings**, with false-discovery-rate correction |
+| Demand as plain counts | Demand with **95% confidence intervals** |
+| No data mining | **Skill co-occurrence rules** (association rules with lift) |
+| RQ1 separate from RQ2 | **RQ1 and RQ2 combined in one table** |
+| DataScience Jobs barely used | Salary vs. experience, concentration of openings among companies, outliers |
+
+## Key findings
+1. **Each extra year of required experience multiplies the odds of a higher salary band by 1.66.** Skill effects are measured *on top of* that.
+2. **Higher-paid skills in data roles:**
+   - product management 2.95×
+   - NLP 1.74×
+   - predictive modelling 1.67×
+   - SAS 1.42×
+   - statistics 1.43×
+   - Tableau and BI 1.41×
+
+   **Lower-paid:** MIS 0.25× and "communication" 0.70×. These mark support roles.
+3. **Skills come in bundles:** hive → Hadoop (75% of the time), Scala → Spark (72%), deep learning ↔ NLP. Teach them together.
+4. **The combined RQ1–RQ2 table is the strongest result:**
+   - **Maths & stats is consistently valuable:** paid more in the market (1.56×) *and* the strongest predictor of junior salary hikes (3.0×).
+   - **Coding is the baseline:** it appears in 41% of data postings.
+   - **Dashboards & storytelling is the gap:** it gets no clear premium in job postings (1.14, not significant) but is the #2 predictor of junior hikes (2.7×). That's what institutions should add.
+5. **DataScience Jobs:**
+   - Experience and salary are strongly linked (ρ = 0.63).
+   - The top 10 firms hold 35% of openings.
+   - Volume is concentrated in IT-services firms, so the job-weighted average salary (9.7 L) is below the typical company's (11.9 L).
+
+## Problems found and handled
+- **The "storytelling" result depended on its definition.** Counting "reporting" and "MIS" as storytelling flipped the market effect to 0.79. I use the narrow definition (visualisation and BI tools), keep the other as a robustness check, and explain both in the report.
+- **"Analytical" was mapped to "analytical chemistry",** which distorted the pay model. Fixed with a short, documented correction list.
+- **Microsoft BI** looked significant in an earlier run but isn't in the final one, so it's out of the report.
+- **A few tag merges are imperfect** (off-page vs. on-page SEO). They affect 1.3% of tag uses and are noted as a limitation.
+
+The report is `reports/rq1/README.md`, with 8 charts in the same folder and tables in `dataset/processed/rq1/`. RQ1, RQ2 and RQ3 are now all strong. **RQ4 (the optimised training plan) is next**, and its priorities now come directly from this combined table.

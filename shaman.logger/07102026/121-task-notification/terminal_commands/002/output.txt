@@ -1,0 +1,19 @@
+...........................................                              [100%]
+43 passed in 17.16s
+HTML               exact=Hypertext markup language HTML                contains=None
+XML                exact=Extensible markup language XML                contains=None
+MIS                exact=Management information systems MIS            contains=None
+J2Ee               exact=Oracle Java 2 Platform Enterprise Edition J2EE contains=None
+Core Java          exact=None                                          contains=Java (computer programming)
+SEO                exact=Majestic SEO                                  contains=None
+HR                 exact=None                                          contains=None
+BPO                exact=None                                          contains=None
+MVC                exact=Microsoft ASP.NET Core MVC                    contains=None
+SDLC               exact=None                                          contains=None
+PPC                exact=Airline Pilots Daily Aviation Log PPC         contains=None
+QA                 exact=None                                          contains=None
+linear regression  exact=None                                          contains=None
+web technologies   exact=None                                          contains=None
+Rest               exact=None                                          contains=None
+sas                exact=SAS                                           contains=None
+R                  exact=None                                          contains=None

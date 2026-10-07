@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas" && until [ -f summary.json ] && grep -q "^EXIT" ../sas_run.log; do sleep 2; done; tail -2 ../sas_run.log; python -c "
+import pandas as pd
+c=pd.read_csv('threshold_calibration.csv'); print(c.iloc[::3].round(3).to_string(index=False))
+r=pd.read_csv('text_matches_raw.csv.gz'); print(r.method.value_counts().to_dict())
+s=r[(r.method=='semantic')&(r.similarity>=0.70)].sample(12,random_state=4)
+for _,x in s.iterrows(): print(f'{x.similarity:.2f} | {x.label[:38]:38} | {str(x.evidence)[:80]}')
+l=r[r.method!='semantic']; print('lexical text top:', l.label.value_counts().head(12).to_dict())
+"

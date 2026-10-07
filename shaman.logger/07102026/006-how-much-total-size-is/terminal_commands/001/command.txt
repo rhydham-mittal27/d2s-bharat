@@ -1,0 +1,1 @@
+for f in text mysql excel; do echo -n "$f: "; curl -sIL "https://www.onetcenter.org/dl_files/database/db_30_3_$f.zip" | grep -i -E "^(HTTP|content-length)" | tail -2 | tr '\r\n' '  '; echo; done

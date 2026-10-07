@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b1orx7jif</task-id>
+<summary>Monitor event: "SAS ingestion final run (milestones)"</summary>
+<event>[   49.7s] tags: {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577}</event>
+</task-notification>

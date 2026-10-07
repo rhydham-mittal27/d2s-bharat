@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b1orx7jif</task-id>
+<summary>Monitor event: "SAS ingestion final run (milestones)"</summary>
+<event>[  253.3s] final post-skill rows 85,278: {'text': 43906, 'key_skills': 36452, 'key_skills+text': 4920}</event>
+</task-notification>

@@ -1,0 +1,39 @@
+                   model  accuracy_mean  accuracy_p2.5  accuracy_p97.5  balanced_accuracy_mean  balanced_accuracy_p2.5  balanced_accuracy_p97.5  roc_auc_mean  roc_auc_p2.5  roc_auc_p97.5
+       majority baseline          0.525          0.500           0.536                   0.500                   0.500                    0.500         0.500         0.500          0.500
+  L2 logistic regression          0.864          0.745           0.964                   0.861                   0.739                    0.964         0.904         0.771          0.992
+decision tree (depth<=3)          0.757          0.600           0.891                   0.756                   0.604                    0.885         0.809         0.642          0.937
+permutation: {'cv_auc': 0.9032496075353219, 'null_auc_mean': 0.494416127681842, 'null_auc_p95': 0.5998550497121925, 'p_value': 0.001996007984031936}
+                          feature  coef_std  odds_ratio_per_sd  or_ci_low  or_ci_high  share_boot_positive  ci_excludes_1
+               maths_stats_skills     1.100              3.005      1.994       4.602                1.000           True
+dashboard_and_storytelling_skills     1.001              2.722      1.773       4.734                1.000           True
+                 ai_and_ml_skills     0.693              2.000      1.225       3.233                0.998           True
+                  big_data_skills     0.564              1.757      1.179       2.671                0.996           True
+                    coding_skills     0.515              1.674      1.101       2.786                0.994           True
+                          feature  perm_importance_auc_drop  gini_importance
+dashboard_and_storytelling_skills                     0.180            0.650
+               maths_stats_skills                     0.042            0.251
+                    coding_skills                     0.040            0.100
+                 ai_and_ml_skills                     0.005            0.000
+                  big_data_skills                     0.000            0.000
+|--- dashboard_and_storytelling_skills <= 4.15
+--
+                   model  accuracy_mean  accuracy_p2.5  accuracy_p97.5  balanced_accuracy_mean  balanced_accuracy_p2.5  balanced_accuracy_p97.5  roc_auc_mean  roc_auc_p2.5  roc_auc_p97.5
+       majority baseline          0.528          0.515           0.531                   0.500                   0.500                      0.5         0.500         0.500            0.5
+  L2 logistic regression          0.924          0.844           1.000                   0.922                   0.833                      1.0         0.963         0.878            1.0
+decision tree (depth<=3)          0.907          0.812           1.000                   0.907                   0.814                      1.0         0.938         0.868            1.0
+permutation: {'cv_auc': 0.949313725490196, 'null_auc_mean': 0.5012972549019608, 'null_auc_p95': 0.589436274509804, 'p_value': 0.001996007984031936}
+               feature  coef_std  odds_ratio_per_sd  or_ci_low  or_ci_high  share_boot_positive  ci_excludes_1
+     conscientiousness     2.281              9.782      5.588      21.328                1.000           True
+openness_to_experience     2.207              9.085      4.647      24.530                1.000           True
+          extraversion     1.022              2.780      1.283       6.598                0.993           True
+           neuroticism     0.893              2.441      1.567       4.689                1.000           True
+         agreeableness     0.674              1.962      0.985       4.403                0.972          False
+               feature  perm_importance_auc_drop  gini_importance
+openness_to_experience                     0.230            0.631
+     conscientiousness                     0.144            0.336
+         agreeableness                     0.036            0.033
+          extraversion                    -0.000            0.000
+           neuroticism                    -0.001            0.000
+|--- openness_to_experience <= 38.50
+rq2_jds C= 0.42813323987193913 maxVIF= 1.45
+rq3_sds C= 1.438449888287663 maxVIF= 1.44

@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && grep -rhoE "^\s*(from|import) [a-zA-Z_]+" --include=*.py src tests | awk '{print $2}' | sort | uniq -c | sort -rn

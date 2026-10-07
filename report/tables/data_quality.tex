@@ -1,0 +1,10 @@
+\begin{tabularx}{\linewidth}{@{}l r r L{3.2cm} L{2.6cm} X@{}}
+\toprule
+File & Raw & Used & Duplicates & Missing & Other issues and actions \\
+\midrule
+Analytics Jobs & 15,841 & 14,840 & 1,001 exact duplicate rows removed & job\_description 23\%, job\_type 78\% & 12,907 truncated tags repaired; 814 job\_type variants merged; 2,347 multi-city rows split; text descriptions truncated at source \\
+DataScience Jobs & 1,602 & 1,602 & 0 duplicates & 0 missing & salaries stored as text (`7.8L') parsed to lakh; 39 high-salary outliers kept (senior roles) \\
+JDS Skill Traits & 139 & 139 & 2 reused IDs kept (different people) & 0 missing & all scores within 1--5; ceiling: 58\% at 5.0 (storytelling); column name fixed \\
+SDS Personality Traits & 161 & 161 & 9 reused IDs kept (7 with different outcomes) & 0 missing & two malformed column names fixed (leading space, spaces in target name) \\
+\bottomrule
+\end{tabularx}

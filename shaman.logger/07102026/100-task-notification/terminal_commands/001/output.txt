@@ -1,0 +1,41 @@
+matches/post  before 5.16  after 3.58
+                                      before  after
+label                                              
+computer science                       15701  15632
+communication                          14527  13754
+SQL                                    11258  11282
+JavaScript                             10250  10260
+Python                                  9340   9362
+database                                7374   7389
+CSS                                        0   6278
+PHP                                     5929   5930
+Git                                     5797   5821
+DevOps                                  5674   5692
+React                                   5072   5093
+MySQL                                   4800   4806
+troubleshoot                            4736   4720
+Visual Basic                            4771   4496
+Analyze                                 4481   4484
+Angular                                 4357   4363
+assume responsibility                   4298   4300
+Android (mobile operating systems)      3788   3794
+jQuery                                  3680   3680
+Kubernetes                              3517   3549
+Linux                                   3240   3265
+Docker                                  3226   3258
+web services                            3124   3140
+SQL Server                              2840   2850
+ICT project management methodologies    8400   2632
+-- removed (top by before):
+                                        before  after
+label                                                
+Design                                   25717      0
+Science                                  16909      0
+Java (computer programming)              12231      0
+Programming                              11811      0
+Writing                                   4644      0
+Troubleshooting                           4540      0
+dies                                      3783      0
+Monitoring                                3492      0
+perform cleaning duties                   2776      0
+Source (digital game creation systems)    2149      0

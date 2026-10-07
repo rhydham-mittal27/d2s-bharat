@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bdhcz7o93</task-id>
+<tool-use-id>toolu_01PYJ2vP1YHDEJVA4XoaXET1</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bdhcz7o93.output</output-file>
+<status>completed</status>
+<summary>Background command "Download Naukri and TechWolf datasets with resume" completed (exit code 0)</summary>
+</task-notification>

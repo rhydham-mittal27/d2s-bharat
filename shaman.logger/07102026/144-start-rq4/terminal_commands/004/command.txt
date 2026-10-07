@@ -1,0 +1,31 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && python - <<'PY'
+p='scripts/run_rq4.py'; s=open(p,encoding='utf-8').read()
+s=s.replace('a.set_title("Gap: juniors below the high-hike group\'s median (of 139)")','a.set_title("Gap: juniors below high-hike median (n=139)")')
+s=s.replace('b.set_title("Value per learner (balanced evidence score, top = 100)")\n    b.legend(fontsize=7, loc="lower right")',
+            'b.set_title("Value per learner (evidence score, top = 100)")\n    b.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=3)')
+s=s.replace('    b.legend(fontsize=7, loc="lower right")\n    b.set_title("Gap closure by skill area")',
+            '    b.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)\n    b.set_title("Gap closure by skill area")')
+s=s.replace('''def fig_pareto(points, budget):
+    fig, ax = plt.subplots(figsize=(7.5, 4))
+    xs = [p.cost / 1e5 for p in points]
+    ys = [p.impact for p in points]
+    ax.plot(xs, ys, "-o", color="#2563eb")''','''def fig_pareto(points, budget, points_more=None):
+    fig, ax = plt.subplots(figsize=(7.5, 4))
+    xs = [p.cost / 1e5 for p in points]
+    ys = [p.impact for p in points]
+    if points_more:
+        ax.plot([p.cost / 1e5 for p in points_more], [p.impact for p in points_more], "--s", ms=4,
+                color="#16a34a", label="400 trainer-hours")
+    ax.plot(xs, ys, "-o", color="#2563eb", label="200 trainer-hours")
+    ax.legend(fontsize=8, loc="lower right")''')
+s=s.replace('''    excluded = [c.id''','''    points400 = frontier(problem.model_copy(update={"constraints": problem.constraints.model_copy(
+        update={"budget": 800_000, "trainer_hours": 400})}), levels=10, min_budget=100_000, options=OPTS)
+    pd.DataFrame([{"budget_cap": p.budget_cap, "cost": p.cost, "impact": p.impact,
+                   "courses": "+".join(c.course_id for c in p.plan.courses)} for p in points400]).to_csv(
+        OUT / "pareto_400h.csv", index=False)
+
+    excluded = [c.id''')
+s=s.replace('fig_pareto(points, args.budget)','fig_pareto(points, args.budget, points400)')
+open(p,'w',encoding='utf-8').write(s)
+PY
+grep -n "points400\|bbox_to_anchor\|high-hike median" scripts/run_rq4.py | head; uv run --no-sync python -u scripts/run_rq4.py 2>&1 | grep -E "^PLAN|DONE|Error|Traceback"; cat ../dataset/processed/rq4/pareto_400h.csv

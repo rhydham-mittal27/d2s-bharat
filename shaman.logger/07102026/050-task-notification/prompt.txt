@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[   14.6s] STEP 2/5 taxonomy + sentence-transformer embeddings</event>
+</task-notification>

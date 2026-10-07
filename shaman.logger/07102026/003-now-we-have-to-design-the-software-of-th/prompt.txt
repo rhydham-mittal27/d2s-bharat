@@ -1,0 +1,1 @@
+now we have to design the software of this techhstack will be nextjs for frontend and python for backend..

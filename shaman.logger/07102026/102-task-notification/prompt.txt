@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bv2y8axas</task-id>
+<summary>Monitor event: "ingestion v1 final run (milestones)"</summary>
+<event>[    0.0s] STEP 1/5 data parsing</event>
+</task-notification>

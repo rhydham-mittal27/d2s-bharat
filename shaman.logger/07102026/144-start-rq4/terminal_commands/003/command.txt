@@ -1,0 +1,17 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+from pathlib import Path
+import pandas as pd
+from d2s.analysis import plan
+from d2s.analysis.traits import load_jds
+from d2s.engine import solve, analyze, SolverOptions
+O=SolverOptions(time_limit_s=20, workers=8, gap_limit=0.0)
+j=load_jds(Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon/JDS Skill Traits.xlsx')).frame
+tri=pd.read_csv('../dataset/processed/rq1/triangulation_rq1_rq2.csv')
+cs=plan.load_catalogue(Path('../reports/rq4/course_catalogue_assumptions.csv'))
+g=plan.cohort_gaps(j); w=plan.evidence_weights(tri)
+for b,h in [(400000,200),(800000,200),(800000,400),(400000,None)]:
+    pr=plan.build_problem(g,w,cs,b,h); p=solve(pr,O)
+    print(b,h,'obj',round(p.objective),'cost',p.total_cost,'hours',p.total_trainer_hours,p.seats(), {s.skill_id[:10]:round(s.closure_pct) for s in p.skills})
+pr=plan.build_problem(g,w,cs,800000,200); p=solve(pr,O); r=analyze(pr,p,budget_delta=100000,hours_delta=40,options=O)
+print([ (m.resource, round(m.per_unit,3)) for m in r.marginals])
+"

@@ -1,0 +1,7 @@
+pdflatex: /c/Users/Rhydham/AppData/Local/Programs/MiKTeX/miktex/bin/x64/pdflatex
+xelatex: /c/Users/Rhydham/AppData/Local/Programs/MiKTeX/miktex/bin/x64/xelatex
+lualatex: /c/Users/Rhydham/AppData/Local/Programs/MiKTeX/miktex/bin/x64/lualatex
+tectonic: no
+latexmk: /c/Users/Rhydham/AppData/Local/Programs/MiKTeX/miktex/bin/x64/latexmk
+bibtex
+doc

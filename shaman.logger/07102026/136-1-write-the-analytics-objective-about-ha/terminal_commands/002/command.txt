@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/reports/objective" && pdflatex -interaction=nonstopmode -halt-on-error analytics_objective.tex > build.log 2>&1; echo "exit $?"; grep -E "^!|Output written|Overfull|Underfull" build.log | head -10

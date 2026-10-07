@@ -1,0 +1,10 @@
+{
+  "stdout": "",
+  "stderr": "",
+  "interrupted": false,
+  "isImage": false,
+  "noOutputExpected": false,
+  "backgroundTaskId": "boxpue2j8",
+  "timedOutAfterMs": 120000,
+  "backgroundCwdHint": "Session cwd remains C:\\Users\\Rhydham\\Desktop\\projects\\shaman\\dataset\\onet\\text\\db_30_3_text; directory changes made by the backgrounded command do not apply to subsequent commands."
+}

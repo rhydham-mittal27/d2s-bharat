@@ -1,0 +1,11 @@
+.......................................                                  [100%]
+39 passed in 15.78s
+{'raw': 13691, 'duplicate_id': 12, 'empty': 89, 'duplicate_text': 914, 'kept': 12676, 'invalid_dates': 56}
+Data Scientist - Phd only
+Bachelor Accommodation provided
+Candidate should be a self-motivated,independent,detail oriented,responsible team player and exhibit exceptional Leadership skills . Job Location - Mumbai
+Relocation required
+Candidate must be Phd completed or thesis submitted. . Phd in computer science,Electronics,. Thesis subject - ML,Deep Learning,NLP based
+['Natural Language Processing', 'Phd', 'Deep Learning', 'Data Science', 'Languages', 'Data', 'Processing', 'Science']
+9 clauses
+avg clauses 9.706

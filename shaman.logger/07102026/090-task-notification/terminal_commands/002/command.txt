@@ -1,0 +1,11 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd
+h=pd.read_csv('../dataset/processed/ingest/matches_hybrid_sample.csv.gz')
+l=pd.read_csv('../dataset/processed/ingest/matches_lexical_all.csv.gz')
+print('hybrid per post', round(len(h)/h.post_id.nunique(),1), '| lexical per post', round(len(l)/l.post_id.nunique(),1))
+for name,d in [('HYBRID sample',h),('LEXICAL all',l)]:
+    print('==',name); print(d.groupby(['label','taxonomy','match_type']).post_id.nunique().sort_values(ascending=False).head(20).to_string())
+print('== semantic-only examples (random)')
+s=h[h.match_type=='semantic'].sample(12,random_state=1)
+for _,r in s.iterrows(): print(f'{r.similarity:.2f} | {r.label[:40]:40} | {str(r.evidence)[:90]}')
+"

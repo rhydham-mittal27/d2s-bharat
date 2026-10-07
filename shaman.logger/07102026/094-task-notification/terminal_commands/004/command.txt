@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -6; cp -r ../dataset/processed/ingest ../dataset/processed/ingest_v0_baseline && echo "baseline saved"

@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>b0c9o7wj0</task-id>
+<summary>Monitor event: "SAS ingestion run (milestones)"</summary>
+<event>[   63.6s] tags: {'semantic_medium': 3268, 'semantic_high': 2471, 'unmapped': 2207, 'exact': 514}
+[   63.6s] STEP 4/5 skill extraction from title + description (semantic matching)</event>
+</task-notification>

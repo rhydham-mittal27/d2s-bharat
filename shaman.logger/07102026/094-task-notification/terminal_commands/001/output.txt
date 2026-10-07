@@ -1,0 +1,32 @@
+== ConTeXT
+  nvidia/dragon-multiturn-context-encoder 1049510 transformers
+  DavidAU/Qwen3-8B-64k-Context-2X-Josiefied-Uncensored 178742 transformers
+  contextboxai/Kokoro-Vietnamese 50948 None
+  nvidia/gpt-oss-120b-Eagle3-short-context 39415 Model Optimizer
+  voyageai/voyage-context-4 21412 None
+  piuba-bigdata/beto-contextualized-hate-speech 17725 transformers
+  perplexity-ai/pplx-embed-context-v1-0.6b 10789 transformers
+  perplexity-ai/pplx-embed-context-v1-4b 7491 transformers
+== skill extraction
+  jjzha/escoxlmr_skill_extraction 70758 transformers
+  TechWolf/ConTeXT-Skill-Extraction-base 3639 sentence-transformers
+  jjzha/jobbert_skill_extraction 765 transformers
+  abd1987/esco-context-skill-extraction 146 sentence-transformers
+  onnx-community/jobbert_skill_extraction-ONNX 87 transformers.js
+  GalalEwida/LLM-BERT-Model-Based-Skills-Extraction-from-jobdescription 37 transformers
+  MangleshNimbalkar/llama_3.2_1b_fine_tune_skill_extraction_quantized 29 transformers
+  MangleshNimbalkar/llama_3.1_8b_fine_tune_skill_extraction_quantized 26 transformers
+== esco skill
+  jjzha/escoxlmr_skill_extraction 70758 transformers
+  abd1987/esco-context-skill-extraction 146 sentence-transformers
+  mehul-jain-joveo/escoxlmr-skill-onnx-int8 15 transformers.js
+  acme105/escoxlmr-skill-ner 6 transformers
+== jobbert
+  TechWolf/JobBERT-v3 45693 sentence-transformers
+  TechWolf/JobBERT-v2 31977 sentence-transformers
+  jjzha/jobbert-base-cased 6717 transformers
+  jjzha/jobbert_knowledge_extraction 1228 transformers
+  jjzha/jobbert_skill_extraction 765 transformers
+  jjzha/jobberta-base 590 transformers
+  mradermacher/JobBERT-v3-GGUF 569 transformers
+  AchrafSoltani/jobbert-ner-sonnet-v2 282 transformers

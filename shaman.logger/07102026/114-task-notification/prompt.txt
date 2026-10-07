@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>b9gpa2f84</task-id>
+<tool-use-id>toolu_0149RPMpUYvf1cRzpLDRoSq9</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b9gpa2f84.output</output-file>
+<status>completed</status>
+<summary>Background command "Restart ingestion pipeline with final lexicon rules" completed (exit code 0)</summary>
+</task-notification>

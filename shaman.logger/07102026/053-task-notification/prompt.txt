@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>self.dim = self._model.get_sentence_embedding_dimension()
+[  123.6s] model BAAI/bge-small-en-v1.5 loaded (dim=384)</event>
+</task-notification>

@@ -1,0 +1,8 @@
+{
+  "stdout": "",
+  "stderr": "",
+  "interrupted": false,
+  "isImage": false,
+  "noOutputExpected": false,
+  "backgroundTaskId": "bnfc4p4xs"
+}

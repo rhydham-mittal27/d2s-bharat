@@ -1,0 +1,7 @@
+I've stopped and am waiting for your instructions.
+
+- The TechWolf labelled set finished downloading to `dataset/eval/techwolf/test.csv` (97 KB).
+- The Naukri download (28 MB) is still running in the background. I can stop it if you don't want it.
+- I haven't changed any code since your last message.
+
+What would you like to change about the approach? For example, a different job-post source, the larger software-engineer file as well, or skipping the Naukri data.

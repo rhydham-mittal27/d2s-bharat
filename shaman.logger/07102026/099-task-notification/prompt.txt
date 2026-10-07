@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bqbj9e3yq</task-id>
+<summary>Monitor event: "ingestion v1 rerun (milestones)"</summary>
+<event>[  145.2s] TechWolf: {'n_sentences': 578, 'gold_not_in_esco': 10, 'hit@1': 0.1245674740484429, 'hit@3': 0.22491349480968859, 'hit@5': 0.27162629757785467, 'hit@10': 0.3373702422145329, 'mrr': 0.18831630691492282}
+[  145.2s] semantic threshold = 0.74
+[  145.2s] STEP 4/5 skill extraction + semantic matching</event>
+</task-notification>

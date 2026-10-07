@@ -1,0 +1,24 @@
+152:    sens = analyze(problem, best, budget_delta=100_000, hours_delta=40, options=OPTS)
+PLAN optimal objective 23391.4 cost 352900 hours 188 []
+     resource    delta  base_objective  new_objective  per_unit  lp_estimate_per_unit
+       budget 100000.0      23391.4342     23391.4342       0.0                0.0116
+trainer_hours     40.0      23391.4342     23391.4342       0.0               27.4624
+LP shadow prices: {'lp_objective': 24312.638046773973, 'budget_per_rupee': 0.011608908058273507, 'trainer_hours_per_hour': 27.462379297064608, 'total_seats_per_seat': None}
+       dl_nlp      True     -3000.190717           -12.826023 forcing it in changes impact by -3000.19 (-12.8%); the budget it uses closes more demand-weighted gap elsewhere
+      bigdata      True     -1333.108601            -5.699132  forcing it in changes impact by -1333.11 (-5.7%); the budget it uses closes more demand-weighted gap elsewhere
+story_powerbi      True      -251.668744            -1.075901   forcing it in changes impact by -251.67 (-1.1%); the budget it uses closes more demand-weighted gap elsewhere
+     bootcamp      True     -4830.824174           -20.652108 forcing it in changes impact by -4830.82 (-20.7%); the budget it uses closes more demand-weighted gap elsewhere
+budget_cap,cost,impact,courses
+100000,100000,8219.876669275465,sas_prog+story_powerbi
+177778,177700,14163.25120195961,sas_prog+stats+story_powerbi
+255556,255300,18402.46846714928,py_sql+sas_prog+stats+story_tableau
+333333,315400,20496.04713287038,py_sql+stats+ml+story_tableau
+411111,352900,23391.434184280042,py_sql+sas_prog+stats+ml+story_tableau
+488889,462900,25766.909242572714,py_sql+sas_prog+stats+ml+bigdata+story_tableau
+566667,564900,26276.842580154662,py_sql+sas_prog+stats+ml+dl_nlp+bigdata+story_tableau
+644444,602900,27157.63652688711,py_sql+sas_prog+stats+ml+dl_nlp+bigdata+story_tableau
+800000,762500,27389.424407606173,py_sql+sas_prog+stats+ml+dl_nlp+bigdata+story_powerbi+bootcamp
+200 h obj 23391 cost 360400 hours 188 {'py_sql': 60, 'sas_prog': 60, 'stats': 60, 'ml': 50, 'story_tableau': 58} {'coding_s': 100, 'maths_st': 100, 'ai_and_m': 70, 'big_data': 0, 'dashboar': 100}
+240 h obj 25767 cost 470400 hours 228 {'py_sql': 60, 'sas_prog': 60, 'stats': 60, 'ml': 50, 'bigdata': 40, 'story_tableau': 58} {'coding_s': 100, 'maths_st': 100, 'ai_and_m': 70, 'big_data': 62, 'dashboar': 100}
+280 h obj 27158 cost 602900 hours 268 {'py_sql': 35, 'sas_prog': 60, 'stats': 60, 'ml': 50, 'dl_nlp': 30, 'bigdata': 40, 'story_tableau': 58} {'coding_s': 100, 'maths_st': 100, 'ai_and_m': 96, 'big_data': 62, 'dashboar': 100}
+400 h obj 27389 cost 768500 hours 358 {'py_sql': 19, 'sas_prog': 60, 'stats': 44, 'ml': 50, 'dl_nlp': 15, 'bigdata': 40, 'story_tableau': 42, 'bootcamp': 40} {'coding_s': 100, 'maths_st': 100, 'ai_and_m': 100, 'big_data': 62, 'dashboar': 100}

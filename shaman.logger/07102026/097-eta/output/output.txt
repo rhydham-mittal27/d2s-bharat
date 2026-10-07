@@ -1,0 +1,11 @@
+These estimates use the rates measured in the earlier runs, so they're more reliable than my first ones.
+
+| Step | Basis | Estimate |
+|---|---|---|
+| Build label index (22,758 short labels) | the label-only variant took 39 s for 13,939 | about 1 min (running now) |
+| TechWolf eval + exact-name pass on 88k posts | 9 s + 27 s last run | under 1 min |
+| Semantic sample (3,000 posts) | 6 min last run; boilerplate lines are now skipped and only ESCO is searched | about 4–5 min |
+| Tag mapping + crosswalk | about 70 s last run | about 1 min |
+| Charts afterwards (including the skill map) | | about 2 min |
+
+**The pipeline should finish around 12:45**, with charts by about 12:48. It's 12:37 now.

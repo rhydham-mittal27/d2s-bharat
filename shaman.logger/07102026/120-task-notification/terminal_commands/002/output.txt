@@ -1,0 +1,2 @@
+[   66.6s] text extraction: 256/14,840 posts
+[   98.9s] text extraction: 2,816/14,840 posts

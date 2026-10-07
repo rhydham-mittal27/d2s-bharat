@@ -1,0 +1,12 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+from pathlib import Path
+import pandas as pd
+from d2s.analysis.traits import load_jds
+from d2s.analysis import plan
+j=load_jds(Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon/JDS Skill Traits.xlsx')).frame
+print(plan.cohort_gaps(j).round(3).to_string(index=False))
+tri=pd.read_csv('../dataset/processed/rq1/triangulation_rq1_rq2.csv')
+for s in plan.SCHEMES:
+    for b in ['point','low','high']:
+        w=plan.evidence_weights(tri,s,b); print(s,b, dict(zip([plan.LABEL[a] for a in w.area], w.weight.round(1))))
+"

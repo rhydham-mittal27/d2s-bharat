@@ -1,0 +1,10 @@
+The tag mapping is done for **8,460 distinct tags**:
+
+| How it mapped | Distinct tags |
+|---|---|
+| exact name match | 514 |
+| close meaning match (high confidence) | 2,471 |
+| medium confidence | 3,268 |
+| unmapped | 2,207 |
+
+Only a few tags map by exact name. The medium-confidence group is large, so I'll spot-check samples from it before trusting it. Text extraction is running now.

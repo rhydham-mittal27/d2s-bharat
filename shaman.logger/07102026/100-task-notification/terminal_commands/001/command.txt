@@ -1,0 +1,10 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd
+new=pd.read_csv('../dataset/processed/ingest/matches_lexical_all.csv.gz', usecols=['post_id','label','taxonomy'])
+old=pd.read_csv('../dataset/processed/ingest_v0_baseline/matches_lexical_all.csv.gz', usecols=['post_id','label'])
+print('matches/post  before', round(len(old)/88561,2), ' after', round(len(new)/88561,2))
+a=old.groupby('label').post_id.nunique().rename('before'); b=new.groupby('label').post_id.nunique().rename('after')
+t=pd.concat([a,b],axis=1).fillna(0).astype(int).sort_values('after',ascending=False)
+print(t.head(25).to_string())
+print('-- removed (top by before):'); print(t[t.after==0].sort_values('before',ascending=False).head(10).to_string())
+"

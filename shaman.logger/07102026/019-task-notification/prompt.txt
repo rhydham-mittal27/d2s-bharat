@@ -1,0 +1,9 @@
+<task-notification>
+<task-id>b0y6knszk</task-id>
+<tool-use-id>toolu_01LjGBgcwRw3F6mqYVFwjpUh</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b0y6knszk.output</output-file>
+<status>completed</status>
+<summary>Monitor "O*NET dataset download progress" stream ended</summary>
+<event>DONE mysql
+ALL_FINISHED</event>
+</task-notification>

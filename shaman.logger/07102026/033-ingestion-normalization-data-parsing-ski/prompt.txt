@@ -1,0 +1,2 @@
+INGESTION & NORMALIZATION│  Data parsing → Skill extraction → Sentence Transformers
+│                          │  → Semantic matching → ESCO/O*NET skill mapping do this steps .. make some visualizations

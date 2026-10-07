@@ -1,0 +1,1 @@
+wsl -l -v; Get-Command redis-server, memurai -ErrorAction SilentlyContinue | Select-Object Source

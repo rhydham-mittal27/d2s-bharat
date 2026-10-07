@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && HF_HUB_DISABLE_SYMLINKS_WARNING=1 uv run --no-sync python -u scripts/run_sas_ingestion.py --reuse-text 2>&1 | grep -E "tags:|reused|calibrated|final post|DONE|FAILED|Error"

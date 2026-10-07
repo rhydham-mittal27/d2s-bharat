@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b1orx7jif</task-id>
+<summary>Monitor event: "SAS ingestion final run (milestones)"</summary>
+<event>[  248.5s] calibrated semantic threshold = 0.7 {'matches_kept': 40537.0, 'precision': 0.06268347435676049, 'recall': 0.07315387937239096, 'f1': 0.06751514507386544}</event>
+</task-notification>

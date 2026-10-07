@@ -1,0 +1,17 @@
+                             skill  odds_ratio  or_ci_low  or_ci_high  q_fdr
+               marketing analytics        1.64       1.20        2.26   0.01
+       Java (computer programming)        1.51       1.20        1.90   0.00
+                        statistics        1.43       1.09        1.88   0.03
+                               SAS        1.42       1.20        1.68   0.00
+             business intelligence        1.41       1.11        1.80   0.02
+                           Tableau        1.41       1.09        1.82   0.03
+                       data mining        1.40       1.07        1.83   0.03
+                    data analytics        1.25       1.09        1.42   0.01
+Microsoft Business Intelligence BI        0.74       0.57        0.96   0.05
+                             area  demand_share  odds_ratio  or_ci_low  or_ci_high
+                  big_data_skills         0.106       1.332      1.095       1.619
+               maths_stats_skills         0.159       1.558      1.347       1.802
+                    coding_skills         0.407       1.500      1.338       1.682
+                 ai_and_ml_skills         0.160       1.441      1.226       1.694
+dashboard_and_storytelling_skills         0.119       1.143      0.979       1.335
+46 passed, 2 warnings in 27.15s

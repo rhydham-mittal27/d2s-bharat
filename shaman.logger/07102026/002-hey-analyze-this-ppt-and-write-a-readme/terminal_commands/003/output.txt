@@ -1,0 +1,212 @@
+=== SLIDE 1 ===
+BUILD FOR BHARAT
+TEAM- CODE5URGE
+TEAM MEMBERS-
+SHAMAN SHARMA
+ANURAG PRAJAPATI
+AMRITA RAMAN
+RHYDHAM MITTAL
+-- images:
+media/image2.png
+media/image1.jpeg
+=== SLIDE 2 ===
+INTRODUCTION
+The ProblemLabour-market demand is changing rapidly, but institutions still struggle to decide which skills to teach, which programs to fund, and where to allocate limited training capacity.
+What D2S Bharat Does
+An AI-powered institutional workforce decision engine that transforms:
+Market Demand → Skill Gaps → Training Choices → Optimized Intervention
+Market Demand → Skill Gaps → Training Choices → Optimized Intervention
+Built for: Universities • Skilling Providers • CSR Workforce Programs
+-- images:
+media/image1.jpeg
+media/image4.png
+media/image3.jpg
+media/image2.png
+=== SLIDE 3 ===
+THE PROBLEM: MARKET-SKILLS GAP
+01 — 📈 Demand Keeps Changing
+Emerging roles and technologies continuously create new skill requirements, while institutions often rely on historical curriculum and static skill assessments.
+01
+02
+03 — 💰 Training Capacity Is Limited
+Budgets, seats, trainers and prerequisites impose hard constraints. Institutions cannot simply teach everything
+03
+02 — 🎓 Skills ≠ Market Demand
+Institutions may know what students currently learn, but lack a systematic way to determine which skills are becoming critical in the job market.
+-- images:
+media/image5.jpeg
+media/image1.jpeg
+media/image6.png
+=== SLIDE 4 ===
+01
+ Demand Intelligence
+Collect job, occupation and emerging-skill signals 
+Extract and normalize skills using ESCO / O*NET 
+Forecast upcoming skill-demand trends
+02
+03
+OUR SOLUTION : D2S BHARAT
+ Traditional systems: “What skills are missing?”
+ D2S Bharat: “Given what the market needs and what we can afford,    what should we teach next?”
+ Technology Stack
+React / Next.js • FastAPI • PostgreSQL + pgvector • Sentence Transformers • scikit-learn • statsmodels • OR-Tools • LLM API
+The optimization engine makes the decision; the LLM is used only to explain and summarize the resulting plan.
+ Skill-Gap Intelligence
+Compare market demand with the skills currently available within a student cohort 
+Identify and prioritize high-impact skill gaps 
+Link gaps to relevant occupations and courses
+ Constraint-Aware Optimization
+Select the training interventions with the highest potential impact 
+Optimize under real-world constraints: 
+Budget 
+Training seats 
+Prerequisites
+-- images:
+media/image1.jpeg
+=== SLIDE 5 ===
+01.
+02.
+04.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+Technology Stack
+-- images:
+media/image2.png
+media/image1.jpeg
+media/image7.png
+=== SLIDE 6 ===
+TECHNICAL FEASIBILITY AND SCALABILITY
+Data &amp; Intelligence
+PostgreSQL + pgvector for structured data and semantic skill matching 
+Sentence Transformers for skill extraction and normalization 
+scikit-learn + statsmodels for demand forecasting 
+ESCO + O*NET + Indian labour-market signals for standardized skill intelligence
+01
+Decision Engine
+Google OR-Tools for constrained optimization 
+Maximizes skill-gap closure while respecting: 
+Budget limits 
+Training-seat capacity 
+Course prerequisites 
+Institutional constraints.
+02
+Application Layer
+React / Next.js responsive institutional dashboard 
+FastAPI backend connecting analytics, optimization and UI 
+Structured APIs enable integration with existing university/skill-development systems 
+, 
+03
+Designed to Scale from One Institution to a National Workforce Intelligence Platform
+Institutional Scale
+Start with one institution and expand across departments, cohorts and courses 
+Reuse the same AI and optimization engine across programs 
+2. Regional Scale
+Integrate labour-market signals across cities, states and regions 
+Enable region-specific skill and training planning 
+3. Ecosystem Scale
+Connect universities, skilling providers and CSR programs 
+Continuously expand skills, occupations, courses and datasets 
+Vision:Institution → Region → Multi-Institution Ecosystem → National Workforce Intelligence
+-- images:
+media/image1.jpeg
+=== SLIDE 7 ===
+IMPACT &amp; BUISNESS MODEL
+ Turning Better Training Decisions into Measurable Workforce Impact
+1. Institutional Impact
+Higher alignment between curriculum and market demand 
+Better utilization of training budgets and available seats 
+Faster identification of emerging skill gaps 
+Evidence-backed curriculum and program planning
+2. Learner &amp; Workforce Impact
+More relevant, market-ready skills 
+Improved access to high-demand training 
+Reduced mismatch between education and employment 
+Stronger regional workforce readiness
+3. Revenue Model
+SaaS for Institutions
+Annual subscription based on institution size and usage 
+Enterprise / Government
+Customized workforce intelligence deployments 
+Regional and large-scale planning contracts 
+Analytics &amp; Decision Support
+Premium forecasting, scenario analysis and benchmarking
+-- images:
+media/image2.png
+media/image1.jpeg
+media/image8.png
+=== SLIDE 8 ===
+INNOVATION AND UNIQUENESS
+Beyond Skill-Gap Detection: From Insight to Intervention
+1. Decision, Not Just Diagnosis
+Traditional platforms identify missing or emerging skills 
+D2S Bharat determines what institutions should teach next 
+2. Constraint-Aware AI
+Recommendations consider budget, seats, prerequisites and capacity 
+Produces solutions that are feasible, not theoretical
+3. Demand-Weighted Skill Intelligence
+Combines labour-market demand with cohort-level skill gaps 
+Prioritizes skills based on their potential market impact
+4. Optimization Before Generative AI
+OR-Tools mathematically selects the intervention 
+LLM is used only to explain and communicate the optimized result 
+Reduces dependence on subjective AI-generated recommendations 
+5. What-If Decision Simulator
+Institutions can change budget, seats or course choices 
+Instantly compare how different scenarios affect skill-gap closure and market coverage 
+6. Evidence-Backed &amp; Auditable
+Every recommendation can be traced to:Market Signal → Skill Gap → Constraint → Optimization → Intervention
+-- images:
+media/image2.png
+media/image1.jpeg
+media/image9.png
+=== SLIDE 9 ===
+COST AND VIABILITY
+Low-Cost Technology. Scalable Business Model.
+MVP Infrastructure Cost
+Cloud + database: ₹2K–₹5K/month 
+Embeddings / semantic search: ₹1K–₹3K/month 
+LLM explanation layer: ₹1K–₹5K/month 
+Core ML + optimization: Open-source 
+Estimated MVP: ₹4K–₹16K/month
+Why It Is Economically Viable
+No expensive foundation-model training 
+Open-source ML and optimization technologies 
+LLM usage limited to the final explanation layer 
+Modular architecture keeps infrastructure costs controllable 
+Costs scale with actual institutional usage
+Commercialization Path
+MVP → Institutional Pilot → SaaS Deployment → Multi-Institution Platform → Regional / National Scale
+Revenue Opportunities
+Institutional SaaS subscriptions 
+Enterprise &amp; Government deployments 
+Premium analytics &amp; forecasting 
+Custom integrations and workforce intelligence 
+Long-Term Vision
+D2S Bharat becomes the decision-intelligence layer connecting labour-market demand, education, and workforce planning.
+“Build once. Scale across institutions, regions and workforce ecosystems.”
+-- images:
+media/image2.png
+media/image1.jpeg
+media/image10.png
+=== SLIDE 10 ===
+CONCLUSION
+ D2S Bharat
+ From Labour-Market Demand to Institutional Action
+ What We Solve
+ Institutions often know what skills the market needs, but struggle to determine what      they should teach next within real-world constraints.
+What D2S Bharat Delivers
+Demand Intelligence — Identify emerging and high-value skills 
+Skill-Gap Intelligence — Measure market demand against cohort capabilities 
+Constraint-Aware Optimization — Select feasible interventions within budget, capacity and prerequisites 
+Explainable Decisions — Turn optimized results into actionable institutional plans
+Why It Matters
+Better Data → Better Training Decisions → Better Skill Alignment → Stronger Workforce Readiness
+-- images:
+media/image11.png
+media/image1.jpeg
+=== SLIDE 11 ===
+THANK YOU
+VERY MUCH
+-- images:
+media/image2.png
+media/image1.jpeg

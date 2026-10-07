@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/report" && grep -E "numberline \{[0-9A-Z]\}|Executive|References" main.toc | sed -E 's/\\contentsline \{section\}\{(\\numberline \{([^}]*)\})?([^}]*)\}\{([^}]*)\}.*/\2 \3 -> p.\4/'; grep -c "Overfull" build3.log; grep -A1 "Overfull" build3.log | grep -oE "[0-9.]+pt too wide" | sort -rn | head -5

@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bv2y8axas</task-id>
+<summary>Monitor event: "ingestion v1 final run (milestones)"</summary>
+<event>[  270.7s] semantic extraction: 1,920/3,000 posts (10 posts/s)</event>
+</task-notification>

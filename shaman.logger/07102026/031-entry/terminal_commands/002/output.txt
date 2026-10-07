@@ -1,0 +1,4 @@
+onet onet-30.3 8819 skills 1016 occ 92594 links
+esco esco-1.2.1 13939 skills 3039 occ 126051 links
+merged onet-30.3+esco-1.2.1 22758 skills 15.8s
+[('skill/competence', 10715), ('tool', 8751), ('knowledge', 3252), ('transferable_skill', 25), ('essential_skill', 10), ('skill', 5)]

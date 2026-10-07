@@ -1,0 +1,5 @@
+[   53.8s] tags: {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577}
+[   71.1s] DONE outputs in C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\sas
+tag_mapping now: 8460 {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577}
+wrote ['01_cleaning.png', '02_salary_experience.png', '03_tag_mapping.png', '04_threshold_calibration.png', '05_top_skills.png', '06_skill_salary.png', '07_skill_city.png', '08_ds_titles_salary.png', '09_title_occupations.png'] + README.md
+after report: {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577}

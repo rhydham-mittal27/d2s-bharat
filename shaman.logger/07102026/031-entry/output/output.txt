@@ -1,0 +1,21 @@
+The failing test was a real bug in the skill matcher, and it's fixed. All 39 tests now pass with no warnings.
+
+**The bug:** a skill name at the end of a sentence was never matched by exact text. `"…Python."` was read as the word `python.`, so it didn't match the skill `python`. That would have silently missed skills in real job posts. The fix in `d2s/ml/skills.py` strips trailing full stops from words, but keeps dots inside names like `Node.js` and `ASP.NET`. I added a test covering both cases.
+
+**Cleaner test output:** I silenced the 4 warnings in `pyproject.toml`. Two come from OR-Tools on Python 3.13; the other is a forecasting model hitting divide-by-zero on the tiny test series. That model just scores badly there and isn't picked. None of them affect results.
+
+**Real-data check:**
+
+| Source | Skills | Occupations | Links | Version tag |
+|---|---|---|---|---|
+| O\*NET | 8,819 (incl. 8,751 tools) | 1,016 | 92,594 | `onet-30.3` |
+| ESCO | 13,939 | 3,039 | 126,051 | `esco-1.2.1` |
+| **Combined** | **22,758** | | | `onet-30.3+esco-1.2.1` |
+
+Loading both takes about 16 seconds. That happens once per worker process, after which the matcher is cached. ESCO's skills file has 21 more rows than the loader ends up with. They're most likely rows repeating the same skill ID; I haven't checked.
+
+**Not tested yet:**
+- **The real embedding model.** Every test uses the stand-in `HashingEmbedder`. The first real run will download `bge-small-en-v1.5` and build the index for all 22,758 skills.
+- **arq with a real Redis.** The worker tests run on the in-process queue. Testing arq needs Redis (Memurai, or WSL).
+
+**Next:** I can run the real embedding model on a few sample job posts to set the matching threshold, or start building the XAI package from `docs/xai.md`.

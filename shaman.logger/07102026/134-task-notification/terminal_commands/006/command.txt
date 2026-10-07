@@ -1,0 +1,6 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas" && python -c "
+import json,pandas as pd
+s=json.load(open('summary.json')); print(s['tags']['distinct_by_method'], s.get('text_semantic_used'))
+q=pd.read_csv('tag_review_queue.csv'); print('queue', len(q), q.method.value_counts().to_dict())
+p=pd.read_csv('post_skills.csv.gz'); print('post_skills', len(p))
+"; grep -rn "tag_mapping" "C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts" "C:/Users/Rhydham/Desktop/projects/shaman/backend/src"

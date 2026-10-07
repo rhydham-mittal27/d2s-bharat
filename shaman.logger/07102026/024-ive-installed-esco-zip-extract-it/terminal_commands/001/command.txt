@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset" && find . -path ./onet -prune -o -type f -print | head; echo; find "$USERPROFILE/Downloads" -maxdepth 1 -iname "*esco*" -newermt "2026-10-06" 2>/dev/null

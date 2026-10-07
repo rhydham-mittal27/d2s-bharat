@@ -1,0 +1,21 @@
+These results show the pipeline isn't accurate enough yet. The charts would currently show noise, so I'll fix it before making them.
+
+**Exact-name matching (all posts) has generic false hits.** The top "skills" are `Design` (25,717 posts), `Science` and `Programming`. These are O\*NET broad knowledge-area labels, and they match any post containing the plain word. Some exact matches *are* good: alternative labels map `CSS` to "style sheet languages" and `Java` to "Java (computer programming)".
+
+**Semantic matching at the 0.6 threshold produces junk.** Examples:
+- "Preferred candidate profile" → *Candidate screening software* (0.69)
+- "senior level experience" → *older adults' needs* (0.71)
+- "Lead Application Developer" → *Hugging Face* (0.73)
+
+The causes:
+1. **The threshold is far too low for this model.** Its similarity scores are compressed into the 0.6–0.9 range.
+2. **O\*NET product names are semantic candidates.** Short names like "SmartDraw" attract unrelated clauses. Tools should be matched by exact name only.
+3. **Boilerplate lines get matched.** Headers like "Preferred candidate profile" and the job-title line are treated as skill statements.
+
+**Planned fixes, using measurements rather than guesses:**
+- Exclude O\*NET's broad knowledge and skill descriptors from exact-name matching. They're meant for describing occupations, not for spotting skills in text.
+- Restrict semantic candidates to ESCO skills and knowledge, so tools are matched by exact name only.
+- Skip boilerplate clauses (very short lines and section headers) for semantic matching.
+- Set the threshold from the TechWolf accuracy-vs-coverage curve, together with the best variant from the comparison script.
+
+I'll wait for step 5 to finish, run the variant comparison, then apply these fixes and rerun.

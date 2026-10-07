@@ -1,0 +1,5 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/rq1" && python -c "
+import pandas as pd
+a=pd.read_csv('pay_adjusted_data_roles.csv'); s=a[a.q_fdr<0.05]
+for _,r in s.iterrows(): print(f'{r.skill:40} {r.odds_ratio:.2f} [{r.or_ci_low:.2f}, {r.or_ci_high:.2f}] q={r.q_fdr:.4f}')
+"

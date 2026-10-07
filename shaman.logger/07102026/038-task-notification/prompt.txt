@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b0qqftq30</task-id>
+<summary>Monitor event: "job-post dataset download progress"</summary>
+<event>naukri: 87% (23 / 26 MB)</event>
+</task-notification>

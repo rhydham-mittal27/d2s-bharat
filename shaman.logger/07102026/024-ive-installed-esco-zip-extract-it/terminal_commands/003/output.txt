@@ -1,0 +1,11 @@
+50M	v1.2.1
+== skills_en.csv
+conceptType,conceptUri,skillType,reuseLevel,preferredLabel,altLabels,hiddenLabels,status,modifiedDate,scopeNote,definition,inScheme,description
+== occupations_en.csv
+conceptType,conceptUri,iscoGroup,preferredLabel,altLabels,hiddenLabels,status,modifiedDate,regulatedProfessionNote,scopeNote,definition,inScheme,description,code,naceCode
+== occupationSkillRelations_en.csv
+occupationUri,occupationLabel,relationType,skillType,skillUri,skillLabel
+skills_en.csv 13960 rows
+occupations_en.csv 3043 rows
+occupationSkillRelations_en.csv 126051 rows
+skillSkillRelations_en.csv 5818 rows

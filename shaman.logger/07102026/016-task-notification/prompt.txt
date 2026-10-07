@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b0y6knszk</task-id>
+<summary>Monitor event: "O*NET dataset download progress"</summary>
+<event>mysql: 52% (6 MB / 12 MB)</event>
+</task-notification>

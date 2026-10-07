@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>bv2y8axas</task-id>
+<summary>Monitor event: "ingestion v1 final run (milestones)"</summary>
+<event>[  374.8s] hybrid sample: {'semantic': 20406, 'lexical': 8656, 'both': 2396}
+[  374.8s] STEP 5/5 ESCO/O*NET mapping</event>
+</task-notification>

@@ -1,0 +1,61 @@
+**Partly on track.** The data preparation is strong, and the D2S idea fits the theme well. But the rubric scores an **analysis report and a presentation**, not software, and **half the provided data (JDS and SDS) hasn't been used yet**. Those two files are where most of the 30 "Data Analysis" marks would come from.
+
+## What the PDF asks for
+
+| What they test | Where it's scored |
+|---|---|
+| Problem identification / analytics objective ("spend a good amount of time here… do not haste") | Report: 10 marks, and everything else depends on it |
+| Data management and manipulation | Report: Approach 15 + Data exploration 25 |
+| Statistical, data mining or ML skills, descriptive *and prescriptive* | Report: Data analysis **30** |
+| Conclusions linked to the problem, and implications for stakeholders | Report: 10 + 10 |
+| Storyline, graphics, Q&A | Presentation (counts 30% of the final score) |
+
+**Deliverables:** a Word report (20–25 pages, Times New Roman 12, plus appendix), then 15–25 slides with a 10-minute talk.
+
+**Tools:** any language is allowed. The SAS route is to upload the data to SAS VFL, build a report in Visual Analytics and a model in Model Studio.
+
+## Where we're on track ✅
+
+| Our work | Rubric section |
+|---|---|
+| Documented cleaning: 1,001 duplicates, 12,907 repaired tags, job_type merges, salary/experience parsing, missing-value counts | **Data exploration (25)**: exactly what they want ("identify data issues, approach to solve issues") |
+| D2S idea: *"what should institutions teach next?"* | **Problem definition (10)** and **Implications (10)**: a clear business framing with clear stakeholders (institutions, students, employers) |
+| Skill demand, skill × salary, city mix, DataScience Jobs titles and salaries | **Descriptive analysis**, part of the 30 |
+| The CP-SAT course-selection engine | **Prescriptive analytics**, which the rubric names explicitly. Few teams will have this, if we apply it to this data. |
+| Reproducible, honest numbers, including the method we tested and rejected | Strong for the Q&A (25 of the presentation marks) |
+
+## Where we're off track or missing pieces ⚠️
+
+1. **JDS and SDS are unused.** These are the only files with outcome labels (salary hike, success), so they're the natural place for statistics and ML:
+   - group comparisons (t-test or Mann-Whitney U)
+   - correlations
+   - logistic regression and a decision tree, with cross-validation
+   - which skills or traits drive the outcome
+
+   Without them, the 30-mark analysis section is mostly descriptive.
+2. **There's no single written analytics objective tying all four files together**, and the brief stresses that this matters most. One possible version:
+   > *"Which skills does the data-science job market demand and pay for (job files), which skills drive early-career growth (JDS) and which traits drive senior success (SDS), and therefore what should an institution teach first within its budget (optimization)?"*
+
+   That's one story, from market to individual to decision, and it's essentially D2S Bharat applied to this data.
+3. **We've built a lot of software that the judges won't score directly**: workers, the SLM plan, the Next.js design, the XAI framework. Keep it for Build for Bharat if that's judged separately; for this rubric, only what shows up in the report and slides counts.
+4. **No SAS Viya work yet.** It isn't mandatory ("technology agnostic"), but this is a SAS-run hackathon and slide 21 suggests a VA report and a Model Studio model. A VA dashboard and one Model Studio model would likely help with the jury.
+5. **The report hasn't been started.** 20–25 pages in their structure (Problem → Approach → Exploration → Analysis → Results → Implications) is real work.
+6. **Some caution needed:**
+   - JDS has only **139 rows** and SDS **161**: use cross-validation, keep models simple, and don't over-claim.
+   - The Analytics Jobs file includes many non-data-science roles (digital marketing, accounting): either filter to data-science roles or say clearly why they're kept.
+   - Using ESCO/O\*NET and a pretrained model is probably fine since any tool is allowed, but **confirm with the organisers** given the "no data transfer to the outside world" rule.
+
+## Recommended next steps, in order
+1. **Write the analytics objective**, about half a page, and agree on it as a team.
+2. **Analyse JDS and SDS:**
+   - exploratory analysis (EDA)
+   - statistical tests
+   - logistic regression and a decision tree, with cross-validation
+   - feature importance
+   - main output: *"which skills or traits move the outcome"*
+3. **Combine the files:** skills the market pays for (job files) vs. skills that drive salary hikes (JDS), as a gap table.
+4. **Prescriptive step:** feed the gaps into the CP-SAT engine to get a sample training plan for an institution.
+5. **Build the Word report skeleton** with sections matching the rubric and its marks, then the slides.
+6. Optionally, recreate 2–3 key charts in SAS Visual Analytics.
+
+I can start with step 2, the JDS and SDS analysis, using standard and explainable methods.

@@ -1,0 +1,7 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/esco" && unzip -o -q "ESCO dataset - v1.2.1 - classification - en - csv.zip" -d v1.2.1 && du -sh v1.2.1 && cd v1.2.1 && for f in skills_en.csv occupations_en.csv occupationSkillRelations_en.csv; do echo "== $f"; head -1 "$f"; done; python -c "
+import csv,sys
+csv.field_size_limit(10**8)
+for f in ['skills_en.csv','occupations_en.csv','occupationSkillRelations_en.csv','skillSkillRelations_en.csv']:
+    with open(f,encoding='utf-8') as h: n=sum(1 for _ in csv.reader(h))-1
+    print(f, n, 'rows')
+"

@@ -1,0 +1,1 @@
+grep "text extraction" "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas_run.log" | tail -2

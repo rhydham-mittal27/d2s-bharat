@@ -1,0 +1,3 @@
+The skill index took **302 seconds** (about 75 skill descriptions per second), slower than my estimate. It's saved to disk, so later runs skip this step. The accuracy test is running now.
+
+**Revised estimate:** job-post clauses are much shorter than skill descriptions, so they should embed faster. I expect about 5–10 more minutes, mostly for the 3,000-post sample.

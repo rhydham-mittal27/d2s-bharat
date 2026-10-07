@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[   29.0s] taxonomy onet-30.3+esco-1.2.1: 22,758 skills</event>
+</task-notification>

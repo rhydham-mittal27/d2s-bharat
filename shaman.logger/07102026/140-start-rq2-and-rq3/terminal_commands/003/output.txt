@@ -1,0 +1,137 @@
+== JDS (junior skills -> salary hike)
+{
+ "renamed_columns": {
+  "maths-stats_skills": "maths_stats_skills"
+ },
+ "rows": 139,
+ "missing_values": 0,
+ "fully_identical_rows": 0,
+ "duplicate_id_rows": 4,
+ "duplicate_ids": 2,
+ "duplicate_ids_with_different_outcome": 1,
+ "class_counts": {
+  "0": 66,
+  "1": 73
+ },
+ "majority_baseline_accuracy": 0.5251798561151079,
+ "out_of_range": {
+  "big_data_skills": 0,
+  "maths_stats_skills": 0,
+  "coding_skills": 0,
+  "ai_and_ml_skills": 0,
+  "dashboard_and_storytelling_skills": 0
+ },
+ "iqr_outliers": {
+  "big_data_skills": 0,
+  "maths_stats_skills": 0,
+  "coding_skills": 0,
+  "ai_and_ml_skills": 18,
+  "dashboard_and_storytelling_skills": 0
+ },
+ "ceiling_share_at_max": {
+  "big_data_skills": 0.17985611510791366,
+  "maths_stats_skills": 0.41007194244604317,
+  "coding_skills": 0.4460431654676259,
+  "ai_and_ml_skills": 0.4892086330935252,
+  "dashboard_and_storytelling_skills": 0.5827338129496403
+ }
+}
+                          feature  mean_high  mean_low  median_high  median_low  mean_diff  cohens_d  rank_biserial  rb_ci_low  rb_ci_high  mannwhitney_p  p_holm  significant_holm_0.05
+dashboard_and_storytelling_skills      4.845     3.814          5.0        3.85      1.032     1.323          0.589      0.445       0.719          0.000   0.000                   True
+               maths_stats_skills      4.712     3.830          5.0        3.80      0.882     1.222          0.551      0.396       0.699          0.000   0.000                   True
+                    coding_skills      4.644     3.853          5.0        3.90      0.791     0.985          0.488      0.312       0.641          0.000   0.000                   True
+                 ai_and_ml_skills      4.822     4.283          5.0        4.60      0.539     0.880          0.363      0.189       0.522          0.000   0.000                   True
+                  big_data_skills      3.940     3.750          3.8        3.75      0.190     0.225          0.121     -0.092       0.320          0.217   0.217                  False
+                   model  accuracy_mean  accuracy_p2.5  accuracy_p97.5  balanced_accuracy_mean  balanced_accuracy_p2.5  balanced_accuracy_p97.5  roc_auc_mean  roc_auc_p2.5  roc_auc_p97.5
+       majority baseline          0.525          0.500           0.536                   0.500                   0.500                    0.500         0.500         0.500          0.500
+  L2 logistic regression          0.817          0.571           0.964                   0.811                   0.571                    0.964         0.902         0.765          0.990
+decision tree (depth<=3)          0.757          0.600           0.891                   0.756                   0.604                    0.885         0.809         0.642          0.937
+permutation: {'cv_auc': 0.9032496075353219, 'null_auc_mean': 0.494416127681842, 'null_auc_p95': 0.5998550497121925, 'p_value': 0.001996007984031936}
+                          feature  coef_std  odds_ratio_per_sd  or_ci_low  or_ci_high  share_boot_positive  ci_excludes_1
+               maths_stats_skills     0.776              2.172      1.671       2.725                1.000           True
+dashboard_and_storytelling_skills     0.764              2.147      1.613       2.921                1.000           True
+                 ai_and_ml_skills     0.536              1.710      1.238       2.235                0.999           True
+                    coding_skills     0.449              1.567      1.187       2.132                0.998           True
+                  big_data_skills     0.352              1.422      1.087       1.853                0.994           True
+                          feature  perm_importance_auc_drop  gini_importance
+dashboard_and_storytelling_skills                     0.180            0.650
+               maths_stats_skills                     0.042            0.251
+                    coding_skills                     0.040            0.100
+                 ai_and_ml_skills                     0.005            0.000
+                  big_data_skills                     0.000            0.000
+|--- dashboard_and_storytelling_skills <= 4.15
+|   |--- maths_stats_skills <= 4.60
+|   |   |--- weights: [26.00, 0.00] class: 0
+|   |--- maths_stats_skills >  4.60
+|   |   |--- weights: [12.00, 3.00] class: 0
+|--- dashboard_and_storytelling_skills >  4.15
+|   |--- maths_stats_skills <= 3.70
+|   |   |--- weights: [9.00, 1.00] class: 0
+|   |--- maths_stats_skills >  3.70
+|   |   |--- coding_skills <= 4.65
+|   |   |   |--- weights: [13.00, 19.00] class: 1
+|   |   |--- coding_skills >  4.65
+|   |   |   |--- weights: [6.00, 50.00] class: 1
+
+== SDS (senior traits -> success)
+{
+ "renamed_columns": {
+  " extraversion": "extraversion",
+  "success_ classification_ high_low": "success_high_low"
+ },
+ "rows": 161,
+ "missing_values": 0,
+ "fully_identical_rows": 0,
+ "duplicate_id_rows": 18,
+ "duplicate_ids": 9,
+ "duplicate_ids_with_different_outcome": 7,
+ "class_counts": {
+  "0": 76,
+  "1": 85
+ },
+ "majority_baseline_accuracy": 0.5279503105590062,
+ "out_of_range": {},
+ "iqr_outliers": {
+  "neuroticism": 0,
+  "extraversion": 0,
+  "openness_to_experience": 0,
+  "agreeableness": 5,
+  "conscientiousness": 0
+ },
+ "ceiling_share_at_max": {}
+}
+               feature  mean_high  mean_low  median_high  median_low  mean_diff  cohens_d  rank_biserial  rb_ci_low  rb_ci_high  mannwhitney_p  p_holm  significant_holm_0.05
+openness_to_experience     48.494    33.316         48.0        31.0     15.178     1.803          0.770      0.645       0.871          0.000   0.000                   True
+     conscientiousness     53.682    35.737         54.0        33.5     17.946     1.847          0.755      0.621       0.868          0.000   0.000                   True
+          extraversion     48.859    36.882         50.0        34.0     11.977     1.132          0.566      0.421       0.711          0.000   0.000                   True
+         agreeableness     47.718    41.118         48.0        39.5      6.599     0.609          0.304      0.091       0.497          0.001   0.002                   True
+           neuroticism     36.129    36.263         35.0        33.0     -0.134    -0.012          0.069     -0.116       0.257          0.454   0.454                  False
+                   model  accuracy_mean  accuracy_p2.5  accuracy_p97.5  balanced_accuracy_mean  balanced_accuracy_p2.5  balanced_accuracy_p97.5  roc_auc_mean  roc_auc_p2.5  roc_auc_p97.5
+       majority baseline          0.528          0.515           0.531                   0.500                   0.500                      0.5         0.500         0.500            0.5
+  L2 logistic regression          0.901          0.707           1.000                   0.897                   0.693                      1.0         0.963         0.880            1.0
+decision tree (depth<=3)          0.907          0.812           1.000                   0.907                   0.814                      1.0         0.938         0.868            1.0
+permutation: {'cv_auc': 0.949313725490196, 'null_auc_mean': 0.5012972549019608, 'null_auc_p95': 0.589436274509804, 'p_value': 0.001996007984031936}
+               feature  coef_std  odds_ratio_per_sd  or_ci_low  or_ci_high  share_boot_positive  ci_excludes_1
+     conscientiousness     0.235              1.264      1.223       1.303                1.000           True
+openness_to_experience     0.234              1.264      1.218       1.302                1.000           True
+          extraversion     0.158              1.171      1.117       1.224                1.000           True
+         agreeableness     0.091              1.095      1.040       1.147                1.000           True
+           neuroticism     0.014              1.014      0.963       1.068                0.701          False
+               feature  perm_importance_auc_drop  gini_importance
+openness_to_experience                     0.230            0.631
+     conscientiousness                     0.144            0.336
+         agreeableness                     0.036            0.033
+          extraversion                    -0.000            0.000
+           neuroticism                    -0.001            0.000
+|--- openness_to_experience <= 38.50
+|   |--- weights: [52.00, 0.00] class: 0
+|--- openness_to_experience >  38.50
+|   |--- conscientiousness <= 36.50
+|   |   |--- weights: [16.00, 0.00] class: 0
+|   |--- conscientiousness >  36.50
+|   |   |--- agreeableness <= 40.50
+|   |   |   |--- weights: [4.00, 6.00] class: 1
+|   |   |--- agreeableness >  40.50
+|   |   |   |--- weights: [4.00, 79.00] class: 1
+
+DONE C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\rq23 C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3

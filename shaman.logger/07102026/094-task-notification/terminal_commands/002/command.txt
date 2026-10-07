@@ -1,0 +1,1 @@
+curl -sL --max-time 30 "https://huggingface.co/TechWolf/ConTeXT-Skill-Extraction-base/raw/main/README.md" | head -150; echo; curl -s --max-time 20 "https://huggingface.co/api/models/TechWolf/ConTeXT-Skill-Extraction-base" | python -c "import sys,json; d=json.load(sys.stdin); print([t for t in d.get('tags',[]) if 'license' in t]); [print(s['rfilename']) for s in d['siblings']]"

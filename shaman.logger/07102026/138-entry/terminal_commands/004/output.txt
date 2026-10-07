@@ -1,0 +1,8 @@
+\documentclass[12pt,a4paper]{article}$
+% Times New Roman 12pt, single spacing: matches the SAS CU Hackathon Round-2 report format.$
+\usepackage[T1]{fontenc}$
+\usepackage{mathptmx}$
+\Sepackage[margin=1.8cm,top=1.6cm,bottom=1.6cm]{geometry}$
+\usepackage{booktabs,tabularx,array}$
+\usepackage{xcolor}$
+\usepackage[framemethod=default]{mdframed}$

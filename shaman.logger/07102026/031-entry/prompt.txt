@@ -1,0 +1,37 @@
+
+
+<pasted_content id="756c">
+..................F...................                                                                                                                                   [100%]
+================================================================================== FAILURES ===================================================================================
+_______________________________________________________________ test_matcher_finds_lexical_tools_with_evidence ________________________________________________________________
+
+    def test_matcher_finds_lexical_tools_with_evidence():
+        m = SkillMatcher(SKILLS, HashingEmbedder(), threshold=0.99)  # semantic effectively off
+        found = {x.skill_id: x for x in m.extract("Must know SQL and Python. Build Tableau dashboards for sales.")}
+>       assert {"s:python", "s:sql", "s:tableau"} <= set(found)
+E       AssertionError: assert {'s:python', ..., 's:tableau'} <= {'s:sql', 's:tableau'}
+E         
+E         Extra items in the left set:
+E         's:python'
+
+tests\test_ml.py:39: AssertionError
+============================================================================== warnings summary ===============================================================================
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+
+tests/test_workers.py::test_forecast_job_returns_weights
+  C:\Users\Rhydham\Desktop\projects\shaman\backend\.venv\Lib\site-packages\statsforecast\ets.py:657: RuntimeWarning: divide by zero encountered in scalar divide
+    sigma2 = np.sum(e**2) / (ny - np_ - 1)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================================================================== short test summary info ===========================================================================
+FAILED tests/test_ml.py::test_matcher_finds_lexical_tools_with_evidence - AssertionError: assert {'s:python', ..., 's:tableau'} <= {'s:sql', 's:tableau'}
+1 failed, 37 passed, 4 warnings in 49.68s
+(d2s) PS C:\Users\Rhydham\Desktop\projects\shaman\backend> 
+</pasted_content id="756c">

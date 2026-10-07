@@ -1,0 +1,1 @@
+S="C:/Users/Rhydham/AppData/Local/Temp/claude/C--Users-Rhydham-Desktop-projects-shaman/179abff8-7912-4c4b-9bae-f98badd5c47b/scratchpad"; mkdir -p "$S/ppt" && cd "$S/ppt" && unzip -o -q "C:/Users/Rhydham/Desktop/projects/shaman/buildforbharat ppt.pptx" && ls ppt/slides ppt/media | head -80

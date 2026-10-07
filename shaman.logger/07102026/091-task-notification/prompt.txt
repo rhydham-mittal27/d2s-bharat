@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bfjmb307r</task-id>
+<tool-use-id>toolu_01KaHg1UKyvGfanVDzjxSFpA</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bfjmb307r.output</output-file>
+<status>completed</status>
+<summary>Background command "Resume ingestion pipeline from saved extraction outputs" completed (exit code 0)</summary>
+</task-notification>

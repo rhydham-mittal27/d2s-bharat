@@ -1,0 +1,18 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd, re
+d='../hackathon/SAS Data Problem Statement and Instructions Hackathon/'
+a=pd.read_csv(d+'Analytics Jobs.csv')
+print('rows',len(a),'dup s_no',a.s_no.duplicated().sum(),'dup rows(excl s_no)',a.drop(columns='s_no').duplicated().sum())
+print('experience top:',a.experience.value_counts().head(8).to_dict())
+print('salary:',a.salary.value_counts().to_dict())
+print('location top:',a.location.value_counts().head(8).to_dict())
+print('multi-city share', a.location.str.contains(',').mean().round(3))
+print('job_type:',a.job_type.value_counts().to_dict())
+ks=a.key_skills.dropna().str.split(',').explode().str.strip()
+print('key_skills: tags/post',round(a.key_skills.dropna().str.count(',').mean()+1,1),'distinct',ks.str.lower().nunique()); print(ks.value_counts().head(25).to_dict())
+print('desig top:',a.job_desig.value_counts().head(10).to_dict())
+dl=a.job_description.dropna().str.len(); print('desc len median',dl.median(),'p10',dl.quantile(.1),'p90',dl.quantile(.9))
+print(repr(a.job_description.dropna().iloc[5][:600]))
+s=pd.read_csv(d+'DataScience Jobs.csv'); print(s.job_title.value_counts().head(10).to_dict()); print(s.min_experience.value_counts().to_dict()); print(s.sample(5,random_state=1).to_string())
+print('ds jobs total', s.num_of_jobs.sum(), 'companies', s.company_name.nunique(), 'dup', s.drop(columns='reference_no').duplicated().sum())
+"

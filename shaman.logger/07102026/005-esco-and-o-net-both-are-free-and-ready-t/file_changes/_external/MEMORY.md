@@ -1,0 +1,1 @@
+- [D2S data sources](d2s-data-sources.md) — ESCO + O*NET chosen as taxonomy backbone; NCS/NQR/PLFS deferred

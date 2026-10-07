@@ -1,0 +1,11 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -1 && uv run --no-sync python -c "
+import numpy as np
+from d2s.ml.taxonomy import load_onet, load_esco
+from d2s.ml.skills import SkillMatcher, SkillIndex, _onet_acronyms
+from d2s.ml.embeddings import HashingEmbedder
+t=load_onet().merge(load_esco()); sk=list(t.skills.values())
+m=SkillMatcher(sk, HashingEmbedder(dim=8), index=SkillIndex([s.id for s in sk],[s.label for s in sk],np.zeros((len(sk),8),dtype='float32'),'hashing-8'))
+for tag in ['HTML','XML','MIS','J2Ee','JSON','UML','CLAIMS','CAM','ADS','Open source','Power Bi']:
+    e=m.lookup(tag) or m.longest_contained(tag); print(f'{tag:12} -> {t.skills[e].label if e else None}')
+print(len(_onet_acronyms(sk)),'acronym keys')
+"

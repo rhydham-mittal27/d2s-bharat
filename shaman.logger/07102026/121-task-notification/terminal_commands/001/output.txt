@@ -1,0 +1,4 @@
+22:TAG_ORDER = ["exact", "contains", "semantic", "review", "unmapped"]
+78:    order = TAG_ORDER
+94:    sem = tags[tags["method"].isin(["semantic", "review", "unmapped"])]
+96:    for t, lab in ((0.78, "review"), (0.85, "accept"), (0.90, "accept 1-word")):

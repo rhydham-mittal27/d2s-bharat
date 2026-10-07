@@ -1,0 +1,13 @@
+plan product management                  2.95 [2.13, 4.07] q=0.0000
+natural language processing              1.74 [1.25, 2.41] q=0.0047
+develop predictive models                1.67 [1.28, 2.18] q=0.0014
+marketing analytics                      1.64 [1.20, 2.26] q=0.0079
+Java (computer programming)              1.51 [1.20, 1.90] q=0.0025
+statistics                               1.43 [1.09, 1.88] q=0.0271
+SAS                                      1.42 [1.20, 1.68] q=0.0006
+business intelligence                    1.41 [1.11, 1.80] q=0.0165
+Tableau                                  1.41 [1.09, 1.82] q=0.0260
+data mining                              1.40 [1.07, 1.83] q=0.0320
+data analytics                           1.25 [1.09, 1.42] q=0.0059
+communication                            0.70 [0.55, 0.89] q=0.0135
+Management information systems MIS       0.25 [0.19, 0.34] q=0.0000

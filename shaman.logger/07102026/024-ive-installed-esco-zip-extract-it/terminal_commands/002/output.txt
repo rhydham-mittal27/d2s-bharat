@@ -1,0 +1,21 @@
+-rw-r--r-- 1 Rhydham 197121 10045670 Oct  7 11:10 ESCO dataset - v1.2.1 - classification - en - csv.zip
+No errors detected in compressed data of ESCO dataset - v1.2.1 - classification - en - csv.zip.
+3047703   occupations_en.csv
+19719   dictionary_en.csv
+9302000   skills_en.csv
+966601   ISCOGroups_en.csv
+340935   skillGroups_en.csv
+730008   broaderRelationsOccPillar_en.csv
+4944592   broaderRelationsSkillPillar_en.csv
+27986628   occupationSkillRelations_en.csv
+57293   transversalSkillsCollection_en.csv
+144359   languageSkillsCollection_en.csv
+1031275   skillSkillRelations_en.csv
+941042   conceptSchemes_en.csv
+18759   digCompSkillsCollection_en.csv
+455125   greenSkillsCollection_en.csv
+27033   researchSkillsCollection_en.csv
+811101   digitalSkillsCollection_en.csv
+126900   researchOccupationsCollection_en.csv
+381733   skillsHierarchy_en.csv
+452849   greenShareOcc_en.csv

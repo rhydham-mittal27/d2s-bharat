@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bu6uhrksq</task-id>
+<tool-use-id>toolu_013JWtJpfo4Mv9xz6JfwKS7T</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bu6uhrksq.output</output-file>
+<status>completed</status>
+<summary>Background command "Final SAS ingestion run" completed (exit code 0)</summary>
+</task-notification>

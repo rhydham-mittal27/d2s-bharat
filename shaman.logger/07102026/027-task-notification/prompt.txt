@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bxl0734ve</task-id>
+<summary>Monitor event: "backend dependency install (uv sync)"</summary>
+<event>[Monitor expired after 15m with no events delivered. Re-arm it if you still need the watch — and widen the filter if silence was unexpected.]</event>
+</task-notification>

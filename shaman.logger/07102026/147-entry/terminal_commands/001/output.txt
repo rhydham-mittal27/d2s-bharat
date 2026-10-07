@@ -1,0 +1,34 @@
+PLAN optimal objective 23391.4 cost 352900 hours 188 []
+   py_sql 35 70500 40
+   sas_prog 60 45000 30
+   stats 60 78000 40
+   ml 50 97000 48
+   story_tableau 58 62400 30
+     resource    delta  base_objective  new_objective  per_unit  lp_estimate_per_unit
+       budget 100000.0      23391.4342     23391.4342       0.0                0.0116
+trainer_hours     20.0      23391.4342     23391.4342       0.0               27.4624
+LP shadow prices: {'lp_objective': 24312.638046773973, 'budget_per_rupee': 0.011608908058273507, 'trainer_hours_per_hour': 27.462379297064608, 'total_seats_per_seat': None}
+ budget_cap   cost       impact                                courses
+     100000 100000  8219.876669                 sas_prog+story_powerbi
+     177778 177700 14163.251202           sas_prog+stats+story_powerbi
+     255556 255300 18402.468467    py_sql+sas_prog+stats+story_tableau
+     333333 315400 20496.047133          py_sql+stats+ml+story_tableau
+     411111 352900 23391.434184 py_sql+sas_prog+stats+ml+story_tableau
+    course_id  feasible  objective_delta  objective_delta_pct                                                                                                          reason
+       dl_nlp      True     -3000.190717           -12.826023 forcing it in changes impact by -3000.19 (-12.8%); the budget it uses closes more demand-weighted gap elsewhere
+      bigdata      True     -1333.108601            -5.699132  forcing it in changes impact by -1333.11 (-5.7%); the budget it uses closes more demand-weighted gap elsewhere
+story_powerbi      True      -251.668744            -1.075901   forcing it in changes impact by -251.67 (-1.1%); the budget it uses closes more demand-weighted gap elsewhere
+     bootcamp      True     -4830.824174           -20.652108 forcing it in changes impact by -4830.82 (-20.7%); the budget it uses closes more demand-weighted gap elsewhere
+                                                          balanced / low  balanced / point  balanced / high  market-led / low  market-led / point  market-led / high  outcome-led / low  outcome-led / point  outcome-led / high
+Python & SQL for Analytics                                            35                35               35                35                  35                 35                 35                   35                  35
+SAS Programming on SAS Viya for Learners                              60                60               60                60                  60                 60                 60                   60                  60
+Applied Statistics & Probability                                      60                60               60                60                  60                 60                 60                   60                  60
+Machine Learning Foundations                                          50                50               50                50                  50                 50                 50                   50                  50
+Deep Learning & NLP                                                    0                 0                0                 0                   0                  0                  0                    0                   0
+Big-Data Stack: Hadoop, Spark, Hive (taught as a bundle)               0                 0                0                39                  39                  0                  0                    0                   0
+Data Storytelling with Tableau                                        58                58               58                 0                   0                 58                 58                   58                  58
+Dashboards & Storytelling with Power BI                                0                 0                0                 0                   0                  0                  0                    0                   0
+Integrated Analytics Bootcamp (capstone)                               0                 0                0                 0                   0                  0                  0                    0                   0
+SAFE CORE: ['Python & SQL for Analytics', 'SAS Programming on SAS Viya for Learners', 'Applied Statistics & Probability', 'Machine Learning Foundations'] 
+NEVER: ['Deep Learning & NLP', 'Dashboards & Storytelling with Power BI', 'Integrated Analytics Bootcamp (capstone)']
+DONE

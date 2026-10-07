@@ -1,0 +1,1 @@
+$c="$env:LOCALAPPDATA\uv\cache"; Get-ChildItem $c -Directory -Force | Sort-Object LastWriteTime -Descending | Select-Object -First 5 Name, LastWriteTime | Format-Table -AutoSize | Out-String; Start-Sleep 10; (Get-Process -Id 13664).CPU; Get-Date -Format T

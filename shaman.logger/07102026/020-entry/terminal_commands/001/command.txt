@@ -1,0 +1,1 @@
+python --version; uv --version; py -0 2>/dev/null; redis-server --version 2>&1 | head -1; docker --version 2>&1 | head -1; memurai --version 2>&1 | head -1; nproc; git --version

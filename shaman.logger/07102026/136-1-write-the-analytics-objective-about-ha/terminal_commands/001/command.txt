@@ -1,0 +1,1 @@
+for c in pdflatex xelatex lualatex tectonic latexmk; do printf "%s: " $c; command -v $c || echo no; done; ls "/c/Program Files/MiKTeX/miktex/bin/x64" 2>/dev/null | head -3; ls "$LOCALAPPDATA/Programs/MiKTeX" 2>/dev/null | head -2

@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>b1qym53vo</task-id>
+<tool-use-id>toolu_01RPU4c9hiNpM7pYZv1HW19z</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b1qym53vo.output</output-file>
+<status>completed</status>
+<summary>Background command "Run TechWolf matching variant comparison" completed (exit code 0)</summary>
+</task-notification>

@@ -1,0 +1,31 @@
+13690 jobs/naukri/naukri_data_scientist.jsonl
+title => 'Data Scientist - Phd only'
+logoPath => 'https://img.naukri.com/logo_images/v3/15620.gif'
+logoPathV3 => 'https://img.naukri.com/logo_images/v3/15620.gif'
+jobId => '010421006391'
+currency => 'INR'
+footerPlaceholderLabel => 'Few Hours Ago'
+footerPlaceholderColor => 'green'
+companyName => 'Anurag Electronic Gujarat'
+isSaved => False
+tagsAndSkills => 'Natural Language Processing,Phd,Deep Learning,Data Science,Languages,Data,Processing,Science'
+companyId => 15620
+jdURL => 'https://www.naukri.com/job-listings-data-scientist-phd-only-anurag-electronic-gujarat-mumbai-0-to-2-years-010421006391'
+ambitionBoxData => {'Url': 'https://www.ambitionbox.com/reviews/anurag-electronics-gujarat-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri', 'ReviewsCount': 
+jobDescription => 'Bachelor Accommodation provided<br><br>Candidate should be a self-motivated,independent,detail oriented,responsible team player and exhibit exceptional Leaders
+showMultipleApply => False
+groupId => 6757137
+isTopGroup => 0
+createdDate => '2024-12-23 06:51:32'
+mode => 'jp'
+board => '1'
+vacancy => 5
+experience => '0-2 Yrs'
+salary => '12-15 Lacs PA'
+location => 'Mumbai'
+companyJobsUrl => 'https://www.naukri.com/anurag-electronic-gujarat-jobs-careers-15620'
+
+sentence,label
+* Strong Mechanical Background/Experience,mechanics
+* Food Manufacturing,food engineering
+(588, 2) ['sentence', 'label']

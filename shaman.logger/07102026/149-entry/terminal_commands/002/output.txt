@@ -1,0 +1,4 @@
+5:\emph{prescriptive} (what to teach first). Figure~\ref{fig:flow} shows the overall flow.
+8:\resizebox{\linewidth}{!}{\input{figures/flow}}
+9:\caption{Analytical flow: four SAS datasets $\rightarrow$ cleaning and derivation $\rightarrow$
+10:three diagnostic questions $\rightarrow$ one prescriptive decision.}\label{fig:flow}

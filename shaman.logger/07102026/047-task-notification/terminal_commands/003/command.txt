@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && mkdir -p ../dataset/processed && HF_HUB_DISABLE_SYMLINKS_WARNING=1 HF_HUB_DOWNLOAD_TIMEOUT=120 uv run --no-sync python -u scripts/run_ingestion.py --semantic-sample 3000 > ../dataset/processed/ingest_run.log 2>&1; echo "EXIT $?" >> ../dataset/processed/ingest_run.log

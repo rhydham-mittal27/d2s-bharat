@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>buqnju8i8</task-id>
+<summary>Monitor event: "Naukri software-engineer (164 MB) download"</summary>
+<event>software_engineer: 84% (132 / 156 MB)</event>
+</task-notification>

@@ -1,0 +1,34 @@
+
+
+<pasted_content id="756c">
+│ Six headings in the given      │ ✅ All present and in order. We add an Executive Summary in front, which is allowed and helpful.                                                   │
+│ order                          │                                                                                                                                                    │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Approach: flow, motivations,   │ ✅ Flow diagram plus a "Why these methods" section. ⚠️ The diagram has visual problems (a curved arrow crosses boxes and lines overlap the         │
+│ reasons                        │ triangulation box), which I need to fix.                                                                                                           │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Data Exploration: derivation,  │ ⚠️ Derivation and modification are covered. "Reductions" isn't named explicitly, even though we did it: 10,096 titles → 10 role families, 8,460    │
+│ modification, "deduction",     │ tags → 6,604 canonical skills, 74,884 tag uses → 5 JDS skill areas. A short "Data reduction" subsection would match their wording. "Data           │
+│ reductions                     │ Deduction" is ambiguous; it probably means deduplication or drawing inferences from the data. We cover both, but should use their word.            │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Data Analysis: descriptive and │ ✅ Descriptive (RQ1), diagnostic (RQ2/RQ3), prescriptive (RQ4 optimisation). That's an explicit match.                                             │
+│  prescriptive                  │                                                                                                                                                    │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Results linked to the problem  │ ✅ An answers-per-RQ table plus an overall conclusion.                                                                                             │
+│ statement                      │                                                                                                                                                    │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Implications for stakeholders  │ ✅ Institutions, students, employers, policy/CSR. Could add one line on the societal angle (employability and skill gaps in India).                │
+│ "in society"                   │                                                                                                                                                    │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Word format                    │ ❌ We have LaTeX/PDF. Convert to .docx with pandoc and clean it up, or confirm with the organisers that PDF is accepted.                           │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 20–25 pages excluding appendix │ ⚠️ About 20 pages of main text, which is at the minimum. Adding the data-reduction subsection and the societal-implications paragraph brings it to │
+│                                │  about 21–22.                                                                                                                                      │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Times 12 pt, single spacing    │ ✅                                                                                                                                                 │
+├────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Appendix: tables, graphs,      │ ⚠️ Tables, graphs, code and equations are there. Software screenshots are missing. Once the team runs the SAS code in VFL, screenshots would fill  │
+│ code, software screenshots,    │ this, and it's a SAS-run hackathon.
+</pasted_content id="756c">
+
+ fix everything

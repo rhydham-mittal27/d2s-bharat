@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python scripts/make_sas_report.py 2>&1 | tail -1 && uv run --no-sync python scripts/make_report_assets.py 2>&1 | tail -30 && cat ../report/tables/data_quality.tex

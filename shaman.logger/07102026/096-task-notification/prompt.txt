@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bqbj9e3yq</task-id>
+<summary>Monitor event: "ingestion v1 rerun (milestones)"</summary>
+<event>[   17.2s] STEP 2/5 taxonomy + sentence-transformer embeddings</event>
+</task-notification>

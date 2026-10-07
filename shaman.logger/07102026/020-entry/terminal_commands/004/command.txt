@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && echo "# d2s backend" > README.md && mkdir -p src/d2s/engine src/d2s/ml src/d2s/workers tests && uv python pin 3.13 && uv sync --all-extras 2>&1 | tail -15

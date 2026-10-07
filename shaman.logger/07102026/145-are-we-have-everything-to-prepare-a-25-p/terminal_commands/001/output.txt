@@ -1,0 +1,4 @@
+/c/Users/Rhydham/AppData/Local/Pandoc/pandoc
+pandoc 3.9.0.2
+ModuleNotFoundError: No module named 'docx'
+43

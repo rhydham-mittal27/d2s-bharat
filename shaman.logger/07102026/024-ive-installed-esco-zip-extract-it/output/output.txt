@@ -1,0 +1,19 @@
+The ESCO file is extracted to `dataset/esco/v1.2.1/`. The zip passed its integrity check: 10 MB zipped, 50 MB extracted, 19 CSV files.
+
+| | Rows |
+|---|---|
+| Skills | 13,960 |
+| Occupations | 3,043 |
+| Occupation ↔ skill links (essential/optional) | 126,051 |
+| Skill ↔ skill links | 5,818 |
+
+It also includes the skill hierarchy, the ISCO occupation groups (the international job classification ESCO maps to), and themed skill collections (digital, green, transversal, language and research).
+
+**Fit with the code:**
+- The column headers match what `load_esco()` expects, so no code changes are needed.
+- The folder name means the data will be labelled `esco-1.2.1`.
+- The skill matcher will automatically combine ESCO with O\*NET and cache the combined skill index under that version.
+
+I haven't run it yet. The dependency install is still going, so the first real test of `load_esco()` against these files will be part of the test run once it finishes.
+
+There's now about 450 MB of data in `dataset/` (O\*NET plus ESCO). Add that folder to `.gitignore` once you set up git.

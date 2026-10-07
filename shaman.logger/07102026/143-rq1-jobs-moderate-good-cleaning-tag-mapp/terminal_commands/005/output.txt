@@ -1,0 +1,20 @@
+posts 14840 {'Software / IT': 3280, 'Analytics / BI': 2720, 'Finance / Risk': 1413, 'Other': 1388, 'Sales / Ops / HR / Support': 1265, 'Management / Consulting': 1182, 'Marketing / SEO / Content': 1174, 'Data Science / ML': 939, 'Business Analysis / Product': 902, 'Data Engineering': 577}
+canonical sources (tag uses): {'esco_onet': 56.4, 'merged_esco_onet': 0.3, 'merged_tag': 1.0, 'tag': 42.3}
+pay model all: {'n': 14840, 'exp_min_or_per_year': 1.6567139609302457, 'pseudo_r2': 0.1940990659697237, 'converged': True} 
+pay model data roles: {'n': 5138, 'exp_min_or_per_year': 1.6113744287058658, 'pseudo_r2': 0.1637495606445899, 'converged': True}
+                              area  demand_share  demand_ci_low  demand_ci_high  odds_ratio  or_ci_low  or_ci_high     p  q_fdr
+                  big_data_skills         0.106          0.098           0.115       1.282      1.055       1.558 0.013  0.013
+               maths_stats_skills         0.159          0.149           0.169       1.501      1.298       1.736 0.000  0.000
+                    coding_skills         0.407          0.394           0.421       1.558      1.391       1.745 0.000  0.000
+                 ai_and_ml_skills         0.160          0.150           0.170       1.400      1.191       1.645 0.000  0.000
+dashboard_and_storytelling_skills         0.171          0.161           0.182       0.788      0.688       0.902 0.001  0.001
+                      skill  posts  share  share_ci_low  share_ci_high
+--
+                             area  demand_share  demand_ci_low  demand_ci_high  odds_ratio  or_ci_low  or_ci_high     p  q_fdr  rq2_odds_ratio  rq2_or_ci_low  rq2_or_ci_high  rq2_rank_biserial
+                  big_data_skills         0.106          0.098           0.115       1.332      1.095       1.619 0.004  0.005           1.757          1.179           2.671              0.121
+               maths_stats_skills         0.159          0.149           0.169       1.558      1.347       1.802 0.000  0.000           3.005          1.994           4.602              0.551
+                    coding_skills         0.407          0.394           0.421       1.500      1.338       1.682 0.000  0.000           1.674          1.101           2.786              0.488
+                 ai_and_ml_skills         0.160          0.150           0.170       1.441      1.226       1.694 0.000  0.000           2.000          1.225           3.233              0.363
+dashboard_and_storytelling_skills         0.119          0.110           0.128       1.143      0.979       1.335 0.091  0.091           2.722          1.773           4.734              0.589
+{
+DONE

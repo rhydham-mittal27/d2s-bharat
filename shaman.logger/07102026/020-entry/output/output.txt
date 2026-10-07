@@ -1,0 +1,1 @@
+I've set up a monitor on the install and will run the test suite once it finishes.

@@ -1,0 +1,4 @@
+Pinned `.python-version` to `3.13`
+3
+uv.exe                       25240 Console                    1     17,804 K
+uv.exe                       13664 Console                    1    131,600 K

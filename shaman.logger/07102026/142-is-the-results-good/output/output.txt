@@ -1,0 +1,36 @@
+**Yes, for this hackathon the results are good.** They're statistically solid and they tell a clear story. Some parts are more trustworthy than others, though.
+
+## Strong parts ✅
+1. **Different methods agree.** The rank tests, logistic regression and decision tree all pick out the same top factors:
+   - juniors: storytelling and maths-stats
+   - seniors: openness and conscientiousness
+
+   When three different methods agree, the finding isn't a quirk of one technique.
+2. **Clearly better than chance.** The models score AUC 0.90 (JDS) and 0.96 (SDS), against 0.50 for always guessing the larger class. A permutation test gives p = 0.002, so the patterns aren't luck.
+3. **Large effects, not just significant ones.** Effect sizes of 0.55–0.77 and Cohen's d of 1.2–1.8 count as large by any standard. With 139–161 people, an effect has to be large to show up this clearly.
+4. **Careful method.** Holm correction, bootstrap confidence intervals, repeated cross-validation, shallow models, and a methodology error caught and fixed (the log-loss change). Judges reward this in the "Data Analysis" (30) and "Q&A" (25) sections.
+5. **Easy to act on.** "Teach storytelling and statistics; for seniors, openness and conscientiousness matter" turns straight into RQ4 and the implications section.
+
+## Read with caution ⚠️
+1. **The data looks too clean to be real-world.** In SDS, *all 52* seniors with openness ≤ 38.5 are low-success, and real HR data almost never splits that perfectly. The brief itself calls it "sample data", so it's probably generated or curated. Say so openly in the report; judges will respect it more than overclaiming.
+2. **Small samples mean wide ranges.** JDS AUC varies from 0.77 to 0.99 across folds, so quote the direction and rough size of effects, not exact figures.
+3. **Associations, not causes.** Strong storytellers may get hikes *because* they're also visible to managers, for example.
+4. **JDS ceiling effect.** Most high performers score the maximum 5, so the scale can't separate the best juniors.
+5. **Odds ratios of about 9–10 for SDS are partly a result of the data being so cleanly separated.** Lead with effect sizes and the decision rules, and treat the odds ratios as supporting detail.
+
+## The weakest part is the jobs-data pipeline, not RQ2/RQ3
+- Only **57.7%** of recruiter tags map to a skill automatically, and **31% still need human review**.
+- Matching job descriptions by meaning **didn't work**, because the descriptions are cut off at about 100 characters. Dropping it was the right call, but it limits RQ1.
+- The salary-by-skill results are coarse, because salary comes in bands rather than exact figures.
+
+## Overall
+| Part | Quality | Why |
+|---|---|---|
+| RQ2 (JDS) | **Strong** | Large, consistent effects; small sample |
+| RQ3 (SDS) | **Strong, maybe too clean** | Very large effects; data looks curated |
+| RQ1 (jobs) | **Moderate** | Good cleaning; tag mapping incomplete; truncated text |
+| Method and honesty | **Strong** | Errors caught, limitations stated |
+
+**What would most improve the overall result:**
+1. Have your team check the **top ~100 review-queue tags**, which would make RQ1 much stronger.
+2. Run **RQ4** so the findings become a recommended training plan.

@@ -1,0 +1,86 @@
+\section{Reproducibility}\label{app:repro}
+
+All analysis is scripted, seeded (seed 42) and re-runnable from the project repository
+(\texttt{backend/}). Run in this order (Python 3.13, \texttt{uv}):
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}L{5.6cm}Y@{}}
+\toprule
+Script & Produces\\
+\midrule
+\texttt{scripts/run\_sas\_ingestion.py} & cleaned postings, tag mapping, text-calibration test\\
+\texttt{scripts/run\_rq2\_rq3.py} & RQ2/RQ3 tests, models, odds ratios, trees\\
+\texttt{scripts/run\_rq1.py} & role families, canonical skills, demand, pay models, rules, triangulation\\
+\texttt{scripts/run\_rq4.py} & optimal plan, sensitivity, Pareto, robustness\\
+\texttt{scripts/make\_report\_assets.py} & cleaned CSVs, LaTeX tables, figures for this report\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Core modules: \texttt{d2s/ingest/} (parsing, skill mapping), \texttt{d2s/analysis/} (traits, jobs,
+plan), \texttt{d2s/engine/} (CP-SAT model, sensitivity, Pareto, why-not). 49 automated tests check
+data handling, statistics and the optimiser (e.g.\ that every plan respects budget, prerequisites
+and either/or groups, and that the optimiser matches brute force on a small instance). Cleaned data:
+\texttt{dataset/processed/clean/}.
+
+\section{Role-family rules}\label{app:families}
+Titles are lower-cased and matched against ordered keyword rules; the first match wins.
+\begin{enumerate}
+  \item \textbf{Data Science / ML:} data scien, machine learning, ML, deep learning, AI, NLP,
+        computer vision, statistician, quant, predictive, modeller/modelling.
+  \item \textbf{Data Engineering:} data engineer, big data, hadoop, spark, ETL, data architect,
+        data warehouse, databricks, kafka, informatica, data platform, DBA, database, data model.
+  \item \textbf{Analytics / BI:} data analy, analytics, BI, business intelligence, Power BI, Tableau,
+        MIS, reporting, insight, SAS, statistic, research analyst.
+  \item \textbf{Business Analysis / Product:} business analy, BA, product manager/owner/analyst,
+        functional or business consultant.
+  \item \textbf{Marketing / SEO / Content}, \textbf{Finance / Risk}, \textbf{Software / IT},
+        \textbf{Sales / Ops / HR / Support}, \textbf{Management / Consulting} (keyword lists in
+        \texttt{d2s/analysis/jobs.py}); generic ``Analyst'' $\rightarrow$ Analytics / BI; else Other.
+\end{enumerate}
+
+\section{RQ4 course catalogue (assumptions)}\label{app:catalogue}
+\begin{table}[H]\centering\scriptsize
+\begin{tabularx}{\linewidth}{@{}L{4.2cm} r r r r r Y@{}}
+\toprule
+Course & Fixed (Rs) & Per seat & Seats & Hours & Prereq. & Coverage (\% of a learner's gap per seat)\\
+\midrule
+Python \& SQL for Analytics & 60,000 & 300 & 15--60 & 40 & -- & Coding 100\\
+SAS Programming (SAS VFL) & 45,000 & 0 & 15--60 & 30 & -- & Coding 70, Maths 20\\
+Applied Statistics \& Probability & 60,000 & 300 & 15--60 & 40 & -- & Maths 100\\
+Machine Learning Foundations & 72,000 & 500 & 15--50 & 48 & Py\&SQL, Stats & AI/ML 100, Maths 20\\
+Deep Learning \& NLP & 80,000 & 2,000 & 10--30 & 40 & ML & AI/ML 60\\
+Big-Data Stack (Hadoop, Spark, Hive) & 70,000 & 1,000 & 15--40 & 40 & Py\&SQL & Big data 100\\
+Data Storytelling with Tableau & 45,000 & 300 & 15--60 & 30 & -- & Storytelling 100 (either/or)\\
+Dashboards with Power BI & 40,000 & 300 & 15--60 & 28 & -- & Storytelling 90 (either/or)\\
+Integrated Analytics Bootcamp & 150,000 & 1,500 & 20--40 & 90 & -- & Coding 40, Maths 40, AI/ML 30, Storytelling 40\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{Additional figures}
+
+\begin{figure}[H]\centering
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_jds_corr.png}\caption{JDS}\end{subfigure}
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_sds_corr.png}\caption{SDS}\end{subfigure}
+\caption{Spearman correlations, including the outcome.}
+\end{figure}
+
+\begin{figure}[H]\centering
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_jds_or.png}\caption{JDS}\end{subfigure}
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_sds_or.png}\caption{SDS}\end{subfigure}
+\caption{Odds ratios per +1 SD (L2 logistic regression, bootstrap 95\% CI).}
+\end{figure}
+
+\fig{fig_sds_dist.png}{SDS: trait scores by success outcome.}
+\fig[0.9\linewidth]{fig_jds_tree.png}{RQ2 depth-3 decision tree.}
+\fig[0.8\linewidth]{fig_pay_all.png}{Adjusted pay association of skills, all postings.}
+\fig{fig_salary_experience.png}{Analytics Jobs: salary bands and experience requirements.}
+\fig[0.85\linewidth]{fig_city.png}{Skill mix by city (top 15 skills, top 10 cities).}
+\fig{fig_rq4_inputs.png}{RQ4 inputs: gaps (left) and the value of closing them (right).}
+
+\section{SAS code for the core analyses}\label{app:sas}
+The following program mirrors the core statistics in SAS (PROC MEANS, NPAR1WAY, LOGISTIC, HPSPLIT)
+for SAS Viya for Learners. \emph{It was written to match the Python analysis but has not yet been
+executed in SAS}; results should be compared with Tables~\ref{tab:rq2}--\ref{tab:rq3} before use.
+\lstinputlisting[language=SAS]{appendix/d2s_core_analysis.sas}

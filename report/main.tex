@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+% SAS CU Hackathon Round-2 report: Times New Roman 12pt, single spacing.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+\newunicodechar{₹}{Rs~}
+\usepackage{mathptmx}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,array,longtable,multirow}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\definecolor{sasblue}{HTML}{0766D1}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\tabularxcolumn}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\titleformat{\section}{\large\bfseries\color{sasblue}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\setlength{\parskip}{3pt}
+\graphicspath{{figures/}}
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,columns=fullflexible,
+        keywordstyle=\bfseries\color{sasblue},commentstyle=\itshape\color{gray}}
+
+\newcommand{\fig}[3][\linewidth]{\begin{figure}[H]\centering\includegraphics[width=#1]{#2}\caption{#3}\label{fig:#2}\end{figure}}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{3cm}
+  {\Huge\bfseries\color{sasblue} D2S Bharat\par}
+  \vspace{0.4cm}
+  {\Large From Data-Science Job Demand to Skills, Success and Training Decisions\par}
+  \vspace{1.2cm}
+  {\large Analytics approach note --- Round 2\par}
+  {\large SAS CU Hackathon \textperiodcentered{} Build for Bharat\par}
+  \vspace{2cm}
+  {\large\bfseries Team Code5urge\par}
+  \vspace{0.3cm}
+  {\large Shaman Sharma \quad Anurag Prajapati \quad Amrita Raman \quad Rhydham Mittal\par}
+  \vfill
+  {\small Data: SAS-provided Analytics Jobs, DataScience Jobs, JDS Skill Traits and SDS Personality Traits files.\\
+  All code and outputs are reproducible from the project repository (Appendix~\ref{app:repro}).\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\input{sections/00_exec_summary}
+\input{sections/01_problem}
+\input{sections/02_approach}
+\input{sections/03_data_exploration}
+\input{sections/04_rq1}
+\input{sections/05_rq2_rq3}
+\input{sections/06_rq4}
+\input{sections/07_results}
+\input{sections/08_implications}
+
+\clearpage
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\clearpage
+\appendix
+\input{sections/09_appendix}
+
+\end{document}

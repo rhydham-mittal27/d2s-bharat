@@ -1,0 +1,10 @@
+ 
+
+<pasted_content id="756c">
+Workers  │        │  ML services   │        │ Decision engine  │
+  │ (arq +   │        │ Sentence-Trans │        │ OR-Tools CP-SAT  │
+  │  Redis)  │        │ StatsForecast  │        │ + GLOP (duals)   │
+  └────┬─────┘        └───────┬────────┘        └────────┬─────────┘
+</pasted_content id="756c">
+
+ now first we will going to build this .. web search aggesively to tell me how we can build best version of these 3 document it .. then implement it in modularized versions

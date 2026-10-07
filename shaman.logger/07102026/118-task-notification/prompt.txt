@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b0c9o7wj0</task-id>
+<summary>Monitor event: "SAS ingestion run (milestones)"</summary>
+<event>[   37.6s] STEP 3/5 ESCO/O*NET mapping of recruiter key_skills</event>
+</task-notification>

@@ -1,0 +1,11 @@
+Python 3.14.3
+uv 0.11.7 (9d177269e 2026-04-15 x86_64-pc-windows-msvc)
+ -V:3.14[-64] *   Python 3.14.3
+ -V:3.13          Python 3.13
+ -V:Astral\CPython3.10.20 CPython 3.10.20 (64-bit)
+ -V:Astral\CPython3.13.13 CPython 3.13.13 (64-bit)
+/usr/bin/bash: line 1: redis-server: command not found
+/usr/bin/bash: line 1: docker: command not found
+/usr/bin/bash: line 1: memurai: command not found
+12
+git version 2.51.0.windows.1

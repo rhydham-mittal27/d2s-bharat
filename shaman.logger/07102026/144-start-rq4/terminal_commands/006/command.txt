@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q tests/test_plan.py 2>&1 | grep -E "assert|Error|where" | head -8

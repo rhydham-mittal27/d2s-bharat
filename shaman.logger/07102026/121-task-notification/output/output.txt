@@ -1,0 +1,1 @@
+The SAS pipeline is rerunning with the improved tag mapping (acronyms, "contains" fallback, stricter acceptance). It should take about 4 minutes, then I'll generate the charts and check them.

@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Rhydham/Desktop/future/logger/.venv/Scripts/python.exe\" \"C:/Users/Rhydham/Desktop/future/logger/src/venlog.py\" hook prompt"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Rhydham/Desktop/future/logger/.venv/Scripts/python.exe\" \"C:/Users/Rhydham/Desktop/future/logger/src/venlog.py\" hook tool"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Users/Rhydham/Desktop/future/logger/.venv/Scripts/python.exe\" \"C:/Users/Rhydham/Desktop/future/logger/src/venlog.py\" hook stop"
+          }
+        ]
+      }
+    ]
+  }
+}

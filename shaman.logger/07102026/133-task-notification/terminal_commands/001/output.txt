@@ -1,0 +1,5 @@
+[   51.0s] tags: {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577}
+[   51.3s] reused 64,169 raw text matches
+[   52.7s] calibrated semantic threshold = 0.7 {'matches_kept': 40537.0, 'precision': 0.06268347435676049, 'recall': 0.07315387937239096, 'f1': 0.06751514507386544}; semantic text matches EXCLUDED (best F1 0.068 vs required 0.2)
+[   55.5s] final post-skill rows 45,869: {'key_skills': 38071, 'text': 4497, 'key_skills+text': 3301}
+[   69.8s] DONE outputs in C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\sas

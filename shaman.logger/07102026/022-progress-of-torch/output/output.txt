@@ -1,0 +1,19 @@
+Torch is downloaded but still being unpacked, and nothing has been installed into the project yet. There's no percentage to show.
+
+| Step | State |
+|---|---|
+| Download torch 2.12.1 (CPU wheel) | ✅ done |
+| Unpack into uv's cache | ✅ one full copy is done (`archive-v0/…/torch-2.12.1.dist-info`) |
+| Second unpack (`.tmpFYGFXg/torch`) | ⏳ in progress |
+| Link packages into `backend/.venv` | ⏳ not started (`site-packages` has 3 entries) |
+
+Two `uv.exe` processes are still running, so it isn't stuck.
+
+**Why it's slow:** torch is thousands of small files, and on Windows, Defender scans each one as it's written. The same thing made my `du` size check time out, so I stopped that check to avoid slowing the install further.
+
+**Options:**
+1. **Wait.** It usually finishes within a few more minutes. The monitor will tell me when it's done, and then I'll run the tests.
+2. **Speed it up (optional):** add a Windows Defender exclusion for `%LOCALAPPDATA%\uv\cache` and the `backend\.venv` folder. This only makes sense if you're comfortable excluding those folders.
+3. **Test the rest now:** I can stop this install and set up only the engine and workers dependencies, without torch or sentence-transformers. That's under a minute, and I could test the engine and workers right away, then add the ML extras afterwards.
+
+I'd go with option 1 unless you want results sooner. Tell me if you'd prefer option 3.

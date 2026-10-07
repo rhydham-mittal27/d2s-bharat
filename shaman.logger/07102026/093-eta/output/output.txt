@@ -1,0 +1,5 @@
+It's still running, 7 minutes 50 seconds in. **My estimate was too low**, so expect about **2–3 more minutes**, finishing around 12:33.
+
+The likely reason: most of the earlier 302-second index build was spent on ESCO's long descriptions, not O\*NET's short tool names. So the label + description variant alone probably takes about 4 minutes. The label + alternative labels variant is also longer than I assumed, since it embeds up to 8 alternative names per skill.
+
+It's working steadily, not stuck: about 2,670 seconds of CPU time across cores. Results will appear as soon as it exits.

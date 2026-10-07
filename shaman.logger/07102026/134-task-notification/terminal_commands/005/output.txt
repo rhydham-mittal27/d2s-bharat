@@ -1,0 +1,6 @@
+24480  start 10:41:25  cpu 82s  mem 82MB  "C:\Users\Rhydham\AppData\Local\Python\pythoncore-3.14-64\python.exe"  email_sender.py run --live
+20824  start 10:41:51  cpu 52s  mem 112MB  "C:\Users\Rhydham\AppData\Local\Python\pythoncore-3.14-64\python.exe"  whatsapp_autosend.py run
+10808  start 10:44:10  cpu 0s  mem 6MB  "C:\Users\Rhydham\Desktop\future\scontrol-clud\.venv\Scripts\python.exe" "C:\Users\Rhydham\Desktop\future\scontrol-clud\.venv\Scripts\scontrol.exe"
+17296  start 10:44:10  cpu 2s  mem 22MB  "C:\Users\Rhydham\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\python.exe"  "C:\Users\Rhydham\Desktop\future\scontrol-clud\.venv\Scripts\scontrol.exe"
+20308  start 12:02:28  cpu 0s  mem 6MB  c:\Users\Rhydham\Desktop\projects\shaman\backend\.venv\Scripts\python.exe c:\Users\Rhydham\.vscode\extensions\ms-python.black-formatter-2026.6.0\bundled\tool\lsp_server.py
+19880  start 12:02:28  cpu 1s  mem 16MB  "C:\Users\Rhydham\AppData\Roaming\uv\python\cpython-3.13-windows-x86_64-none\python.exe"  c:\Users\Rhydham\.vscode\extensions\ms-python.black-formatter-2026.6.0\bundled\tool\lsp_server.py

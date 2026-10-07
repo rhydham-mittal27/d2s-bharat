@@ -1,0 +1,28 @@
+[  267.8s] DONE outputs in C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\sas
+EXIT 0
+ threshold  matches_kept  precision  recall    f1
+      0.60         54702      0.051   0.081 0.063
+      0.63         54223      0.052   0.080 0.063
+      0.66         51754      0.053   0.080 0.064
+      0.69         44273      0.059   0.076 0.067
+      0.72         32574      0.070   0.065 0.068
+      0.75         20008      0.086   0.050 0.063
+      0.78          9577      0.112   0.031 0.048
+      0.81          3750      0.145   0.016 0.028
+      0.84          1180      0.217   0.007 0.014
+      0.87           361      0.266   0.003 0.005
+      0.90            71      0.366   0.001 0.001
+{'semantic': 56371, 'lexical': 5835, 'both': 1963}
+0.72 | animal hunting                         | 8 Years of experience in Hunting role and Sales Management
+0.71 | manage credit union operations         | Immediate Openings for Credit Executives & Credit Officers.
+0.73 | write situation reports                | Prior experience having supported/led report optimization efforts
+0.79 | utilise machine learning               | Senior Machine Learning Scientist
+0.84 | run errands on behalf of customers     | Interact with customers and other external parties whenever required
+0.71 | interact verbally in English           | Professional oral and written communication skills with good command over Englis
+0.78 | perform procurement processes          | Manage overall performance of the Payment Processing process by providing strate
+0.72 | use microsoft office                   | Should have a decent exposure in handling MS Excel functions
+0.72 | business analytics                     | Regional Analytics Manager | Bangalore Location
+0.76 | consult with industry professionals    | Should be from IT Consulting Firms
+0.77 | execute advertising for vehicles       | advertising operations, account management and/or
+0.74 | liaise with managers                   | Senior Associate/ Manager/ Senior Manager
+lexical text top: {'communication': 538, 'Java (computer programming)': 308, 'machine learning': 244, 'Python': 229, 'SQL': 226, 'SAS': 223, 'data analytics': 210, 'statistics': 157, 'computer science': 145, 'Microsoft Business Intelligence BI': 138, 'Management information systems MIS': 137, 'data science': 131}

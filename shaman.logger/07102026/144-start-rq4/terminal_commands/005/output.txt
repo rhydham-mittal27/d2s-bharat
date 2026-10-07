@@ -1,0 +1,2 @@
+FAILED tests/test_plan.py::test_evidence_weights_scaled_and_or_below_one_gets_no_market_value
+1 failed, 48 passed, 2 warnings in 28.71s

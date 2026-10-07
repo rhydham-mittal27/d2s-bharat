@@ -1,0 +1,22 @@
+**This accuracy is low, and I'm flagging it now rather than after the charts.**
+
+On TechWolf's 578 labelled sentences (10 gold labels weren't found in ESCO 1.2.1), the correct ESCO skill ranks:
+
+| | |
+|---|---|
+| first (hit@1) | 9.2% |
+| in the top 3 | 19.4% |
+| in the top 5 | 23.9% |
+| in the top 10 | 31.8% |
+| MRR (average of 1/rank) | 0.16 |
+
+Part of this is expected: the model has to pick exactly one of 13,939 very similar ESCO skills, and it's an off-the-shelf model that was never trained on job data. But some of it is probably our own setup. Two choices look likely to be hurting:
+1. **What we embed for each skill.** We embed "label + full description". ESCO descriptions are long and generic, which can drown out the short label that a job-post sentence actually resembles.
+2. **The query prompt.** `encode_query` may be adding bge's long "search for passages" prefix, which is meant for question-to-document search, not matching a short sentence to a short skill name.
+
+I'll let the current run finish, since extraction and the charts are still useful. Then I'll run a quick test on TechWolf comparing:
+- label only vs. label + alternative labels vs. label + description
+- query prompt on vs. off
+- possibly a larger model (`bge-base`)
+
+I'll keep whichever setting scores best on the labelled data. The report will show both the before and after numbers.

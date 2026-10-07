@@ -1,0 +1,45 @@
+RQ2 and RQ3 are done, and both give strong, statistically clear answers. All 46 tests pass, including 3 new tests for the analysis module.
+
+## RQ2: which junior skills go with a high salary hike? (139 people)
+
+| Skill | Effect size (rank-biserial) | Odds ratio per +1 SD |
+|---|---|---|
+| **Dashboard & storytelling** | **0.59** [0.45–0.72] | 2.72 |
+| **Maths-stats** | **0.55** [0.40–0.70] | **3.01** |
+| Coding | 0.49 | 1.67 |
+| AI & ML | 0.36 | 2.00 |
+| Big data | 0.12 (not significant) | 1.76 † |
+
+The **logistic model scores AUC 0.90 and accuracy 86%**, against 52.5% for always guessing the larger class. A permutation test gives p = 0.002, so the model is clearly better than chance.
+
+**In plain terms:** juniors who are good at communicating results and at statistics get high hikes. Big-data skill on its own doesn't make a difference.
+
+## RQ3: which senior traits go with success? (161 people)
+
+| Trait | Effect size (rank-biserial) | Odds ratio per +1 SD |
+|---|---|---|
+| **Openness to experience** | **0.77** | **9.1** |
+| **Conscientiousness** | **0.76** | **9.8** |
+| Extraversion | 0.57 | 2.8 |
+| Agreeableness | 0.30 | 2.0 (confidence interval includes 1) |
+| Neuroticism | 0.07 (not significant) | 2.4 † |
+
+The **model scores AUC 0.96 and accuracy 92%** (p = 0.002). The decision tree finds that every senior with openness ≤ 38.5 was low-success: 52 out of 52.
+
+## Issues I found and fixed along the way
+1. **The odds ratios were distorted.** I first chose the regularisation strength by AUC, which only checks ranking, so it shrank the coefficients heavily. SDS conscientiousness showed OR 1.26 even though the raw effect is very large. Switching to log-loss fixed the odds ratios and also improved accuracy (JDS 81.7% → 86.4%, SDS 90.1% → 92.4%). The README records this for the methods section.
+2. **Suppressor effects (†).** Big data and neuroticism show nothing on their own, but turn positive once the other features are held constant. For neuroticism, the coefficient goes from −0.01 to 1.37. I've labelled these as conditional associations and don't base any recommendation on them.
+3. **Duplicate IDs (2 in JDS, 9 in SDS) are kept.** The rows have different scores and mostly different outcomes, so they look like reused or masked IDs rather than duplicate people.
+4. **JDS ceiling effect.** 41–58% of juniors score the maximum 5 on four of the skills, so the effects are probably underestimated.
+
+## Caveats to state in the report
+- The samples are small, so the cross-validation ranges are wide (e.g. JDS AUC 0.77–0.99 across folds).
+- These are associations from a single snapshot in time, not causes.
+- The SDS outcome splits unusually cleanly, which can indicate curated sample data, so the results should be checked on another group before being used for policy.
+
+**Files:**
+- `reports/rq2_rq3/README.md`: full tables, methods and limitations, ready to use in report sections 4–6.
+- 12 charts in the same folder: distributions, effect sizes, correlations, model vs. baseline, odds ratios and decision trees.
+- Raw tables in `dataset/processed/rq23/`.
+
+**For RQ4:** dashboards & storytelling and maths-stats (juniors), plus openness and conscientiousness (seniors), are now evidence-backed priorities for a training plan. The two open decisions still apply: keep the Analytics Jobs file to data-science roles only, and accept course costs as assumptions.

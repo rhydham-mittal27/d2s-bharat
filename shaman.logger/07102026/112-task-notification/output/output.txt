@@ -1,0 +1,1 @@
+The semantic sample finished. With the higher threshold and boilerplate filtering, semantic-only matches dropped from 41,474 to **20,406**. Step 5 (tag mapping and crosswalk) is running, about 1 minute.

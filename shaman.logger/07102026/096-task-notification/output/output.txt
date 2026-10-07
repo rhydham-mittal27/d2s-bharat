@@ -1,0 +1,1 @@
+Parsing is done; now loading the taxonomy and building the label-only index.

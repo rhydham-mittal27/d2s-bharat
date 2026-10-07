@@ -1,0 +1,29 @@
+{
+  "postings": 14840,
+  "distinct_titles": 10096,
+  "exp_min_median": 3.0,
+  "exp_max_median": 7.0,
+  "salary_bands": {
+    "0to3": 2565,
+    "3to6": 2032,
+    "6to10": 2875,
+    "10to15": 3503,
+    "15to25": 2873,
+    "25to50": 992
+  },
+  "top_cities": {
+    "Bengaluru": 3831,
+    "Mumbai": 2453,
+    "Gurgaon": 1950,
+    "Delhi NCR": 1242,
+    "Pune": 1163,
+    "Hyderabad": 1117
+  },
+  "tags_per_post_median": 5.0,
+  "ds_rows": 1602,
+  "ds_companies": 642,
+  "ds_openings": 93005,
+  "ds_titles": 10,
+  "ds_avg_lakh_median": 11.9,
+  "ds_minexp_median": 2.0
+}

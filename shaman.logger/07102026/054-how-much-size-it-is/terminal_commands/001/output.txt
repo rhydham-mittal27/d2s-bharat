@@ -1,0 +1,9 @@
+407M	dataset/onet
+60M	dataset/esco
+183M	dataset/jobs
+96K	dataset/eval
+4.5M	dataset/processed
+654M	dataset
+129M	C:\Users\Rhydham/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5
+[  123.6s] model BAAI/bge-small-en-v1.5 loaded (dim=384)
+[  123.6s] embedding 22,758 skill descriptions (one-off, cached afterwards)

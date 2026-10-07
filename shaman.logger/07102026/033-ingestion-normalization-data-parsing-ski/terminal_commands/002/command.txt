@@ -1,0 +1,6 @@
+for q in muhammetakkurt/naukri-jobs-dataset jason1966/PromptCloudHQ_jobs-on-naukricom TechWolf/skill-extraction-techwolf; do echo "== $q"; curl -s --max-time 20 "https://huggingface.co/api/datasets/$q" | python -c "
+import sys,json; d=json.load(sys.stdin)
+print('license:', [t for t in d.get('tags',[]) if t.startswith('license')], 'size:', [t for t in d.get('tags',[]) if t.startswith('size')])
+for s in d.get('siblings',[]): print('  ', s['rfilename'])
+print((d.get('cardData') or {}).get('license'))
+"; done

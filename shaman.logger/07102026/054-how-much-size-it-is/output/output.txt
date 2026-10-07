@@ -1,0 +1,20 @@
+About **800 MB** so far, not counting the Python environment.
+
+| What | Size |
+|---|---|
+| `dataset/onet/`: O\*NET zips + extracted text + SQL | 407 MB |
+| `dataset/jobs/`: Naukri job posts (DS 28 MB + SE 156 MB) | 183 MB |
+| `dataset/esco/`: ESCO zip + extracted CSVs | 60 MB |
+| `dataset/processed/`: pipeline outputs so far (more coming) | 4.5 MB |
+| `dataset/eval/`: TechWolf labelled sentences | 96 KB |
+| **`dataset/` total** | **654 MB** |
+| Embedding model cache (`~/.cache/huggingface/…/bge-small-en-v1.5`) | 129 MB |
+| Skill index (`dataset/index/`), being built now | about 35 MB expected (22,758 × 384 numbers) |
+
+`backend/.venv` (torch, ortools and the rest) is probably 1.5–2 GB, but my size check timed out, so I don't have an exact figure.
+
+**Ways to save space:**
+- About 330 MB of `dataset/onet/` can be freed by deleting the zips (26 MB) and the `mysql/` SQL copy (284 MB). We only use the `text/` folder.
+- The ESCO zip (10 MB) can go too, since it's already extracted.
+
+The run is still on the skill-embedding step; the last log line is at 2:04.

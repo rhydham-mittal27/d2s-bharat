@@ -1,0 +1,1 @@
+grep -vE "Loading weights|Warning|warn|^\s*$" "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/ingest_run_v1.log" | tail -5; date +%T

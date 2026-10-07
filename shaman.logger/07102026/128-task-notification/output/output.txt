@@ -1,0 +1,1 @@
+The calibration came out at threshold 0.70, but agreement with the recruiter tags is very low there: precision 6.3%, recall 7.3%. It looks like matching by meaning on these ~100-character truncated descriptions adds mostly noise. I'll check the full calibration curve once the run finishes, before deciding whether to keep text-based meaning matches at all.

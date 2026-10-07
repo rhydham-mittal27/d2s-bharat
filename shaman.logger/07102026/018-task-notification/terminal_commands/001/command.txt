@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/onet" && cat download.log && ls -l *.zip && unzip -tq db_30_3_text.zip && unzip -tq db_30_3_mysql.zip && unzip -o -q db_30_3_text.zip -d text && unzip -o -q db_30_3_mysql.zip -d mysql && du -sh text mysql && ls text/*/ | head -50

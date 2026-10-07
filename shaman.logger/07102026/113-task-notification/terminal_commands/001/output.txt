@@ -1,0 +1,12 @@
+wrote ['01_parsing_funnel.png', '02_top_skills_hybrid.png', '03_match_types_similarity.png', '04_eval_techwolf.png', '05_embedding_map.png', '06_crosswalk.png', '07_tag_mapping.png', '08_city_heatmap.png', '09_top_skills_all_lexical.png', '10_before_after.png'] + README.md
+01_parsing_funnel.png
+02_top_skills_hybrid.png
+03_match_types_similarity.png
+04_eval_techwolf.png
+05_embedding_map.png
+06_crosswalk.png
+07_tag_mapping.png
+08_city_heatmap.png
+09_top_skills_all_lexical.png
+10_before_after.png
+README.md

@@ -1,0 +1,25 @@
+== TechWolf/skill-extraction-techwolf
+{"_id":"66994635dac1eb34c05b2a5e","id":"TechWolf/skill-extraction-techwolf","author":"TechWolf","sha":"ed83e50ff6bc7e44008e98a82f6143ddaf59a255","lastModified":"2024-12-21T09:05:19.000Z","private":false,"gated":false,"disabled":false,"tags":["task_categories:text-classification","language:en","license:cc-by-4.0","size_categories:n<1K","format:csv","modality:text","library:datasets","library:pandas","library:mlcroissant","library:polars","arxiv:2307.10778","region:us","Skill Extraction"],"description":"\n\t\n\t\t\n\t\n\t\n\t\tSkill Extraction with ESCO skills - TechWolf subset\n\t\n\n\n\t\n\t\t
+== jjzha/skillspan
+{"_id":"64a42080af3f61355701dc8d","id":"jjzha/skillspan","author":"jjzha","sha":"33062e6bd0e03a5e01ae299ce0518f4613ef4298","lastModified":"2023-09-07T12:12:10.000Z","private":false,"gated":false,"disabled":false,"tags":["language:en","license:cc-by-4.0","size_categories:10K<n<100K","format:json","modality:text","library:datasets","library:pandas","library:mlcroissant","library:polars","region:us"],"description":"This is the SkillSpan dataset created by:\n@inproceedings{zhang-etal-2022-skillspan,\n    title = \"{S}kill{S}pan: Hard and Soft Skill Extraction from {E}nglish Job Postings\",\n    au
+== search india jobs
+muhammetakkurt/naukri-jobs-dataset 74
+cathy005/naukri-jobs-dataset 15
+jason1966/PromptCloudHQ_jobs-on-naukricom 35
+logiover/naukri-job-scraper-sample-data 20
+average-developer/stocks-NAUKRI-1D-candles 221
+cnamuangtoun/resume-job-description-fit 1019
+lang-uk/recruitment-dataset-job-descriptions-english 313
+NxtGenIntern/job_titles_and_descriptions 307
+jacob-hugging-face/job-descriptions 304
+tinixai/vietnamese-job-descriptions 209
+ismailcemsahin/job-titles-descriptions 88
+nathansutton/data-science-job-descriptions 53
+IvanLukianets/Job-Description-Dataset-Djinni 53
+lang-uk/recruitment-dataset-job-descriptions-ukrainian 42
+niktigerbill/resume-job-description-fit-ru 41
+JobSelect/Job-Descriptions-JobAnalyze_6k 40
+Aneeth/job_description_10k 29
+Pratik3171/resume-job-description-fit 26
+rohankrishna99/job-descriptions-dataset-mini 22
+nakamoto-yama/job-descriptions-public 22

@@ -1,0 +1,1 @@
+The report script now includes the before/after comparison and writes the README. The final run is on step 2 and should finish in about 6–7 minutes.

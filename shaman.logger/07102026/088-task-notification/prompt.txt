@@ -1,0 +1,10 @@
+<task-notification>
+<task-id>bhg5s1792</task-id>
+<summary>Monitor event: "ingestion pipeline (milestones only)"</summary>
+<event>[  826.5s] hybrid sample: {'semantic': 41474, 'lexical': 11539, 'both': 3712}
+[  826.5s] STEP 5/5 ESCO/O*NET mapping
+[  826.7s] FAILED UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 55: character maps to &lt;undefined&gt;
+Traceback (most recent call last):
+log(f"mapping {len(tags):,} distinct recruiter tags (used \u2265{min_count}�)")
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2265' in position 55: character maps to &lt;undefined&gt;</event>
+</task-notification>

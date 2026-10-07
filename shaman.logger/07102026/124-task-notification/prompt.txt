@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>bossucaqd</task-id>
+<summary>Monitor event: "SAS ingestion rerun (milestones)"</summary>
+<event>[   57.4s] tags: {'review': 3349, 'unmapped': 2099, 'semantic': 1718, 'contains': 710, 'exact': 584}
+[   57.4s] STEP 4/5 skill extraction from title + description (semantic matching)</event>
+</task-notification>

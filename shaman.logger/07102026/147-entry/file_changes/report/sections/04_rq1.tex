@@ -1,0 +1,109 @@
+\section{Data Analysis I: Market Demand and Pay (RQ1)}\label{sec:rq1}
+
+\subsection{Demand}
+
+Within the 5,138 data-role postings, the most requested skills (with Wilson 95\% intervals
+\citep{wilson1927}) are data analytics (18.3\% [17.3, 19.4]), SQL (16.5\% [15.5, 17.5]), SAS (13.4\%),
+Python (12.6\%), business analysis (12.5\%), machine learning (12.0\%) and R (10.8\%)
+(Figure~\ref{fig:fig_demand.png}). The market expects a \emph{toolkit}: one statistical language
+(SAS, R or Python) plus SQL.
+
+\fig[0.78\linewidth]{fig_demand.png}{Most demanded skills in data-role postings (Wilson 95\% CIs).}
+
+\subsection{Pay, after accounting for experience}
+
+Raw salary comparisons are misleading because skills and seniority go together. We therefore fit an
+ordinal logistic regression of the six salary bands on indicators for the 30 most common skills,
+minimum experience, role family and a multi-city flag. The odds ratio (OR) of a skill is the
+multiplicative change in the odds of being in a \emph{higher} band when a posting lists it, at the
+same experience and role family.
+
+\textbf{Experience dominates:} each extra year of required experience multiplies the odds of a
+higher band by 1.66 (all postings) and 1.61 (data roles). Beyond experience, 13 skills remain
+significant at FDR $q<0.05$ in data roles (Table~\ref{tab:pay}, Figure~\ref{fig:fig_pay_data_roles.png}).
+
+\begin{table}[H]\centering\small
+\caption{Skills associated with salary band in data-role postings (ordinal logit, adjusted for
+experience, role family and multi-city; FDR $q<0.05$).}\label{tab:pay}
+\begin{tabular}{@{}l c c l c@{}}
+\toprule
+Higher-pay skill & OR [95\% CI] & & Lower-pay skill & OR [95\% CI]\\
+\midrule
+Product management & 2.95 [2.13, 4.07] & & MIS & 0.25 [0.19, 0.34]\\
+Natural language processing & 1.74 [1.25, 2.41] & & Communication & 0.70 [0.55, 0.89]\\
+Predictive modelling & 1.67 [1.28, 2.18] & & & \\
+Marketing analytics & 1.64 [1.20, 2.26] & & & \\
+Java & 1.51 [1.20, 1.90] & & & \\
+Statistics & 1.43 [1.09, 1.88] & & & \\
+SAS & 1.42 [1.20, 1.68] & & & \\
+Business intelligence / Tableau & 1.41 / 1.41 & & & \\
+Data mining & 1.40 [1.07, 1.83] & & & \\
+Data analytics & 1.25 [1.09, 1.42] & & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\fig[0.82\linewidth]{fig_pay_data_roles.png}{Adjusted pay association of skills in data roles
+(only skills with FDR $q<0.05$).}
+
+\textbf{Interpretation.} Advanced analytics (predictive modelling, NLP, statistics, data mining)
+and core tools (SAS, SQL, Java) are linked to higher bands \emph{beyond what experience explains}.
+Postings emphasising MIS reporting or generic ``communication'' are lower-paid support roles; this
+does not mean communication is unvaluable, as RQ2 shows.
+
+\subsection{Skill bundles}
+
+Association rules show that the big-data stack is requested as a bundle: hive $\rightarrow$ Hadoop
+(confidence 75\%, lift 13.1), Scala $\rightarrow$ Spark (72\%, lift 15.2), hive $\rightarrow$ Spark
+(68\%, lift 14.3); deep learning and NLP co-occur with lift 13.6 (Figure~\ref{fig:fig_bundles.png}).
+These skills should be taught together, which is why the RQ4 catalogue contains a single Big-Data
+course.
+
+\fig[0.85\linewidth]{fig_bundles.png}{Strongest skill co-occurrence rules in data roles.}
+
+\subsection{Company-level view (DataScience Jobs)}
+
+Average salary rises with minimum experience (Spearman $\rho = 0.63$, $p<10^{-100}$). Openings are
+spread across many employers (Herfindahl index 0.021), but the ten largest (TCS, Accenture,
+Cognizant, Wipro, IBM, Genpact, Capgemini, LTI, Tech Mahindra, HCL) offer 35\% of all openings. The
+job-weighted average salary (9.7 lakh) is below the per-row median (11.9 lakh): \emph{most openings
+are at large IT-services firms that pay below the typical company} (Figure~\ref{fig:fig_ds_jobs.png}).
+
+\fig{fig_ds_jobs.png}{DataScience Jobs: salary vs experience (bubble size = openings) and the ten
+largest employers.}
+
+\subsection{Triangulation: the five JDS skill areas in the market}
+
+To connect RQ1 with RQ2, each of the five JDS skill areas was measured in the job market
+(Table~\ref{tab:tri}, Figure~\ref{fig:fig_triangulation.png}).
+
+\begin{table}[H]\centering\small
+\caption{The five JDS skill areas: market demand and pay (RQ1, data roles) vs junior salary-hike
+link (RQ2).}\label{tab:tri}
+\begin{tabular}{@{}l c c c@{}}
+\toprule
+Skill area & Demand (\% postings) & Market pay OR [95\% CI] & RQ2 hike OR per SD [95\% CI]\\
+\midrule
+Coding & \textbf{40.7} & 1.50 [1.34, 1.68] & 1.67 [1.10, 2.79]\\
+Maths \& stats & 15.9 & \textbf{1.56} [1.35, 1.80] & \textbf{3.01} [1.99, 4.60]\\
+AI \& ML & 16.0 & 1.44 [1.23, 1.69] & 2.00 [1.23, 3.23]\\
+Big data & 10.6 & 1.33 [1.10, 1.62] & 1.76 [1.18, 2.67]$^\dagger$\\
+Dashboards \& storytelling & 11.9 & 1.14 [0.98, 1.34] & \textbf{2.72} [1.77, 4.73]\\
+\bottomrule
+\multicolumn{4}{@{}l}{\footnotesize $^\dagger$ conditional (suppressor) effect; not significant on its own (Section~\ref{sec:rq23}).}
+\end{tabular}
+\end{table}
+
+\fig{fig_triangulation.png}{Triangulation of the five JDS skill areas across market demand, market
+pay and junior salary hikes.}
+
+Three messages follow. \textbf{Maths \& stats} is the only area that is both paid more in the market
+and the strongest junior-hike signal. \textbf{Coding} is the baseline expectation (in 41\% of
+data postings). \textbf{Dashboards \& storytelling} is rarely advertised and carries no clear market
+premium, yet it is the second-strongest junior-hike signal: employers reward it after hiring more
+than they ask for it in postings.
+
+\textbf{Robustness check.} The result for storytelling depends on its definition. If ``reporting''
+and ``MIS'' are counted as storytelling (the literal JDS wording), its market OR becomes 0.79
+[0.69, 0.90], because those terms mark clerical MIS jobs. We report the narrow definition
+(visualisation and BI tools, dashboards, storytelling) and disclose the alternative.

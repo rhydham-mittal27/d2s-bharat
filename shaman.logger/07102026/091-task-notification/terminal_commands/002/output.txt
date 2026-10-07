@@ -1,0 +1,39 @@
+threshold  coverage              precision@1
+0.3        1.0                   0.09169550173010381
+0.325      1.0                   0.09169550173010381
+0.35       1.0                   0.09169550173010381
+0.375      1.0                   0.09169550173010381
+0.4        1.0                   0.09169550173010381
+0.425      1.0                   0.09169550173010381
+0.45       1.0                   0.09169550173010381
+0.475      1.0                   0.09169550173010381
+0.5        1.0                   0.09169550173010381
+0.525      1.0                   0.09169550173010381
+0.55       1.0                   0.09169550173010381
+0.575      1.0                   0.09169550173010381
+0.6        0.9982698961937716    0.09185441941074524
+0.625      0.9913494809688581    0.0924956369982548
+0.65       0.967128027681661     0.09302325581395349
+0.675      0.9065743944636678    0.09732824427480916
+0.7        0.6903114186851211    0.12030075187969924
+0.725      0.5103806228373703    0.14576271186440679
+0.75       0.3615916955017301    0.1722488038277512
+0.775      0.16262975778546712   0.24468085106382978
+0.8        0.06747404844290658   0.28205128205128205
+0.825      0.02249134948096886   0.3076923076923077
+0.85       0.010380622837370242  0.3333333333333333
+0.875      0.0                   
+0.9        0.0                   
+0.925      0.0                   
+0.95       0.0                   
+                                         sentence                                      gold                                          top1  top1_similarity  gold_rank
+515  A willingness to get involved, suggest id...                         think proactively              demonstrate willingness to learn         0.768811        3.0
+159  Proven management skills in the trade ind...                     own management skills  portfolio management in textile manufactu...         0.748604        NaN
+193  Cinema 4D. After Effects Strong eye for d...                              3D modelling                   determine image composition         0.730968        NaN
+346                              Driver's Licence                            drive vehicles                                drive vehicles         0.760229        1.0
+371  demonstrated ability to provide value add...  provide support in financial calculation                                 work in teams         0.744492        7.0
+455  We are looking for a candidate with exper...                                JavaScript            implement front-end website design         0.707358        2.0
+262  Candidates must be passionate about carin...                   develop personal skills      work with broad variety of personalities         0.734055        NaN
+296  Previous experience of accommodation clea...                               clean rooms           maintain check-out area cleanliness         0.683447        NaN
+574  An ability to inspire, coach and develop ...                             manage a team            develop strong attitudes in sports         0.798215        NaN
+312          Ability to work under own initiative                           show initiative                            work independently         0.770574        8.0

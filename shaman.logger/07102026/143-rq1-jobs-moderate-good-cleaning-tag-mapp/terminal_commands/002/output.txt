@@ -1,0 +1,15 @@
+posts 14840 {'Software / IT': 3218, 'Analytics / BI': 2803, 'Other': 2765, 'Finance / Risk': 1413, 'Marketing / SEO / Content': 1174, 'Sales / Ops / HR / Support': 1049, 'Data Science / ML': 939, 'Business Analysis / Product': 902, 'Data Engineering': 577}
+canonical sources (tag uses): {'esco_onet': 100.0}
+Traceback (most recent call last):
+  File "C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq1.py", line 239, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq1.py", line 192, in main
+    adj_data, info_data = jobs.pay_adjusted(data_posts, data_ps, top_data)
+                          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py", line 186, in pay_adjusted
+    res = OrderedModel(np.asarray(y.codes)[keep], X, distr="logit").fit(method="bfgs", maxiter=2000, disp=False)
+          ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rhydham\Desktop\projects\shaman\backend\.venv\Lib\site-packages\statsmodels\miscmodels\ordinal_model.py", line 166, in __init__
+    raise ValueError("There should not be a constant in the model")
+ValueError: There should not be a constant in the model

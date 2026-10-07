@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[  425.4s] index built in 302s -&gt; BAAI__bge-small-en-v1.5__onet-30.3+esco-1.2.1.npz
+[  425.7s] STEP 3/5 evaluation on TechWolf labelled sentences</event>
+</task-notification>

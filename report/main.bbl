@@ -1,0 +1,141 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Agrawal and Srikant(1994)]{agrawal1994}
+Rakesh Agrawal and Ramakrishnan Srikant.
+\newblock Fast algorithms for mining association rules.
+\newblock In \emph{Proceedings of the 20th International Conference on Very
+  Large Data Bases}, pages 487--499, 1994.
+
+\bibitem[Barrick and Mount(1991)]{barrick1991}
+Murray~R. Barrick and Michael~K. Mount.
+\newblock The big five personality dimensions and job performance: A
+  meta-analysis.
+\newblock \emph{Personnel Psychology}, 44\penalty0 (1):\penalty0 1--26, 1991.
+
+\bibitem[Benjamini and Hochberg(1995)]{benjamini1995}
+Yoav Benjamini and Yosef Hochberg.
+\newblock Controlling the false discovery rate: A practical and powerful
+  approach to multiple testing.
+\newblock \emph{Journal of the Royal Statistical Society: Series B},
+  57\penalty0 (1):\penalty0 289--300, 1995.
+
+\bibitem[Breiman et~al.(1984)Breiman, Friedman, Olshen, and Stone]{breiman1984}
+Leo Breiman, Jerome~H. Friedman, Richard~A. Olshen, and Charles~J. Stone.
+\newblock \emph{Classification and Regression Trees}.
+\newblock Wadsworth, Belmont, CA, 1984.
+
+\bibitem[Efron and Tibshirani(1993)]{efron1993}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman and Hall, New York, 1993.
+
+\bibitem[{European Commission}(2024)]{esco2024}
+{European Commission}.
+\newblock {ESCO}: European skills, competences, qualifications and occupations,
+  version 1.2.1, 2024.
+\newblock URL \url{https://esco.ec.europa.eu}.
+
+\bibitem[Holm(1979)]{holm1979}
+Sture Holm.
+\newblock A simple sequentially rejective multiple test procedure.
+\newblock \emph{Scandinavian Journal of Statistics}, 6\penalty0 (2):\penalty0
+  65--70, 1979.
+
+\bibitem[Kerby(2014)]{kerby2014}
+Dave~S. Kerby.
+\newblock The simple difference formula: An approach to teaching nonparametric
+  correlation.
+\newblock \emph{Comprehensive Psychology}, 3:\penalty0 11.IT.3.1, 2014.
+
+\bibitem[{KnowledgeHut}(2025)]{knowledgehut}
+{KnowledgeHut}.
+\newblock How much does corporate training cost in india?, 2025.
+\newblock URL
+  \url{https://www.knowledgehut.com/blog/enterprise/corporate-training-pricing-india}.
+
+\bibitem[Mann and Whitney(1947)]{mannwhitney1947}
+Henry~B. Mann and Donald~R. Whitney.
+\newblock On a test of whether one of two random variables is stochastically
+  larger than the other.
+\newblock \emph{Annals of Mathematical Statistics}, 18\penalty0 (1):\penalty0
+  50--60, 1947.
+
+\bibitem[McCullagh(1980)]{mccullagh1980}
+Peter McCullagh.
+\newblock Regression models for ordinal data.
+\newblock \emph{Journal of the Royal Statistical Society: Series B},
+  42\penalty0 (2):\penalty0 109--142, 1980.
+
+\bibitem[{National Center for O*NET Development}(2025)]{onet2025}
+{National Center for O*NET Development}.
+\newblock {O*NET} 30.3 database, 2025.
+\newblock URL \url{https://www.onetcenter.org/database.html}.
+
+\bibitem[Pedregosa et~al.(2011)]{pedregosa2011}
+Fabian Pedregosa et~al.
+\newblock Scikit-learn: Machine learning in {Python}.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011.
+
+\bibitem[Peduzzi et~al.(1996)Peduzzi, Concato, Kemper, Holford, and
+  Feinstein]{peduzzi1996}
+Peter Peduzzi, John Concato, Elizabeth Kemper, Theodore~R. Holford, and
+  Alvan~R. Feinstein.
+\newblock A simulation study of the number of events per variable in logistic
+  regression analysis.
+\newblock \emph{Journal of Clinical Epidemiology}, 49\penalty0 (12):\penalty0
+  1373--1379, 1996.
+
+\bibitem[Perron and Didier(2025)]{cpsat}
+Laurent Perron and Fr{\'e}d{\'e}ric Didier.
+\newblock {CP-SAT} solver, {Google} {OR-Tools} v9.15.
+\newblock \url{https://developers.google.com/optimization/cp/cp_solver/}, 2025.
+
+\bibitem[Reimers and Gurevych(2019)]{reimers2019}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-{BERT}: Sentence embeddings using {Siamese} {BERT}-networks.
+\newblock In \emph{Proceedings of EMNLP-IJCNLP 2019}, pages 3982--3992, 2019.
+
+\bibitem[{SAS Institute}(2026)]{sasvfl}
+{SAS Institute}.
+\newblock {SAS} viya for learners, 2026.
+\newblock URL \url{https://www.sas.com/en_my/software/viya-for-learners.html}.
+\newblock Free for academic, non-commercial use.
+
+\bibitem[Seabold and Perktold(2010)]{seabold2010}
+Skipper Seabold and Josef Perktold.
+\newblock Statsmodels: Econometric and statistical modeling with {Python}.
+\newblock In \emph{Proceedings of the 9th Python in Science Conference}, pages
+  92--96, 2010.
+
+\bibitem[{TensorData}(2026)]{gpuindia2026}
+{TensorData}.
+\newblock {GPU} cloud pricing in india 2026: {A100} and {H100} costs compared,
+  2026.
+\newblock URL \url{https://tensordata.com/blog/gpu-cloud-pricing-india-2026}.
+
+\bibitem[Vittinghoff and McCulloch(2007)]{vittinghoff2007}
+Eric Vittinghoff and Charles~E. McCulloch.
+\newblock Relaxing the rule of ten events per variable in logistic and {Cox}
+  regression.
+\newblock \emph{American Journal of Epidemiology}, 165\penalty0 (6):\penalty0
+  710--718, 2007.
+
+\bibitem[Wilson(1927)]{wilson1927}
+Edwin~B. Wilson.
+\newblock Probable inference, the law of succession, and statistical inference.
+\newblock \emph{Journal of the American Statistical Association}, 22\penalty0
+  (158):\penalty0 209--212, 1927.
+
+\bibitem[Xiao et~al.(2023)Xiao, Liu, Zhang, and Muennighoff]{xiao2023bge}
+Shitao Xiao, Zheng Liu, Peitian Zhang, and Niklas Muennighoff.
+\newblock {C-Pack}: Packaged resources to advance general {Chinese} embedding,
+  2023.
+\newblock arXiv:2309.07597 (BGE embedding models).
+
+\end{thebibliography}

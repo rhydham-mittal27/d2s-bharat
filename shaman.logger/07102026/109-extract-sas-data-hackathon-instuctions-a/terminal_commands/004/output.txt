@@ -1,0 +1,28 @@
+== Analytics Jobs.csv (15841, 8)
+s_no               int64
+experience           str
+job_description      str
+job_desig            str
+job_type             str
+key_skills           str
+location             str
+salary               str
+   s_no experience                                              job_description                                                    job_desig job_type                                                   key_skills            location  salary
+0     1   6-10 yrs  Must be knowledgeable and experienced in relational data...                              Oracle EBS Technical Consultant      NaN  Oracle SQL, PLSQL, PL, Oracle Forms, Oracle Reports, Ora...  Bengaluru, Chennai   6to10
+1     2   8-12 yrs  - Experience in building scalable and highly available d...  Staff Software Engineer - Object Oriented Analysis & Design      NaN  Javascript, HTML, JQuery, Web Development, Play Framewor...           Bengaluru  10to15
+2     3    3-8 yrs                                                          NaN                                         Servicenow Developer      NaN                       SNOW, Servicenow, Servicenow Developer     Hyderabad, Pune    0to3
+== DataScience Jobs.csv (1602, 8)
+reference_no      int64
+company_name        str
+job_title           str
+min_experience    int64
+avg_salary          str
+min_salary          str
+max_salary          str
+num_of_jobs       int64
+   reference_no company_name       job_title  min_experience avg_salary min_salary max_salary  num_of_jobs
+0          7834          TCS  Data Scientist               2       7.8L       4.5L      16.0L          841
+1          7862    Accenture  Data Scientist               2      12.8L       5.8L      23.0L          501
+2          5925          IBM  Data Scientist               2      13.4L       5.3L      25.0L          394
+JDS Skill Traits.xlsx ERR `Import openpyxl` failed.  Use pip or conda to install the openpyxl package.
+SDS Personality Traits.xlsx ERR `Import openpyxl` failed.  Use pip or conda to install the openpyxl package.

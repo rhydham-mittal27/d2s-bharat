@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bqbj9e3yq</task-id>
+<summary>Monitor event: "ingestion v1 rerun (milestones)"</summary>
+<event>[  272.6s] semantic extraction: 960/3,000 posts (10 posts/s)</event>
+</task-notification>

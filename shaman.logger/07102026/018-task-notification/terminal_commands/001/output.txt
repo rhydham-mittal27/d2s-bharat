@@ -1,0 +1,57 @@
+START text
+DONE text
+START mysql
+DONE mysql
+ALL_FINISHED
+-rw-r--r-- 1 Rhydham 197121 13580025 Oct  7 11:03 db_30_3_mysql.zip
+-rw-r--r-- 1 Rhydham 197121 13222549 Oct  7 11:02 db_30_3_text.zip
+No errors detected in compressed data of db_30_3_text.zip.
+No errors detected in compressed data of db_30_3_mysql.zip.
+98M	text
+284M	mysql
+Abilities to Work Activities.txt
+Abilities to Work Context.txt
+Abilities.txt
+Career Interest Type Keywords.txt
+Career Interest Types.txt
+Content Model Reference.txt
+Education Categories.txt
+Education.txt
+Emerging Tasks.txt
+Essential Skills to Work Activities.txt
+Essential Skills to Work Context.txt
+Essential Skills.txt
+GWAs to IWAs to DWAs.txt
+GWAs to IWAs.txt
+Interests Illustrative Activities.txt
+Interests Illustrative Occupations.txt
+Job Titles.txt
+Job Zone Reference.txt
+Job Zones.txt
+Knowledge.txt
+Level Scale Anchors.txt
+Occupation Data.txt
+Occupation Level Metadata.txt
+Read Me.txt
+Related Occupations.txt
+Sample of Reported Titles.txt
+Scales Reference.txt
+Software Skills.txt
+Specific Interest Areas to Career Interest Types.txt
+Specific Interest Areas.txt
+Survey Booklet Locations.txt
+Task Categories.txt
+Task Ratings.txt
+Task Statements.txt
+Tasks to DWAs.txt
+Training and Experience Categories.txt
+Training and Experience.txt
+Transferable Skills to Work Activities.txt
+Transferable Skills to Work Context.txt
+Transferable Skills.txt
+Work Activities.txt
+Work Context Categories.txt
+Work Context.txt
+Work Styles to Work Activities.txt
+Work Styles to Work Context.txt
+Work Styles.txt

@@ -1,0 +1,1 @@
+Parsing finished: **103,657 raw posts became 88,561 clean ones** after dropping 6,998 duplicate IDs (many jobs appear in both files), 1,227 empty descriptions and 6,871 reposts with identical text. The embedding model is loading now.

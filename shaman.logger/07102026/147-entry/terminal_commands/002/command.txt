@@ -1,0 +1,13 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && sed -i 's/sens = analyze(problem, best, budget_delta=100_000, hours_delta=20, options=OPTS)/sens = analyze(problem, best, budget_delta=100_000, hours_delta=40, options=OPTS)/' scripts/run_rq4.py && grep -n "hours_delta=40" scripts/run_rq4.py && uv run --no-sync python -u scripts/run_rq4.py 2>&1 | grep -E "^PLAN|resource|budget |trainer_hours |LP shadow" ; cat ../dataset/processed/rq4/pareto_400h.csv; uv run --no-sync python -c "
+from pathlib import Path
+import pandas as pd
+from d2s.analysis import plan
+from d2s.analysis.traits import load_jds
+from d2s.engine import solve, SolverOptions
+O=SolverOptions(time_limit_s=20, workers=8, gap_limit=0.0)
+j=load_jds(Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon/JDS Skill Traits.xlsx')).frame
+tri=pd.read_csv('../dataset/processed/rq1/triangulation_rq1_rq2.csv'); cs=plan.load_catalogue(Path('../reports/rq4/course_catalogue_assumptions.csv'))
+g=plan.cohort_gaps(j); w=plan.evidence_weights(tri)
+for h in [200,240,280,400]:
+    p=solve(plan.build_problem(g,w,cs,800000,h),O); print(h,'h obj',round(p.objective),'cost',p.total_cost,'hours',p.total_trainer_hours,p.seats(),{s.skill_id[:8]:round(s.closure_pct) for s in p.skills})
+"

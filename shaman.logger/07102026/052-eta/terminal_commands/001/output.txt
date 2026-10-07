@@ -1,0 +1,6 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:  36%|###6      | 72/199 [00:00<00:00, 700.93it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 1321.47it/s]
+C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\embeddings.py:47: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self._model.get_sentence_embedding_dimension()
+[  123.6s] model BAAI/bge-small-en-v1.5 loaded (dim=384)
+[  123.6s] embedding 22,758 skill descriptions (one-off, cached afterwards)
+129M	C:\Users\Rhydham/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5

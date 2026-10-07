@@ -1,0 +1,45 @@
+% Analytical flow diagram (input into main.tex and compiled standalone for the Word version).
+\begin{tikzpicture}[
+  x=3.7cm, y=-1.25cm, font=\footnotesize,
+  box/.style={rectangle,rounded corners=2pt,minimum height=0.8cm,align=center,inner sep=3pt},
+  data/.style={box,draw=sasblue,fill=sasblue!8,minimum width=3.3cm},
+  prep/.style={box,draw=gray!70,fill=gray!8,minimum width=3.3cm},
+  rq/.style={box,draw=orange!80!black,fill=orange!10,minimum width=3.3cm},
+  wide/.style={box,draw=gray!70,fill=gray!8},
+  dec/.style={box,draw=green!50!black,fill=green!10},
+  arr/.style={-{Stealth[length=2mm]},thick,gray!60!black}]
+% row 0: data
+\node[data] (aj)  at (0,0) {Analytics Jobs\\15,841 postings};
+\node[data] (dj)  at (1,0) {DataScience Jobs\\1,602 rows};
+\node[data] (jds) at (2,0) {JDS Skill Traits\\139 juniors};
+\node[data] (sds) at (3,0) {SDS Personality\\161 seniors};
+% row 1: modification / deduction / derivation
+\node[prep] (p1) at (0,1) {de-duplicate, repair tags,\\parse bands \& ranges};
+\node[prep] (p2) at (1,1) {parse salaries,\\outlier review};
+\node[prep] (p3) at (2,1) {audit IDs, ranges,\\ceiling effect};
+\node[prep] (p4) at (3,1) {fix headers,\\audit IDs};
+% row 2: reduction
+\node[wide,minimum width=7.2cm] (red) at (0.5,2) {Data reduction: titles $\rightarrow$ 10 role families;
+tags $\rightarrow$ 6,604 canonical skills (ESCO/O*NET)};
+% row 3: research questions
+\node[rq,minimum width=7.2cm] (rq1) at (0.5,3) {\textbf{RQ1} demand \& pay: Wilson CIs, ordinal logit, association rules};
+\node[rq] (rq2) at (2,3) {\textbf{RQ2} junior skills\\tests, L2-logit, tree};
+\node[rq] (rq3) at (3,3) {\textbf{RQ3} senior traits\\tests, L2-logit, tree};
+% row 4: triangulation
+\node[wide,minimum width=11.0cm] (tri) at (1,4) {Triangulation: the 5 JDS skill areas in the market (RQ1) vs junior salary hikes (RQ2)};
+% row 5: decision
+\node[dec,minimum width=11.0cm] (rq4) at (1,5) {\textbf{RQ4} CP-SAT training plan: gaps (JDS) $\times$ value (RQ1 + RQ2) under budget, trainers, seats};
+\node[rq] (people) at (3,5) {RQ3 $\rightarrow$ mentoring\\\& assessment};
+% row 6: outputs
+\node[dec,minimum width=11.0cm] (out) at (1,6) {Sensitivity \textbullet{} Pareto frontier \textbullet{} robustness (9 scenarios) \textbullet{} why-not};
+% arrows (all vertical, no crossings)
+\foreach \a/\b in {aj/p1, dj/p2, jds/p3, sds/p4, p3/rq2, p4/rq3, rq3/people, rq4/out}
+  \draw[arr] (\a) -- (\b);
+\draw[arr] (p1.south) -- (p1.south |- red.north);
+\draw[arr] (p2.south) -- (p2.south |- red.north);
+\draw[arr] (red) -- (rq1);
+\draw[arr] (rq1.south) -- (rq1.south |- tri.north);
+\draw[arr] (rq2.south) -- (rq2.south |- tri.north);
+\draw[arr] (tri.south -| rq1.south) -- (rq1.south |- rq4.north);
+\draw[arr] (tri.south -| rq2.south) -- (rq2.south |- rq4.north);
+\end{tikzpicture}

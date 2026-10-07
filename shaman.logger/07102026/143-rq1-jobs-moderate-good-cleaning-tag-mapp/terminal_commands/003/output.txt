@@ -1,0 +1,168 @@
+posts 14840 {'Software / IT': 3218, 'Analytics / BI': 2803, 'Other': 2765, 'Finance / Risk': 1413, 'Marketing / SEO / Content': 1174, 'Sales / Ops / HR / Support': 1049, 'Data Science / ML': 939, 'Business Analysis / Product': 902, 'Data Engineering': 577}
+canonical sources (tag uses): {'esco_onet': 57.7, 'merged_esco_onet': 0.4, 'merged_tag': 1.0, 'tag': 41.0}
+pay model all: {'n': 14840, 'exp_min_or_per_year': 1.6713926060966067, 'pseudo_r2': 0.19084511601629162, 'converged': True} 
+pay model data roles: {'n': 5221, 'exp_min_or_per_year': 1.615157489348372, 'pseudo_r2': 0.16454595465478483, 'converged': True}
+                      skill  posts  share  share_ci_low  share_ci_high
+             data analytics    942  0.180         0.170          0.191
+                        SQL    851  0.163         0.153          0.173
+                        SAS    692  0.133         0.124          0.142
+                     Python    647  0.124         0.115          0.133
+          business analysis    644  0.123         0.115          0.133
+           machine learning    615  0.118         0.109          0.127
+                          R    554  0.106         0.098          0.115
+      perform data analysis    503  0.096         0.089          0.105
+               data science    330  0.063         0.057          0.070
+Java (computer programming)    315  0.060         0.054          0.067
+                     Hadoop    298  0.057         0.051          0.064
+         project management    252  0.048         0.043          0.054
+            Microsoft Excel    250  0.048         0.042          0.054
+                      SPARK    249  0.048         0.042          0.054
+              communication    237  0.045         0.040          0.051
+                             skill  odds_ratio  or_ci_low  or_ci_high     p  q_fdr
+         develop predictive models       1.671      1.308       2.134 0.000  0.000
+                               SAS       1.531      1.313       1.786 0.000  0.000
+       Java (computer programming)       1.494      1.309       1.705 0.000  0.000
+                         Marketing       1.442      1.171       1.777 0.001  0.003
+             business intelligence       1.383      1.121       1.707 0.003  0.009
+                  Google Analytics       1.370      1.099       1.707 0.005  0.012
+            develop business plans       1.347      1.109       1.637 0.003  0.009
+                  machine learning       1.312      1.100       1.566 0.003  0.009
+            plan digital marketing       1.308      1.090       1.570 0.004  0.010
+                           finance       1.270      1.083       1.489 0.003  0.009
+                               SQL       1.252      1.125       1.394 0.000  0.000
+                             Sales       1.247      1.029       1.512 0.024  0.051
+                            Python       1.235      1.074       1.422 0.003  0.009
+                  analyse big data       1.191      0.934       1.519 0.159  0.259
+    Hypertext markup language HTML       1.190      0.953       1.486 0.125  0.217
+                   market research       1.186      0.965       1.456 0.105  0.190
+                project management       1.185      1.022       1.375 0.025  0.051
+                             SPARK       1.184      0.916       1.530 0.198  0.282
+                       data mining       1.182      0.932       1.501 0.168  0.259
+                    data analytics       1.169      1.054       1.297 0.003  0.009
+                                 R       1.129      0.944       1.352 0.185  0.274
+                financial analysis       1.095      0.905       1.325 0.350  0.466
+                         budgeting       1.061      0.834       1.349 0.631  0.765
+                        Operations       1.050      0.845       1.303 0.660  0.777
+                        JavaScript       1.049      0.879       1.250 0.597  0.765
+                      data science       1.021      0.817       1.276 0.854  0.905
+                 business analysis       1.021      0.874       1.192 0.796  0.905
+        search engine optimisation       1.015      0.801       1.286 0.905  0.928
+                            Hadoop       0.995      0.783       1.265 0.969  0.969
+              outsourcing strategy       0.980      0.788       1.220 0.859  0.905
+                business processes       0.977      0.782       1.222 0.841  0.905
+                          auditing       0.941      0.737       1.203 0.629  0.765
+             perform data analysis       0.912      0.788       1.054 0.213  0.293
+                               SEO       0.856      0.689       1.064 0.162  0.259
+Microsoft Business Intelligence BI       0.804      0.641       1.009 0.060  0.114
+                   Microsoft Excel       0.803      0.662       0.973 0.026  0.051
+                        accounting       0.754      0.632       0.899 0.002  0.007
+                     communication       0.712      0.622       0.814 0.000  0.000
+              analytical chemistry       0.630      0.512       0.776 0.000  0.000
+Management information systems MIS       0.393      0.316       0.489 0.000  0.000
+                                            skill  odds_ratio  or_ci_low  or_ci_high     p  q_fdr
+                          plan product management       2.963      2.144       4.095 0.000  0.000
+                      natural language processing       1.739      1.253       2.413 0.001  0.005
+                        develop predictive models       1.666      1.274       2.179 0.000  0.001
+                              marketing analytics       1.641      1.196       2.254 0.002  0.007
+                      Java (computer programming)       1.498      1.192       1.882 0.001  0.003
+                                       statistics       1.432      1.088       1.886 0.011  0.026
+                                              SAS       1.420      1.199       1.682 0.000  0.000
+                            business intelligence       1.411      1.107       1.798 0.005  0.016
+                                      data mining       1.401      1.073       1.829 0.013  0.030
+                                          Tableau       1.400      1.082       1.813 0.010  0.026
+                                            SPARK       1.350      0.996       1.829 0.053  0.099
+                               project management       1.310      1.036       1.657 0.024  0.049
+data extraction, transformation and loading tools       1.248      0.920       1.694 0.154  0.243
+                                   data analytics       1.245      1.089       1.424 0.001  0.005
+                                 machine learning       1.208      0.984       1.484 0.071  0.126
+                                          finance       1.197      0.907       1.580 0.204  0.255
+                                           Python       1.182      0.983       1.422 0.076  0.126
+                                 analyse big data       1.165      0.885       1.534 0.275  0.330
+                                                R       1.141      0.937       1.390 0.189  0.255
+                                    deep learning       1.130      0.793       1.609 0.499  0.534
+                                     data science       1.125      0.888       1.425 0.328  0.378
+                                              SQL       1.098      0.953       1.265 0.195  0.255
+                                business analysis       1.081      0.888       1.316 0.435  0.484
+                                           Hadoop       1.052      0.794       1.394 0.723  0.748
+                                  Microsoft Excel       1.004      0.790       1.277 0.971  0.971
+                            perform data analysis       0.889      0.745       1.060 0.188  0.255
+                                             hive       0.792      0.556       1.130 0.198  0.255
+               Microsoft Business Intelligence BI       0.739      0.567       0.962 0.024  0.049
+                                    communication       0.675      0.531       0.857 0.001  0.005
+               Management information systems MIS       0.261      0.194       0.353 0.000  0.000
+                 antecedent                  consequent  support  confidence   lift
+       outsourcing strategy          business processes    0.012       0.649 29.208
+         business processes        outsourcing strategy    0.012       0.526 29.208
+                       hive                       NoSQL    0.010       0.312 16.609
+                      NoSQL                        hive    0.010       0.541 16.609
+                      SPARK                       Scala    0.015       0.317 15.197
+                      Scala                       SPARK    0.015       0.725 15.197
+                      SPARK                        hive    0.022       0.466 14.307
+                       hive                       SPARK    0.022       0.682 14.307
+              deep learning natural language processing    0.012       0.454 13.620
+natural language processing               deep learning    0.012       0.368 13.620
+                     Hadoop                        hive    0.024       0.426 13.089
+                       hive                      Hadoop    0.024       0.747 13.089
+                      NoSQL                       SPARK    0.011       0.602 12.624
+                     Hadoop                       SPARK    0.027       0.477  9.991
+                      SPARK                      Hadoop    0.027       0.570  9.991
+                             area  demand_share  demand_ci_low  demand_ci_high  odds_ratio  or_ci_low  or_ci_high     p  q_fdr  rq2_odds_ratio  rq2_or_ci_low  rq2_or_ci_high  rq2_rank_biserial
+                  big_data_skills         0.105          0.097           0.113       1.278      1.051       1.553 0.014  0.014           1.757          1.179           2.671              0.121
+               maths_stats_skills         0.157          0.147           0.167       1.500      1.298       1.734 0.000  0.000           3.005          1.994           4.602              0.551
+                    coding_skills         0.402          0.389           0.415       1.552      1.386       1.737 0.000  0.000           1.674          1.101           2.786              0.488
+                 ai_and_ml_skills         0.157          0.148           0.167       1.401      1.192       1.646 0.000  0.000           2.000          1.225           3.233              0.363
+dashboard_and_storytelling_skills         0.169          0.159           0.180       0.790      0.691       0.904 0.001  0.001           2.722          1.773           4.734              0.589
+{
+ "spearman_minexp_avgsalary": 0.6332130102511441,
+ "spearman_p": 2.9057682574234706e-180,
+ "top10_company_share_of_openings": 0.35455083060050535,
+ "hhi_openings": 0.02128101481375857,
+ "top_companies": {
+  "TCS": 9064,
+  "Accenture": 5425,
+  "Cognizant": 3813,
+  "Wipro": 2566,
+  "IBM": 2480,
+  "Genpact": 2147,
+  "Capgemini": 1994,
+  "L&T Infotech": 1873,
+  "Tech Mahindra": 1830,
+  "HCL Technologies": 1783
+ },
+ "salary_outliers_iqr": 39,
+ "salary_outlier_examples": [
+  {
+   "company_name": "Flipkart",
+   "job_title": "Senior Data Scientist",
+   "avg_lakh": 82.0,
+   "num_of_jobs": 5
+  },
+  {
+   "company_name": "Emirates Airlines",
+   "job_title": "Senior Data Engineer",
+   "avg_lakh": 68.3,
+   "num_of_jobs": 5
+  },
+  {
+   "company_name": "Uber",
+   "job_title": "Senior Data Engineer",
+   "avg_lakh": 66.3,
+   "num_of_jobs": 5
+  },
+  {
+   "company_name": "Microsoft Corporation",
+   "job_title": "Senior Data Scientist",
+   "avg_lakh": 56.4,
+   "num_of_jobs": 22
+  },
+  {
+   "company_name": "Fidelity International",
+   "job_title": "Data Architect",
+   "avg_lakh": 50.6,
+   "num_of_jobs": 4
+  }
+ ],
+ "job_weighted_avg_lakh": 9.6931003709478,
+ "row_avg_lakh_median": 11.9
+}
+DONE

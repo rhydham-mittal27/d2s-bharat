@@ -1,0 +1,11 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd, re
+from d2s.ml.taxonomy import load_esco
+e=load_esco()
+for lbl in ['Visual Basic','SAP Data Services','lead others','ICT project management methodologies','style sheet languages','database','communication']:
+    s=[x for x in e.skills.values() if x.label==lbl]
+    if s: print(lbl, '=> alts:', s[0].alt_labels[:12])
+l=pd.read_csv('../dataset/processed/ingest/matches_lexical_all.csv.gz', usecols=['label','evidence'])
+for lbl in ['Visual Basic','SAP Data Services']:
+    print('--', lbl); [print('   ', str(x)[:110]) for x in l[l.label==lbl].evidence.sample(4, random_state=0)]
+"

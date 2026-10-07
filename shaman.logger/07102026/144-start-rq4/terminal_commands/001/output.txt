@@ -1,0 +1,15 @@
+                             area  target_score  learners_short  share_short  cohort_mean
+                    coding_skills           5.0              77        0.554        4.268
+               maths_stats_skills           5.0              82        0.590        4.294
+                 ai_and_ml_skills           5.0              71        0.511        4.566
+                  big_data_skills           3.8              65        0.468        3.850
+dashboard_and_storytelling_skills           5.0              58        0.417        4.355
+balanced point {'Coding': 99.7, 'Maths & stats': 100.0, 'AI & ML': 77.3, 'Big data': 59.4, 'Dashboards & storytelling': 62.9}
+balanced low {'Coding': 89.0, 'Maths & stats': 100.0, 'AI & ML': 57.2, 'Big data': 33.3, 'Dashboards & storytelling': 46.7}
+balanced high {'Coding': 100.0, 'Maths & stats': 93.8, 'AI & ML': 80.8, 'Big data': 67.8, 'Dashboards & storytelling': 70.6}
+market-led point {'Coding': 100.0, 'Maths & stats': 72.6, 'AI & ML': 63.5, 'Big data': 47.4, 'Dashboards & storytelling': 31.0}
+market-led low {'Coding': 100.0, 'Maths & stats': 69.7, 'AI & ML': 53.9, 'Big data': 28.0, 'Dashboards & storytelling': 14.1}
+market-led high {'Coding': 100.0, 'Maths & stats': 74.4, 'AI & ML': 69.0, 'Big data': 57.9, 'Dashboards & storytelling': 42.2}
+outcome-led point {'Coding': 46.8, 'Maths & stats': 100.0, 'AI & ML': 63.0, 'Big data': 51.2, 'Dashboards & storytelling': 91.0}
+outcome-led low {'Coding': 14.0, 'Maths & stats': 100.0, 'AI & ML': 29.4, 'Big data': 23.8, 'Dashboards & storytelling': 83.0}
+outcome-led high {'Coding': 65.9, 'Maths & stats': 98.2, 'AI & ML': 75.5, 'Big data': 63.2, 'Dashboards & storytelling': 100.0}

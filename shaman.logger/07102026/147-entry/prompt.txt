@@ -1,0 +1,29 @@
+
+
+<pasted_content id="756c">
+───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 1. An overall approach diagram (data → cleaning → RQ1–3 → RQ4)                │ The Approach section is worth 15 marks; a flow figure makes it easy to     │ small                 │
+│                                                                               │ read                                                                       │                       │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 2. Overall descriptive tables (mean/SD/min/max) for JDS and SDS, and a        │ Expected in "data exploration"                                             │ small                 │
+│ summary table for Analytics Jobs                                              │                                                                            │                       │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 3. One combined data-quality table for all 4 files                            │ Shows the cleaning work at a glance (25 marks)                             │ small                 │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 4. Cleaned JDS/SDS files saved                                                │ Reproducibility, and needed for any SAS VFL upload                         │ tiny                  │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 5. An executive summary and a combined conclusion across RQ1–4                │ Judges read this first                                                     │ writing               │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 6. References (ESCO, O*NET, Big Five, OR-Tools, scikit-learn, statsmodels)    │ Credibility                                                                │ small                 │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 7. Consistent figure numbering and captions; a curated subset of charts       │ 43 charts is too many; the main text needs about 12–15                     │ selection             │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 8. SAS software evidence (optional)                                           │ It's a SAS hackathon, and the appendix guidance mentions "software         │ needs your team: SAS  │
+│                                                                               │ screenshots". None of our work uses SAS yet.                               │ VFL login             │
+├───────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────┼───────────────────────┤
+│ 9. Team decisions: confirm the RQ4 cost assumptions; confirm we report all    │ Prevents changes late in writing                                           │ your call             │
+│ roles with data roles analysed separately                                     │                                                                            │                       │
+└───────────────────────────────────────────────────────────────────────────────┴──────────────────────────────
+</pasted_content id="756c">
+
+ find these if something feels off web search to find

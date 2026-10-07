@@ -1,0 +1,34 @@
+I've updated all three docs: there's no external LLM API or Langfuse service any more, and our own small language model (SLM) writes the decision briefs.
+
+**One point about "train":** I've written this as fine-tuning an open small model (about 1–4B parameters, e.g. Qwen3, Gemma 3, Phi-4-mini, Llama 3.2 3B). Training one from scratch would need billions of tokens and a GPU cluster, which doesn't fit a hackathon or MVP budget. Fine-tuning on a few thousand examples fits on one consumer GPU. Tell me if you really meant training from scratch.
+
+**New design (`features.md` §8)**
+
+| Tier | What it is | When |
+|---|---|---|
+| **T0 template brief** | Fixed Python templates fill the engine's numbers into the brief, so it's always factually right. | MVP, and the permanent backup whenever the SLM's output fails a check |
+| **T1 fine-tuned SLM** | An open 1–4B model fine-tuned on pairs of (plan data → brief), made efficiently with Unsloth. It's compressed and run on a normal CPU with llama.cpp. | V1 |
+| **T2 domain SLM** | Trained on real reviewed briefs, with Hindi and regional-language versions. | V2+ |
+
+**Training data:** generate many planning problems, solve each one with the engine, write a T0 brief for each, have people improve the wording, then fine-tune on the result.
+
+**What stays the same:**
+- The SLM only sees the engine's output and never makes decisions.
+- Its output is constrained so it always follows the brief's JSON structure.
+- Every number in the brief is checked against the engine's figures, and the template brief is used if any check fails.
+
+**Also updated**
+- **README:** design principle, architecture diagram, tech stack, and the cost table. The new estimate is ₹3K–₹11K/month plus a one-time fine-tuning cost of a few rented GPU-hours, with no per-token fees.
+- **`features.md`:** the architecture diagram, the monitoring section (now self-hosted), the MVP plan (now uses the template brief), and the sources.
+- **`docs/core-services.md`:** the design principles and the appendix Q&A.
+- **Memory:** saved, so future sessions won't suggest LLM APIs.
+
+**The pitch deck still describes the LLM API.** Slides 4, 6, 8 and 9 say "LLM API" and cost ₹4K–₹16K/month. Update those slides to match.
+
+Sources:
+- [Best lightweight language models 2026](https://blog.premai.io/best-lightweight-language-models-worth-running)
+- [Small local LLMs](https://www.promptquorum.com/local-llms/small-local-llm-models)
+- [Unsloth fine-tune & self-host](https://pinggy.io/blog/finetune_and_selfhost_llms_locally_with_unsloth/)
+- [Fine-tune locally guide 2026](https://toolhalla.ai/blog/fine-tune-llm-locally-guide-2026)
+- [llguidance](https://github.com/guidance-ai/llguidance)
+- [Structured output with local LLMs](https://insiderllm.com/guides/structured-output-local-llms/)

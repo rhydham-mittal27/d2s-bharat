@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync --with openpyxl python -c "
+import pandas as pd
+d='../hackathon/SAS Data Problem Statement and Instructions Hackathon/'
+j=pd.read_excel(d+'JDS Skill Traits.xlsx'); s=pd.read_excel(d+'SDS Personality Traits.xlsx')
+for name,df,y in [('JDS',j,'salary_hike_high_or_low'),('SDS',s,'success_ classification_ high_low')]:
+    vc=df[y].value_counts().to_dict(); m=min(vc.values()); p=df.shape[1]-2
+    print(name, len(df), vc, 'predictors', p, 'events/predictor', round(m/p,1), 'missing', int(df.isna().sum().sum()), 'dup ids', int(df.id.duplicated().sum()))
+" 2>&1 | grep -E "^(JDS|SDS)"

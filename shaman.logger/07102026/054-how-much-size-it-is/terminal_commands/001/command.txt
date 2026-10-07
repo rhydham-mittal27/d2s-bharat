@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman" && du -sh dataset/onet dataset/esco dataset/jobs dataset/eval dataset/processed dataset/index 2>/dev/null; du -sh dataset; du -sh "$USERPROFILE/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5"; timeout 90 du -sh backend/.venv; tail -2 dataset/processed/ingest_run.log

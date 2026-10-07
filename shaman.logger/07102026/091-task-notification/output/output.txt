@@ -1,0 +1,7 @@
+The threshold curve confirms the problem: **a higher threshold only helps slightly**. Even at 0.80 the top match is exactly right only about 28% of the time, and it only covers 7% of sentences.
+
+The strict test also underrates some predictions. Many "wrong" top answers are close in meaning to the gold label:
+- "Ability to work under own initiative": predicted *work independently*, gold *show initiative*
+- "Driver's Licence": predicted *drive vehicles*, which is correct
+
+Others are genuinely wrong, e.g. "inspire, coach and develop…" → *develop strong attitudes in sports*. Waiting for the variant results.

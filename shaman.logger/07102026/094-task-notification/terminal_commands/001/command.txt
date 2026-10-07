@@ -1,0 +1,1 @@
+for q in "ConTeXT" "skill extraction" "esco skill" "jobbert"; do echo "== $q"; curl -s --max-time 20 "https://huggingface.co/api/models?search=$(echo $q | sed 's/ /%20/g')&sort=downloads&limit=8" | python -c "import sys,json; [print(' ', m['id'], m.get('downloads'), m.get('library_name')) for m in json.load(sys.stdin)]"; done

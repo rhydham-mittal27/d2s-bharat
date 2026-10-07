@@ -1,0 +1,5 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas" && python -c "
+import pandas as pd
+t=pd.read_csv('tag_mapping.csv'); print(len(t), t.method.value_counts(dropna=False).to_dict()); print(t.columns.tolist())
+t2=pd.read_csv('tag_mapping.csv', keep_default_na=False); print(len(t2), t2.method.value_counts().to_dict())
+"; grep -n "TAG_ORDER\|def fig_tags" -A3 "C:/Users/Rhydham/Desktop/projects/shaman/backend/scripts/make_sas_report.py" | head -20

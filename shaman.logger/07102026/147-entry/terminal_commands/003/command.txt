@@ -1,0 +1,6 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/rq4" && python -c "
+import pandas as pd, json
+print(pd.read_csv('plan_courses.csv').to_string(index=False)); print(pd.read_csv('plan_skills.csv')[['skill_id','learners_short','learners_closed','closure_pct']].round(1).to_string(index=False))
+w=pd.read_csv('weights_balanced.csv'); print(w.round(1).to_string(index=False))
+m=pd.read_csv('robustness_matrix.csv',index_col=0); print((m>0).sum(axis=1).to_string())
+"

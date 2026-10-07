@@ -1,0 +1,1 @@
+Get-Process uv | Select-Object Id, CPU, WorkingSet64, StartTime; $c="$env:LOCALAPPDATA\uv\cache"; Get-ChildItem $c -Directory | Sort-Object LastWriteTime -Descending | Select-Object -First 4 Name, LastWriteTime; Get-Date

@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bossucaqd</task-id>
+<summary>Monitor event: "SAS ingestion rerun (milestones)"</summary>
+<event>[   36.5s] STEP 3/5 ESCO/O*NET mapping of recruiter key_skills</event>
+</task-notification>

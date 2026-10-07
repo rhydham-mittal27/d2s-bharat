@@ -1,0 +1,6 @@
+{
+  "stdout": "",
+  "stderr": "",
+  "interrupted": false,
+  "isImage": false
+}

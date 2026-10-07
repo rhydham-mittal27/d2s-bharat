@@ -1,0 +1,19 @@
+== muhammetakkurt/naukri-jobs-dataset
+license: ['license:cc-by-nc-4.0'] size: ['size_categories:100K<n<1M']
+   .gitattributes
+   README.md
+   naukri_data_scientist.jsonl
+   naukri_software_engineer.jsonl
+cc-by-nc-4.0
+== jason1966/PromptCloudHQ_jobs-on-naukricom
+license: ['license:unknown'] size: ['size_categories:10K<n<100K']
+   .gitattributes
+   README.md
+   naukri_com-job_sample.csv
+unknown
+== TechWolf/skill-extraction-techwolf
+license: ['license:cc-by-4.0'] size: ['size_categories:n<1K']
+   .gitattributes
+   README.md
+   test.csv
+cc-by-4.0

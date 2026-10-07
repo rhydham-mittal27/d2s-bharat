@@ -1,0 +1,1 @@
+command -v pandoc && pandoc --version | head -1; cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "import docx; print('python-docx', docx.__version__ if hasattr(docx,'__version__') else 'ok')" 2>&1 | tail -1; ls ../reports/*/ | grep -c png

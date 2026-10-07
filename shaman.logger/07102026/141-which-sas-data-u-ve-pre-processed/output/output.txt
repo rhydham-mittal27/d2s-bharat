@@ -1,0 +1,16 @@
+I've preprocessed **all four SAS files**, but not to the same depth:
+
+| SAS file | Preprocessed? | What was done | Output |
+|---|---|---|---|
+| **Analytics Jobs.csv** (15,841 rows) | ✅ Fully, and mapped to skills | • Removed **1,001 exact duplicate rows**, leaving 14,840<br>• Converted experience ("5-10 yrs") and salary bands ("10to15") to numbers, including a salary midpoint<br>• Normalized `job_type` (814 spelling variants merged, 78% missing)<br>• Split multi-city locations (2,347 rows)<br>• Cleaned `key_skills`: 12,907 cut-off tags repaired, 912 empty or `...` tags dropped, 28 case duplicates removed<br>• Removed the trailing `...` and the `;` separators from descriptions<br>• **Mapped skills to ESCO/O\*NET** (57.7% of tag uses mapped) | `dataset/processed/sas/posts_clean.csv.gz`, `post_skills.csv.gz`, `tag_mapping.csv`, `tag_review_queue.csv`, `skill_profile.csv` |
+| **DataScience Jobs.csv** (1,602 rows) | ✅ Cleaned and summarised | • Salaries "7.8L" → 7.8 lakh (average, min and max)<br>• Trimmed company and title names; checked duplicates (none)<br>• Summarised by job title: total openings, job-weighted average salary, salary range<br>• Matched job titles to ESCO/O\*NET occupations | `ds_jobs_clean.csv`, `ds_jobs_by_title.csv`, `title_occupations.csv` |
+| **JDS Skill Traits.xlsx** (139 rows) | ✅ Audited and cleaned | • Renamed column `maths-stats_skills` → `maths_stats_skills`<br>• Checked missing values (0), value range 1–5 (all valid), outliers (18 low values in AI & ML, kept)<br>• **2 duplicate IDs kept** after inspection: different scores, so different people<br>• Measured the ceiling effect: 41–58% score the maximum 5 | `dataset/processed/rq23/rq2_jds_*.csv` (no separate cleaned copy saved; it's cleaned in memory) |
+| **SDS Personality Traits.xlsx** (161 rows) | ✅ Audited and cleaned | • Fixed column names: `" extraversion"` (leading space) and `"success_ classification_ high_low"`<br>• Checked missing values (0) and outliers (5 in agreeableness, kept)<br>• **9 duplicate IDs kept**, 7 of them with different outcomes, so they look like reused or masked IDs | `dataset/processed/rq23/rq3_sds_*.csv` (same: cleaned in memory) |
+
+**Gaps to know about:**
+1. **The cleaned JDS and SDS data isn't saved as separate files.** The cleaning runs each time inside `traits.py`. For the report and for uploading to SAS VFL, it would help to save `jds_clean.csv` and `sds_clean.csv`, which takes a minute.
+2. **Analytics Jobs isn't filtered to data-science roles yet.** It still includes marketing, accounting, SEO and similar. That's the open scope decision.
+3. **The tag review queue is unchecked.** 31% of tag uses are waiting for human review.
+4. **DataScience Jobs:** I haven't checked for outliers in `num_of_jobs` and salaries yet (e.g. the 82-lakh average salary), and haven't standardized company-name spellings.
+
+Should I save the cleaned JDS/SDS files and finish the DataScience Jobs outlier check?

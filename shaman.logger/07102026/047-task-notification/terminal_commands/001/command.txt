@@ -1,0 +1,4 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && export UV_HTTP_TIMEOUT=300 && uv add --group viz "matplotlib>=3.9" 2>&1 | tail -3; wc -l ../dataset/jobs/naukri/naukri_software_engineer.jsonl; uv run --no-sync python -c "
+import pandas as pd
+d=pd.read_json('../dataset/jobs/naukri/naukri_software_engineer.jsonl', lines=True)
+print(d.shape, d['jobId'].nunique()); print(pd.to_datetime(d['createdDate']).dt.year.value_counts().sort_index().tail(4).to_string())"

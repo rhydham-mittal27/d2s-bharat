@@ -1,0 +1,3 @@
+About **1 minute left** for the pipeline. It's at 13,056 of 14,840 posts and processing about 80 per second, so roughly 25 seconds of extraction remain, followed by calibration and the result tables.
+
+After that, generating the charts takes about 30 seconds, so the full report should be ready in about 2 minutes.

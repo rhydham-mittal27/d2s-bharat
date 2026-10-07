@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[  434.4s] TechWolf: {'n_sentences': 578, 'gold_not_in_esco': 10, 'hit@1': 0.09169550173010381, 'hit@3': 0.19377162629757785, 'hit@5': 0.23875432525951557, 'hit@10': 0.31833910034602075, 'mrr': 0.15818091942659418}
+[  434.4s] STEP 4/5 skill extraction + semantic matching</event>
+</task-notification>

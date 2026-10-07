@@ -1,0 +1,23 @@
+Here are rough sizes for the two datasets. Only the O\*NET download sizes are measured; the rest are estimates. My attempt to download O\*NET and measure it unzipped failed with a network error.
+
+| Data | Download | Unzipped / on disk |
+|---|---|---|
+| **O\*NET 30.3**, tab-delimited text (45 files) | **13.2 MB** (measured) | roughly 60–100 MB (estimate) |
+| O\*NET 30.3, MySQL/PostgreSQL SQL | **13.6 MB** (measured) | similar |
+| O\*NET 30.3, Excel | **47.5 MB** (measured) | not needed |
+| **ESCO v1.2**, CSV, English only | roughly 15–25 MB (estimate) | roughly 60–90 MB (estimate) |
+| ESCO, all 28 languages | a few hundred MB (estimate) | we don't need this |
+
+**What it adds up to in Postgres for the MVP:**
+- **Raw tables:** about 150–200 MB (ESCO English plus O\*NET).
+- **Embeddings:** about 50 MB of vectors for about 20,000 skills and occupations, plus a similar amount for the search index.
+- **Total:** roughly **250–300 MB.** That fits easily on a free or entry-level managed Postgres, and on a laptop.
+
+The only part that grows over time is the job descriptions you ingest. Each post is a few KB, plus its embeddings.
+
+Using the SQL format of O\*NET (13.6 MB) and the English-only ESCO CSV would keep the initial download under about 40 MB.
+
+Sources:
+- [O\*NET 30.3 Database](https://www.onetcenter.org/database.html)
+- [O\*NET developer downloads](https://www.onetcenter.org/developers.html)
+- [Download ESCO Dataset](https://esco.ec.europa.eu/en/use-esco/download)

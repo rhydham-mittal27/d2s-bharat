@@ -1,0 +1,1 @@
+tail -5 "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/ingest_run.log"; ls -la "C:/Users/Rhydham/Desktop/projects/shaman/dataset/index" 2>/dev/null; du -sh "$USERPROFILE/.cache/huggingface/hub/models--BAAI--bge-small-en-v1.5" 2>/dev/null

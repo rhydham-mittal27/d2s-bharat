@@ -1,0 +1,9 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+from pathlib import Path
+from d2s.ingest.parsing import load_sas_analytics, load_sas_ds_jobs
+d=Path('../hackathon/SAS Data Problem Statement and Instructions Hackathon')
+p,log=load_sas_analytics(d/'Analytics Jobs.csv'); print(log.as_dict())
+print(p.iloc[0][['title','city','exp_min','exp_max','sal_mid_lakh','tags']].to_dict()); print(repr(p.iloc[0].text))
+print(p.segment.value_counts().to_dict()); print(p[['exp_min','sal_mid_lakh']].isna().sum().to_dict())
+s=load_sas_ds_jobs(d/'DataScience Jobs.csv'); print(s[['avg_lakh','min_lakh','max_lakh']].describe().round(1).to_string()); print(s.isna().sum().to_dict())
+"

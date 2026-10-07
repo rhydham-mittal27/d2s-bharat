@@ -1,0 +1,13 @@
+I added the appendix to `docs/core-services.md`, just before the Sources list. It has three sections:
+
+| Section | Definitions | How it works | Q&A |
+|---|---|---|---|
+| **A. Decision Engine** | 20 terms, e.g. saturation, shadow price, optimality gap, Pareto frontier | from problem input through validation, model build and solve to the plan, plus the optional analyses | 8 questions, e.g. why CP-SAT instead of greedy ranking, why two sensitivity numbers |
+| **B. ML Services** | 25 terms, e.g. O\*NET importance/level ratings, demand patterns (ADI/CV²), conformal intervals | three flows: building the skill index, extracting skills from a job post, forecasting demand | 9 questions, e.g. why not use an LLM to extract skills, how much history is needed |
+| **C. Workers** | 18 terms, e.g. idempotent job ID, TransientError, progress sink | a job's path from enqueue through running to result, with retries and concurrency | 8 questions, e.g. whether Redis is needed for development, what happens if a worker crashes |
+
+The appendix describes what the code actually does, so I corrected two places in the main doc that didn't match:
+- **Scheduled job:** the code runs a nightly skill-index check. Nightly forecasting is now marked as coming once demand data is loaded.
+- **"About 1000× cheaper than an LLM":** I couldn't back this figure up, so I changed it to "far less per document".
+
+The dependency install is still running in the background (torch is the large download). Nothing has been tested yet; I'll run the full test suite when the install finishes and report the results.

@@ -1,0 +1,1 @@
+Get-CimInstance Win32_Process -Filter "Name='python.exe'" | Where-Object { $_.CommandLine -like '*run_*ingestion*' -or $_.CommandLine -like '*make_*report*' -or $_.CommandLine -like '*eval_matching*' } | ForEach-Object { $p = Get-Process -Id $_.ProcessId -ErrorAction SilentlyContinue; "{0}  start {1:T}  cpu {2:N0}s  {3}" -f $_.ProcessId, $p.StartTime, $p.CPU, $_.CommandLine }

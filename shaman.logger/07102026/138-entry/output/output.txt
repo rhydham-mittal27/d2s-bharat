@@ -1,0 +1,17 @@
+I've applied both of the review's points to the objective. It's back to one page: `reports/objective/analytics_objective.pdf`.
+
+**1. Wording now says "associated with" everywhere.** The problem statement and RQ2/RQ3 previously said traits "distinguish" successful people, which reads as causal. It now matches the scope section's "associations, not causal effects".
+
+**2. The sample-size concern is answered with the actual numbers.** The scope section now says:
+
+> *"With five predictors each, the smaller outcome class gives **13.2 (JDS) and 15.2 (SDS) events per predictor**, above the common minimum of 10. We use L2-regularised logistic regression and decision trees of depth ≤ 3, repeated stratified k-fold cross-validation, and bootstrap confidence intervals."*
+
+So the reviewer's worry was reasonable, but these samples are large enough for small, constrained models. The objective now says so and limits the methods accordingly.
+
+**Found while checking the sample sizes:**
+- **Duplicate IDs:** 2 in JDS and 9 in SDS. Data preparation needs to establish whether these are repeated people or reused ID numbers.
+- **Balanced outcomes:** JDS has 66 low vs. 73 high, SDS 76 vs. 85, so no re-weighting is needed. Accuracy can be compared against a majority-class baseline of 53%.
+
+The two scope questions from before still need the team's decision before the analysis starts:
+1. Should Analytics Jobs be filtered to data-science roles only?
+2. Should RQ4 stay in, given that course costs will have to be stated as assumptions?

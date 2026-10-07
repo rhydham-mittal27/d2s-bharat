@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/reports/objective" && sed -n '1,8p' analytics_objective.tex | cat -A | head -8

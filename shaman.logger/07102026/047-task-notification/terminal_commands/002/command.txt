@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -2 && uv run --no-sync python -c "
+from pathlib import Path
+from d2s.ingest import parsing
+p,s=parsing.load_naukri([Path('../dataset/jobs/naukri/naukri_data_scientist.jsonl')])
+print(s.as_dict()); print(p.iloc[0]['text'][:500]); print(p.iloc[0]['tags'])
+from d2s.ml.skills import split_clauses; print(len(split_clauses(p.iloc[0]['text'])), 'clauses')
+print('avg clauses', sum(len(split_clauses(t)) for t in p['text'].head(500))/500)
+"

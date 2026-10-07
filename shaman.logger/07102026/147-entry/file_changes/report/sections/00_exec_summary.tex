@@ -1,0 +1,47 @@
+\section*{Executive Summary}
+\addcontentsline{toc}{section}{Executive Summary}
+
+\textbf{Question.} Institutions training data professionals must decide what to teach with limited
+money, trainers and seats. Using only the four SAS-provided datasets, we ask which skills the
+market demands and pays for (RQ1), which skills are associated with early-career salary hikes
+(RQ2), which personality traits are associated with senior success (RQ3), and what an
+institution should therefore teach first within its constraints (RQ4).
+
+\textbf{Data work.} We removed 1,001 exact duplicate job postings (15,841 $\rightarrow$ 14,840),
+repaired 12,907 truncated skill tags, merged 814 spelling variants of \texttt{job\_type},
+parsed salary bands and experience ranges into numbers, and mapped every recruiter skill tag to a
+canonical skill (56.4\% of tag uses to the ESCO/O*NET international taxonomies). A
+meaning-based text-matching step was tested, calibrated against recruiter tags, and
+\emph{rejected} (best F1 6.8\%) because the source descriptions are truncated at about 100
+characters. In JDS and SDS, duplicate IDs (2 and 9) were investigated and kept as distinct people.
+
+\textbf{Key findings} (associations, not causal effects):
+\begin{itemize}
+  \item \textbf{Market (RQ1).} Each extra year of required experience multiplies the odds of a
+        higher salary band by 1.66. Beyond experience, data-role postings asking for
+        predictive modelling (OR 1.67), NLP (1.74), statistics (1.43), SAS (1.42) and Tableau/BI
+        (1.41) sit in higher bands; MIS (0.25) and generic ``communication'' (0.70) mark
+        lower-paid support roles.
+  \item \textbf{Juniors (RQ2, n = 139).} Dashboards \& storytelling (rank-biserial 0.59) and
+        maths-stats (0.55) separate high- from low-hike juniors most strongly; a regularised
+        logistic model reaches cross-validated AUC 0.90 against a 0.50 baseline
+        (permutation $p = 0.002$).
+  \item \textbf{Seniors (RQ3, n = 161).} Openness to experience (0.77) and conscientiousness
+        (0.76) are by far the strongest correlates of success (AUC 0.96, $p = 0.002$),
+        consistent with established personnel research \citep{barrick1991}.
+  \item \textbf{Triangulation.} Maths \& stats is the only skill area that is \emph{both} paid
+        more in the market and the strongest junior-hike signal. Dashboards \& storytelling is
+        rarely advertised and carries no clear market premium, yet it is the second-strongest
+        junior-hike signal: a gap institutions can close.
+\end{itemize}
+
+\textbf{Decision (RQ4).} An integer optimisation model (OR-Tools CP-SAT) selects a proven-optimal
+plan for an illustrative cohort with Rs~4~lakh and 200 trainer-hours: Statistics (60 seats), SAS on
+SAS Viya for Learners (60), Machine Learning Foundations (50), Python \& SQL (35) and Data
+Storytelling with Tableau (58), costing Rs~3.53~lakh and closing 100\% of the coding, maths and
+storytelling gaps. The four foundation courses are chosen with identical seat counts in all nine
+evidence scenarios. \textbf{The binding constraint is trainer capacity, not money}: extra budget
+alone adds nothing, while +40 trainer-hours (with about Rs~1.1~lakh) adds the Big-Data bundle
+(+10.2\% impact) and +80 hours adds Deep Learning \& NLP (+16.1\%).
+
+\clearpage

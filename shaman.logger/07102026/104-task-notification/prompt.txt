@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bv2y8axas</task-id>
+<summary>Monitor event: "ingestion v1 final run (milestones)"</summary>
+<event>[   46.9s] STEP 3/5 evaluation on TechWolf labelled sentences</event>
+</task-notification>

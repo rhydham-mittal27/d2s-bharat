@@ -1,0 +1,68 @@
+\section{Approach}\label{sec:approach}
+
+The analysis moves from \emph{descriptive} (what the market and employees look like) to
+\emph{diagnostic} (which skills and traits are associated with pay and success) to
+\emph{prescriptive} (what to teach first). Figure~\ref{fig:flow} shows the overall flow.
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[
+  node distance=0.45cm and 0.5cm, font=\footnotesize,
+  data/.style={rectangle,rounded corners=2pt,draw=sasblue,fill=sasblue!8,minimum width=2.9cm,minimum height=0.85cm,align=center},
+  proc/.style={rectangle,rounded corners=2pt,draw=gray!70,fill=gray!8,minimum width=2.9cm,minimum height=0.85cm,align=center},
+  rq/.style={rectangle,rounded corners=2pt,draw=orange!80!black,fill=orange!10,minimum width=2.9cm,minimum height=0.85cm,align=center},
+  dec/.style={rectangle,rounded corners=2pt,draw=green!50!black,fill=green!10,minimum width=6.4cm,minimum height=0.9cm,align=center},
+  arr/.style={-{Stealth[length=2mm]},thick,gray!70!black}]
+\node[data] (aj) {Analytics Jobs\\15,841 postings};
+\node[data,right=of aj] (dj) {DataScience Jobs\\1,602 rows};
+\node[data,right=of dj] (jds) {JDS Skill Traits\\139 juniors};
+\node[data,right=of jds] (sds) {SDS Personality\\161 seniors};
+\node[proc,below=of aj] (c1) {Clean \& derive\\dedupe, parse bands};
+\node[proc,below=of dj] (c2) {Parse salaries\\outlier check};
+\node[proc,below=of jds] (c3) {Audit\\IDs, ranges, ceiling};
+\node[proc,below=of sds] (c4) {Audit\\fix headers, IDs};
+\node[proc,below=of c1] (n1) {Skill normalisation\\ESCO/O*NET + canonical};
+\node[proc,below=of n1] (f1) {Role families\\title rules};
+\node[rq,below=of f1,xshift=1.7cm] (rq1) {\textbf{RQ1} demand \& pay\\ordinal logit, rules};
+\node[rq,below=of c3,yshift=-1.35cm] (rq2) {\textbf{RQ2} junior skills\\tests, L2-logit, tree};
+\node[rq,below=of c4,yshift=-1.35cm] (rq3) {\textbf{RQ3} senior traits\\tests, L2-logit, tree};
+\node[proc,below=of rq1,xshift=2.2cm,minimum width=6.4cm] (tri) {Triangulation: 5 JDS skill areas in market (RQ1) vs junior hike (RQ2)};
+\node[dec,below=of tri] (rq4) {\textbf{RQ4} CP-SAT training plan\\gaps (JDS) $\times$ value (RQ1+RQ2) under budget, trainers, seats};
+\node[rq,right=0.6cm of rq4,minimum width=3.6cm] (people) {RQ3 $\rightarrow$ mentoring\\\& assessment};
+\node[dec,below=of rq4] (out) {Sensitivity \textbullet{} Pareto \textbullet{} robustness \textbullet{} why-not};
+\draw[arr] (aj)--(c1); \draw[arr] (dj)--(c2); \draw[arr] (jds)--(c3); \draw[arr] (sds)--(c4);
+\draw[arr] (c1)--(n1); \draw[arr] (n1)--(f1); \draw[arr] (f1)--(rq1); \draw[arr] (c2)|-(rq1);
+\draw[arr] (c3)--(rq2); \draw[arr] (c4)--(rq3);
+\draw[arr] (rq1)--(tri); \draw[arr] (rq2)|-(tri); \draw[arr] (tri)--(rq4); \draw[arr] (rq3)|-(people);
+\draw[arr] (c3.south west)++(0,0) to[out=-120,in=60] (rq4.north east);
+\draw[arr] (rq4)--(out);
+\end{tikzpicture}
+\caption{Analytical flow: four SAS datasets $\rightarrow$ cleaning and derivation $\rightarrow$
+three diagnostic questions $\rightarrow$ one prescriptive decision.}\label{fig:flow}
+\end{figure}
+
+\textbf{Why these methods.}
+\begin{itemize}
+  \item \textbf{Rank-based tests and effect sizes} (Mann--Whitney U \citep{mannwhitney1947},
+        rank-biserial correlation \citep{kerby2014}) because the JDS 1--5 scores are bounded and
+        heavily skewed towards the ceiling; Holm correction \citep{holm1979} controls the five
+        tests per dataset. Bootstrap CIs \citep{efron1993} quantify uncertainty.
+  \item \textbf{L2-regularised logistic regression and depth-limited trees} \citep{breiman1984}
+        for the small JDS/SDS samples. With five predictors the smaller class gives 13.2 (JDS) and
+        15.2 (SDS) events per predictor, a favourable ratio \citep{peduzzi1996,vittinghoff2007};
+        complexity is still kept deliberately low and every model is scored by repeated stratified
+        5-fold cross-validation (20 repeats) against a majority-class baseline, with a label-permutation
+        test of the AUC.
+  \item \textbf{Ordinal logistic regression} \citep{mccullagh1980} for pay, because salary is
+        given in six ordered bands, not exact amounts; it lets us control for experience and role
+        family. Benjamini--Hochberg FDR \citep{benjamini1995} controls the 30--40 skills tested.
+  \item \textbf{Association rules} \citep{agrawal1994} reveal skill bundles that should be taught
+        together.
+  \item \textbf{Integer optimisation} (CP-SAT \citep{cpsat}) because courses are all-or-nothing,
+        have batch sizes and prerequisites; a linear relaxation would propose fractional courses.
+\end{itemize}
+
+\textbf{Tools.} Python 3.13 with pandas, scikit-learn \citep{pedregosa2011}, statsmodels
+\citep{seabold2010}, sentence-transformers \citep{reimers2019} (\texttt{bge-small-en-v1.5}
+\citep{xiao2023bge}) and OR-Tools; all steps are scripted and seeded
+(Appendix~\ref{app:repro}). Equivalent SAS code for the core statistics is provided for SAS Viya
+for Learners \citep{sasvfl} (Appendix~\ref{app:sas}).

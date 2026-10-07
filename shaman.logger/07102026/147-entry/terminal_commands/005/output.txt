@@ -1,0 +1,24 @@
+8460 {'review': 3363, 'unmapped': 2111, 'semantic': 1724, 'contains': 685, 'exact': 577} {'contains': 3.9, 'exact': 25.5, 'review': 31.0, 'semantic': 28.3, 'unmapped': 11.3} 73936
+{'matches_kept': 40537.0, 'precision': 0.06268347435676049, 'recall': 0.07315387937239096, 'f1': 0.06751514507386544} 0.7
+\begin{tabular}{@{}l r r r r r r r@{}}
+\toprule
+Variable & Mean & SD & Min & Median & Max & Mean (high) & Mean (low) \\
+\midrule
+Big data & 3.85 & 0.85 & 2.3 & 3.8 & 5 & 3.94 & 3.75 \\
+Maths \& stats & 4.29 & 0.84 & 2.2 & 4.6 & 5 & 4.71 & 3.83 \\
+Coding & 4.27 & 0.89 & 2.2 & 4.6 & 5 & 4.64 & 3.85 \\
+AI \& ML & 4.57 & 0.67 & 2.2 & 4.9 & 5 & 4.82 & 4.28 \\
+Dashboards \& storytelling & 4.36 & 0.93 & 2.3 & 5 & 5 & 4.85 & 3.81 \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{@{}l r r r r r r r@{}}
+\toprule
+Variable & Mean & SD & Min & Median & Max & Mean (high) & Mean (low) \\
+\midrule
+Neuroticism & 36.19 & 11.27 & 17 & 34 & 68 & 36.13 & 36.26 \\
+Extraversion & 43.20 & 12.13 & 17 & 45 & 67 & 48.86 & 36.88 \\
+Openness & 41.33 & 11.32 & 18 & 44 & 65 & 48.49 & 33.32 \\
+Agreeableness & 44.60 & 11.29 & 17 & 46 & 68 & 47.72 & 41.12 \\
+Conscientiousness & 45.21 & 13.21 & 18 & 49 & 66 & 53.68 & 35.74 \\
+\bottomrule
+\end{tabular}

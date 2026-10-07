@@ -1,0 +1,25 @@
+I wrote the analytics objective in LaTeX and compiled it to a one-page PDF in Times 12 pt, the font the Round-2 report requires: `reports/objective/analytics_objective.pdf`, with source in `analytics_objective.tex`. It's marked *"Draft for team agreement"*.
+
+**The objective, as written:**
+> *To identify the technical skills and personality traits most strongly associated with labour-market demand, pay and on-the-job success for data-science professionals, and to translate this evidence into a budget-constrained, explainable training plan that tells an institution what to teach first.*
+
+**It's broken into four research questions, so all four SAS files are used:**
+
+| RQ | Question | Data | Main methods |
+|---|---|---|---|
+| RQ1 Demand & pay | Which skills and roles are most demanded and best paid? | Analytics Jobs (14,840) + DataScience Jobs (1,602 rows, 93,005 openings) | Cleaning, skill normalisation, descriptive stats, non-parametric tests |
+| RQ2 Junior growth | Which skill areas separate high vs. low salary hike? | JDS (139) | Tests, correlation, logistic regression, decision tree, cross-validation |
+| RQ3 Senior success | Which Big Five traits separate high vs. low success? | SDS (161) | Same as RQ2 |
+| RQ4 Decision | What should an institution teach first within its budget? | Evidence from RQ1–3 | CP-SAT optimisation, sensitivity analysis |
+
+The page also covers:
+- **Scope and assumptions:** only the SAS data is analysed, ESCO/O\*NET are used only as a vocabulary, results are associations rather than causes, and the small samples get cross-validation and confidence intervals.
+- **Stakeholders:** institutions, students, and employers or policy/CSR programmes.
+- **Success criteria:** models must beat a majority-class baseline on cross-validated accuracy and AUC.
+
+**Points for the team to decide:**
+1. **Is "data-science professionals" the right scope?** The Analytics Jobs file also covers marketing, accounting and SEO roles. Either filter to data-science roles, or widen the wording to "analytics professionals".
+2. **Should RQ4 (optimisation) stay in?** It's what sets D2S apart and covers the "prescriptive" part of the rubric. But it needs course cost and coverage inputs that the SAS data doesn't contain, so we'd have to state them as assumptions.
+3. **The title:** keep "D2S Bharat", or use a name specific to this hackathon?
+
+Once the team agrees, the next step is the JDS/SDS analysis for RQ2 and RQ3.

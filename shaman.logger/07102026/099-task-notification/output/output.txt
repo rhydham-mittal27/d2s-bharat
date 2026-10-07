@@ -1,0 +1,11 @@
+TechWolf accuracy improved as the comparison predicted:
+
+| Metric | Before | Now |
+|---|---|---|
+| top-1 correct (hit@1) | 9.2% | **12.5%** |
+| top-3 (hit@3) | 19.4% | 22.5% |
+| top-5 (hit@5) | 23.9% | **27.2%** |
+| top-10 (hit@10) | 31.8% | 33.7% |
+| MRR | 0.158 | 0.188 |
+
+The automatic threshold is **0.74**, up from 0.6. It's the median top-1 similarity on TechWolf's labelled sentences, so semantic matches now need at least that much confidence. Extraction is running now.

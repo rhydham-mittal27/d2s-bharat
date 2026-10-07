@@ -1,0 +1,41 @@
+wrote ['01_cleaning.png', '02_salary_experience.png', '03_tag_mapping.png', '04_threshold_calibration.png', '05_top_skills.png', '06_skill_salary.png', '07_skill_city.png', '08_ds_titles_salary.png', '09_title_occupations.png'] + README.md
+{
+ "postings": 14840,
+ "distinct_titles": 10096,
+ "exp_min_median": 3.0,
+ "exp_max_median": 7.0,
+ "salary_bands": {
+  "0to3": 2565,
+  "3to6": 2032,
+  "6to10": 2875,
+  "10to15": 3503,
+  "15to25": 2873,
+  "25to50": 992
+ },
+ "top_cities": {
+  "Bengaluru": 3831,
+  "Mumbai": 2453,
+  "Gurgaon": 1950,
+  "Delhi NCR": 1242,
+  "Pune": 1163,
+  "Hyderabad": 1117
+ },
+ "tags_per_post_median": 5.0,
+ "ds_rows": 1602,
+ "ds_companies": 642,
+ "ds_openings": 93005,
+ "ds_titles": 10,
+ "ds_avg_lakh_median": 11.9,
+ "ds_minexp_median": 2.0
+}
+copied 30 figures; tables: ['data_quality.tex', 'describe_jds.tex', 'describe_sds.tex', 'profile.json', 'salary_bands.tex']
+\begin{tabularx}{\linewidth}{@{}l r r L{3.2cm} L{2.6cm} X@{}}
+\toprule
+File & Raw & Used & Duplicates & Missing & Other issues and actions \\
+\midrule
+Analytics Jobs & 15,841 & 14,840 & 1,001 exact duplicate rows removed & job\_description 23\%, job\_type 78\% & 12,907 truncated tags repaired; 814 job\_type variants merged; 2,347 multi-city rows split; text descriptions truncated at source \\
+DataScience Jobs & 1,602 & 1,602 & 0 duplicates & 0 missing & salaries stored as text (`7.8L') parsed to lakh; 39 high-salary outliers kept (senior roles) \\
+JDS Skill Traits & 139 & 139 & 2 reused IDs kept (different people) & 0 missing & all scores within 1--5; ceiling: 58\% at 5.0 (storytelling); column name fixed \\
+SDS Personality Traits & 161 & 161 & 9 reused IDs kept (7 with different outcomes) & 0 missing & two malformed column names fixed (leading space, spaces in target name) \\
+\bottomrule
+\end{tabularx}

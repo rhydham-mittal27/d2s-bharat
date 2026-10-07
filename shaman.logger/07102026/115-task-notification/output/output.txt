@@ -1,0 +1,42 @@
+The ingestion and normalization pipeline is built and has run end to end on real data. The charts and a report with the measured results are in `reports/ingestion/`. Skill matching is still weak: the correct ESCO skill comes first only 12.5% of the time on hand-labelled sentences. That's the main thing to improve next. All 42 tests pass.
+
+**Data used**
+- **Job posts:** 103,657 Naukri.com posts, reduced to **88,561 clean** ones after removing duplicate IDs (6,998), empty descriptions (1,227) and reposted identical text (6,871).
+- **Skill list:** O\*NET 30.3 plus ESCO v1.2.1, 22,758 skills.
+- **Accuracy test set:** TechWolf, 578 job-post sentences each hand-labelled with one ESCO skill.
+
+**What each step does (code in `backend/src/d2s/ingest/`)**
+1. **Data parsing:** strips HTML, de-duplicates by ID and by identical text, and blanks out the invalid dates.
+2. **Skill extraction, exact names:** runs on all 88,561 posts (about 3,600 posts per second) and finds 316,376 matches in 76,237 posts.
+3. **Sentence Transformers:** `bge-small-en-v1.5` embeds every skill label. The embeddings are saved, so later runs reuse them.
+4. **Semantic matching:** matching by meaning, run on a 3,000-post sample split equally between data-science and software-engineering posts (about 10 posts per second). It found 31,458 matches.
+5. **ESCO/O\*NET mapping:** 6,912 distinct recruiter skill tags mapped to the skill list. Linking each O\*NET skill to its closest ESCO skill gave 594 auto-accepted pairs, 6,710 to review and 1,515 left unlinked.
+
+**Charts:** cleaning steps, top skills, how each match was found, accuracy vs. threshold, a 2-D map of the skill embeddings, the O\*NET→ESCO links, recruiter-tag mapping, a city × skill heatmap, and a before/after comparison.
+
+**Fixes made during the run, each one measured:**
+- Embedding skill names instead of name + description raised the right-answer-first rate from 9.2% to **12.5%**, and top-5 from 23.9% to 27.2%. It also made embedding 5× faster.
+- The cut-off for meaning matches went from 0.60 to **0.74**, picked from the hand-labelled set rather than guessed. Meaning matches now only search ESCO skills, so product names like "Hugging Face" no longer get matched to unrelated sentences.
+- Exact matching no longer counts broad words that match almost every post: `Design` (25,717 posts), `Science`, `Programming`, `SAP`, `.NET`, `Analyze`.
+- Two bugs found and fixed: skill names at the end of a sentence were being missed, and a filter was about to drop about 3,200 legitimate ESCO skills.
+
+**Still limited:**
+- **Accuracy:** the test only counts an exact ESCO label as correct, and many misses are near-synonyms, but the small general-purpose model is still the main limit. The next step is a job-specific model such as TechWolf's ConTeXT. Its licence isn't stated, so testing it is fine but using it in the product needs their permission.
+- **Missed skills:** dropping one-word generic terms also lost useful ones like `leadership` and `agile`. They should come back through a reviewed allow-list.
+- **Naukri dates:** the posting dates are a December 2024 snapshot, so this data can show which skills are in demand but can't be used for forecasting.
+- **Recruiter tags:** only 27% of tags exist exactly in the skill list, and the extraction recovers 44% of those from the description text.
+
+I can publish this report as a private web page if you want a link to share with the team.
+
+Files are in `reports/ingestion/` and `dataset/processed/ingest/`:
+- README.md (the report)
+- 01_parsing_funnel.png
+- 02_top_skills_hybrid.png
+- 03_match_types_similarity.png
+- 04_eval_techwolf.png
+- 05_embedding_map.png
+- 06_crosswalk.png
+- 07_tag_mapping.png
+- 08_city_heatmap.png
+- 09_top_skills_all_lexical.png
+- 10_before_after.png

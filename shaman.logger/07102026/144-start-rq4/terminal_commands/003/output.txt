@@ -1,0 +1,5 @@
+400000 200 obj 20903 cost 399500 hours 186 {'py_sql': 35, 'sas_prog': 60, 'stats': 60, 'ml': 27, 'story_powerbi': 60} {'coding_ski': 100, 'maths_stat': 94, 'ai_and_ml_': 38, 'big_data_s': 0, 'dashboard_': 93}
+800000 200 obj 23391 cost 465000 hours 188 {'py_sql': 54, 'sas_prog': 60, 'stats': 60, 'ml': 50, 'story_tableau': 58} {'coding_ski': 100, 'maths_stat': 100, 'ai_and_ml_': 70, 'big_data_s': 0, 'dashboard_': 100}
+800000 400 obj 27158 cost 769800 hours 268 {'py_sql': 35, 'sas_prog': 60, 'stats': 60, 'ml': 50, 'dl_nlp': 30, 'bigdata': 40, 'story_tableau': 58} {'coding_ski': 100, 'maths_stat': 100, 'ai_and_ml_': 96, 'big_data_s': 62, 'dashboard_': 100}
+400000 None obj 20903 cost 399500 hours 186 {'py_sql': 35, 'sas_prog': 60, 'stats': 60, 'ml': 27, 'story_powerbi': 60} {'coding_ski': 100, 'maths_stat': 94, 'ai_and_ml_': 38, 'big_data_s': 0, 'dashboard_': 93}
+[('budget', 0.0), ('trainer_hours', 59.387)]

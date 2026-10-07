@@ -1,0 +1,14 @@
+8460 {'semantic_medium': 3268, 'semantic_high': 2471, 'unmapped': 2207, 'exact': 514}
+['key', 'tag', 'posts', 'skill_id', 'nearest_skill_id', 'nearest_label', 'similarity', 'runner_up_label', 'method']
+8460 {'semantic_medium': 3268, 'semantic_high': 2471, 'unmapped': 2207, 'exact': 514}
+22:TAG_ORDER = ["exact", "contains", "semantic", "review", "unmapped"]
+23-plt.rcParams.update({"figure.dpi": 130, "axes.spines.top": False, "axes.spines.right": False,
+24-                     "axes.titleweight": "bold", "font.size": 9})
+25-
+--
+76:def fig_tags(tags, s):
+77-    fig, (a, b) = plt.subplots(1, 2, figsize=(11, 3.6))
+78:    order = TAG_ORDER
+79-    uses = tags.groupby("method")["posts"].sum().reindex(order).fillna(0)
+80-    distinct = tags["method"].value_counts().reindex(order).fillna(0)
+81-    x = np.arange(2)

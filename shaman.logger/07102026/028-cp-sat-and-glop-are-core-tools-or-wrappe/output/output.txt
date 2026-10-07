@@ -1,0 +1,33 @@
+**Both are Google's own solvers, not wrappers.** They're written in C++ inside OR-Tools, and the Python code we call is a thin layer over that C++ engine.
+
+### CP-SAT: Google's own solver
+- It's an original solver developed by Google's OR team, not built on any external solver.
+- It combines three techniques:
+  - **Constraint programming** narrows each variable's possible values (e.g. "if ml201 runs, py101 must run").
+  - **SAT solving** searches yes/no choices and learns from conflicts as it goes.
+  - **Linear programming** relaxations bound how good a plan can possibly be. That's where our `best_bound` and optimality gap come from.
+- It has won many gold medals in the MiniZinc Challenge, the main constraint-solver competition. It's one of the strongest free solvers available.
+
+### GLOP: Google's own linear solver
+- It's Google's own simplex-method linear-programming solver, also in C++.
+- CP-SAT itself uses GLOP internally for its linear-programming step.
+
+### Where the wrappers are
+```
+our code (d2s/engine/model.py, sensitivity.py)
+   │
+   ├─ ortools.sat.python.cp_model ──► (Python modelling API: builds a protobuf model)
+   │                                     └─► CP-SAT C++ engine            ← core
+   │
+   └─ ortools.linear_solver.pywraplp ──► (generic LP/MIP wrapper interface)
+                                          ├─► GLOP C++ engine             ← core (what we use)
+                                          ├─► SCIP, CBC/CLP, HiGHS        ← bundled third-party solvers
+                                          └─► Gurobi, CPLEX, Xpress       ← commercial, need their own licence
+```
+- **`cp_model`** is a Python wrapper: it turns our model into a protobuf message and passes it to the C++ CP-SAT engine.
+- **`pywraplp`** is a general wrapper ("py-wrap linear programming") that can send the same model to different solvers. We pick GLOP with `CreateSolver("GLOP")`, but changing that string would switch to SCIP, HiGHS, or even Gurobi if licensed.
+
+### What this means for us
+- **No outside dependency:** all the solving happens inside the `ortools` package, under the Apache 2.0 licence. There's no extra solver to install and nothing to license.
+- **Fast:** the Python side only builds the model; the hard work runs in compiled C++ using multiple threads.
+- **Easy to swap later:** because the shadow-price code goes through `pywraplp`, it could move to another linear solver by changing one string, if that's ever needed.

@@ -1,0 +1,9 @@
+{
+  "stdout": "",
+  "stderr": "",
+  "interrupted": false,
+  "isImage": false,
+  "noOutputExpected": false,
+  "backgroundTaskId": "b9gpa2f84",
+  "backgroundCwdHint": "Session cwd remains C:\\Users\\Rhydham\\Desktop\\projects\\shaman\\backend; directory changes made by the backgrounded command do not apply to subsequent commands."
+}

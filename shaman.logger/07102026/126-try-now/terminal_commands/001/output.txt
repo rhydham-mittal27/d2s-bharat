@@ -1,0 +1,12 @@
+[   53.3s] text extraction: 256/14,840 posts
+[   84.7s] text extraction: 2,816/14,840 posts
+[  118.6s] text extraction: 5,376/14,840 posts
+[  158.1s] text extraction: 7,936/14,840 posts
+python.exe                   24480 Console                    1     84,072 K
+python.exe                   20824 Console                    1    116,464 K
+python.exe                   10808 Console                    1      6,300 K
+python.exe                   17296 Console                    1     22,620 K
+python.exe                   20308 Console                    1      6,224 K
+python.exe                   19880 Console                    1     15,900 K
+python.exe                   13496 Console                    1      6,692 K
+python.exe                   10184 Console                    1    900,564 K

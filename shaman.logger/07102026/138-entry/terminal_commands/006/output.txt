@@ -1,0 +1,3 @@
+<stdin>:2: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+exit 0
+Output written on analytics_objective.pdf (2 pages, 59329 bytes).

@@ -1,0 +1,44 @@
+I've added XAI to the design and documented it. Nothing is coded yet.
+
+**What's new in the docs**
+- **`docs/xai.md`:** the full design. Every recommendation answers *Why?*, *Why not?* and *What if?*, using each model's actual internals rather than a separate tool guessing afterwards.
+- **`features.md` §8.4:** a summary of the design.
+- **README:** a 7th "what makes it different" point, XAI by design, tied to MeitY's *"Understandable by Design"* principle in India's AI Governance Guidelines (November 2025).
+
+**What XAI covers in each module**
+
+| Module | Already built | New in the design |
+|---|---|---|
+| **Decision engine** | shadow prices, `why_not`, Pareto frontier | • which limits held the plan back (binding constraints)<br>• each course's contribution, and the loss if it were dropped<br>• counterfactuals, e.g. *"₹40K more and ml201 gets chosen"*<br>• the smallest set of conflicting constraints when no plan is possible (CP-SAT supports this)<br>• how the plan holds up across low/high demand forecasts |
+| **Forecasting** | demand pattern, prediction intervals | • the reason each model was picked<br>• backtest leaderboard<br>• trend/seasonality breakdown (MSTL)<br>• SHAP only once feature-based ML exists (V2+) |
+| **Skill extraction** | the evidence clause, lexical/semantic flag, similarity | • highlighted words<br>• runner-up skills for one-click correction<br>• calibrated confidence |
+| **Gaps and briefs** | none | • gap-score waterfall (demand × shortfall)<br>• data sources<br>• sentence-level citations<br>• faithfulness report |
+
+**Across all modules:**
+- one shared `Explanation` format
+- a "Why?" button on every number
+- the Evidence Trail view
+- an audit log
+- model cards
+
+**The SLM fits in:** it receives these computed explanations and turns them into readable text. It never makes up reasons.
+
+**Install status: still not finished.** `uv` has been running for about 25 minutes. Its CPU use is almost flat and the cache was last written at 11:35, so it's probably stuck on a slow download. The O\*NET download earlier dropped its connection once, so this looks like the same network issue. Nothing has been installed into the project yet, so none of the backend code has been tested.
+
+**Options:**
+1. **Restart the install in stages.** Install the engine and workers packages first (small, quick), run their tests, then add torch and statsforecast separately. I'd recommend this.
+2. **Keep waiting** on the current install.
+
+After that, I can code the `d2s/xai/` package as laid out in §5 of `docs/xai.md`: the engine explanations, the forecast leaderboard and MSTL breakdown, the skill highlighting and runner-ups, and a new `explain` background task.
+
+Should I restart the install and then build the XAI package?
+
+Sources:
+- [MeitY AI Governance Guidelines summary](https://www.iasgyan.in/daily-current-affairs/meity-released-india-ai-governance-guidelines-roadmap)
+- [JSA Law analysis](https://www.jsalaw.com/wp-content/uploads/2025/11/JSA-Prism-InfoTech-Nov-2025-India-AI-Governance.final_.pdf)
+- [Counterfactual Explanations for Integer Optimization](https://arxiv.org/html/2510.17624v2)
+- [Inverse CP / counterfactuals (CP 2021)](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CP.2021.35)
+- [CPMpy unsat cores with OR-Tools](https://cpmpy.readthedocs.io/en/io/unsat_core_extraction.html)
+- [StatsForecast MSTL](https://nixtlaverse.nixtla.io/statsforecast/docs/models/multipleseasonaltrend.html)
+- [Text-similarity explanation primer](https://arxiv.org/pdf/2502.14862v2)
+- [MaxSimE](https://lamarr-institute.org/publication/maxsime-explaining-transformer-based-semantic-similarity-via-contextualized-best-matching-token-pairs/)

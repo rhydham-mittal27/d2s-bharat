@@ -1,0 +1,13 @@
+..........................................                               [100%]
+42 passed in 17.05s
+java -> Java (computer programming)
+.net -> None
+sap -> None
+css -> CSS
+analyze -> None
+google -> None
+agile -> None
+scrum -> ICT project management methodologies
+vb.net -> Visual Basic
+kubernetes -> Kubernetes
+89505 lexicon entries

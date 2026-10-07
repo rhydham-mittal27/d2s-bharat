@@ -1,0 +1,10 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -2 && uv run --no-sync python -c "
+from d2s.ml.taxonomy import load_onet, load_esco
+from d2s.ml.skills import SkillMatcher, SkillIndex
+from d2s.ml.embeddings import HashingEmbedder
+t=load_onet().merge(load_esco()); sk=list(t.skills.values())
+m=SkillMatcher(sk, HashingEmbedder(dim=8), index=SkillIndex(ids=[s.id for s in sk], labels=[s.label for s in sk], matrix=__import__('numpy').zeros((len(sk),8),dtype='float32'), model_name='hashing-8'))
+for tag in ['HTML','XML','MIS','J2Ee','Core Java','SEO','HR','BPO','MVC','SDLC','PPC','QA','linear regression','web technologies','Rest','sas','R']:
+    e=m.lookup(tag); c=None if e else m.longest_contained(tag)
+    print(f'{tag:18} exact={t.skills[e].label if e else None!s:45} contains={t.skills[c].label if c else None}')
+"

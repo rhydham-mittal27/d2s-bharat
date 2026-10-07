@@ -1,0 +1,6 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/reports/objective" && python - <<'EOF'
+p='analytics_objective.tex'; s=open(p,encoding='utf-8').read()
+s=s.replace('\\noindent\\textbf{Research questions.}\\\\[2pt]\n{\\small','\\noindent\\textbf{Research questions.}\\\\[2pt]\n{\\footnotesize',1)
+open(p,'w',encoding='utf-8').write(s)
+EOF
+grep -n "footnotesize" analytics_objective.tex; pdflatex -interaction=nonstopmode -halt-on-error analytics_objective.tex > build.log 2>&1; echo "exit $?"; grep -E "^!|Output written" build.log; rm -f analytics_objective.aux analytics_objective.out build.log analytics_objective.log

@@ -1,0 +1,23 @@
+The O\*NET data is downloaded into `dataset/onet/`. Both zips passed an integrity check and are unzipped. ESCO can't be downloaded by a script, so that part needs you.
+
+| Folder | Contents | Size |
+|---|---|---|
+| `dataset/onet/text/` | 45 tab-delimited files | 98 MB |
+| `dataset/onet/mysql/` | SQL scripts for MySQL/PostgreSQL | 284 MB |
+| `dataset/onet/*.zip` | the original archives | 26.8 MB |
+
+The progress monitor sent updates at roughly 25% steps, and both downloads finished on the first try.
+
+**Version change in O\*NET 30.3:** the files I expected to call "Skills" and "Technology Skills" are now `Essential Skills.txt`, `Transferable Skills.txt` and `Software Skills.txt`. There's also a new `Emerging Tasks.txt`, which helps with spotting emerging skills. The loader we build should use these new file names.
+
+**ESCO needs one manual step from you.** Its portal emails a download link, so I can't fetch it with a script:
+1. Go to https://esco.ec.europa.eu/en/use-esco/download
+2. Choose the latest v1.2.x, Classification, English, CSV.
+3. Enter your email address and submit.
+4. Put the zip from the email link into `dataset/esco/`.
+
+Tell me when it's there and I'll unzip and check it. The steps are also in `dataset/README.md`.
+
+If you'd rather skip the email step, I can write a script that pulls ESCO through its public API instead. It's slower, about 17,000 requests.
+
+When you set up git, add `dataset/` to `.gitignore`; together it's about 400 MB.

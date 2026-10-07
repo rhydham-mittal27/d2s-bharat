@@ -1,0 +1,24 @@
+I've updated `features.md` so ESCO and O\*NET are the chosen data sources for skills and occupations.
+
+**How the two fit together**
+- **ESCO is the main skill list.** It's more detailed (about 14,000 skills) and available in 28 languages.
+- **O\*NET adds detail on top.** It rates how important each skill is for an occupation and at what level, and flags "hot technologies" and in-demand occupations.
+- **Each skill gets one ID in our database,** with links to both its ESCO and O\*NET entries, so the two lists line up.
+
+**How we'll use them**
+- **Load the full download files first, use the live APIs second.** Both offer free downloads of the complete data, so we load those into Postgres at setup. The APIs are only for small lookups, which avoids rate limits and keeps things fast.
+- **Pin the ESCO version.** The ESCO API defaults to an old version (v1.0.9), which returns noticeably different results. We'll always ask for a specific newer version and record it on each skill.
+- **Credit both sources on screen.** O\*NET's license requires attribution, so there's a "data from ESCO and O\*NET" footer in the dashboard and briefs.
+
+**Moved later:** India's qualifications register (NSQF), NCS job vacancies and PLFS survey data are now in the V2+ phase. The MVP plan now begins with loading ESCO and O\*NET.
+
+**Two things to do**
+- **Register now** for a free O\*NET developer account at `services.onetcenter.org`. Credentials arrive in minutes, so it won't hold up the build.
+- **Check ESCO's terms of use** before charging customers. I couldn't confirm its license for commercial use.
+
+I also saved this decision to memory, so future sessions will build around ESCO and O\*NET.
+
+Sources:
+- [O\*NET API guide](https://jobspipe.dev/blog/onet-api.md)
+- [ESCO API guide](https://jobspipe.dev/blog/esco-api.md)
+- [ESCO web service API](https://esco.ec.europa.eu/en/use-esco/use-esco-services-api/esco-web-service-api)

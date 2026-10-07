@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bnfc4p4xs</task-id>
+<tool-use-id>toolu_019a7DGvMpaVMSsPjLUB5YaL</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bnfc4p4xs.output</output-file>
+<status>completed</status>
+<summary>Background command "Wait for SAS run to finish" completed (exit code 0)</summary>
+</task-notification>

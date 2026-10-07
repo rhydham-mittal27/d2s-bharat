@@ -1,0 +1,52 @@
+Yes. The instructions PDF has two slides on the **Approach Note**, which is the Round 2 deliverable (the written report). Here's what they say, followed by how our current report compares.
+
+## What the PDF says (slides 15–16)
+
+**"Approach Note: Important for Round 2"**
+- **Required headings, in this order:**
+  1. Problem definition / Analytics Objective
+  2. Approach
+  3. Data Exploration: *"data derivation, data modification, Data Deduction, reductions"*
+  4. Data Analysis
+  5. Results and Conclusions
+  6. Implications
+- **Format:**
+  - **Word format**
+  - **20–25 pages excluding appendix**
+  - **Times Roman, 12 pt, single spacing preferred**
+  - The appendix *"may include tables, graphs, codes, software screenshots, equations etc. and any other info"*
+
+**"Approach Note: Round 2 Considerations, Total 100 marks (Top 8 teams)"**
+| Heading | Marks | What they look for |
+|---|---|---|
+| Problem definition / Analytics Objective | 10 | Problem identification skills; scope, depth and coverage of the identified problem |
+| Approach Description | 15 | The overall flow, motivations and reasons for choosing the approach |
+| Data Exploration (manipulation, derivation, consolidation, preparation) | **25** | Skill at identifying data issues, how they're resolved, consolidating information, exploration and data-prep strategies |
+| Data Analysis | **30** | Statistical / non-statistical skills, descriptive / prescriptive analytics, overall approach |
+| Results and Conclusions | 10 | Consolidating the analysis, linked back to the problem statement |
+| Implications | 10 | Implications of the findings for relevant stakeholders in society |
+
+The final score is **Round 2 (70%) + Round 3 presentation (30%)**.
+
+## How our LaTeX report compares
+| Requirement | Status |
+|---|---|
+| Six headings in the given order | ✅ All present and in order. We add an Executive Summary in front, which is allowed and helpful. |
+| Approach: flow, motivations, reasons | ✅ Flow diagram plus a "Why these methods" section. ⚠️ The diagram has visual problems (a curved arrow crosses boxes and lines overlap the triangulation box), which I need to fix. |
+| Data Exploration: **derivation, modification, "deduction", reductions** | ⚠️ Derivation and modification are covered. **"Reductions"** isn't named explicitly, even though we did it: 10,096 titles → 10 role families, 8,460 tags → 6,604 canonical skills, 74,884 tag uses → 5 JDS skill areas. A short "Data reduction" subsection would match their wording. **"Data Deduction"** is ambiguous; it probably means deduplication or drawing inferences from the data. We cover both, but should use their word. |
+| Data Analysis: descriptive and **prescriptive** | ✅ Descriptive (RQ1), diagnostic (RQ2/RQ3), prescriptive (RQ4 optimisation). That's an explicit match. |
+| Results linked to the problem statement | ✅ An answers-per-RQ table plus an overall conclusion. |
+| Implications for stakeholders **"in society"** | ✅ Institutions, students, employers, policy/CSR. Could add one line on the societal angle (employability and skill gaps in India). |
+| **Word format** | ❌ We have LaTeX/PDF. Convert to `.docx` with pandoc and clean it up, or confirm with the organisers that PDF is accepted. |
+| 20–25 pages excluding appendix | ⚠️ About 20 pages of main text, which is at the minimum. Adding the data-reduction subsection and the societal-implications paragraph brings it to about 21–22. |
+| Times 12 pt, single spacing | ✅ |
+| Appendix: tables, graphs, code, **software screenshots**, equations | ⚠️ Tables, graphs, code and equations are there. **Software screenshots are missing.** Once the team runs the SAS code in VFL, screenshots would fill this, and it's a SAS-run hackathon. |
+
+## Recommended fixes
+1. Add a **"Data reduction"** subsection and use their words ("derivation, modification, deduction, reduction") in the Data Exploration headings, since that section carries 25 marks.
+2. Fix the **flow diagram**.
+3. Add a short **societal implications** paragraph.
+4. Produce the **Word version**: pandoc conversion plus a formatting check.
+5. Team: run the SAS code in VFL and add **screenshots** to the appendix.
+
+Should I do fixes 1–4 now?

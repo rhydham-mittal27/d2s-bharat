@@ -1,0 +1,3 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && HF_HUB_DISABLE_SYMLINKS_WARNING=1 uv run --no-sync python -u scripts/run_sas_ingestion.py --reuse-text 2>&1 | grep -E "tags:|DONE|FAILED" && python -c "
+import pandas as pd; t=pd.read_csv('../dataset/processed/sas/tag_mapping.csv'); print('tag_mapping now:', len(t), t.method.value_counts().to_dict())" && uv run --no-sync python scripts/make_sas_report.py 2>&1 | tail -1 && sleep 5 && python -c "
+import pandas as pd; t=pd.read_csv('../dataset/processed/sas/tag_mapping.csv'); print('after report:', t.method.value_counts().to_dict())"

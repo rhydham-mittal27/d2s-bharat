@@ -1,0 +1,9 @@
+I've updated the wording, and the PDF still compiles to one page. The objective now reads:
+
+> *"…the smaller outcome class gives 13.2 (JDS) and 15.2 (SDS) events per predictor, a favourable ratio, while model complexity stays deliberately constrained."*
+
+The reviewer is right that what matters now is doing the analysis, not polishing the wording. Two scope decisions from earlier are still open:
+1. **Analytics Jobs scope:** filter to data-science roles only, or keep all analytics roles and say so in the report?
+2. **RQ4:** keep the optimisation in, with course costs and coverage stated as assumptions?
+
+Once you've decided those, I'll start on RQ2 and RQ3 (the JDS and SDS analysis): deal with the duplicate IDs, then exploratory analysis, group tests, regularised logistic regression and shallow trees with repeated cross-validation, plus bootstrap confidence intervals and charts.

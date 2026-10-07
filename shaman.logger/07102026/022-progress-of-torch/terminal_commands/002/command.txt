@@ -1,0 +1,1 @@
+cd "$LOCALAPPDATA/uv/cache"; du -sh archive-v0/6DIBB3DTOPcT2lqp5ddKG archive-v0/8fP_uBTb9X2K2k_ZquLav .tmpFYGFXg 2>/dev/null; sleep 5; du -sh .tmpFYGFXg 2>/dev/null; ls -d .tmp* 2>/dev/null

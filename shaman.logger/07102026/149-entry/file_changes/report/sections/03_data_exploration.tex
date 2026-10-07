@@ -1,0 +1,188 @@
+\section{Data Exploration and Preparation}\label{sec:data}
+
+This section follows the four preparation steps named in the brief: \textbf{data modification}
+(repairing and standardising values), \textbf{data derivation} (new variables from existing ones),
+\textbf{data deduction} (removing redundant records and inferring the right treatment of ambiguous
+ones) and \textbf{data reduction} (condensing high-cardinality text into analysable categories),
+followed by a consolidated profile of each dataset.
+
+\subsection{Consolidated data-quality audit}
+
+SAS describes the files as public, self-reported or masked sample data that may contain mistyped
+entries and outliers. We therefore audited every file before analysis (Table~\ref{tab:quality}).
+The guiding rule was \emph{repair what is recoverable, flag what is uncertain, delete only what is
+provably redundant}.
+
+\begin{table}[H]\centering\scriptsize
+\caption{Data-quality audit and actions for the four SAS files.}\label{tab:quality}
+\input{tables/data_quality}
+\end{table}
+
+\subsection{Data modification: repairing and standardising values}
+
+\textbf{Missing and inconsistent values.} \texttt{job\_type} is 78\% missing and, where present,
+spelt five ways (Analytics, analytics, ANALYTICS, analytic, Analytic). We merged the 814 variants
+but do not use the variable for segmentation. \texttt{job\_description} is missing in 23\% of rows,
+and 11,469 descriptions are cut off at about 100 characters and end in ``\ldots'' (a property of the
+source, not of our processing). The recruiter-provided \texttt{key\_skills} field is almost complete
+(one missing row), so it became the primary skill signal.
+
+\textbf{Skill tags.} The 74,884 comma-separated tags contained 12,907 entries truncated by the
+export (``Rest\ldots'', ``Oracle Workflow\ldots''), which we repaired by stripping the ellipsis rather
+than discarding them; 912 empty or ``\ldots''-only tags were dropped, and 28 case duplicates within a
+posting removed (Figure~\ref{fig:fig_cleaning.png}).
+
+\textbf{Headers and formats.} SDS headers contained a leading space (`` extraversion'') and spaces
+inside the target name, and JDS used a hyphen (\texttt{maths-stats\_skills}); all were normalised.
+DataScience Jobs salaries were stored as text (``7.8L'') and converted to lakh per year.
+
+\fig{fig_cleaning.png}{Modification and deduction actions on Analytics Jobs (left) and missing values
+after de-duplication (right).}
+
+\subsection{Data derivation: new variables}
+
+Text ranges were converted to numbers so they can be modelled
+(Table~\ref{tab:derived}). Salary is only available as six ordered bands, so it is analysed
+\emph{ordinally} rather than as an exact amount (Table~\ref{tab:bands}). The median posting asks
+for 3--7 years of experience, and 2,347 postings list several cities, which were split into a list.
+
+\begin{table}[H]\centering\small
+\caption{Variables derived during preparation.}\label{tab:derived}
+\begin{tabularx}{\linewidth}{@{}L{3.6cm}L{4.2cm}Y@{}}
+\toprule
+Derived variable & From & Rule \\
+\midrule
+\texttt{exp\_min}, \texttt{exp\_max} & \texttt{experience} (``5-10 yrs'') & numeric range bounds \\
+salary band (ordinal), \texttt{sal\_mid\_lakh} & \texttt{salary} (``10to15'') & 6 ordered levels; midpoint for description only \\
+\texttt{locations}, \texttt{multi\_city} & \texttt{location} & split on commas; flag if $>1$ city \\
+\texttt{family} & \texttt{job\_desig} & 10 role families from ordered keyword rules (Section~\ref{sec:families}) \\
+canonical skills & \texttt{key\_skills} & ESCO/O*NET label or data-derived label (Section~\ref{sec:skills}) \\
+JDS skill-area flags & canonical skills & keyword patterns per JDS area (used for triangulation) \\
+\texttt{avg/min/max\_lakh} & DataScience Jobs salaries (``7.8L'') & numeric lakh per year \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]\centering\small
+\caption{Distribution of the salary band (Analytics Jobs, 14,840 postings).}\label{tab:bands}
+\input{tables/salary_bands}
+\end{table}
+
+\subsection{Data deduction: redundant records and ambiguous cases}
+
+\textbf{Exact duplicates.} 1,001 Analytics Jobs rows were copies of another posting in every column
+except the row number. They were removed (15,841 $\rightarrow$ 14,840); keeping them would
+double-count demand. DataScience Jobs, JDS and SDS contain no fully identical rows.
+
+\textbf{Re-used IDs, inferred to be different people.} JDS has 2 and SDS 9 IDs that appear twice.
+The paired rows have entirely different scores, and in SDS 7 of the 9 pairs have different outcomes.
+We deduce that these are masked or re-used IDs, not repeated people, and keep all rows; deleting
+them would discard 2.9\% (JDS) and 11.2\% (SDS) of the employee data.
+
+\textbf{Outliers, kept with reasons.} 39 DataScience Jobs rows are high-salary outliers by the IQR
+rule (e.g.\ Senior Data Scientist at Flipkart, 82 lakh). They are plausible senior roles with few
+openings, so they are kept and salaries are summarised with medians and job-weighted averages.
+Low AI \& ML scores (18 in JDS) and 5 agreeableness values (SDS) are valid scale values; rank-based
+methods are robust to them.
+
+\textbf{A method deduced to be unreliable.} Meaning-based extraction of skills from the truncated
+descriptions was tested and rejected (Section~\ref{sec:skills}).
+
+\subsection{Data reduction: from high-cardinality text to analysable categories}\label{sec:reduction}
+
+Two fields are far too fine-grained to analyse directly: 10,096 distinct job titles and 8,460 distinct
+skill tags. Table~\ref{tab:reduction} summarises how each was reduced while keeping the information
+needed for the research questions.
+
+\begin{table}[H]\centering\small
+\caption{Data reduction steps.}\label{tab:reduction}
+\begin{tabularx}{\linewidth}{@{}L{3.2cm}L{2.7cm}L{2.7cm}Y@{}}
+\toprule
+Field & Before & After & Method\\
+\midrule
+Job titles & 10,096 distinct & 10 role families & ordered keyword rules (Section~\ref{sec:families})\\
+Skill tags & 8,460 distinct (73,936 uses) & 6,604 canonical skills & taxonomy mapping + merging near-duplicate spellings (Section~\ref{sec:skills})\\
+Canonical skills & 6,604 & top 30--40 per model & demand ranking; rarer skills kept for description only\\
+Canonical skills & 6,604 & 5 JDS skill areas & keyword patterns aligned with the JDS definitions (triangulation, RQ4)\\
+Salary & 6 text bands & 1 ordinal variable & ordered levels; midpoint used only for description\\
+DataScience Jobs & 1,602 company $\times$ title rows & 10 titles & job-weighted aggregation\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{Skill normalisation: from 8,460 free-text tags to comparable skills}\label{sec:skills}
+
+Recruiters write the same skill many ways (``Machine Learning'', ``machine learning'', ``ML''). To
+count and compare skills, the 8,460 distinct tags were mapped onto the international ESCO v1.2.1
+and O*NET 30.3 taxonomies (22,758 skills) in a fixed order: exact name or acronym match;
+a known skill name contained in the tag (``Core Java'' $\rightarrow$ Java); and finally the nearest
+skill by sentence-embedding similarity, accepted only above 0.85 (0.90 for one-word tags). A manual
+spot-check found and fixed systematic errors, for example ``HTML'' $\rightarrow$ PHP, ``Core Java''
+$\rightarrow$ ``core apples'' and ``Analytical'' $\rightarrow$ analytical chemistry; four such
+mappings are corrected by an explicit, documented override list.
+
+\fig{fig_tag_mapping.png}{Mapping of recruiter tags to ESCO/O*NET (left) and similarity of
+non-exact tags to their nearest skill (right).}
+
+Tags that could not be mapped confidently (42.3\% of tag uses) are not discarded. They become
+\emph{data-derived skills}, and near-duplicate spellings are merged when two tags are
+$\geq 0.92$ similar (1.3\% of uses). As a result, \textbf{every tag use resolves to a canonical skill}
+(Figure~\ref{fig:fig_canonical.png}), giving 6,604 distinct skills.
+
+\fig[0.82\linewidth]{fig_canonical.png}{Every recruiter tag resolves to a canonical skill.}
+
+\textbf{A method we tested and rejected.} We also tried extracting skills by meaning from the job
+descriptions. Calibrated against the recruiters' own tags, it reached at best F1 = 6.8\%
+(precision 6.3\%, recall 7.3\%; Figure~\ref{fig:fig_text_calibration.png}), and it produced
+matches such as ``Hunting role'' $\rightarrow$ animal hunting. Because the descriptions are
+truncated at the source, only exact skill names found in the text are used.
+
+\fig[0.72\linewidth]{fig_text_calibration.png}{Calibrating meaning-based text matching against
+recruiter tags: agreement never exceeds F1 $\approx$ 7\%, so it was excluded.}
+
+\subsubsection*{Role families}\label{sec:families}
+
+Job titles are highly varied (10,096 distinct titles, often padded with ``Urgent'', ``Walk-in'' or city
+names). An ordered set of readable keyword rules assigns each title to one of ten families; generic
+``Analyst'' falls back to Analytics/BI. Four families form the \textbf{data roles} (5,138 postings):
+Data Science/ML, Data Engineering, Analytics/BI and Business Analysis/Product. Only 9.4\% of postings
+remain ``Other'' (Figure~\ref{fig:fig_role_families.png}).
+
+\fig{fig_role_families.png}{Postings and median salary band by role family; data roles in blue.}
+
+\subsection{Dataset profiles after preparation}
+
+\textbf{DataScience Jobs.} The 1,602 rows aggregate 93,005 openings across 642 companies and 10
+standard titles; the row median of the average salary is 11.9 lakh and the median minimum experience
+is 2 years.
+
+\textbf{JDS and SDS.}
+
+Both files are complete (no missing values), and both outcomes are balanced
+(JDS: 73 high / 66 low hike; SDS: 85 high / 76 low success), so the majority-class baseline
+accuracy is 52.5\% and 52.8\%. Table~\ref{tab:desc} summarises the variables.
+
+\begin{table}[H]\centering\small
+\caption{Descriptive statistics with group means by outcome.}\label{tab:desc}
+\begin{subtable}{\linewidth}\centering
+\caption{JDS Skill Traits (1--5 scale; outcome: salary hike).}\input{tables/describe_jds}
+\end{subtable}\\[6pt]
+\begin{subtable}{\linewidth}\centering
+\caption{SDS Personality Traits (normalised scores; outcome: success).}\input{tables/describe_sds}
+\end{subtable}
+\end{table}
+
+\textbf{Exploratory findings.}
+\begin{itemize}
+  \item \textbf{Ceiling effect (JDS).} 58\% of juniors score the maximum 5.0 in dashboards \&
+        storytelling, 49\% in AI \& ML, 45\% in coding and 41\% in maths-stats
+        (Figure~\ref{fig:fig_jds_dist.png}). The scale cannot separate the strongest juniors, so
+        effects are probably \emph{under}-estimated.
+  \item \textbf{Group differences are visible before modelling}: high-hike juniors score higher on
+        four of five skills and high-success seniors on four of five traits (Table~\ref{tab:desc}),
+        motivating the formal tests in Section~\ref{sec:rq23}.
+  \item \textbf{Multicollinearity} is low (maximum variance inflation factor 1.45 in JDS, 1.44 in SDS).
+\end{itemize}
+
+\fig{fig_jds_dist.png}{JDS: skill scores by salary-hike outcome. High-hike juniors cluster at the
+5.0 ceiling.}

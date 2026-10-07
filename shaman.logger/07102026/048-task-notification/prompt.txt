@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[    0.0s] STEP 1/5 data parsing</event>
+</task-notification>

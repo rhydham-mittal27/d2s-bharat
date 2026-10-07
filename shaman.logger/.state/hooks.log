@@ -1,0 +1,709 @@
+2026-10-07T10:44:25  prompt -             
+2026-10-07T10:45:28  prompt -             
+2026-10-07T10:45:35  tool   PowerShell    
+2026-10-07T10:45:40  tool   Bash          
+2026-10-07T10:45:47  tool   Bash          
+2026-10-07T10:45:50  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\scratchpad\ppt\ppt\media\image7.png 
+2026-10-07T10:45:51  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\scratchpad\ppt\ppt\media\image4.png 
+2026-10-07T10:46:19  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T10:46:27  stop   -             
+2026-10-07T10:47:48  prompt -             
+2026-10-07T10:48:43  prompt -             
+2026-10-07T10:48:48  tool   ToolSearch    
+2026-10-07T10:49:19  tool   WebSearch     
+2026-10-07T10:49:20  tool   WebSearch     
+2026-10-07T10:49:20  tool   WebSearch     
+2026-10-07T10:49:20  tool   WebSearch     
+2026-10-07T10:49:21  tool   WebSearch     
+2026-10-07T10:49:21  tool   WebSearch     
+2026-10-07T10:49:35  tool   WebSearch     
+2026-10-07T10:49:35  tool   WebSearch     
+2026-10-07T10:49:35  tool   WebSearch     
+2026-10-07T10:49:35  tool   WebSearch     
+2026-10-07T10:49:35  tool   WebSearch     
+2026-10-07T10:49:36  tool   WebSearch     
+2026-10-07T10:49:49  tool   WebSearch     
+2026-10-07T10:49:49  tool   WebSearch     
+2026-10-07T10:49:50  tool   WebSearch     
+2026-10-07T10:49:50  tool   WebSearch     
+2026-10-07T10:49:52  tool   WebSearch     
+2026-10-07T10:49:53  tool   WebSearch     
+2026-10-07T10:50:07  tool   WebSearch     
+2026-10-07T10:50:07  tool   WebSearch     
+2026-10-07T10:50:08  tool   WebSearch     
+2026-10-07T10:50:08  tool   WebSearch     
+2026-10-07T10:50:08  tool   WebSearch     
+2026-10-07T10:50:09  tool   WebSearch     
+2026-10-07T10:51:45  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:51:59  stop   -             
+2026-10-07T10:54:51  prompt -             
+2026-10-07T10:55:08  tool   WebFetch      
+2026-10-07T10:55:08  tool   WebFetch      
+2026-10-07T10:55:28  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:55:29  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:55:37  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:55:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:55:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T10:55:44  tool   Write        C:\Users\Rhydham\.claude\projects\C--Users-Rhydham-Desktop-projects-shaman\memory\d2s-data-sources.md 
+2026-10-07T10:55:45  tool   Write        C:\Users\Rhydham\.claude\projects\C--Users-Rhydham-Desktop-projects-shaman\memory\MEMORY.md 
+2026-10-07T10:55:52  stop   -             
+2026-10-07T10:56:34  prompt -             
+2026-10-07T10:56:42  tool   WebSearch     
+2026-10-07T10:56:43  tool   WebSearch     
+2026-10-07T10:56:52  tool   Bash          
+2026-10-07T10:58:57  tool   Bash          
+2026-10-07T10:59:00  prompt -             
+2026-10-07T11:00:17  stop   -             
+2026-10-07T11:01:07  prompt -             
+2026-10-07T11:01:10  tool   ToolSearch    
+2026-10-07T11:01:18  tool   WebSearch     
+2026-10-07T11:01:26  tool   Bash          
+2026-10-07T11:01:34  tool   Bash          
+2026-10-07T11:01:34  tool   Monitor       
+2026-10-07T11:01:41  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\dataset\README.md 
+2026-10-07T11:01:41  prompt -             
+2026-10-07T11:01:43  stop   -             
+2026-10-07T11:01:45  prompt -             
+2026-10-07T11:01:46  stop   -             
+2026-10-07T11:01:54  prompt -             
+2026-10-07T11:01:56  stop   -             
+2026-10-07T11:02:11  prompt -             
+2026-10-07T11:02:13  stop   -             
+2026-10-07T11:02:20  prompt -             
+2026-10-07T11:02:22  stop   -             
+2026-10-07T11:02:23  prompt -             
+2026-10-07T11:02:24  stop   -             
+2026-10-07T11:02:43  prompt -             
+2026-10-07T11:02:44  stop   -             
+2026-10-07T11:03:02  prompt -             
+2026-10-07T11:03:04  stop   -             
+2026-10-07T11:03:17  prompt -             
+2026-10-07T11:03:19  stop   -             
+2026-10-07T11:03:37  prompt -             
+2026-10-07T11:03:45  tool   Bash          
+2026-10-07T11:03:46  prompt -             
+2026-10-07T11:03:51  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\dataset\README.md 
+2026-10-07T11:03:58  stop   -             
+2026-10-07T11:14:32  prompt -             
+2026-10-07T11:14:48  tool   Bash          
+2026-10-07T11:14:55  tool   WebSearch     
+2026-10-07T11:14:56  tool   WebSearch     
+2026-10-07T11:14:56  tool   WebSearch     
+2026-10-07T11:14:57  tool   WebSearch     
+2026-10-07T11:14:58  tool   WebSearch     
+2026-10-07T11:15:08  tool   PowerShell    
+2026-10-07T11:15:14  tool   WebSearch     
+2026-10-07T11:15:15  tool   WebSearch     
+2026-10-07T11:15:16  tool   WebSearch     
+2026-10-07T11:15:17  tool   WebSearch     
+2026-10-07T11:15:20  tool   WebSearch     
+2026-10-07T11:15:59  tool   Bash          
+2026-10-07T11:16:04  tool   WebFetch      
+2026-10-07T11:16:04  tool   WebFetch      
+2026-10-07T11:16:05  tool   WebFetch      
+2026-10-07T11:17:03  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:17:12  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\pyproject.toml 
+2026-10-07T11:17:16  tool   Bash          
+2026-10-07T11:17:33  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\__init__.py 
+2026-10-07T11:17:34  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\config.py 
+2026-10-07T11:17:35  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\schemas.py 
+2026-10-07T11:18:02  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\model.py 
+2026-10-07T11:18:26  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\solver.py 
+2026-10-07T11:18:57  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\model.py 
+2026-10-07T11:18:58  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\sensitivity.py 
+2026-10-07T11:19:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\sensitivity.py 
+2026-10-07T11:19:26  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\pareto.py 
+2026-10-07T11:19:27  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\explain.py 
+2026-10-07T11:19:28  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\engine\__init__.py 
+2026-10-07T11:19:33  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b7o1z1oa6.output 
+2026-10-07T11:19:47  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\embeddings.py 
+2026-10-07T11:20:14  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\taxonomy.py 
+2026-10-07T11:20:40  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T11:21:22  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\forecasting.py 
+2026-10-07T11:21:23  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\__init__.py 
+2026-10-07T11:21:57  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\progress.py 
+2026-10-07T11:21:59  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\registry.py 
+2026-10-07T11:22:48  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\tasks.py 
+2026-10-07T11:22:49  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\queue.py 
+2026-10-07T11:22:50  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\worker.py 
+2026-10-07T11:22:51  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\__init__.py 
+2026-10-07T11:22:55  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b7o1z1oa6.output 
+2026-10-07T11:23:58  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\conftest.py 
+2026-10-07T11:23:58  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_engine.py 
+2026-10-07T11:23:59  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T11:24:00  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_workers.py 
+2026-10-07T11:24:07  tool   Bash          
+2026-10-07T11:24:21  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\README.md 
+2026-10-07T11:24:27  tool   Monitor       
+2026-10-07T11:24:31  stop   -             
+2026-10-07T11:25:07  prompt -             
+2026-10-07T11:25:11  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:26:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:26:37  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:26:44  stop   -             
+2026-10-07T11:26:57  prompt -             
+2026-10-07T11:27:07  tool   Bash          
+2026-10-07T11:29:11  tool   Bash          
+2026-10-07T11:29:14  tool   ToolSearch    
+2026-10-07T11:29:17  tool   TaskStop      
+2026-10-07T11:29:25  stop   -             
+2026-10-07T11:30:48  prompt -             
+2026-10-07T11:30:56  tool   Bash          
+2026-10-07T11:31:02  tool   Bash          
+2026-10-07T11:31:12  stop   -             
+2026-10-07T11:33:57  prompt -             
+2026-10-07T11:34:03  tool   Bash          
+2026-10-07T11:34:08  tool   Bash          
+2026-10-07T11:34:16  tool   Bash          
+2026-10-07T11:34:24  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\dataset\README.md 
+2026-10-07T11:34:25  tool   Bash          
+2026-10-07T11:34:36  stop   -             
+2026-10-07T11:35:30  prompt -             
+2026-10-07T11:35:45  tool   WebSearch     
+2026-10-07T11:35:47  tool   WebSearch     
+2026-10-07T11:35:50  tool   WebSearch     
+2026-10-07T11:35:58  tool   Grep          
+2026-10-07T11:36:02  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:30  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:31  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:33  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:34  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:39  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:36:40  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:02  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:03  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:04  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:04  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:05  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:37:06  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:37:06  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\docs\core-services.md 
+2026-10-07T11:37:07  tool   Write        C:\Users\Rhydham\.claude\projects\C--Users-Rhydham-Desktop-projects-shaman\memory\d2s-no-llm-api-own-slm.md 
+2026-10-07T11:37:11  tool   Bash          
+2026-10-07T11:37:23  stop   -             
+2026-10-07T11:38:56  prompt -             
+2026-10-07T11:39:18  tool   WebSearch     
+2026-10-07T11:39:18  tool   WebSearch     
+2026-10-07T11:39:18  tool   WebSearch     
+2026-10-07T11:39:18  tool   WebSearch     
+2026-10-07T11:39:18  tool   WebSearch     
+2026-10-07T11:40:13  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\docs\xai.md 
+2026-10-07T11:40:14  prompt -             
+2026-10-07T11:40:27  tool   Bash          
+2026-10-07T11:40:28  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:40:28  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:40:35  tool   PowerShell    
+2026-10-07T11:40:52  tool   PowerShell    
+2026-10-07T11:41:08  stop   -             
+2026-10-07T11:42:35  prompt -             
+2026-10-07T11:42:50  stop   -             
+2026-10-07T11:44:19  prompt -             
+2026-10-07T11:44:21  tool   TaskStop      
+2026-10-07T11:44:26  tool   PowerShell    
+2026-10-07T11:44:31  stop   -             
+2026-10-07T11:45:16  prompt -             
+2026-10-07T11:45:34  stop   -             
+2026-10-07T11:54:48  prompt -             
+2026-10-07T11:55:04  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T11:55:04  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T11:55:25  tool   Bash          
+2026-10-07T11:55:48  tool   Bash          
+2026-10-07T11:55:55  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\pyproject.toml 
+2026-10-07T11:56:28  tool   Bash          
+2026-10-07T11:56:37  stop   -             
+2026-10-07T11:57:21  prompt -             
+2026-10-07T11:57:34  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:57:47  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:57:47  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:57:48  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:57:49  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\README.md 
+2026-10-07T11:57:53  tool   Grep          
+2026-10-07T11:57:55  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:58:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:58:33  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:58:33  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\features.md 
+2026-10-07T11:58:46  stop   -             
+2026-10-07T11:59:32  prompt -             
+2026-10-07T11:59:52  tool   Bash          
+2026-10-07T12:00:01  tool   Bash          
+2026-10-07T12:00:10  tool   Bash          
+2026-10-07T12:00:20  tool   Bash          
+2026-10-07T12:00:21  tool   Monitor       
+2026-10-07T12:00:23  prompt -             
+2026-10-07T12:00:29  prompt -             
+2026-10-07T12:00:29  stop   -             
+2026-10-07T12:00:29  prompt -             
+2026-10-07T12:00:29  prompt -             
+2026-10-07T12:00:32  stop   -             
+2026-10-07T12:00:40  tool   Bash          
+2026-10-07T12:00:41  tool   Monitor       
+2026-10-07T12:00:41  prompt -             
+2026-10-07T12:00:41  prompt -             
+2026-10-07T12:00:42  prompt -             
+2026-10-07T12:00:51  tool   Bash          
+2026-10-07T12:00:51  prompt -             
+2026-10-07T12:02:19  tool   Bash          
+2026-10-07T12:02:19  prompt -             
+2026-10-07T12:02:20  prompt -             
+2026-10-07T12:02:20  prompt -             
+2026-10-07T12:02:20  prompt -             
+2026-10-07T12:02:21  prompt -             
+2026-10-07T12:02:21  prompt -             
+2026-10-07T12:02:42  tool   Bash          
+2026-10-07T12:03:04  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:03:19  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:03:20  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:03:20  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:03:37  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\parsing.py 
+2026-10-07T12:04:19  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:04:20  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\pipeline.py 
+2026-10-07T12:04:21  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:04:21  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\crosswalk.py 
+2026-10-07T12:04:22  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\evaluate.py 
+2026-10-07T12:04:23  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\__init__.py 
+2026-10-07T12:04:50  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:04:58  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:04:59  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:05:21  tool   Bash          
+2026-10-07T12:05:28  tool   Bash          
+2026-10-07T12:05:29  tool   Monitor       
+2026-10-07T12:06:17  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:06:18  prompt -             
+2026-10-07T12:06:18  prompt -             
+2026-10-07T12:06:19  prompt -             
+2026-10-07T12:06:19  prompt -             
+2026-10-07T12:06:23  stop   -             
+2026-10-07T12:07:30  prompt -             
+2026-10-07T12:07:35  tool   Bash          
+2026-10-07T12:07:35  prompt -             
+2026-10-07T12:07:47  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\embeddings.py 
+2026-10-07T12:07:50  stop   -             
+2026-10-07T12:08:10  prompt -             
+2026-10-07T12:09:49  tool   Bash          
+2026-10-07T12:09:56  stop   -             
+2026-10-07T12:12:36  prompt -             
+2026-10-07T12:12:40  stop   -             
+2026-10-07T12:12:45  prompt -             
+2026-10-07T12:12:58  stop   -             
+2026-10-07T12:12:58  prompt -             
+2026-10-07T12:12:58  prompt -             
+2026-10-07T12:12:59  prompt -             
+2026-10-07T12:12:59  prompt -             
+2026-10-07T12:12:59  prompt -             
+2026-10-07T12:13:00  prompt -             
+2026-10-07T12:13:00  prompt -             
+2026-10-07T12:13:00  prompt -             
+2026-10-07T12:13:01  prompt -             
+2026-10-07T12:13:01  prompt -             
+2026-10-07T12:13:01  prompt -             
+2026-10-07T12:13:02  prompt -             
+2026-10-07T12:13:04  stop   -             
+2026-10-07T12:13:05  prompt -             
+2026-10-07T12:13:05  prompt -             
+2026-10-07T12:13:05  prompt -             
+2026-10-07T12:13:06  prompt -             
+2026-10-07T12:13:06  prompt -             
+2026-10-07T12:13:06  prompt -             
+2026-10-07T12:13:08  stop   -             
+2026-10-07T12:13:08  prompt -             
+2026-10-07T12:13:09  prompt -             
+2026-10-07T12:13:09  prompt -             
+2026-10-07T12:13:09  prompt -             
+2026-10-07T12:13:12  tool   TaskStop      
+2026-10-07T12:13:15  tool   Monitor       
+2026-10-07T12:13:15  prompt -             
+2026-10-07T12:13:15  prompt -             
+2026-10-07T12:13:15  prompt -             
+2026-10-07T12:13:16  prompt -             
+2026-10-07T12:13:31  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\eval_matching_variants.py 
+2026-10-07T12:13:33  prompt -             
+2026-10-07T12:13:36  stop   -             
+2026-10-07T12:15:11  prompt -             
+2026-10-07T12:15:14  stop   -             
+2026-10-07T12:17:10  prompt -             
+2026-10-07T12:17:13  stop   -             
+2026-10-07T12:19:03  prompt -             
+2026-10-07T12:19:06  stop   -             
+2026-10-07T12:19:14  prompt -             
+2026-10-07T12:19:16  stop   -             
+2026-10-07T12:19:17  prompt -             
+2026-10-07T12:19:35  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\pipeline.py 
+2026-10-07T12:19:36  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:19:36  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:19:37  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:19:37  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:19:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:19:39  prompt -             
+2026-10-07T12:19:39  prompt -             
+2026-10-07T12:19:45  tool   Bash          
+2026-10-07T12:19:54  tool   Bash          
+2026-10-07T12:20:17  stop   -             
+2026-10-07T12:22:11  prompt -             
+2026-10-07T12:22:14  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bfjmb307r.output 
+2026-10-07T12:22:20  tool   Bash          
+2026-10-07T12:22:24  tool   Bash          
+2026-10-07T12:22:29  stop   -             
+2026-10-07T12:24:27  prompt -             
+2026-10-07T12:24:31  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b1qym53vo.output 
+2026-10-07T12:24:40  tool   PowerShell    
+2026-10-07T12:24:45  stop   -             
+2026-10-07T12:30:02  prompt -             
+2026-10-07T12:30:13  tool   PowerShell    
+2026-10-07T12:30:19  stop   -             
+2026-10-07T12:30:47  prompt -             
+2026-10-07T12:30:50  tool   Read         C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b1qym53vo.output 
+2026-10-07T12:31:06  tool   Bash          
+2026-10-07T12:31:13  tool   Bash          
+2026-10-07T12:31:37  tool   Bash          
+2026-10-07T12:32:03  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:32:49  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:32:49  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:32:52  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:33:03  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:33:04  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:33:18  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\workers\tasks.py 
+2026-10-07T12:33:19  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\config.py 
+2026-10-07T12:33:19  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\crosswalk.py 
+2026-10-07T12:33:23  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:33:37  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:33:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:33:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:33:39  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_ingestion.py 
+2026-10-07T12:33:57  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:33:58  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:33:58  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T12:34:21  tool   Bash          
+2026-10-07T12:34:29  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:34:47  tool   Bash          
+2026-10-07T12:34:54  tool   Bash          
+2026-10-07T12:34:55  tool   Monitor       
+2026-10-07T12:34:58  stop   -             
+2026-10-07T12:34:58  prompt -             
+2026-10-07T12:35:01  stop   -             
+2026-10-07T12:35:13  prompt -             
+2026-10-07T12:35:17  stop   -             
+2026-10-07T12:37:01  prompt -             
+2026-10-07T12:37:05  tool   Bash          
+2026-10-07T12:37:12  stop   -             
+2026-10-07T12:37:13  prompt -             
+2026-10-07T12:37:16  stop   -             
+2026-10-07T12:37:22  prompt -             
+2026-10-07T12:37:25  stop   -             
+2026-10-07T12:37:46  prompt -             
+2026-10-07T12:38:00  tool   Bash          
+2026-10-07T12:38:58  tool   Bash          
+2026-10-07T12:39:47  tool   Bash          
+2026-10-07T12:39:48  prompt -             
+2026-10-07T12:40:03  tool   TaskStop      
+2026-10-07T12:40:03  tool   TaskStop      
+2026-10-07T12:40:16  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:40:17  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:40:18  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T12:40:53  tool   Bash          
+2026-10-07T12:41:01  tool   Bash          
+2026-10-07T12:41:01  tool   Monitor       
+2026-10-07T12:41:30  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:41:30  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:41:31  prompt -             
+2026-10-07T12:41:31  prompt -             
+2026-10-07T12:41:33  stop   -             
+2026-10-07T12:41:49  prompt -             
+2026-10-07T12:41:52  stop   -             
+2026-10-07T12:41:57  prompt -             
+2026-10-07T12:42:00  stop   -             
+2026-10-07T12:43:15  prompt -             
+2026-10-07T12:43:18  stop   -             
+2026-10-07T12:44:00  prompt -             
+2026-10-07T12:44:03  stop   -             
+2026-10-07T12:45:34  prompt -             
+2026-10-07T12:45:37  stop   -             
+2026-10-07T12:46:22  prompt -             
+2026-10-07T12:46:28  tool   Bash          
+2026-10-07T12:46:32  tool   Bash          
+2026-10-07T12:46:36  tool   Bash          
+2026-10-07T12:46:42  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\hackathon\SAS Data Problem Statement and Instructions Hackathon\Data Description Doc.pdf 
+2026-10-07T12:46:47  tool   Bash          
+2026-10-07T12:46:54  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\hackathon\SAS Data Problem Statement and Instructions Hackathon\Problem Context Brief,  SAS VFL Demos, Guidelines Dos and Donts.pdf 
+2026-10-07T12:46:54  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\hackathon\SAS Data Problem Statement and Instructions Hackathon\Problem Context Brief,  SAS VFL Demos, Guidelines Dos and Donts.pdf 
+2026-10-07T12:47:11  tool   Bash          
+2026-10-07T12:47:12  prompt -             
+2026-10-07T12:47:35  stop   -             
+2026-10-07T12:47:35  prompt -             
+2026-10-07T12:47:36  prompt -             
+2026-10-07T12:47:39  stop   -             
+2026-10-07T12:48:13  prompt -             
+2026-10-07T12:48:49  tool   Bash          
+2026-10-07T12:48:49  prompt -             
+2026-10-07T12:48:49  prompt -             
+2026-10-07T12:48:52  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\ingestion\02_top_skills_hybrid.png 
+2026-10-07T12:48:52  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\ingestion\04_eval_techwolf.png 
+2026-10-07T12:48:53  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\ingestion\05_embedding_map.png 
+2026-10-07T12:48:53  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\ingestion\10_before_after.png 
+2026-10-07T12:48:54  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\ingestion\README.md 
+2026-10-07T12:49:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:49:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_ingestion_report.py 
+2026-10-07T12:50:02  tool   Bash          
+2026-10-07T12:50:17  stop   -             
+2026-10-07T12:54:30  prompt -             
+2026-10-07T12:54:57  tool   Bash          
+2026-10-07T12:55:40  tool   Write        C:\Users\Rhydham\.claude\projects\C--Users-Rhydham-Desktop-projects-shaman\memory\d2s-sas-dataset-only.md 
+2026-10-07T12:55:46  tool   Bash          
+2026-10-07T12:56:10  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\parsing.py 
+2026-10-07T12:56:12  tool   Bash          
+2026-10-07T12:56:54  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\sas.py 
+2026-10-07T12:57:18  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_sas_ingestion.py 
+2026-10-07T12:57:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_sas_ingestion.py 
+2026-10-07T12:57:27  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_sas_ingestion.py 
+2026-10-07T12:57:28  tool   Bash          
+2026-10-07T12:57:28  tool   Monitor       
+2026-10-07T12:58:22  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T12:58:23  prompt -             
+2026-10-07T12:58:23  prompt -             
+2026-10-07T12:58:28  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T12:58:31  stop   -             
+2026-10-07T12:58:33  prompt -             
+2026-10-07T12:58:37  stop   -             
+2026-10-07T12:58:38  prompt -             
+2026-10-07T12:58:48  tool   Bash          
+2026-10-07T12:59:21  tool   Bash          
+2026-10-07T12:59:22  prompt -             
+2026-10-07T12:59:25  tool   TaskStop      
+2026-10-07T12:59:26  tool   TaskStop      
+2026-10-07T12:59:26  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:59:49  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:59:50  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T12:59:50  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\sas.py 
+2026-10-07T12:59:51  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\sas.py 
+2026-10-07T12:59:51  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\sas.py 
+2026-10-07T13:00:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:00:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T13:00:09  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T13:00:09  tool   Bash          
+2026-10-07T13:00:14  tool   Grep          
+2026-10-07T13:00:24  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T13:01:00  tool   Bash          
+2026-10-07T13:01:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:01:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_ml.py 
+2026-10-07T13:01:59  tool   Bash          
+2026-10-07T13:02:22  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:02:56  tool   Bash          
+2026-10-07T13:03:06  tool   Bash          
+2026-10-07T13:03:06  tool   Monitor       
+2026-10-07T13:03:08  stop   -             
+2026-10-07T13:03:09  prompt -             
+2026-10-07T13:03:12  stop   -             
+2026-10-07T13:03:44  prompt -             
+2026-10-07T13:03:47  stop   -             
+2026-10-07T13:04:05  prompt -             
+2026-10-07T13:04:15  tool   Bash          
+2026-10-07T13:04:39  tool   TaskStop      
+2026-10-07T13:04:39  tool   TaskStop      
+2026-10-07T13:04:45  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:04:46  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:04:47  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ml\skills.py 
+2026-10-07T13:05:22  tool   Bash          
+2026-10-07T13:05:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_sas_ingestion.py 
+2026-10-07T13:05:33  tool   Bash          
+2026-10-07T13:05:33  tool   Monitor       
+2026-10-07T13:05:35  stop   -             
+2026-10-07T13:06:24  prompt -             
+2026-10-07T13:08:10  prompt -             
+2026-10-07T13:08:18  tool   Bash          
+2026-10-07T13:08:25  tool   Bash          
+2026-10-07T13:08:27  stop   -             
+2026-10-07T13:09:19  prompt -             
+2026-10-07T13:09:23  tool   Bash          
+2026-10-07T13:09:26  stop   -             
+2026-10-07T13:09:43  prompt -             
+2026-10-07T13:09:48  stop   -             
+2026-10-07T13:09:49  prompt -             
+2026-10-07T13:10:05  tool   Bash          
+2026-10-07T13:10:05  prompt -             
+2026-10-07T13:10:06  prompt -             
+2026-10-07T13:10:06  prompt -             
+2026-10-07T13:10:06  prompt -             
+2026-10-07T13:10:27  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\ingest\sas.py 
+2026-10-07T13:10:28  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_sas_ingestion.py 
+2026-10-07T13:11:41  tool   Bash          
+2026-10-07T13:11:41  prompt -             
+2026-10-07T13:11:48  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T13:12:14  tool   Bash          
+2026-10-07T13:12:16  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\01_cleaning.png 
+2026-10-07T13:12:17  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\03_tag_mapping.png 
+2026-10-07T13:12:17  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\05_top_skills.png 
+2026-10-07T13:12:18  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\06_skill_salary.png 
+2026-10-07T13:12:18  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\08_ds_titles_salary.png 
+2026-10-07T13:12:19  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\09_title_occupations.png 
+2026-10-07T13:12:31  tool   Bash          
+2026-10-07T13:12:40  tool   Bash          
+2026-10-07T13:12:51  tool   PowerShell    
+2026-10-07T13:12:55  tool   PowerShell    
+2026-10-07T13:13:09  tool   Bash          
+2026-10-07T13:14:44  tool   Bash          
+2026-10-07T13:14:52  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_sas_report.py 
+2026-10-07T13:14:57  tool   Bash          
+2026-10-07T13:14:58  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\README.md 
+2026-10-07T13:14:58  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\03_tag_mapping.png 
+2026-10-07T13:14:58  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\sas_ingestion\04_threshold_calibration.png 
+2026-10-07T13:15:12  stop   -             
+2026-10-07T13:15:56  prompt -             
+2026-10-07T13:16:31  stop   -             
+2026-10-07T13:20:02  prompt -             
+2026-10-07T13:20:09  tool   Bash          
+2026-10-07T13:20:40  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:21:31  tool   Bash          
+2026-10-07T13:21:33  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.pdf 
+2026-10-07T13:21:42  tool   Bash          
+2026-10-07T13:21:48  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:21:49  tool   Bash          
+2026-10-07T13:21:54  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:21:56  tool   Bash          
+2026-10-07T13:22:05  stop   -             
+2026-10-07T13:25:33  prompt -             
+2026-10-07T13:25:36  stop   -             
+2026-10-07T13:27:11  prompt -             
+2026-10-07T13:27:27  tool   Bash          
+2026-10-07T13:27:43  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:27:44  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:27:44  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:27:46  tool   Bash          
+2026-10-07T13:27:52  tool   Bash          
+2026-10-07T13:27:55  tool   Bash          
+2026-10-07T13:28:00  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:28:02  tool   Bash          
+2026-10-07T13:28:05  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.pdf 
+2026-10-07T13:28:14  tool   Bash          
+2026-10-07T13:28:18  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:28:20  tool   Bash          
+2026-10-07T13:28:22  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.pdf 
+2026-10-07T13:28:29  stop   -             
+2026-10-07T13:29:45  prompt -             
+2026-10-07T13:29:51  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\objective\analytics_objective.tex 
+2026-10-07T13:29:53  tool   Bash          
+2026-10-07T13:29:57  stop   -             
+2026-10-07T13:33:52  prompt -             
+2026-10-07T13:34:14  tool   Bash          
+2026-10-07T13:35:07  tool   Bash          
+2026-10-07T13:35:07  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\__init__.py 
+2026-10-07T13:35:08  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\traits.py 
+2026-10-07T13:35:44  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq2_rq3.py 
+2026-10-07T13:37:00  tool   Bash          
+2026-10-07T13:37:14  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\traits.py 
+2026-10-07T13:38:22  tool   Bash          
+2026-10-07T13:38:39  tool   Bash          
+2026-10-07T13:38:47  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3\rq2_jds_2_effect_sizes.png 
+2026-10-07T13:38:47  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3\rq3_sds_6_tree.png 
+2026-10-07T13:38:47  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3\rq3_sds_4_models.png 
+2026-10-07T13:38:48  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3\rq2_jds_1_distributions.png 
+2026-10-07T13:39:28  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq2_rq3\README.md 
+2026-10-07T13:39:29  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_analysis.py 
+2026-10-07T13:40:00  tool   Bash          
+2026-10-07T13:40:15  stop   -             
+2026-10-07T13:42:03  prompt -             
+2026-10-07T13:42:16  stop   -             
+2026-10-07T13:43:44  prompt -             
+2026-10-07T13:44:00  stop   -             
+2026-10-07T13:45:55  prompt -             
+2026-10-07T13:46:27  tool   Bash          
+2026-10-07T13:47:40  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:48:35  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:48:36  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq1.py 
+2026-10-07T13:49:54  tool   Bash          
+2026-10-07T13:50:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:50:08  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:51:32  tool   Bash          
+2026-10-07T13:51:52  tool   Bash          
+2026-10-07T13:52:24  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:52:24  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:52:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:52:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:52:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\jobs.py 
+2026-10-07T13:52:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq1.py 
+2026-10-07T13:54:03  tool   Bash          
+2026-10-07T13:54:14  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\01_role_families.png 
+2026-10-07T13:54:14  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\07_triangulation.png 
+2026-10-07T13:54:14  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\05_pay_premium_data_roles.png 
+2026-10-07T13:54:15  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\06_skill_bundles.png 
+2026-10-07T13:54:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq1.py 
+2026-10-07T13:56:09  tool   Bash          
+2026-10-07T13:56:47  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\README.md 
+2026-10-07T13:57:21  tool   Bash          
+2026-10-07T13:57:29  tool   Bash          
+2026-10-07T13:57:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\README.md 
+2026-10-07T13:57:38  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq1\README.md 
+2026-10-07T13:57:52  stop   -             
+2026-10-07T14:40:26  prompt -             
+2026-10-07T14:41:19  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\src\d2s\analysis\plan.py 
+2026-10-07T14:41:34  tool   Bash          
+2026-10-07T14:42:28  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\course_catalogue_assumptions.csv 
+2026-10-07T14:42:29  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\run_rq4.py 
+2026-10-07T14:42:35  tool   Bash          
+2026-10-07T14:42:56  tool   Bash          
+2026-10-07T14:43:04  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\02_plan.png 
+2026-10-07T14:43:04  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\04_robustness.png 
+2026-10-07T14:43:04  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\01_inputs.png 
+2026-10-07T14:43:04  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\03_pareto.png 
+2026-10-07T14:43:28  tool   Bash          
+2026-10-07T14:43:30  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\03_pareto.png 
+2026-10-07T14:43:31  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\01_inputs.png 
+2026-10-07T14:44:07  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\README.md 
+2026-10-07T14:44:08  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_plan.py 
+2026-10-07T14:44:41  tool   Bash          
+2026-10-07T14:44:48  tool   Bash          
+2026-10-07T14:44:53  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\backend\tests\test_plan.py 
+2026-10-07T14:45:21  tool   Bash          
+2026-10-07T14:45:33  stop   -             
+2026-10-07T14:46:59  prompt -             
+2026-10-07T14:47:14  tool   Bash          
+2026-10-07T14:47:21  prompt -             
+2026-10-07T14:47:43  stop   -             
+2026-10-07T14:54:09  prompt -             
+2026-10-07T14:54:34  tool   WebSearch     
+2026-10-07T14:54:36  tool   WebSearch     
+2026-10-07T14:54:36  tool   WebSearch     
+2026-10-07T14:54:37  tool   WebSearch     
+2026-10-07T14:54:37  tool   WebSearch     
+2026-10-07T14:54:38  tool   WebSearch     
+2026-10-07T14:55:03  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\course_catalogue_assumptions.csv 
+2026-10-07T14:55:09  tool   Bash          
+2026-10-07T14:55:34  tool   Bash          
+2026-10-07T14:55:48  tool   Bash          
+2026-10-07T14:56:17  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\README.md 
+2026-10-07T14:56:27  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\README.md 
+2026-10-07T14:56:32  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\reports\rq4\README.md 
+2026-10-07T14:57:15  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\backend\scripts\make_report_assets.py 
+2026-10-07T14:57:24  tool   Bash          
+2026-10-07T14:57:49  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\references.bib 
+2026-10-07T14:58:07  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\references.bib 
+2026-10-07T14:58:08  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\main.tex 
+2026-10-07T14:58:59  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\00_exec_summary.tex 
+2026-10-07T14:58:59  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\01_problem.tex 
+2026-10-07T14:59:00  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\02_approach.tex 
+2026-10-07T14:59:07  tool   Bash          
+2026-10-07T15:00:02  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:00:03  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\04_rq1.tex 
+2026-10-07T15:01:10  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\05_rq2_rq3.tex 
+2026-10-07T15:01:11  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\06_rq4.tex 
+2026-10-07T15:01:11  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\07_results.tex 
+2026-10-07T15:01:12  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\08_implications.tex 
+2026-10-07T15:01:58  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\appendix\d2s_core_analysis.sas 
+2026-10-07T15:01:58  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\sections\09_appendix.tex 
+2026-10-07T15:02:41  tool   Bash          
+2026-10-07T15:02:48  tool   Bash          
+2026-10-07T15:02:55  tool   Read         C:\Users\Rhydham\Desktop\projects\shaman\report\main.pdf 
+2026-10-07T15:04:25  prompt -             
+2026-10-07T15:04:49  stop   -             
+2026-10-07T15:05:28  prompt -             
+2026-10-07T15:05:52  tool   Bash          
+2026-10-07T15:06:22  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:22  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:23  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:24  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:25  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:26  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:27  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:46  tool   Edit         C:\Users\Rhydham\Desktop\projects\shaman\report\sections\03_data_exploration.tex 
+2026-10-07T15:06:46  tool   Write        C:\Users\Rhydham\Desktop\projects\shaman\report\figures\flow.tex 
+2026-10-07T15:06:55  tool   Bash          

@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd
+from d2s.ml.taxonomy import load_onet
+o=load_onet(); tools={s.label for s in o.skills.values() if s.kind=='tool' and ' ' not in s.label.strip()}
+new=pd.read_csv('../dataset/processed/ingest/matches_lexical_all.csv.gz', usecols=['post_id','label','evidence'])
+t=new[new.label.isin(tools)].groupby('label').post_id.nunique().sort_values(ascending=False)
+print(len(tools),'single-word O*NET tools;', (t>0).sum(),'matched'); print(t.head(60).to_string())
+"

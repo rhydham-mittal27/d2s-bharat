@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>bossucaqd</task-id>
+<summary>Monitor event: "SAS ingestion rerun (milestones)"</summary>
+<event>[    0.0s] STEP 1/5 data parsing &amp; cleaning (SAS files only)
+[    0.7s] STEP 2/5 taxonomy vocabulary + sentence-transformer index</event>
+</task-notification>

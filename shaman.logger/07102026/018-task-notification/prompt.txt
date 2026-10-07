@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bx1bkynwz</task-id>
+<tool-use-id>toolu_016DjzqGddfSd5nLwXdqqQqS</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bx1bkynwz.output</output-file>
+<status>completed</status>
+<summary>Background command "Download O*NET text and SQL zips with resume and retries" completed (exit code 0)</summary>
+</task-notification>

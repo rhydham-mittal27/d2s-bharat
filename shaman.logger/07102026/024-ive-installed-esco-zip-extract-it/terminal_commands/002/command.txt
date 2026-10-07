@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/esco" && Z="ESCO dataset - v1.2.1 - classification - en - csv.zip"; ls -l "$Z"; unzip -tq "$Z" && unzip -l "$Z" | awk 'NR>3' | grep -vE "^-+|files$" | awk '{$2=$3=""; print}' | head -40

@@ -1,0 +1,19 @@
+55:    a.set_title("Gap: juniors below high-hike median (n=139)")
+64:    b.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.12), ncol=3)
+88:    b.legend(fontsize=7, loc="upper center", bbox_to_anchor=(0.5, -0.1), ncol=2)
+165:    points400 = frontier(problem.model_copy(update={"constraints": problem.constraints.model_copy(
+168:                   "courses": "+".join(c.course_id for c in p.plan.courses)} for p in points400]).to_csv(
+191:    figs = [fig_inputs(gaps, w), fig_plan(best, problem, args.budget), fig_pareto(points, args.budget, points400),
+PLAN optimal objective 20902.7 cost 399500 hours 186 []
+DONE
+budget_cap,cost,impact,courses
+100000,99800,7483.745594169346,sas_prog+story_powerbi
+177778,177500,11537.985313220528,sas_prog+stats+story_powerbi
+255556,214800,15037.800086060042,sas_prog+stats+story_tableau
+333333,302800,18528.302838962292,py_sql+sas_prog+stats+story_tableau
+411111,411100,21624.20056974284,py_sql+sas_prog+stats+ml+story_powerbi
+488889,449800,23391.434184280042,py_sql+sas_prog+stats+ml+story_tableau
+566667,566000,24980.75861083084,py_sql+sas_prog+stats+ml+bigdata+story_powerbi
+644444,599800,25766.909242572714,py_sql+sas_prog+stats+ml+bigdata+story_tableau
+722222,721800,26415.915308586096,py_sql+sas_prog+stats+ml+dl_nlp+bigdata+story_tableau
+800000,769800,27157.63652688711,py_sql+sas_prog+stats+ml+dl_nlp+bigdata+story_tableau

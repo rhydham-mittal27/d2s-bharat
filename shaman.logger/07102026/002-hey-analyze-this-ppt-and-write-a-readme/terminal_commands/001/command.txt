@@ -1,0 +1,1 @@
+Get-ChildItem -Recurse -Depth 2 | Select-Object FullName, Length

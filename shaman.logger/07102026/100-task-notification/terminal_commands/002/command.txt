@@ -1,0 +1,14 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+from d2s.ml.taxonomy import load_onet, load_esco
+from d2s.ml.skills import build_lexicon, _norm
+t=load_onet().merge(load_esco()); sk=list(t.skills.values()); lex=build_lexicon(sk)
+by={}
+for k,v in lex.items(): by.setdefault(v,[]).append(k)
+for lbl in ['Java (computer programming)','Visual Basic','SAP Data Services','Analyze','style sheet languages']:
+    s=[x for x in sk if x.label==lbl]
+    for x in s: print(lbl,'|',x.source,x.kind,'| alts',x.alt_labels[:6],'| lexicon keys ->',by.get(x.id))
+import re
+lab=[_norm(x.label) for x in sk if not (x.source=='onet' and x.kind in ('essential_skill','transferable_skill','knowledge'))]
+for term in ['java','.net','sap','css']:
+    print(term, sum(1 for l in lab if re.search(r'(^| )'+re.escape(term)+r'( |$)', l)), [l for l in lab if re.search(r'(^| )'+re.escape(term)+r'( |$)', l)][:6])
+"

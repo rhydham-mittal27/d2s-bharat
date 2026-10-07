@@ -1,0 +1,13 @@
+FullName                                                                                                    Length 
+--------                                                                                                    ------ 
+C:\Users\Rhydham\Desktop\projects\shaman\.claude                                                                   
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger                                                             
+C:\Users\Rhydham\Desktop\projects\shaman\buildforbharat ppt.pptx                                            8854421
+C:\Users\Rhydham\Desktop\projects\shaman\.claude\settings.json                                              941    
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\.state                                                      
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\07102026                                                    
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\timeline.json                                        655    
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\.state\179abff8-7912-4c4b-9bae-f98badd5c47b.json     188    
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\.state\hooks.log                                     88     
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\07102026\001-hey-analyze-this-ppt-and-write-a-readme        
+C:\Users\Rhydham\Desktop\projects\shaman\shaman.logger\07102026\002-hey-analyze-this-ppt-and-write-a-readme

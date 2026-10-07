@@ -1,0 +1,16 @@
+Pinned `.python-version` to `3.13`
+---
+3
+--- uv cache torch:
+C:\Users\Rhydham\AppData\Local/uv/cache/.tmpFYGFXg/functorch
+C:\Users\Rhydham\AppData\Local/uv/cache/.tmpFYGFXg/torch
+C:\Users\Rhydham\AppData\Local/uv/cache/.tmpFYGFXg/torch/torch_version.py
+C:\Users\Rhydham\AppData\Local/uv/cache/.tmpFYGFXg/torch/_functorch
+C:\Users\Rhydham\AppData\Local/uv/cache/.tmpFYGFXg/torch/_torch_docs.py
+C:\Users\Rhydham\AppData\Local/uv/cache/archive-v0/6DIBB3DTOPcT2lqp5ddKG/functorch
+C:\Users\Rhydham\AppData\Local/uv/cache/archive-v0/6DIBB3DTOPcT2lqp5ddKG/torch
+C:\Users\Rhydham\AppData\Local/uv/cache/archive-v0/6DIBB3DTOPcT2lqp5ddKG/torch-2.12.1.dist-info
+C:\Users\Rhydham\AppData\Local/uv/cache/archive-v0/6DIBB3DTOPcT2lqp5ddKG/torchgen
+C:\Users\Rhydham\AppData\Local/uv/cache/archive-v0/8fP_uBTb9X2K2k_ZquLav/functorch
+uv.exe                       25240 Console                    1     18,132 K
+uv.exe                       13664 Console                    1    136,164 K

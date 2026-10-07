@@ -1,0 +1,97 @@
+{'exact': 17288, 'semantic_high': 28555, 'semantic_medium': 19492, 'unmapped': 8601}
+== exact: top by usage
+               tag  posts               nearest_label  similarity
+               SQL    928                         SQL         1.0
+            Python    864                      Python         1.0
+              Java    714 Java (computer programming)         1.0
+ Business Analysis    690           business analysis         1.0
+  Machine Learning    635            machine learning         1.0
+               sas    605                         SAS         1.0
+        Javascript    538                  JavaScript         1.0
+Project Management    527          project management         1.0
+    Data Analytics    411              data analytics         1.0
+        accounting    370                  accounting         1.0
+            Hadoop    302                      Hadoop         1.0
+             Spark    275                       SPARK         1.0
+-- exact: random
+                tag  posts                         nearest_label  similarity
+              Unity      2 Unity (digital game creation systems)         1.0
+            Physics      5                               physics         1.0
+            sap erp      3                               SAP ERP         1.0
+    Amazon Redshift      8                       Amazon Redshift         1.0
+     media planning     13                        media planning         1.0
+reverse engineering      5                   reverse engineering         1.0
+    Hardware Design      1                       design hardware         1.0
+           MS Excel     12             use spreadsheets software         1.0
+== semantic_high: top by usage
+                 tag  posts          nearest_label  similarity
+           Analytics    902         data analytics    0.913728
+       data analysis    651  perform data analysis    0.943017
+                   R    616                      R    1.000000
+   Digital Marketing    576 plan digital marketing    0.897803
+         Outsourcing    417   outsourcing strategy    0.913783
+               Sales    410       sales activities    0.874871
+               Excel    372        Microsoft Excel    0.906134
+           Marketing    345     services marketing    0.861315
+          Operations    341 maintenance operations    0.876400
+    Business process    312     business processes    0.974413
+Business Development    271 develop business plans    0.859619
+            auditing    269      internal auditing    0.868044
+-- semantic_high: random
+                tag  posts                     nearest_label  similarity
+ System integration     15       integrate system components    0.924855
+ Process automation      2 operate automated process control    0.903098
+             Supply      1                    supply machine    0.854451
+    design engineer      2                            Design    0.853821
+        Call Center     41              Call center software    0.889477
+           rest api      5                       RESTful API    0.924195
+    Ticketing Tools      1           Ticket issuing software    0.910958
+instrument engineer      1       instrumentation engineering    0.882150
+== semantic_medium: top by usage
+             tag  posts                                  nearest_label  similarity
+         finance    766                             financial products    0.793876
+             SEO    483                                 search engines    0.829456
+            HTML    301                                            PHP    0.809696
+        strategy    188                             strategic planning    0.847631
+web technologies    172                             cloud technologies    0.835272
+             XML    168                 Extensible markup language XML    0.843666
+       Core Java    165                                    core apples    0.784947
+              HR    165                  Personnel and Human Resources    0.835715
+         banking    155                             banking activities    0.849096
+online marketing    155                 online ads campaign techniques    0.818638
+             mis    148             Management information systems MIS    0.824787
+            J2Ee    146 Oracle Java 2 Platform Enterprise Edition J2EE    0.832511
+-- semantic_medium: random
+                   tag  posts                              nearest_label  similarity
+                   GRC      1                                  Aline GRC    0.780277
+    process consulting      4                  use consulting techniques    0.822579
+    personal assistant      3 assist with personal administration issues    0.811643
+         Design Review      7                      design questionnaires    0.848546
+  business rf planning      1                     develop business plans    0.819757
+         Space Selling      5                 handle cargo space on sale    0.811847
+      risk and control      1                            risk management    0.810761
+Commercial Real Estate      2                         real estate market    0.829462
+== unmapped: top by usage
+              tag  posts                               nearest_label  similarity
+              PPC    131                   Thomson PPC e-Tools Suite    0.757369
+              BPO    121                              BPS Compliance    0.776653
+         presales     96                                sell tickets    0.734537
+              MVC     95                  Microsoft ASP.NET Core MVC    0.759400
+        part time     85                          work independently    0.777161
+linear regression     75        Best Linear Unbiased Prediction BLUP    0.779267
+               QA     75                                  medQ Q/ris    0.768060
+      freelancing     73      impart business plans to collaborators    0.742071
+             SDLC     70                Simple DirectMedia Layer SDL    0.756173
+          Fresher     69 ensure cleanliness of food preparation area    0.697472
+              KPO     66                                        KSEG    0.745950
+           macros     65                             Microsoft Excel    0.761371
+-- unmapped: random
+                    tag  posts                           nearest_label  similarity
+                    Cdd      2    Clinical data management system CDMS    0.765063
+        MIS Preparation     14                    prepare sales checks    0.754756
+        advanced macros      2             Advanced numerical software    0.766842
+                   moat      1                            design piers    0.716964
+                  IPVPN      1 Virtual private networking VPN software    0.764307
+Product Support Analyst      1   Customer service and support software    0.754260
+                 provar      1                                 Asprova    0.774593
+                     NT      1                                 English    0.704423

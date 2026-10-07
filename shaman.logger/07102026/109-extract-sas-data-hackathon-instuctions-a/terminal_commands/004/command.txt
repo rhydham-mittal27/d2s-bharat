@@ -1,0 +1,13 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/hackathon/SAS Data Problem Statement and Instructions Hackathon" && cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd
+d='../hackathon/SAS Data Problem Statement and Instructions Hackathon/'
+for f in ['Analytics Jobs.csv','DataScience Jobs.csv']:
+    try: x=pd.read_csv(d+f)
+    except UnicodeDecodeError: x=pd.read_csv(d+f, encoding='latin-1')
+    print('==',f,x.shape); print(x.dtypes.to_string()); print(x.head(3).to_string(max_colwidth=60))
+for f in ['JDS Skill Traits.xlsx','SDS Personality Traits.xlsx']:
+    try:
+        xl=pd.read_excel(d+f, sheet_name=None)
+        for s,x in xl.items(): print('==',f,'/',s,x.shape); print(x.head(12).to_string(max_colwidth=70))
+    except Exception as e: print(f, 'ERR', e)
+"

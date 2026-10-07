@@ -1,0 +1,9 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync --with openpyxl python -c "
+import pandas as pd
+d='../hackathon/SAS Data Problem Statement and Instructions Hackathon/'
+for f in ['JDS Skill Traits.xlsx','SDS Personality Traits.xlsx']:
+    for s,x in pd.read_excel(d+f, sheet_name=None).items():
+        print('==',f,'/',s,x.shape); print(x.head(5).to_string()); print(x.describe().round(2).to_string())
+a=pd.read_csv(d+'Analytics Jobs.csv')
+print('analytics nulls', a.isna().sum().to_dict()); print(a.job_type.value_counts().head().to_dict()); print(a.salary.value_counts().head(8).to_dict())
+" 2>&1 | grep -v "Installed\|Resolved\|Prepared\|Audited"

@@ -1,0 +1,34 @@
+I wrote `features.md`, based on about 25 web searches. Each feature is tagged by when you'd build it: **MVP** for the hackathon demo, **V1** for the first paying institution, and **V2+** for scale.
+
+**What I'd lead with:**
+- **Show why the plan is what it is.** OR-Tools can report what the next ₹1 lakh of budget or 10 extra seats would add (its "shadow prices"). It can also say what you'd lose by forcing in a course it didn't pick, and show a cost-vs-impact curve to choose a plan from. That makes "decision, not just diagnosis" concrete.
+- **Plan for weak demand, not just average demand.** StatsForecast can give each skill's demand forecast a reliable confidence band, and the optimizer can plan against the low end so the plan still works if demand disappoints.
+- **Better skill matching.** Combining keyword search with meaning-based search in Postgres catches exact tool names like "AutoCAD" as well as paraphrases. pgvector 0.8 also keeps filtered searches (for example, "only IT sector") returning full results.
+- **Make it Indian, not just European/US data.** Link ESCO and O\*NET to India's national qualifications (NSQF, via the National Qualifications Register), and use the free Bhashini APIs for Hindi and regional-language job posts and briefs.
+- **Keep the LLM honest.** It only writes the Decision Brief from the optimizer's results, using structured outputs so the brief always has the same sections. A check then confirms every number in it matches the engine.
+- **Next.js 16 and FastAPI.** The frontend uses Next.js's new opt-in caching (`"use cache"`) and Server Actions. Solver progress and briefs stream live from FastAPI, and the frontend's API types are generated from FastAPI automatically, so they can't drift apart.
+
+The file also covers the screens, chart libraries, background jobs, login and per-institution data separation, compliance with India's data protection law (the DPDP Act), monitoring, and a three-phase delivery plan.
+
+**Data gaps to plan around:**
+- **NCS and the National Qualifications Register:** I found no public API for either. NCS data needs a partnership; the qualifications register means scraping or a bulk download.
+- **ESCO and O\*NET:** both are free and ready to use now.
+
+Version numbers (FastAPI 0.142, pgvector 0.8, Next.js 16.3) are current as of today; recheck them before you pin dependencies.
+
+The full source list is at the end of `features.md`. The main ones:
+- [Next.js 16.3](https://nextjs.org/blog/next-16-3)
+- [FastAPI release notes](https://fastapi.tiangolo.com/release-notes/)
+- [pgvector 0.8.0](https://www.thenile.dev/blog/pgvector-080)
+- [ParadeDB hybrid search](https://paradedb.com/blog/hybrid-search-in-postgresql-the-missing-manual)
+- [StatsForecast conformal prediction](https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/ConformalPrediction)
+- [OR-Tools](https://github.com/google/or-tools)
+- [esco-skill-extractor](https://pypi.org/project/esco-skill-extractor)
+- [ESCO API](https://esco.ec.europa.eu/en/use-esco/use-esco-services-api/esco-web-service-api)
+- [National Qualifications Register](https://nqr.gov.in/aboutus)
+- [Claude structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)
+- [AI SDK UI v6](https://v6.ai-sdk.dev/docs/ai-sdk-ui)
+- [hey-api client generation](https://fastapi.tiangolo.com/ja/advanced/generate-clients/)
+- [Better Auth comparison](https://makerkit.dev/blog/tutorials/better-auth-vs-clerk)
+- [Langfuse + OpenTelemetry](https://langfuse.com/integrations/native/opentelemetry.md)
+- [Bhashini](https://en.vikaspedia.in/viewcontent/e-governance/digital-india/bhashini)

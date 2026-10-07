@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper]{article}
+% Times New Roman 12pt, single spacing: matches the SAS CU Hackathon Round-2 report format.
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{booktabs,tabularx,array}
+\usepackage{xcolor}
+\usepackage[framemethod=default]{mdframed}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{sasblue}{HTML}{0766D1}
+\newmdenv[linecolor=sasblue,linewidth=1.2pt,backgroundcolor=sasblue!6,
+  innertopmargin=6pt,innerbottommargin=6pt,innerleftmargin=8pt,innerrightmargin=8pt]{objbox}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlist{nosep,leftmargin=*}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries Analytics Objective}\\[2pt]
+  {\large D2S Bharat: From Data-Science Job Demand to Skills, Success and Training Decisions}\\[4pt]
+  {\small Team Code5urge \quad$\cdot$\quad SAS CU Hackathon / Build for Bharat \quad$\cdot$\quad
+  \textit{Draft for team agreement}}
+\end{center}
+
+\noindent\textbf{Problem context.}
+Institutions that prepare data professionals must decide what to teach with limited budget,
+trainers and seats. They currently lack evidence on three questions: which skills the market
+\emph{demands and pays for}, which skills drive \emph{early-career growth}, and which personal
+traits distinguish \emph{successful senior} data scientists. The SAS-provided data covers all three:
+job postings, company-level openings and salaries, and two outcome-labelled employee datasets.
+
+\vspace{6pt}
+\begin{objbox}
+\noindent\textbf{Analytics objective.}
+To identify the technical skills and personality traits most strongly associated with
+labour-market demand, pay and on-the-job success for data-science professionals, and to
+translate this evidence into a budget-constrained, explainable training plan that tells an
+institution \emph{what to teach first}.
+\end{objbox}
+
+\vspace{4pt}
+\noindent\textbf{Research questions.}\\[2pt]
+{\small
+\begin{tabularx}{\linewidth}{@{}L{1.9cm}Y L{3.4cm} L{3.6cm}@{}}
+\toprule
+\textbf{RQ} & \textbf{Question} & \textbf{Data} & \textbf{Methods} \\
+\midrule
+RQ1 Demand \& pay & Which skills and roles are most demanded, and which are associated with
+higher salary bands and experience requirements? &
+Analytics Jobs (14,840 postings after cleaning); DataScience Jobs (1,602 rows, 93,005 openings) &
+Cleaning, skill normalisation to ESCO/O*NET, descriptive statistics, non-parametric tests \\
+\addlinespace
+RQ2 Junior growth & Which of the five measured skill areas distinguish junior data scientists
+with a high vs.\ low salary hike? & JDS Skill Traits (139) &
+Group tests, correlation, logistic regression, decision tree, cross-validation \\
+\addlinespace
+RQ3 Senior success & Which Big Five traits distinguish high vs.\ low success among senior,
+customer-facing data scientists? & SDS Personality Traits (161) & As RQ2 \\
+\addlinespace
+RQ4 Decision & Given RQ1--RQ3, which training interventions should an institution prioritise
+under budget and capacity limits? & Evidence from RQ1--RQ3 &
+Constrained optimisation (OR-Tools CP-SAT), sensitivity analysis \\
+\bottomrule
+\end{tabularx}}
+
+\vspace{6pt}
+\noindent\textbf{Scope and assumptions.}
+Only the SAS-provided datasets are analysed; ESCO and O*NET serve solely as a skill vocabulary.
+Findings are associations, not causal effects. Because JDS and SDS are small samples, results
+are reported with cross-validation, effect sizes and confidence intervals. Salaries are
+analysed as band midpoints.
+
+\vspace{4pt}
+\noindent\textbf{Stakeholders and expected outputs.}
+\begin{itemize}
+  \item \textbf{Institutions and curriculum designers:} a ranked, evidence-backed list of skills
+        to teach, and an optimised training plan with its cost--impact trade-offs.
+  \item \textbf{Students:} which skills and traits are linked to pay, growth and success.
+  \item \textbf{Employers and policy/CSR programmes:} where supply and demand diverge, by role and city.
+\end{itemize}
+
+\vspace{4pt}
+\noindent\textbf{Success criteria.}
+Each RQ is answered with a quantified finding; predictive models (RQ2, RQ3) are judged against
+a majority-class baseline using cross-validated accuracy and AUC; and the RQ4 plan states which
+constraints bind and what extra budget would change.
+
+\end{document}

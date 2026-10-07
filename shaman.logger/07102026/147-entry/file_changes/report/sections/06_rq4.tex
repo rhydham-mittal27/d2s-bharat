@@ -1,0 +1,106 @@
+\section{Data Analysis III: What to Teach First (RQ4)}\label{sec:rq4}
+
+\subsection{Model}
+
+RQ4 turns the evidence into a decision. For each candidate course $c$ the model chooses whether to
+run it ($r_c \in \{0,1\}$) and how many seats to offer ($s_c$). For each skill area $k$ it counts
+learners whose gap is closed, $z_k$:
+\begin{align*}
+\max \; & \textstyle\sum_k w_k z_k \\
+\text{s.t. } & z_k \le \min\!\big(G_k,\ \textstyle\sum_c a_{ck}\, s_c\big) && \text{no value beyond the gap}\\
+& m_c r_c \le s_c \le M_c r_c && \text{batch size and seat limits}\\
+& \textstyle\sum_c (F_c r_c + p_c s_c) \le B && \text{budget}\\
+& \textstyle\sum_c h_c r_c \le H && \text{trainer-hours}\\
+& r_c \le r_{c'} \ \text{for prerequisites } c' \text{ of } c; \quad \textstyle\sum_{c\in g} r_c \le 1 && \text{either/or groups}
+\end{align*}
+$G_k$ (gap) and $w_k$ (value) come from the data; course parameters $F_c, p_c, h_c, M_c, a_{ck}$ are
+documented assumptions. The model is solved exactly with CP-SAT \citep{cpsat}.
+
+\begin{table}[H]\centering\small
+\caption{RQ4 inputs: what is data and what is assumed.}\label{tab:rq4in}
+\begin{tabularx}{\linewidth}{@{}L{3.1cm}L{4.6cm}Y@{}}
+\toprule
+Input & Source & Values \\
+\midrule
+Gap $G_k$ & \textbf{Data (JDS):} juniors below the high-hike group's median & Maths 82 \textbullet{} Coding 77 \textbullet{} AI/ML 71 \textbullet{} Big data 65 \textbullet{} Storytelling 58\\
+Value $w_k$ & \textbf{Data (RQ1+RQ2):} equal mix of demand share, log market OR, log RQ2 OR, each scaled to its maximum & Maths 100 \textbullet{} Coding 99.7 \textbullet{} AI/ML 77.3 \textbullet{} Storytelling 62.9 \textbullet{} Big data 59.4\\
+Uncertainty & \textbf{Data:} CI lower/upper bounds $\times$ 3 weighting schemes & 9 scenarios\\
+Courses & \textbf{Assumption}, checked against public sources & 9 courses (Appendix~\ref{app:catalogue})\\
+Budget, capacity & \textbf{Assumption} (scenario) & Rs~4 lakh, 200 trainer-hours\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Cost assumptions: trainers at Rs~1,430--2,000 per hour, the upper-mid of the Rs~250--2,000 range
+reported for Indian data-science trainers \citep{knowledgehut} (deliberately conservative); SAS
+Viya for Learners \citep{sasvfl}, Tableau for students and Power BI Desktop are free, so per-seat
+costs are materials only; GPU time for deep learning at about Rs~100 per hour \citep{gpuindia2026}.
+Personality (RQ3) is not modelled as a course, because traits are relatively stable; it informs
+mentoring and assessment instead (Section~\ref{sec:implications}).
+
+\subsection{The optimal plan}
+
+\begin{table}[H]\centering\small
+\caption{Proven-optimal plan for Rs~4 lakh and 200 trainer-hours.}\label{tab:plan}
+\begin{tabular}{@{}l r r r@{}}
+\toprule
+Course & Seats & Cost (Rs lakh) & Trainer-hours\\
+\midrule
+Applied Statistics \& Probability & 60 & 0.78 & 40\\
+SAS Programming on SAS Viya for Learners & 60 & 0.45 & 30\\
+Machine Learning Foundations & 50 & 0.97 & 48\\
+Python \& SQL for Analytics & 35 & 0.71 & 40\\
+Data Storytelling with Tableau & 58 & 0.62 & 30\\
+\midrule
+Total & 263 & 3.53 & 188\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\fig{fig_rq4_plan.png}{Optimal plan (left) and the share of each skill gap it closes (right).}
+
+The plan closes 100\% of the coding, maths \& stats and storytelling gaps and 70\% of the AI \& ML
+gap (ML Foundations is capped at 50 seats). It leaves the big-data gap open.
+
+\textbf{Why other courses were left out.} Forcing each excluded course into the plan and re-solving
+shows its cost: Integrated Bootcamp $-20.7\%$ impact (high fixed cost, 90 trainer-hours, partial
+coverage), Deep Learning \& NLP $-12.8\%$ (needs ML first and 40 more hours), Big-Data Stack $-5.7\%$
+(lowest-valued area, does not fit the remaining hours), Power BI $-1.1\%$ (either/or with Tableau,
+which closes the full gap at the same per-seat cost).
+
+\subsection{Sensitivity: what would change the decision?}
+
+\textbf{Money is not the constraint}: Rs~0.47 lakh remains unspent, and an extra Rs~1 lakh adds no
+impact. \textbf{Trainer capacity is}, but in whole-course steps. The linear relaxation suggests each
+extra trainer-hour is worth 27.5 impact units, yet the exact integer re-solve with +40 hours adds
+nothing, because the next course (Big Data) needs 40 hours \emph{and} Rs~1.1 lakh at the same time.
+This is precisely why integer optimisation, not a linear approximation, is needed. With a generous
+budget, extra trainer capacity buys:
+
+\begin{table}[H]\centering\small
+\caption{What additional trainer-hours buy (budget not limiting).}\label{tab:hours}
+\begin{tabular}{@{}r l r l@{}}
+\toprule
+Trainer-hours & Added to the plan & Impact (change) & Gap closed\\
+\midrule
+200 & base plan (5 courses) & 23,391 & AI/ML 70\%, big data 0\%\\
+240 & + Big-Data stack & 25,767 (+10.2\%) & big data 62\%\\
+280 & + Deep Learning \& NLP & 27,158 (+16.1\%) & AI/ML 96\%\\
+400 & + Bootcamp & 27,389 (+17.1\%) & gains level off\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\fig[0.8\linewidth]{fig_rq4_pareto.png}{Cost--impact Pareto frontier with 200 and 400
+trainer-hours.}
+
+\subsection{Robustness}
+
+The plan was re-optimised under nine evidence scenarios: balanced, market-led and outcome-led
+weightings, each at the lower bound, point estimate and upper bound of every confidence interval
+(Figure~\ref{fig:fig_rq4_robust.png}). \textbf{Statistics (60), SAS (60), ML Foundations (50) and
+Python \& SQL (35) are chosen with identical seat counts in all nine scenarios}, forming a safe core.
+Tableau storytelling is chosen in 7 of 9 and is replaced by the Big-Data stack only when the
+evidence is weighted purely by what job postings advertise.
+
+\fig{fig_rq4_robust.png}{Seats per course across nine evidence scenarios.}

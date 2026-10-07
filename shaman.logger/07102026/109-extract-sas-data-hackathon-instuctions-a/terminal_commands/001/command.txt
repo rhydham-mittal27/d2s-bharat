@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham" && find Desktop Downloads Documents -maxdepth 4 -iname "*sas*" -newermt "2026-09-01" 2>/dev/null | head -20; echo ---; find Desktop/projects/shaman -maxdepth 2 -iname "*sas*" -o -maxdepth 2 -iname "*hackathon*" 2>/dev/null | grep -v node_modules | head

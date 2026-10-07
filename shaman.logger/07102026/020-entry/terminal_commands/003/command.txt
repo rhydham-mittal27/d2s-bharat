@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/onet/text"/*/ && for f in "Occupation Data.txt" "Essential Skills.txt" "Transferable Skills.txt" "Software Skills.txt" "Knowledge.txt" "Emerging Tasks.txt" "Content Model Reference.txt"; do echo "== $f ($(wc -l < "$f") lines)"; head -3 "$f"; done

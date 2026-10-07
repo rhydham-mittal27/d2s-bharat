@@ -1,0 +1,5 @@
+avg_salary {'L': 1602}
+min_salary {'L': 1602}
+max_salary {'L': 1602}
+{}
+tags ending ... 13806 ['Oracle Workflow...', 'Rest...', 'Eclipse...', 'FEA...', 'Analytics...']

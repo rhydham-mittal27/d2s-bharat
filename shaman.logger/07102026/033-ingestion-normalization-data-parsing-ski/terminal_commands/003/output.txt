@@ -1,0 +1,24 @@
+muhammetakkurt/naukri-jobs-dataset/resolve/main/naukri_data_scientist.jsonl: content-length: 27796734
+muhammetakkurt/naukri-jobs-dataset/resolve/main/naukri_software_engineer.jsonl: content-length: 164070951
+TechWolf/skill-extraction-techwolf/resolve/main/test.csv: Content-Length: 97098
+---
+license: cc-by-nc-4.0
+language:
+- en
+pretty_name: >-
+  Job postings for Software Engineers and Data Scientists in Naukri with
+  insights.
+size_categories:
+- 100K<n<1M
+task_categories:
+- text-classification
+tags:
+- job
+- data-science
+- software-engineering
+- skills-analysis
+---
+
+# Overview
+
+This dataset contains job postings for Software Engineers and Data Scientists collected from the Naukri platform, a leading job portal in India. It includes detailed information about job titles, company reviews, ratings, locations, salary ranges, and required skills.

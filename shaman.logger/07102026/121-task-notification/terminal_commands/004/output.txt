@@ -1,0 +1,16 @@
+43 passed in 15.24s
+HTML   -> Hypertext markup language HTML
+XML    -> Extensible markup language XML
+MIS    -> Management information systems MIS
+J2Ee   -> Oracle Java 2 Platform Enterprise Edition J2EE
+ERP    -> None
+CRM    -> None
+PPC    -> None
+ETL    -> data extraction, transformation and loading tools
+JSON   -> JavaScript Object Notation JSON
+PHP    -> PHP
+SOAP   -> None
+UML    -> Unified modeling language UML
+LDAP   -> LDAP
+OLAP   -> online analytical processing
+331 acronym keys; sample: [('ampl', 'A mathematical programming language AMPL'), ('apl', 'A programming language APL'), ('absms', 'Acculaw Court Reporters Billing Scheduling Job Management System ABSMS'), ('abc/m', 'AcorynSystems Activity Based Costing/Management ABC/M'), ('cam', 'AdTrack Customer Acquisition Management CAM'), ('abel', 'Advanced boolean expression language ABEL'), ('abap', 'Advanced business application programming ABAP'), ('acsl', 'Advanced computer simulation language ACSL'), ('atop', 'Advanced technologies and oceanic procedures ATOP'), ('mits', 'AgInfoLink Meat Inventory Tracking System MITS'), ('ads', 'Agilent Advanced Design System ADS'), ('ahdl', 'Altera hardware description language AHDL')]

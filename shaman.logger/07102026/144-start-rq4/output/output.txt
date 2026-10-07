@@ -1,0 +1,42 @@
+RQ4 is done: it produces a **proven-optimal training plan** built on the RQ1–RQ3 evidence, and all 49 tests pass. The plan's choices are robust, but the costs, seats and trainer-hours are our assumptions, so the exact seat counts are illustrative.
+
+## The plan (₹4 lakh budget, 200 trainer-hours)
+| Course | Seats | Cost |
+|---|---|---|
+| Applied Statistics & Probability | 60 | ₹0.90 L |
+| SAS Programming on SAS Viya for Learners | 60 | ₹0.45 L |
+| Python & SQL for Analytics | 35 | ₹0.88 L |
+| Machine Learning Foundations | 27 | ₹1.13 L |
+| Dashboards & Storytelling (Power BI) | 60 | ₹0.64 L |
+| **Total** | **242** | **₹3.995 L**, 186 hours |
+
+**Share of each skill gap closed:**
+- coding 100%
+- maths & stats 94%
+- dashboards & storytelling 93%
+- AI & ML 38%
+- big data 0%
+
+## Main findings
+1. **Robust core.** Statistics, SAS, Python & SQL and ML foundations are chosen in **all 9 evidence scenarios** (3 weightings × low/point/high confidence bounds). Power BI storytelling is chosen in 7 of 9.
+2. **Money is the limit at ₹4 L, then trainers.** An extra ₹1 lakh adds **+11.9% impact**, and the approximate and exact sensitivity checks agree (0.0235 vs. 0.0249 per rupee). **Above about ₹4.5 L, more money buys nothing** with 200 trainer-hours: each extra trainer-hour is worth +59 impact. With 400 hours, Big Data and DL/NLP join the plan. **Recommendation: add trainers, or share them across institutions, before adding budget.**
+3. **Each excluded course has a stated reason.** For example, forcing in DL/NLP costs −35% impact, because GPU costs and its ML prerequisite take money away from the foundations.
+4. **Diminishing returns:** the gains are steep up to about ₹2.2 L (the foundation courses), then flatten.
+
+## How each input is labelled
+| From data | Assumed (editable CSV) |
+|---|---|
+| Skill gaps (JDS: juniors below the high-hike median) | Course costs, seats, hours |
+| Value per area (RQ1 demand and pay + RQ2 hike link) | How much of a gap one seat closes |
+| Uncertainty (confidence intervals × 3 weightings) | Budget and trainer-hour scenario |
+
+The SAS course is favoured partly because SAS Viya for Learners has no per-seat cost. The report states this.
+
+**Personality traits (RQ3) aren't treated as courses**, because personality is fairly stable. They feed the recommendations for mentoring and role allocation instead.
+
+**Files:**
+- `reports/rq4/README.md`: inputs, plan, sensitivity, robustness and recommendations.
+- 4 charts: inputs, the plan, a two-line cost–impact frontier (200 vs. 400 trainer-hours), and the robustness grid.
+- `course_catalogue_assumptions.csv`: the editable assumptions. Change the costs or budget, then rerun `uv run python scripts/run_rq4.py --budget … --trainer-hours …`.
+
+**All four research questions are now done.** The remaining deliverables are the **20–25 page Word report** (Round 2, 70% of the score) and the **15–25 slide presentation** (Round 3), plus optionally a few charts recreated in SAS Visual Analytics.

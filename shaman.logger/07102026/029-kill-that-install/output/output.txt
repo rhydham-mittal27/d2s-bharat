@@ -1,0 +1,11 @@
+I've stopped the install. The `uv sync` process (PID 13664) is gone.
+
+One other `uv` process is still running, PID 25240. I left it alone because it's your `scontrol` server from a different project (`Desktop/future/scontrol-clud`), not part of this install.
+
+**Current state of `backend/`**
+- `uv.lock` was written, so the full set of package versions is already worked out.
+- `.venv` is still basically empty, so nothing is installed and none of the backend code has been tested.
+- uv's cache now holds the downloaded torch (2.12.1), so a later install won't download it again.
+- All the source code, tests and docs are unaffected.
+
+When you want to continue, I'd install in stages: engine and workers first (small, a minute or so) and run their tests, then statsforecast, then torch and sentence-transformers last.

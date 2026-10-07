@@ -1,0 +1,1 @@
+L="C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas_run.log"; until grep -qE "^EXIT" "$L"; do sleep 3; done; grep -E "calibrated|final post|DONE|FAILED|EXIT" "$L"

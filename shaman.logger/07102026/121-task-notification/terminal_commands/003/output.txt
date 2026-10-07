@@ -1,0 +1,17 @@
+43 passed in 15.08s
+HTML   -> Hypertext markup language HTML
+XML    -> Extensible markup language XML
+MIS    -> Management information systems MIS
+J2Ee   -> Oracle Java 2 Platform Enterprise Edition J2EE
+SEO    -> None
+MVC    -> None
+PPC    -> None
+CSS    -> CSS
+SQL    -> SQL
+ERP    -> Technology Group International Enterprise 21 ERP
+CRM    -> Microsoft Dynamics CRM
+API    -> None
+ETL    -> data extraction, transformation and loading tools
+AWS    -> None
+GCP    -> None
+SAP    -> None

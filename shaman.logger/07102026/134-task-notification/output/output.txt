@@ -1,0 +1,40 @@
+The ingestion pipeline now uses only the SAS hackathon files, and the charts and report are in `reports/sas_ingestion/`. ESCO and O\*NET are still used as the skill vocabulary that jobs are mapped onto; if you'd rather avoid all outside resources, I can build the skill list from the SAS `key_skills` column instead. All 43 tests pass.
+
+**Data preparation** (the judges give this 25 of 100 marks in Round 2):
+- 15,841 rows → **14,840** after removing 1,001 exact duplicates.
+- 814 spelling variants of `job_type` merged; 2,347 multi-city rows split into a list of cities.
+- 12,907 cut-off tags repaired and 912 junk `...` tags dropped.
+- Experience and salary bands converted to numbers. DataScience Jobs salaries ("7.8L") parsed: 1,602 rows covering 93,005 openings.
+- Missing values: `job_type` 78%, `job_description` 23%, `key_skills` 1 row.
+
+**Skill mapping**
+- **57.7% of recruiter tag uses map to an ESCO/O\*NET skill:** 25% exact name, 4% contain a known skill name, 28% close in meaning. Another **31% are in a review queue** and 11% are unmapped.
+- **Matching by meaning on job descriptions was tested and dropped.** It agreed with recruiter tags at no more than about 7% F1, because the source cuts descriptions off at about 100 characters. Only exact skill names found in the text are kept.
+- **Final table:** 45,869 (posting, skill) pairs covering 14,118 postings.
+
+**First findings** (correlations only, not causes):
+- The median posting pays **8.0 lakh** a year.
+- Postings tagged with SQL, Python, Java, SAS, machine learning or data analytics sit at about **12.5 lakh**.
+- AI and neural-network postings sit at about 20 lakh, but there are only 60–70 of them.
+- SEO, data entry and customer service sit at 1.5–4.5 lakh.
+- **Business Analyst** is the most posted title (32,843 openings).
+
+**Fixed while checking the output:**
+- Several wrong mappings: HTML → PHP, Core Java → "core apples", CLAIMS / Open source → unrelated products, and broad one-word tags landing on overly specific skills.
+- One unresolved oddity: an output file was overwritten with stale content from the first run, and I couldn't find what did it. Regenerating fixed it and it stayed correct. If you have `tag_mapping.csv` open in VS Code or Excel, close it before the next run.
+
+**Needs your team's call**
+1. **The review queue** (`dataset/processed/sas/tag_review_queue.csv`) lists 5,474 tags, most-used first, with a `human_decision` column. Checking just the top 100 or so would cover a large share of those uses. I haven't measured exactly how much, but the file has a running-total column that shows it. Many are probably right already, e.g. hive → Apache Hive, auditing → internal auditing.
+2. **The JDS and SDS files aren't used yet.** The skill and personality scores that predict salary hikes and success are the obvious next analysis for the report.
+3. **The Naukri data downloaded earlier is no longer used for any results.** It takes 183 MB in `dataset/jobs/`; tell me if you want it deleted.
+
+Charts in `reports/sas_ingestion/`, plus `README.md` with all the numbers:
+- 01_cleaning.png
+- 02_salary_experience.png
+- 03_tag_mapping.png
+- 04_threshold_calibration.png
+- 05_top_skills.png
+- 06_skill_salary.png
+- 07_skill_city.png
+- 08_ds_titles_salary.png
+- 09_title_occupations.png

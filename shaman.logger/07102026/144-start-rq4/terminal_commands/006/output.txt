@@ -1,0 +1,5 @@
+>               assert w["weight"].max() == 100
+E               assert np.float64(100.00000000000001) == 100
+E                +  where np.float64(100.00000000000001) = max()
+E                +    where max = 0     89.637245\n1    100.000000\n2     56.301215\n3     35.941976\n4     47.389118\nName: weight, dtype: float64.max
+tests\test_plan.py:38: AssertionError

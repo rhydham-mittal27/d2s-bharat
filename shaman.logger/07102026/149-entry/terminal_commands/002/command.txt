@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/report/sections" && python - <<'PY'
+import re
+p='02_approach.tex'; s=open(p,encoding='utf-8').read()
+start=s.index(r'\begin{tikzpicture}'); end=s.index(r'\end{tikzpicture}')+len(r'\end{tikzpicture}')
+s=s[:start]+r'\resizebox{\linewidth}{!}{\input{figures/flow}}'+s[end:]
+open(p,'w',encoding='utf-8').write(s)
+PY
+grep -n "flow" 02_approach.tex

@@ -1,0 +1,10 @@
+id,name,fixed_cost,cost_per_seat,min_batch,max_seats,trainer_hours,cov_coding_skills,cov_maths_stats_skills,cov_ai_and_ml_skills,cov_big_data_skills,cov_dashboard_and_storytelling_skills,prerequisites,exclusive_group,mandatory,assumption_basis
+py_sql,Python & SQL for Analytics,60000,300,15,60,40,100,,,,,,,false,"trainer Rs1500/h x 40h (upper-mid of the Rs250-2000/h Indian market range); per seat: materials (free notebooks)"
+sas_prog,SAS Programming on SAS Viya for Learners,45000,0,15,60,30,70,20,,,,,,false,"trainer Rs1500/h x 30h; SAS Viya for Learners is free for academic use"
+stats,Applied Statistics & Probability,60000,300,15,60,40,,100,,,,,,false,"trainer Rs1500/h x 40h; per seat: materials"
+ml,Machine Learning Foundations,72000,500,15,50,48,,20,100,,,py_sql;stats,,false,"trainer Rs1500/h x 48h; per seat: modest cloud CPU/GPU credits"
+dl_nlp,Deep Learning & NLP,80000,2000,10,30,40,,,60,,,ml,,false,"trainer Rs2000/h x 40h; per seat: ~20 GPU-hours at ~Rs100/h (IndiaAI subsidised Rs67-92/h; L4 $0.35-0.80/h)"
+bigdata,"Big-Data Stack: Hadoop, Spark, Hive (taught as a bundle)",70000,1000,15,40,40,,,,100,,py_sql,,false,"trainer Rs1750/h x 40h; per seat: cluster time; bundle from RQ1 association rules"
+story_tableau,Data Storytelling with Tableau,45000,300,15,60,30,,,,,100,,viz_tool,false,"trainer Rs1500/h x 30h; Tableau free for students (1-year academic licence); per seat: materials"
+story_powerbi,Dashboards & Storytelling with Power BI,40000,300,15,60,28,,,,,90,,viz_tool,false,"trainer Rs1430/h x 28h; Power BI Desktop is free; per seat: materials"
+bootcamp,Integrated Analytics Bootcamp (capstone),150000,1500,20,40,90,40,40,30,,40,,,false,"trainer Rs1670/h x 90h; per seat: projects/compute; partial coverage of four areas"

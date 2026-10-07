@@ -1,0 +1,3 @@
+exit 1
+! Undefined control sequence.
+!  ==> Fatal error occurred, no output PDF file produced!

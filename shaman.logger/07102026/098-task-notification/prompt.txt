@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>bqbj9e3yq</task-id>
+<summary>Monitor event: "ingestion v1 rerun (milestones)"</summary>
+<event>[  135.7s] index built in 85s -&gt; BAAI__bge-small-en-v1.5__onet-30.3+esco-1.2.1__label.npz
+[  136.3s] STEP 3/5 evaluation on TechWolf labelled sentences</event>
+</task-notification>

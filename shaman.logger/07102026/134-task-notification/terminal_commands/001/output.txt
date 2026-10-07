@@ -1,0 +1,2 @@
+wrote ['01_cleaning.png', '02_salary_experience.png', '03_tag_mapping.png', '04_threshold_calibration.png', '05_top_skills.png', '06_skill_salary.png', '07_skill_city.png', '08_ds_titles_salary.png', '09_title_occupations.png'] + README.md
+43 passed in 16.43s

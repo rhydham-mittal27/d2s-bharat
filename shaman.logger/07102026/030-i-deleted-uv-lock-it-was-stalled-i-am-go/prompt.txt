@@ -1,0 +1,1 @@
+i deleted uv.lock .. it was stalled.. i am going to restart give me uv add commands uv sync is hanged

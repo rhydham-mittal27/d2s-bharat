@@ -1,0 +1,35 @@
+I applied all four points from the feedback. The new features are marked *(planned)*, and no example results were added anywhere.
+
+**README changes**
+1. **Name and positioning:** dropped "(Demand-to-Skills)". The journey line now reads **Demand → Skills → Gap → Constraints → Decision → Action**, alongside the existing tagline *"From labour-market demand to institutional action."* The core question now mentions uncertainty: *"Given what the market needs, how uncertain that is, and what we can afford…"*
+2. **New "Advanced decision capabilities" section** with the three paragraphs you supplied, lightly polished:
+   - **Uncertainty-Aware Planning:** P10/P50/P90 scenarios, and the "30% below forecast" question.
+   - **Decision Backtesting:** baselines are top-gap-first, most-popular-course and best-value-per-rupee. It states that every figure must come from a real backtest.
+   - **Multi-Institution Resource Pooling:** the College A / College B example.
+3. **"What makes it different"** grows from 7 to 10 points: robust plans, backtested performance, and planning across institutions.
+4. **Status line updated:** the design is complete, the backend core is built and tested, and planned items are labelled.
+
+**Technical design added to `features.md`**
+- **§6.3 Uncertainty-aware planning (V1):** the forecast's `lo`/`point`/`hi` bands become scenarios. Four objective modes:
+  - expected (best on average)
+  - worst-case (safest if demand disappoints)
+  - **blended**, the default: average with downside protection, controlled by a slider
+  - min-max regret (never far worse than the best plan for any scenario)
+  
+  Two other pieces:
+  - **Market absorption:** training more people than the market can hire in a low scenario counts as waste, not as success.
+  - **"Safe core":** the courses that stay in the plan under every scenario.
+- **§6.4 Decision backtesting (V1):** pick a past cutoff date and plan using only data up to that date. Compare against four baselines:
+  - top-gap-first
+  - most-popular-course
+  - greedy value-per-rupee
+  - random
+  
+  Also compare against an *oracle* plan made with the real future demand, to show the best that was achievable. Score coverage, oversupply, cost per learner and % of oracle achieved. It includes rules against leaking future data and against unlabelled synthetic numbers.
+- **§6.5 Multi-institution pooling (V2+):** seats at one college allocated to students from another, shared trainers (with travel time), and which students can reach which college. Plus cost sharing, a fairness floor per institution, and the **pooling gain**: pooling is only suggested when it beats each college planning alone.
+- **Delivery plan:** robust planning and backtesting go to the pilot phase (V1); pooling goes to scale (V2+).
+
+**What each one needs**
+- **Uncertainty-aware planning:** the cheapest to build next. The forecaster already produces the bands, and the engine only needs one value variable per scenario.
+- **Backtesting:** blocked on data, not code. It needs 2–3 years of time-stamped job postings, which we don't have yet. Until then, only labelled synthetic tests are possible.
+- **Pitch deck:** it should get the same updates, especially slide 8 ("Innovation") and the new journey line.

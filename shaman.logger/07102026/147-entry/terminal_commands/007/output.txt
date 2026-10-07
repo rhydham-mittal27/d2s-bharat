@@ -1,0 +1,19 @@
+\contentsline {section}{Executive Summary}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Problem Definition and Analytics Objective}{2}{section.1}%
+\contentsline {section}{\numberline {2}Approach}{2}{section.2}%
+\contentsline {section}{\numberline {3}Data Exploration and Preparation}{4}{section.3}%
+\contentsline {section}{\numberline {4}Data Analysis I: Market Demand and Pay (RQ1)}{9}{section.4}%
+\contentsline {section}{\numberline {5}Data Analysis II: Junior Skills and Senior Traits (RQ2, RQ3)}{12}{section.5}%
+\contentsline {section}{\numberline {6}Data Analysis III: What to Teach First (RQ4)}{15}{section.6}%
+\contentsline {section}{\numberline {7}Results and Conclusions}{18}{section.7}%
+\contentsline {section}{\numberline {8}Implications}{19}{section.8}%
+\contentsline {section}{\numberline {A}Reproducibility}{22}{appendix.A}%
+\contentsline {section}{\numberline {B}Role-family rules}{22}{appendix.B}%
+\contentsline {section}{\numberline {C}RQ4 course catalogue (assumptions)}{22}{appendix.C}%
+\contentsline {section}{\numberline {D}Additional figures}{23}{appendix.D}%
+\contentsline {section}{\numberline {E}SAS code for the core analyses}{25}{appendix.E}%
+4
+85.11552pt too wide
+23.90804pt too wide
+8.56827pt too wide
+4.75716pt too wide

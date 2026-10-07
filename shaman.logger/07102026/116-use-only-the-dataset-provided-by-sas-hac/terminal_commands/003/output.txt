@@ -1,0 +1,15 @@
+{'raw_rows': 15841, 'exact_duplicate_rows': 1001, 'kept_rows': 14840, 'missing_description': 3371, 'missing_job_type': 11567, 'job_type_variants_merged': 814, 'multi_city_rows': 2347, 'missing_key_skills': 1, 'tags_total': 74884, 'tags_truncated_fixed': 12907, 'tags_dropped_empty_or_ellipsis': 912, 'tags_case_duplicates_dropped': 28, 'descriptions_truncated': 11469}
+{'title': 'Oracle EBS Technical Consultant', 'city': 'Bengaluru', 'exp_min': 6.0, 'exp_max': 10.0, 'sal_mid_lakh': 8.0, 'tags': ['Oracle SQL', 'PLSQL', 'PL', 'Oracle Forms', 'Oracle Reports', 'Oracle Workflow']}
+'Oracle EBS Technical Consultant\nMust be knowledgeable and experienced in relational database concepts,Oracle Apps database architecture'
+{'unknown': 11567, 'analytics': 3273}
+{'exp_min': 0, 'sal_mid_lakh': 0}
+       avg_lakh  min_lakh  max_lakh
+count    1602.0    1602.0    1602.0
+mean       13.2       8.6      19.1
+std         7.8       5.8      11.2
+min         1.4       0.2       2.0
+25%         7.6       4.4      12.0
+50%        11.9       7.0      18.0
+75%        17.2      11.5      24.0
+max        82.0      55.0     102.0
+{'reference_no': 0, 'company_name': 0, 'job_title': 0, 'min_experience': 0, 'avg_salary': 0, 'min_salary': 0, 'max_salary': 0, 'num_of_jobs': 0, 'avg_lakh': 0, 'min_lakh': 0, 'max_lakh': 0}

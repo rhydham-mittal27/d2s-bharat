@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b1orx7jif</task-id>
+<summary>Monitor event: "SAS ingestion final run (milestones)"</summary>
+<event>[  267.8s] DONE outputs in C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\sas</event>
+</task-notification>

@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bhg5s1792</task-id>
+<summary>Monitor event: "ingestion pipeline (milestones only)"</summary>
+<event>[  824.1s] semantic extraction: 3,000/3,000 posts (8 posts/s)</event>
+</task-notification>

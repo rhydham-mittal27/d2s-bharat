@@ -1,0 +1,32 @@
+The three services use **9 direct third-party packages**: 8 imported in the code, plus `redis`, which is declared but only used through arq. A test run needs 3 more dev-only tools. Including everything those pull in, the lock file has **98 packages**.
+
+**Direct runtime packages (9)**
+
+| # | Package | Used by | What for |
+|---|---|---|---|
+| 1 | `pydantic` | all 3 | input/output schemas, validation |
+| 2 | `pydantic-settings` | all 3 (`config.py`) | reading the `D2S_*` environment variables |
+| 3 | `numpy` | ML | embedding vectors, similarity maths |
+| 4 | `pandas` | ML | reading O\*NET/ESCO files, forecast data |
+| 5 | `ortools` | Decision engine | CP-SAT solver and GLOP solver |
+| 6 | `statsforecast` | ML (forecasting) | AutoETS, AutoARIMA, Croston, conformal intervals |
+| 7 | `sentence-transformers` | ML (embeddings) | the bge-small embedding model |
+| 8 | `arq` | Workers | Redis job queue, retries, scheduled jobs |
+| 9 | `redis` | Workers | arq's Redis connection; our code never imports it directly |
+
+**Dev-only tools (3), not part of the running app**
+
+| # | Package | What for |
+|---|---|---|
+| 10 | `pytest` | test runner |
+| 11 | `pytest-asyncio` | async tests for the workers |
+| 12 | `ruff` | linter |
+
+**By service**
+- **Decision engine:** 2 packages (`ortools`, `pydantic`), plus `pydantic-settings` for config.
+- **ML services:** 4 packages (`numpy`, `pandas`, `statsforecast`, `sentence-transformers`), plus `pydantic`.
+- **Workers:** 2 packages (`arq`, `redis`), plus `pydantic`.
+
+**Hidden dependencies:** most of the 98 come from `sentence-transformers`, which pulls in torch, transformers, huggingface-hub, tokenizers, scikit-learn, scipy and others, and from `statsforecast`, which pulls in numba, statsmodels and scipy. Those two are the heavy part of the install. The engine and workers alone pull in only a handful of extra packages.
+
+The ML packages and the workers packages are optional extras in `pyproject.toml`. A deployment that only needs the engine installs just `pydantic`, `pydantic-settings`, `numpy`, `pandas` and `ortools`.

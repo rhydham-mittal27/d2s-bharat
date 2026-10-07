@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>b2ukqepkj</task-id>
+<tool-use-id>toolu_013JZHdyHtvLacjcHXofsNk1</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\b2ukqepkj.output</output-file>
+<status>failed</status>
+<summary>Background command "Download O*NET text database and measure unzipped size" failed with exit code 56</summary>
+</task-notification>

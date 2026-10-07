@@ -1,0 +1,6 @@
+<task-notification>
+<task-id>bv2y8axas</task-id>
+<summary>Monitor event: "ingestion v1 final run (milestones)"</summary>
+<event>[  430.7s] crosswalk O*NET-&gt;ESCO: {'review': 6710, 'unlinked': 1515, 'auto_accept': 594}
+[  430.7s] DONE outputs in C:\Users\Rhydham\Desktop\projects\shaman\dataset\processed\ingest</event>
+</task-notification>

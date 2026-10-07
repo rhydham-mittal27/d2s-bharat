@@ -1,0 +1,7 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && HF_HUB_DISABLE_SYMLINKS_WARNING=1 uv run --no-sync python -u scripts/run_rq1.py > ../dataset/processed/rq1_run.log 2>&1; tail -1 ../dataset/processed/rq1_run.log; cd ../dataset/processed/rq1 && python -c "
+import pandas as pd, json
+s=json.load(open('summary.json')); print({k:s[k] for k in ['posts','data_role_posts','families','family_median_salary','canonical_tag_uses_pct','distinct_canonical_skills','pay_model_all','pay_model_data_roles']})
+d=pd.read_csv('demand_data_roles.csv'); print(d.head(12).round(3).to_string(index=False))
+a=pd.read_csv('pay_adjusted_all.csv'); print('ALL sig:', a[a.q_fdr<0.05][['skill','odds_ratio','or_ci_low','or_ci_high']].round(2).to_string(index=False))
+c=pd.read_csv('canonical_tags.csv'); m=c[c.canonical_source.str.startswith('merged')]; print('merge examples:'); print(m.head(15)[['tag','posts','canonical','canonical_source']].to_string(index=False))
+"

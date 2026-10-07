@@ -1,0 +1,17 @@
+total 7544
+drwxr-xr-x 1 Rhydham 197121       0 13:10:01 .
+drwxr-xr-x 1 Rhydham 197121       0 12:57:29 ..
+-rw-r--r-- 1 Rhydham 197121     682 13:11:25 ds_jobs_by_title.csv
+-rw-r--r-- 1 Rhydham 197121  118466 13:10:30 ds_jobs_clean.csv
+-rw-r--r-- 1 Rhydham 197121 1255888 13:11:25 post_skills.csv.gz
+-rw-r--r-- 1 Rhydham 197121  733138 13:10:30 posts_clean.csv.gz
+-rw-r--r-- 1 Rhydham 197121    3968 13:11:25 skill_city.csv
+-rw-r--r-- 1 Rhydham 197121   35421 13:11:25 skill_profile.csv
+-rw-r--r-- 1 Rhydham 197121    1543 13:11:39 summary.json
+-rw-r--r-- 1 Rhydham 197121 1690109 13:11:28 tag_mapping.csv
+-rw-r--r-- 1 Rhydham 197121  581647 13:11:20 tag_review_queue.csv
+-rw-r--r-- 1 Rhydham 197121 3269129 13:09:43 text_matches_raw.csv.gz
+-rw-r--r-- 1 Rhydham 197121    2277 13:11:22 threshold_calibration.csv
+-rw-r--r-- 1 Rhydham 197121    3916 13:11:39 title_occupations.csv
+13:12:38
+C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas/tag_review_queue.csv

@@ -1,0 +1,5 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/rq1" && python -c "
+import pandas as pd
+a=pd.read_csv('pay_adjusted_data_roles.csv'); print(a[a.skill.isin(['Tableau','business intelligence','Microsoft Business Intelligence BI','statistics','data mining','Java (computer programming)','SAS','marketing analytics','data analytics'])][['skill','odds_ratio','or_ci_low','or_ci_high','q_fdr']].round(2).to_string(index=False))
+t=pd.read_csv('triangulation_rq1_rq2.csv'); print(t[['area','demand_share','odds_ratio','or_ci_low','or_ci_high']].round(3).to_string(index=False))
+"; cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -1

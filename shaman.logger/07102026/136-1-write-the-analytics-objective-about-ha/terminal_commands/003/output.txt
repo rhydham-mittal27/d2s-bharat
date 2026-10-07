@@ -1,0 +1,6 @@
+15:\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+47:\begin{tabularx}{\linewidth}{@{}L{1.9cm}Y L{3.4cm} L{3.6cm}@{}}
+85:\noindent\textbf{Success criteria.}
+exit 1
+! Package array Error:  Illegal pream-token (Y): `c' used.
+!  ==> Fatal error occurred, no output PDF file produced!

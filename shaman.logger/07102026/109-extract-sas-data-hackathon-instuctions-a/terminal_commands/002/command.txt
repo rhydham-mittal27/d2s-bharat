@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman" && Z="SAS Data Problem Statement and Instructions Hackathon (1).zip"; ls -l "$Z"; unzip -l "$Z"

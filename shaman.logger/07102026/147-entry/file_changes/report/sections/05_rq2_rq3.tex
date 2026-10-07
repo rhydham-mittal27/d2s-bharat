@@ -1,0 +1,100 @@
+\section{Data Analysis II: Junior Skills and Senior Traits (RQ2, RQ3)}\label{sec:rq23}
+
+Both questions use the same three-step design: (i) univariate comparison of high vs low outcome
+groups (Mann--Whitney U, rank-biserial effect size with 2,000-sample bootstrap CI, Holm
+correction); (ii) multivariable models (standardised L2-regularised logistic regression and a
+depth-$\leq 3$ decision tree with at least 10 people per leaf), scored by repeated stratified
+5-fold cross-validation (100 folds in total); (iii) a permutation test (500 label shuffles) of the
+cross-validated AUC.
+
+\textbf{A methodological correction.} The regularisation strength was first tuned on AUC. Because
+AUC ignores the size of coefficients, it selected very strong shrinkage, and the odds ratios
+collapsed towards 1 (e.g.\ SDS conscientiousness OR 1.26 despite Cohen's $d = 1.85$). Tuning on
+log-loss fixed this and also improved cross-validated accuracy (JDS 0.817 $\rightarrow$ 0.864;
+SDS 0.901 $\rightarrow$ 0.924). All results below use log-loss tuning.
+
+\subsection{RQ2: which skills are associated with a high salary hike for juniors?}
+
+\begin{table}[H]\centering\small
+\caption{RQ2 (JDS, $n=139$): group comparison and multivariable association.}\label{tab:rq2}
+\begin{tabular}{@{}l c c c c@{}}
+\toprule
+Skill area & Mean high / low & Rank-biserial [95\% CI] & Holm $p$ & OR per +1 SD [95\% CI]\\
+\midrule
+Dashboards \& storytelling & 4.85 / 3.81 & \textbf{0.59} [0.45, 0.72] & $<0.001$ & 2.72 [1.77, 4.73]\\
+Maths \& stats & 4.71 / 3.83 & \textbf{0.55} [0.40, 0.70] & $<0.001$ & \textbf{3.01} [1.99, 4.60]\\
+Coding & 4.64 / 3.85 & 0.49 [0.31, 0.64] & $<0.001$ & 1.67 [1.10, 2.79]\\
+AI \& ML & 4.82 / 4.28 & 0.36 [0.19, 0.52] & $<0.001$ & 2.00 [1.23, 3.23]\\
+Big data & 3.94 / 3.75 & 0.12 [$-$0.09, 0.32] & 0.217 & 1.76 [1.18, 2.67]$^\dagger$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]\centering
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_jds_effects.png}\caption{Effect sizes}\end{subfigure}
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_jds_models.png}\caption{Models vs baseline}\end{subfigure}
+\caption{RQ2: effect sizes with bootstrap CIs (left) and cross-validated model performance (right).}\label{fig:rq2}
+\end{figure}
+
+\textbf{Models.} The L2 logistic regression reaches accuracy 0.864, balanced accuracy 0.861 and
+AUC \textbf{0.904} (fold range 0.77--0.99) against a 0.525 / 0.50 baseline; the tree reaches AUC
+0.809. The permutation test gives AUC 0.903 vs a null mean of 0.494, $p = 0.002$.
+
+\textbf{Decision rule.} The tree is easy to read: juniors with storytelling $>4.15$, maths-stats
+$>3.70$ and coding $>4.65$ received a high hike in 50 of 56 cases; those with storytelling
+$\leq 4.15$ and maths-stats $\leq 4.60$ received a low hike in 26 of 26 cases.
+
+\textbf{Answer to RQ2.} High-hike juniors score higher on four of the five skill areas. The
+strongest signals are \emph{communicating results} (dashboards \& storytelling) and
+\emph{quantitative foundations} (maths-stats). Big-data skill alone does not separate the groups.
+
+\subsection{RQ3: which traits are associated with senior success?}
+
+\begin{table}[H]\centering\small
+\caption{RQ3 (SDS, $n=161$): group comparison and multivariable association.}\label{tab:rq3}
+\begin{tabular}{@{}l c c c c@{}}
+\toprule
+Trait & Mean high / low & Rank-biserial [95\% CI] & Holm $p$ & OR per +1 SD [95\% CI]\\
+\midrule
+Openness to experience & 48.5 / 33.3 & \textbf{0.77} [0.65, 0.87] & $<0.001$ & 9.09 [4.65, 24.5]\\
+Conscientiousness & 53.7 / 35.7 & \textbf{0.76} [0.62, 0.87] & $<0.001$ & 9.78 [5.59, 21.3]\\
+Extraversion & 48.9 / 36.9 & 0.57 [0.42, 0.71] & $<0.001$ & 2.78 [1.28, 6.60]\\
+Agreeableness & 47.7 / 41.1 & 0.30 [0.09, 0.50] & 0.002 & 1.96 [0.99, 4.40]\\
+Neuroticism & 36.1 / 36.3 & 0.07 [$-$0.12, 0.26] & 0.454 & 2.44 [1.57, 4.69]$^\dagger$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]\centering
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_sds_effects.png}\caption{Effect sizes}\end{subfigure}
+\begin{subfigure}{0.49\linewidth}\includegraphics[width=\linewidth]{fig_sds_models.png}\caption{Models vs baseline}\end{subfigure}
+\caption{RQ3: effect sizes (left) and cross-validated model performance (right).}\label{fig:rq3}
+\end{figure}
+
+\textbf{Models.} L2 logistic regression: accuracy 0.924, balanced accuracy 0.922, AUC
+\textbf{0.963}; tree: AUC 0.938. Permutation test: AUC 0.949 vs null 0.501, $p = 0.002$.
+
+\textbf{Decision rule.} Every senior with openness $\leq 38.5$ was low-success (52 of 52); openness
+$>38.5$, conscientiousness $>36.5$ and agreeableness $>40.5$ was high-success in 79 of 83 cases
+(Figure~\ref{fig:fig_sds_tree.png}).
+
+\fig[0.95\linewidth]{fig_sds_tree.png}{RQ3 depth-3 decision tree.}
+
+\textbf{Answer to RQ3.} Openness to experience and conscientiousness are by far the strongest
+correlates of senior success, followed by extraversion. This agrees with meta-analytic evidence
+that conscientiousness predicts job performance across occupations and that openness predicts
+training proficiency \citep{barrick1991}.
+
+\subsection{Suppressor effects and caution}
+
+$^\dagger$Big data (JDS) and neuroticism (SDS) show \emph{no} difference on their own but a positive
+coefficient once the other variables are held constant. Each is mildly negatively correlated with the
+strong predictors (e.g.\ neuroticism vs extraversion $-0.25$). For neuroticism the logistic coefficient
+moves from $-0.01$ ($p = 0.94$) alone to 0.87 with conscientiousness and openness, and 1.37
+($p = 0.001$) with all five traits. These are conditional associations in a small sample; we report
+them but base no recommendation on them.
+
+The SDS outcome separates unusually cleanly (52 of 52 below an openness threshold), which may
+indicate curated sample data; findings should be validated on another cohort before being used for
+policy. The very large SDS odds ratios partly reflect this separation, so effect sizes and decision
+rules are the more reliable summary.

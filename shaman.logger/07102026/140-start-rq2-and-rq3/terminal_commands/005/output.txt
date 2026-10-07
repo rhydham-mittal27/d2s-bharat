@@ -1,0 +1,17 @@
+                        neuroticism  extraversion  openness_to_experience  agreeableness  conscientiousness  success_high_low
+neuroticism                    1.00         -0.25                    0.01          -0.17              -0.12              0.06
+extraversion                  -0.25          1.00                    0.42           0.29               0.43              0.49
+openness_to_experience         0.01          0.42                    1.00           0.11               0.45              0.67
+agreeableness                 -0.17          0.29                    0.11           1.00               0.30              0.26
+conscientiousness             -0.12          0.43                    0.45           0.30               1.00              0.65
+success_high_low               0.06          0.49                    0.67           0.26               0.65              1.00
+                                   big_data_skills  maths_stats_skills  coding_skills  ai_and_ml_skills  dashboard_and_storytelling_skills  salary_hike_high_or_low
+big_data_skills                               1.00               -0.18           0.05             -0.17                               0.05                     0.11
+maths_stats_skills                           -0.18                1.00           0.40              0.44                               0.36                     0.49
+coding_skills                                 0.05                0.40           1.00              0.16                               0.47                     0.44
+ai_and_ml_skills                             -0.17                0.44           0.16              1.00                               0.27                     0.33
+dashboard_and_storytelling_skills             0.05                0.36           0.47              0.27                               1.00                     0.57
+salary_hike_high_or_low                       0.11                0.49           0.44              0.33                               0.57                     1.00
+['neuroticism'] neuroticism coef -0.01 p 0.9399
+['neuroticism', 'conscientiousness', 'openness_to_experience'] neuroticism coef 0.87 p 0.0157
+['neuroticism', 'extraversion', 'openness_to_experience', 'agreeableness', 'conscientiousness'] neuroticism coef 1.37 p 0.0013

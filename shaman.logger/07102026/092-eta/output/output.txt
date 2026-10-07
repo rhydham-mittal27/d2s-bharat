@@ -1,0 +1,8 @@
+About **4–5 minutes left**. It's been running for 2 min 20 s and is busy (715 s of CPU time across cores).
+
+**Where that comes from:** the earlier index build embedded skills at about 75 per second, so the three variants over 13,939 ESCO skills should take:
+- label only: about 1 min (short texts)
+- label + alternative labels: about 2 min
+- label + description: about 3 min
+
+Total is roughly 6–7 minutes, so it should finish around 12:29. I can't see per-variant progress this time, because the `grep` filter I put on the output holds lines until the process ends (my mistake). All results will appear together when it finishes.

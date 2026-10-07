@@ -1,0 +1,13 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import importlib
+for m in ['sklearn','scipy','statsmodels','openpyxl','seaborn']:
+    try: x=importlib.import_module(m); print(m, x.__version__)
+    except Exception as e: print(m,'MISSING')
+"; uv run --no-sync --with openpyxl python -c "
+import pandas as pd
+d='../hackathon/SAS Data Problem Statement and Instructions Hackathon/'
+for f,s in [('JDS Skill Traits.xlsx','JDS'),('SDS Personality Traits.xlsx','SDS')]:
+    x=pd.read_excel(d+f); dup=x[x.id.duplicated(keep=False)].sort_values('id')
+    print('==',s,'columns',list(x.columns)); print(dup.to_string(index=False))
+    print('fully identical duplicate rows:', int(x.duplicated().sum()))
+" 2>&1 | grep -v "Installed\|Resolved\|Prepared\|Audited"

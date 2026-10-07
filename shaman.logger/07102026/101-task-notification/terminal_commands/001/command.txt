@@ -1,0 +1,6 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync pytest -q 2>&1 | tail -2 && uv run --no-sync python -c "
+from d2s.ml.taxonomy import load_onet, load_esco
+from d2s.ml.skills import build_lexicon
+t=load_onet().merge(load_esco()); lex=build_lexicon(list(t.skills.values()))
+for k in ['java','.net','sap','css','analyze','google','agile','scrum','vb.net','kubernetes']: print(k, '->', t.skills[lex[k]].label if k in lex else None)
+print(len(lex),'lexicon entries')"

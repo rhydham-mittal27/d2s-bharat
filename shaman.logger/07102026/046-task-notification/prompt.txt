@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bmnyuusli</task-id>
+<tool-use-id>toolu_01YDbfYNseTYuMYoDqHxpCSH</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bmnyuusli.output</output-file>
+<status>completed</status>
+<summary>Background command "Download 164 MB Naukri software-engineer file with resume" completed (exit code 0)</summary>
+</task-notification>

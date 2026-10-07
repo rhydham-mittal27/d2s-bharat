@@ -1,0 +1,17 @@
+I went through all 11 slides, including the architecture diagram on slide 5, and wrote `README.md` in the project folder.
+
+The project is **D2S Bharat**, Team Code5urge's entry for the Build for Bharat hackathon. It's an AI tool that tells universities, skilling providers and CSR programs which skills to teach next, given what the job market needs and their limits on budget, seats and prerequisites.
+
+The README covers:
+- **The problem:** job-market demand keeps changing, what institutions teach doesn't match it, and training capacity is limited.
+- **The solution:** forecasting skill demand, finding gaps against what a student cohort already knows, and picking the best training plan within the constraints.
+- **Architecture:** the deck's layered diagram as text, from data sources through FastAPI and the explanation step to the Next.js dashboard, plus a tech stack table.
+- **Key design point:** Google OR-Tools picks the plan; the LLM only explains it.
+- **What makes it different:** includes the what-if simulator and the ability to trace every recommendation back to a market signal.
+- **Growth plan:** from one institution to region to national.
+- **Impact, cost and business model:** estimated MVP cost of ₹4K–₹16K/month, the subscription and government revenue streams, and the path to market.
+- **Team members.**
+
+There's no code in the folder yet, so the README presents this as a proposal and leaves out install and usage steps. Add those once there's code.
+
+**Fix before presenting:** slide 5 still has two "Lorem ipsum" placeholder text boxes and numbering (01, 02, 04) left over from a template, next to the architecture diagram.

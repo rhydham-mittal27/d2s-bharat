@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/dataset/processed/sas" && python -c "
+import pandas as pd
+t=pd.read_csv('tag_mapping.csv'); u=t.groupby('method').posts.sum(); print((100*u/u.sum()).round(1).to_dict())
+for m in ['contains','semantic','review']:
+    s=t[t.method==m]
+    print(f'== {m}: top'); print(s.head(10)[['tag','posts','nearest_label','similarity']].to_string(index=False))
+    print(f'-- {m}: random'); print(s.sample(10,random_state=5)[['tag','posts','nearest_label','similarity']].to_string(index=False))
+"

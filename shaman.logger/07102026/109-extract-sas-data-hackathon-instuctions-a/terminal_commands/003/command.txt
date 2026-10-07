@@ -1,0 +1,1 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman" && mkdir -p hackathon && unzip -o -q "SAS Data Problem Statement and Instructions Hackathon (1).zip" -d hackathon && ls -R hackathon

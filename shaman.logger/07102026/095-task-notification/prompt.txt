@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>bqbj9e3yq</task-id>
+<summary>Monitor event: "ingestion v1 rerun (milestones)"</summary>
+<event>[    0.0s] STEP 1/5 data parsing</event>
+</task-notification>

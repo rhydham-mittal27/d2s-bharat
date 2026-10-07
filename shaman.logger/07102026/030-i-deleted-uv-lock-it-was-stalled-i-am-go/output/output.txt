@@ -1,0 +1,41 @@
+Run these from `backend/` in PowerShell, one stage at a time, so a stall only affects that stage.
+
+**0. Settings for a slow network.** These apply to the current PowerShell window only.
+```powershell
+cd C:\Users\Rhydham\Desktop\projects\shaman\backend
+$env:UV_HTTP_TIMEOUT = "300"          # don't give up on slow downloads
+$env:UV_CONCURRENT_DOWNLOADS = "2"    # fewer parallel downloads = fewer dropped connections
+```
+
+**1. Core packages and the decision engine** (small, about a minute)
+```powershell
+uv add "pydantic>=2.9" "pydantic-settings>=2.5" "numpy>=2.0" "pandas>=2.2" "ortools>=9.14"
+uv add --dev pytest pytest-asyncio ruff
+uv run pytest tests/test_engine.py -q
+```
+
+**2. Workers**
+```powershell
+uv add --optional workers "arq>=0.27" "redis>=5.0"
+uv sync --extra workers
+uv run pytest tests/test_workers.py -q -k "not forecast"
+```
+
+**3. Forecasting** (pulls in numba and statsmodels, medium size)
+```powershell
+uv add --optional ml "statsforecast>=2.0"
+uv sync --extra workers --extra ml
+```
+
+**4. Embeddings** (torch, the big one; it should already be in uv's cache)
+```powershell
+uv add --optional ml "sentence-transformers>=5.1"
+uv sync --all-extras
+uv run pytest -q
+```
+
+**Notes**
+- `pyproject.toml` already lists these packages, so `uv add` just records the versions it chooses. Nothing gets duplicated.
+- `uv add --optional …` writes the package into its extras group (`ml` or `workers`). The `uv sync --extra …` line after it is what installs that group into `.venv`.
+- **If a stage stalls again,** rerun that command with `-v` (e.g. `uv sync --all-extras -v`) to see exactly which file it's stuck on, and paste me the last few lines.
+- On Windows, the torch package from PyPI is the CPU-only build, which is what we want. No GPU (CUDA) files get downloaded.

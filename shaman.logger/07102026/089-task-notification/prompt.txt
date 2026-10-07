@@ -1,0 +1,7 @@
+<task-notification>
+<task-id>bz5ymlbat</task-id>
+<tool-use-id>toolu_01MDiLvTWchcJDkyqhEcnK53</tool-use-id>
+<output-file>C:\Users\Rhydham\AppData\Local\Temp\claude\C--Users-Rhydham-Desktop-projects-shaman\179abff8-7912-4c4b-9bae-f98badd5c47b\tasks\bz5ymlbat.output</output-file>
+<status>completed</status>
+<summary>Background command "Run the full ingestion pipeline on real data" completed (exit code 0)</summary>
+</task-notification>

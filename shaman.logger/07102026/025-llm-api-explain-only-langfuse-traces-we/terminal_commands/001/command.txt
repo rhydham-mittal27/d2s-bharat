@@ -1,0 +1,1 @@
+echo "- [No LLM API, own SLM](d2s-no-llm-api-own-slm.md) — briefs from own fine-tuned self-hosted SLM; template fallback; no external LLM APIs" >> "C:/Users/Rhydham/.claude/projects/C--Users-Rhydham-Desktop-projects-shaman/memory/MEMORY.md"

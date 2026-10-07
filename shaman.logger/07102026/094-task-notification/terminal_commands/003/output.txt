@@ -1,0 +1,17 @@
+Visual Basic => alts: ['VB.NET', '.NET', 'Visual Studio .NET', 'Visual Studio', 'VB']
+SAP Data Services => alts: ['SAP', 'SAP analytics cloud']
+lead others => alts: ['guide others', 'make use of leadership abilities for team coordination', 'make use of result-oriented leadership abilities', 'lead colleagues', 'exert a result-oriented leadership role towards colleagues', 'show an exemplary leading role in an organisation', 'exert a goal-oriented leadership role towards colleagues', 'show leadership attitude', 'exert a result-oriented leadership role', 'exert a leadership role towards colleagues', 'exert result-oriented leadership', 'exert a goal-oriented leadership role']
+ICT project management methodologies => alts: ['Code and fix development', 'Benefits realization management', 'Agile', 'Scrum', 'structured methodology', 'prince2', 'Extreme project management', 'agile', 'Critical chain project management', 'software development methodologies', 'project management framework', 'project management software']
+style sheet languages => alts: ['Formatted Output Specification Instance', 'Extensible Stylesheet Language', 'cascading style sheets', 'CSS', 'SMIL Timesheets', 'Document Style Semantics and Specification Language']
+database => alts: ['non-relational database', 'types of databases', 'relational database']
+communication => alts: ['communicating', 'correspondence', 'interaction', 'conversation']
+-- Visual Basic
+    Proficient in programming using Visual Basic,VBA,.NET,SQL Server .
+    Experience on .NET Core
+    .Net Core Developer
+    8 years of professional website (.NET and C#) experience .
+-- SAP Data Services
+    SAP,Oracle or PeopleSoft .
+    SAP Hybris eCommerce
+    Must have skills : SAP MM Materials Management
+    Must have skills : SAP BASIS Administration

@@ -1,0 +1,5 @@
+<task-notification>
+<task-id>b61t9f20q</task-id>
+<summary>Monitor event: "ingestion pipeline run"</summary>
+<event>[   12.5s] parsed 103,657 raw -&gt; 88,561 clean posts {'raw': 103657, 'duplicate_id': 6998, 'empty': 1227, 'duplicate_text': 6871, 'kept': 88561, 'invalid_dates': 935}</event>
+</task-notification>

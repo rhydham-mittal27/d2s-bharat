@@ -1,0 +1,48 @@
+DONE
+{'posts': 14840, 'data_role_posts': 5138, 'families': {'Software / IT': 3280, 'Analytics / BI': 2720, 'Finance / Risk': 1413, 'Other': 1388, 'Sales / Ops / HR / Support': 1265, 'Management / Consulting': 1182, 'Marketing / SEO / Content': 1174, 'Data Science / ML': 939, 'Business Analysis / Product': 902, 'Data Engineering': 577}, 'family_median_salary': {'Analytics / BI': 8.0, 'Business Analysis / Product': 12.5, 'Data Engineering': 12.5, 'Data Science / ML': 12.5, 'Finance / Risk': 12.5, 'Management / Consulting': 12.5, 'Marketing / SEO / Content': 4.5, 'Other': 4.5, 'Sales / Ops / HR / Support': 4.5, 'Software / IT': 12.5}, 'canonical_tag_uses_pct': {'esco_onet': 56.42, 'merged_esco_onet': 0.27, 'merged_tag': 1.05, 'tag': 42.26}, 'distinct_canonical_skills': 6604, 'pay_model_all': {'n': 14840, 'exp_min_or_per_year': 1.6567139609302457, 'pseudo_r2': 0.1940990659697237, 'converged': True}, 'pay_model_data_roles': {'n': 5138, 'exp_min_or_per_year': 1.6113744287058658, 'pseudo_r2': 0.1637495606445899, 'converged': True}}
+                      skill  posts  share  share_ci_low  share_ci_high
+             data analytics    941  0.183         0.173          0.194
+                        SQL    847  0.165         0.155          0.175
+                        SAS    690  0.134         0.125          0.144
+                     Python    647  0.126         0.117          0.135
+          business analysis    641  0.125         0.116          0.134
+           machine learning    615  0.120         0.111          0.129
+                          R    553  0.108         0.099          0.116
+      perform data analysis    499  0.097         0.089          0.106
+               data science    330  0.064         0.058          0.071
+Java (computer programming)    314  0.061         0.055          0.068
+                     Hadoop    298  0.058         0.052          0.065
+                      SPARK    249  0.048         0.043          0.055
+ALL sig:                              skill  odds_ratio  or_ci_low  or_ci_high
+                               C++        2.30       1.80        2.92
+         develop predictive models        1.71       1.34        2.19
+                               SAS        1.52       1.30        1.77
+                         Marketing        1.42       1.15        1.75
+             business intelligence        1.40       1.14        1.73
+       Java (computer programming)        1.39       1.22        1.59
+                  Google Analytics        1.37       1.10        1.71
+                  machine learning        1.34       1.12        1.60
+            plan digital marketing        1.29       1.08        1.55
+                           finance        1.26       1.07        1.47
+                               SQL        1.23       1.11        1.37
+                    data analytics        1.17       1.05        1.29
+                        accounting        0.75       0.63        0.89
+                     communication        0.73       0.64        0.83
+Management information systems MIS        0.38       0.31        0.48
+merge examples:
+                            tag  posts                   canonical canonical_source
+business development management     69        Business Development       merged_tag
+                        adwords     55                  Google Ads merged_esco_onet
+        off - page optimization     16      on - page optimization       merged_tag
+         back office operations     15                 back office       merged_tag
+               solution selling     14              solution sales       merged_tag
+                        HLOOKUP     12                     VLOOKUP       merged_tag
+                 content writer     12     provide written content merged_esco_onet
+                   UI Developer     11              ui development       merged_tag
+                            tax     11                    Taxation       merged_tag
+                  Visualization     11 Data visualization software merged_esco_onet
+                      ar caller     10                  AR Calling       merged_tag
+                           RFPS     10                         rfp       merged_tag
+                 content editor      9             Content Editing       merged_tag
+                           GAAP      9                     us gaap       merged_tag
+        senior business analyst      8              Senior Analyst       merged_tag

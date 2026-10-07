@@ -1,0 +1,73 @@
+{'contains': 4.0, 'exact': 25.5, 'review': 31.0, 'semantic': 28.3, 'unmapped': 11.2}
+== contains: top
+                 tag  posts                          nearest_label  similarity
+           Core Java    165            Java (computer programming)         1.0
+communication skills    151                          communication         1.0
+       MIS Reporting    104     Management information systems MIS         1.0
+            Power Bi     85     Microsoft Business Intelligence BI         1.0
+             SAS SQL     81                                    SAS         1.0
+         SQL Queries     77                                    SQL         1.0
+  big data analytics     56                         data analytics         1.0
+          Oracle SQL     54                                    SQL         1.0
+              ms sql     47                                    SQL         1.0
+         Open source     46 Source (digital game creation systems)         1.0
+-- contains: random
+                          tag  posts                                                    nearest_label  similarity
+          communication coach      1                                                    communication         1.0
+                      SAS AML      1                                                              SAS         1.0
+                  SEM Analyst      4                                       search engine optimisation         1.0
+          Business Accounting     13                                                       accounting         1.0
+             Claims Associate      1 Computer Linked Application Information Management System CLAIMS         1.0
+   french language specialist      1                                                           French         1.0
+              DevOps Engineer      6                                                           DevOps         1.0
+                 Linux Kernel      4                                                            Linux         1.0
+Consultant - Machine Learning      1                                                 machine learning         1.0
+                     SAP ABAP     22                                                             ABAP         1.0
+== semantic: top
+                 tag  posts          nearest_label  similarity
+           Analytics    902         data analytics    0.913728
+       data analysis    651  perform data analysis    0.943016
+                   R    616                      R    1.000000
+   Digital Marketing    576 plan digital marketing    0.897803
+         Outsourcing    417   outsourcing strategy    0.913783
+               Excel    372        Microsoft Excel    0.906134
+    Business process    312     business processes    0.974413
+Business Development    271 develop business plans    0.859619
+            Big Data    267       analyse big data    0.897735
+          Analytical    250   analytical chemistry    0.901120
+-- semantic: random
+                   tag  posts                   nearest_label  similarity
+              S - PLUS      1                 S-Plus software    0.932266
+      Accounts Payable     51       Accounts payable software    0.885399
+    Process Operations      4 operations department processes    0.909660
+        Test Reporting      5            report test findings    0.899101
+     business research     58       perform business research    0.942678
+       prepare reports      1      prepare scientific reports    0.899373
+         layout design      2             store design layout    0.867557
+      Food Preparation      1 use food preparation techniques    0.922969
+          double click      1              Google DoubleClick    0.898622
+Stakeholders Interview      1   communicate with stakeholders    0.870607
+== review: top
+       tag  posts             nearest_label  similarity
+   finance    766        financial products    0.793876
+       SEO    483            search engines    0.829456
+     Sales    410          sales activities    0.874871
+ Marketing    345        services marketing    0.861315
+Operations    341    maintenance operations    0.876400
+  auditing    269         internal auditing    0.868044
+ budgeting    259            manage budgets    0.875238
+Consulting    222 use consulting techniques    0.888908
+      hive    192               Apache Hive    0.899594
+  strategy    188        strategic planning    0.847631
+-- review: random
+                       tag  posts                         nearest_label  similarity
+                  advanced      1                    advanced materials    0.818397
+             piping layout      3                          PipingOffice    0.839406
+             Data handling      4                   handle data samples    0.847358
+           Statutory Audit      9      follow the statutory obligations    0.799670
+          manual reporting      1                    Reporting software    0.826859
+              process re -      1 identify processes for re-engineering    0.847375
+Manager - Customer Success      1           perform customer management    0.836256
+  Competitive Intelligence     28   conduct online competitive analysis    0.814718
+                     SCORM      2                 create SCORM packages    0.846110
+                    Window      1                            set window    0.855267

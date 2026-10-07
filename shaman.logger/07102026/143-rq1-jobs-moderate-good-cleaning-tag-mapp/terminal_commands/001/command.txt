@@ -1,0 +1,8 @@
+cd "C:/Users/Rhydham/Desktop/projects/shaman/backend" && uv run --no-sync python -c "
+import pandas as pd, re
+p=pd.read_csv('../dataset/processed/sas/posts_clean.csv.gz')
+t=p.title.str.lower()
+print('distinct titles', t.nunique())
+words=t.str.findall(r'[a-z]+').explode().value_counts(); print(words.head(70).to_dict())
+print(p.title.value_counts().head(40).to_dict())
+"
